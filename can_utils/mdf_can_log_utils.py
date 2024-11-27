@@ -12,9 +12,11 @@ import canmatrix.formats
 from etils import ecolab
 from pathlib import Path
 import os
-from utils.can_dbc_db import CanDbcDb
+from can_utils.can_dbc_db import CanDbcDb
 import sys
 import re
+from loguru import logger
+
 
 
 def log_explore(dbc_dir,log_file,f_time,map_file,map_ecu_sheet):
@@ -64,6 +66,7 @@ def log_explore(dbc_dir,log_file,f_time,map_file,map_ecu_sheet):
 def mdf_get_trace(mdf):
     """ get CAN trace from mdf file. Output - DataFrame"""
     dfs = []
+    logger.info("Processing mdf file to get CAN Trace")
 
     if mdf.version >= "4.00":
 
@@ -305,6 +308,7 @@ def mdf_get_trace(mdf):
     signals['DataBytes']=signals['DataBytes'].apply(strHex2Int)
     signals['BusChannel']=signals['BusChannel'].apply(lambda s: s.replace('CAN ',''))
     
+    logger.success("Preparing CAN Trace complete.")
     
     return signals
 
