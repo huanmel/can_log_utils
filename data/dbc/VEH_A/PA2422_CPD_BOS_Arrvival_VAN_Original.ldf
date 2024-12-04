@@ -1,0 +1,262 @@
+
+
+LIN_description_file;
+LIN_protocol_version = "2.1";
+LIN_language_version = "2.1";
+LIN_speed = 19.2 kbps;
+
+Nodes {
+  Master: ECM, 5 ms, 0.1 ms ;
+  Slaves: AGM_1 ;
+}
+
+Signals {
+  ECM_TargetPosReq_1: 8, 0, ECM, AGM_1 ;
+  ECM_TorqueBoostReq_1: 4, 2, ECM, AGM_1 ;
+  ECM_AutoCalibReq_1: 1, 0, ECM, AGM_1 ;
+  AGM_1_ActualPosition: 8, 126, AGM_1, ECM ;
+  AGM_1_ActTorqueBoost: 4, 2, AGM_1, ECM ;
+  AGM_1_HldTrqActive: 1, 0, AGM_1, ECM ;
+  AGM_1_MoveActive: 1, 0, AGM_1, ECM ;
+  AGM_1_CalibActive: 1, 0, AGM_1, ECM ;
+  AGM_1_CalibRequired: 1, 1, AGM_1, ECM ;
+  AGM_1_Sta_Overtravel: 1, 0, AGM_1, ECM ;
+  AGM_1_Sta_Blockage: 1, 0, AGM_1, ECM ;
+  AGM_1_Sta_UnderVolt: 1, 0, AGM_1, ECM ;
+  AGM_1_Sta_OverVolt: 1, 0, AGM_1, ECM ;
+  AGM_1_Sta_OverTemp: 1, 0, AGM_1, ECM ;
+  AGM_1_Sta_LINResp: 1, 0, AGM_1, ECM ;
+  AGM_1_Err_Electrical: 1, 0, AGM_1, ECM ;
+  AGM_1_Push_to_run_status: 1, 0, AGM_1, ECM ;
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+
+Frames {
+  ECM_AGM_1_Demand: 48, ECM, 8 {
+    ECM_TargetPosReq_1, 0 ;
+    ECM_AutoCalibReq_1, 9 ;
+    ECM_TorqueBoostReq_1, 10 ;
+  }
+  AGM_1_ECM_Status: 49, AGM_1, 8 {
+    AGM_1_ActualPosition, 0 ;
+    AGM_1_ActTorqueBoost, 8 ;
+    AGM_1_HldTrqActive, 12 ;
+    AGM_1_MoveActive, 13 ;
+    AGM_1_CalibActive, 14 ;
+    AGM_1_CalibRequired, 15 ;
+    AGM_1_Sta_Overtravel, 16 ;
+    AGM_1_Sta_Blockage, 17 ;
+    AGM_1_Err_Electrical, 18 ;
+    AGM_1_Sta_UnderVolt, 19 ;
+    AGM_1_Sta_OverVolt, 20 ;
+    AGM_1_Sta_OverTemp, 21 ;
+    AGM_1_Sta_LINResp, 22 ;
+    AGM_1_Push_to_run_status, 23 ;
+  }
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  AGM_1{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x1 ;
+    initial_NAD = 0x1 ;
+    product_id = 0x102, 0x8310, 65 ;
+    response_error = AGM_1_Sta_LINResp ;
+    P2_min = 50 ms ;
+    ST_min = 50 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      ECM_AGM_1_Demand ;
+      AGM_1_ECM_Status ;
+    }
+  }
+}
+
+Schedule_tables {
+ NormalTable {
+    ECM_AGM_1_Demand delay 10 ms ;
+    AGM_1_ECM_Status delay 10 ms ;
+  }
+ CommandStatusTable {
+    ECM_AGM_1_Demand delay 10 ms ;
+    AGM_1_ECM_Status delay 10 ms ;
+  }
+ StatusTable_AGM_1 {
+    AGM_1_ECM_Status delay 10 ms ;
+  }
+ CommandTable_AGM_1 {
+    ECM_AGM_1_Demand delay 10 ms ;
+  }
+ CommandStatusTable_AGM_1 {
+    ECM_AGM_1_Demand delay 10 ms ;
+    AGM_1_ECM_Status delay 10 ms ;
+  }
+ Diagnostic_Schedule {
+    MasterReq delay 50 ms ;
+    SlaveResp delay 50 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  ActTorqueBoost_type {
+    logical_value, 0, "High Torque" ;
+    logical_value, 1, "reserved" ;
+    logical_value, 2, "Low Torque" ;
+    logical_value, 3, "reserved" ;
+    logical_value, 4, "reserved" ;
+    logical_value, 5, "reserved" ;
+    logical_value, 6, "reserved" ;
+    logical_value, 7, "reserved" ;
+    logical_value, 8, "reserved" ;
+    logical_value, 9, "reserved" ;
+    logical_value, 10, "reserved" ;
+    logical_value, 11, "reserved" ;
+    logical_value, 12, "reserved" ;
+    logical_value, 13, "reserved" ;
+    logical_value, 14, "reserved" ;
+    logical_value, 15, "reserved" ;
+  }
+  ActualPosition_type {
+    physical_value, 0, 126, 1, 0, "%" ;
+  }
+  CalibActive_type {
+    logical_value, 0, "not active" ;
+    logical_value, 1, "active" ;
+  }
+  CalibRequired_type {
+    logical_value, 0, "False" ;
+    logical_value, 1, "True" ;
+  }
+  ECM_AutoCalibReq_type {
+    logical_value, 0, "not active" ;
+    logical_value, 1, "active" ;
+  }
+  ECM_TargetPosReq_type {
+    physical_value, 0, 126, 1, 0, "%" ;
+  }
+  ECM_TorqueBoostReq_type {
+    logical_value, 0, "High Torque" ;
+    logical_value, 1, "reserved" ;
+    logical_value, 2, "Low Torque" ;
+    logical_value, 3, "reserved" ;
+    logical_value, 4, "reserved" ;
+    logical_value, 5, "reserved" ;
+    logical_value, 6, "reserved" ;
+    logical_value, 7, "reserved" ;
+    logical_value, 8, "reserved" ;
+    logical_value, 9, "reserved" ;
+    logical_value, 10, "reserved" ;
+    logical_value, 11, "reserved" ;
+    logical_value, 12, "reserved" ;
+    logical_value, 13, "reserved" ;
+    logical_value, 14, "reserved" ;
+    logical_value, 15, "reserved" ;
+  }
+  Err_Electrical_type {
+    logical_value, 0, "False" ;
+    logical_value, 1, "True" ;
+  }
+  HldTrqActive_type {
+    logical_value, 0, "not active" ;
+    logical_value, 1, "active" ;
+  }
+  MoveActive_type {
+    logical_value, 0, "not active" ;
+    logical_value, 1, "active" ;
+  }
+  Push_to_run_status_type {
+    logical_value, 0, "not active" ;
+    logical_value, 1, "active" ;
+  }
+  Sta_Blockage_type {
+    logical_value, 0, "False" ;
+    logical_value, 1, "True" ;
+  }
+  Sta_LINResp_type {
+    logical_value, 0, "False" ;
+    logical_value, 1, "True" ;
+  }
+  Sta_OverTemp_type {
+    logical_value, 0, "False" ;
+    logical_value, 1, "True" ;
+  }
+  Sta_OverVolt_type {
+    logical_value, 0, "False" ;
+    logical_value, 1, "True" ;
+  }
+  Sta_Overtravel_type {
+    logical_value, 0, "False" ;
+    logical_value, 1, "True" ;
+  }
+  Sta_UnderVolt_type {
+    logical_value, 0, "False" ;
+    logical_value, 1, "True" ;
+  }
+}
+
+Signal_representation {
+  ActTorqueBoost_type: AGM_1_ActTorqueBoost ;
+  ActualPosition_type: AGM_1_ActualPosition ;
+  CalibActive_type: AGM_1_CalibActive ;
+  CalibRequired_type: AGM_1_CalibRequired ;
+  ECM_AutoCalibReq_type: ECM_AutoCalibReq_1 ;
+  ECM_TargetPosReq_type: ECM_TargetPosReq_1 ;
+  ECM_TorqueBoostReq_type: ECM_TorqueBoostReq_1 ;
+  Err_Electrical_type: AGM_1_Err_Electrical ;
+  HldTrqActive_type: AGM_1_HldTrqActive ;
+  MoveActive_type: AGM_1_MoveActive ;
+  Push_to_run_status_type: AGM_1_Push_to_run_status ;
+  Sta_Blockage_type: AGM_1_Sta_Blockage ;
+  Sta_LINResp_type: AGM_1_Sta_LINResp ;
+  Sta_OverTemp_type: AGM_1_Sta_OverTemp ;
+  Sta_OverVolt_type: AGM_1_Sta_OverVolt ;
+  Sta_Overtravel_type: AGM_1_Sta_Overtravel ;
+  Sta_UnderVolt_type: AGM_1_Sta_UnderVolt ;
+}

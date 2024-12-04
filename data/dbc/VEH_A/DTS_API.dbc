@@ -1,0 +1,342 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Host
+VAL_TABLE_ InterfaceStatus 3 "Permanently Failed" 2 "Temporarily Limited" 1 "Active" 0 "Inactive" ;
+VAL_TABLE_ uint_32 -1 "Not Available" -2 "Error" ;
+VAL_TABLE_ uint_8 255 "Not Available" 254 "Error" ;
+VAL_TABLE_ uint_16 65535 "Not Available" 65534 "Error" ;
+VAL_TABLE_ uint_14 16383 "Not Available" 16382 "Error" ;
+VAL_TABLE_ uint_10 1023 "Not Available" 1022 "Error" ;
+
+
+BO_ 2381470206 GsExtReq: 8 Vector__XXX
+ SG_ GsExtReqMsgCtr : 51|4@0+ (1,0) [0|15] ""  Host
+ SG_ GsExtReqMsgCks : 63|8@0+ (1,0) [0|255] ""  Host
+ SG_ ExtGearPosnReqAcv : 4|2@0+ (1,0) [0|3] ""  Host
+ SG_ ExtGearPosnReq : 7|3@0+ (1,0) [0|7] ""  Host
+
+BO_ 2381469950 GsState: 8 Host
+ SG_ GsExtGearPosnIfSts : 4|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ GsStateMsgCtr : 51|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ GsStateMsgCks : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ GsGearPosn : 7|3@0+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2381469694 VIN2: 8 Host
+ SG_ VinSym17 : 55|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ VinSym16 : 47|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ VinSym15 : 39|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ VinSym14 : 31|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ VinSym13 : 23|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ VinSym12 : 15|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ VinSym11 : 7|6@0+ (1,0) [0|63] "" Vector__XXX
+
+BO_ 2381469438 VIN1: 8 Host
+ SG_ VinSym10 : 49|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ VinSym9 : 55|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ VinSym8 : 45|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ VinSym7 : 35|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ VinSym6 : 25|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ VinSym5 : 31|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ VinSym4 : 21|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ VinSym3 : 11|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ VinSym2 : 1|6@0+ (1,0) [0|63] "" Vector__XXX
+ SG_ VinSym1 : 7|6@0+ (1,0) [0|63] "" Vector__XXX
+
+BO_ 2381469182 VehDa: 8 Host
+ SG_ LvU : 45|10@0+ (0.05,0) [0|51.15] "V" Vector__XXX
+ SG_ HvSoc : 39|10@0+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ TotDst : 7|32@0+ (2.5,0) [0|2147483646] "m" Vector__XXX
+
+BO_ 2381468414 DtTorqueData: 8 Host
+ SG_ DtTqReRi : 55|14@0+ (1,-8191) [-8191|8192] "Nm" Vector__XXX
+ SG_ DtTqReLe : 39|14@0+ (1,-8191) [-8191|8192] "Nm" Vector__XXX
+ SG_ DtTqFrntRi : 23|14@0+ (1,-8191) [-8191|8192] "Nm" Vector__XXX
+ SG_ DtTqFrntLe : 7|14@0+ (1,-8191) [-8191|8192] "Nm" Vector__XXX
+
+BO_ 2381468926 DtExtReqAdvd: 8 Vector__XXX
+ SG_ ExtTqReRiReq : 55|14@0+ (1,-8191) [-8191|8192] "Nm"  Host
+ SG_ ExtTqReLeReq : 39|14@0+ (1,-8191) [-8191|8192] "Nm"  Host
+ SG_ ExtTqFrntRiReq : 23|14@0+ (1,-8191) [-8191|8192] "Nm"  Host
+ SG_ ExtTqFrntLeReq : 7|14@0+ (1,-8191) [-8191|8192] "Nm"  Host
+
+BO_ 2381468158 DtState: 8 Host
+ SG_ DtExtTracTqIfSts : 53|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ DtExtSpdLimIfSts : 55|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ LvSysSts : 9|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ HvSysSts : 11|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ DtTracTqReqFromAccrPedl : 39|16@0+ (1,-32767) [-32767|31488] "Nm" Vector__XXX
+ SG_ DtTracTqLim : 23|16@0+ (1,-32767) [-32767|31488] "Nm" Vector__XXX
+ SG_ DtStMsgCtr : 51|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ DtStMsgCks : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ DtSysSts : 13|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ DtAccrPedlPosn : 7|10@0+ (0.1,0) [0|100] "%" Vector__XXX
+
+BO_ 2381468670 DtExtReq: 8 Vector__XXX
+ SG_ ExtSpdLimReqAcv : 19|2@0+ (1,0) [0|3] ""  Host
+ SG_ ExtSpdLimReq : 31|8@0+ (1,0) [0|250] "km/h"  Host
+ SG_ ExtCtlModReq : 23|2@0+ (1,0) [0|3] ""  Host
+ SG_ DtExtReqMsgCtr : 51|4@0+ (1,0) [0|15] ""  Host
+ SG_ DtExtReqMsgCks : 63|8@0+ (1,0) [0|255] ""  Host
+ SG_ ExtTqReqAcv : 21|2@0+ (1,0) [0|3] ""  Host
+ SG_ ExtTracTqReq : 7|16@0+ (1,-32767) [-32767|31488] "Nm"  Host
+
+BO_ 2381467902 DtTracTqReLim: 8 Host
+ SG_ DtTqReRiMin : 55|14@0+ (1,-8191) [-8191|8192] "Nm" Vector__XXX
+ SG_ DtTqReRiMax : 39|14@0+ (1,-8191) [-8191|8192] "Nm" Vector__XXX
+ SG_ DtTqReLeMin : 23|14@0+ (1,-8191) [-8191|8192] "Nm" Vector__XXX
+ SG_ DtTqReLeMax : 7|14@0+ (1,-8191) [-8191|8192] "Nm" Vector__XXX
+
+BO_ 2381466110 DtTracTqFrntLim: 8 Host
+ SG_ DtTqFrntRiMin : 55|14@0+ (1,-8191) [-8191|8192] "Nm" Vector__XXX
+ SG_ DtTqFrntRiMax : 39|14@0+ (1,-8191) [-8191|8192] "Nm" Vector__XXX
+ SG_ DtTqFrntLeMin : 23|14@0+ (1,-8191) [-8191|8192] "Nm" Vector__XXX
+ SG_ DtTqFrntLeMax : 7|14@0+ (1,-8191) [-8191|8192] "Nm" Vector__XXX
+
+
+
+CM_ BO_ 2381470206 "Gear selector external request message
+CRC DATAID: 0x0059";
+CM_ SG_ 2381470206 GsExtReqMsgCtr "Message counter to verify the signal path from the demanding device to the controller";
+CM_ SG_ 2381470206 GsExtReqMsgCks "Message checksum to verify the signal path from the demanding device to the controller.
+Calculated according to AUTOSAR profile 1A";
+CM_ SG_ 2381470206 ExtGearPosnReqAcv "External gear position request active";
+CM_ SG_ 2381470206 ExtGearPosnReq "Gear position request";
+CM_ BO_ 2381469950 "Gear selector state
+CRC DATAID: 0x0058";
+CM_ SG_ 2381469950 GsExtGearPosnIfSts "Gear position external interface status";
+CM_ SG_ 2381469950 GsStateMsgCtr "Message counter to verify the signal path from the demanding device to the controller";
+CM_ SG_ 2381469950 GsStateMsgCks "Message checksum to verify the signal path from the demanding device to the controller.
+Calculated according to AUTOSAR profile 1A";
+CM_ SG_ 2381469950 GsGearPosn "Active gear position";
+CM_ SG_ 2381469694 VinSym17 "VIN symbol #17";
+CM_ SG_ 2381469694 VinSym16 "VIN symbol #16";
+CM_ SG_ 2381469694 VinSym15 "VIN symbol #15";
+CM_ SG_ 2381469694 VinSym14 "VIN symbol #14";
+CM_ SG_ 2381469694 VinSym13 "VIN symbol #13";
+CM_ SG_ 2381469694 VinSym12 "VIN symbol #12";
+CM_ SG_ 2381469694 VinSym11 "VIN symbol #11";
+CM_ SG_ 2381469438 VinSym10 "VIN symbol #10";
+CM_ SG_ 2381469438 VinSym9 "VIN symbol #9";
+CM_ SG_ 2381469438 VinSym8 "VIN symbol #8";
+CM_ SG_ 2381469438 VinSym7 "VIN symbol #7";
+CM_ SG_ 2381469438 VinSym6 "VIN symbol #6";
+CM_ SG_ 2381469438 VinSym5 "VIN symbol #5";
+CM_ SG_ 2381469438 VinSym4 "VIN symbol #4";
+CM_ SG_ 2381469438 VinSym3 "VIN symbol #3";
+CM_ SG_ 2381469438 VinSym2 "VIN symbol #2";
+CM_ SG_ 2381469438 VinSym1 "VIN symbol #1";
+CM_ BO_ 2381469182 "Vehicle data";
+CM_ SG_ 2381469182 LvU "LV system supply voltage";
+CM_ SG_ 2381469182 HvSoc "HV State of charge";
+CM_ SG_ 2381469182 TotDst "Accumulated distance traveled by the vehicle during its operation";
+CM_ BO_ 2381468414 "Vehicle actual traction torque data";
+CM_ SG_ 2381468414 DtTqReRi "Rear right wheel traction torque value";
+CM_ SG_ 2381468414 DtTqReLe "Rear left wheel traction torque value";
+CM_ SG_ 2381468414 DtTqFrntRi "Front right wheel traction torque value";
+CM_ SG_ 2381468414 DtTqFrntLe "Front left wheel traction torque value";
+CM_ BO_ 2381468926 "Advanced control mode request: traction torque on each wheel";
+CM_ SG_ 2381468926 ExtTqReRiReq "Rear right wheel traction torque request";
+CM_ SG_ 2381468926 ExtTqReLeReq "Rear left wheel traction torque request";
+CM_ SG_ 2381468926 ExtTqFrntRiReq "Front right wheel traction torque request";
+CM_ SG_ 2381468926 ExtTqFrntLeReq "Front left wheel traction torque request";
+CM_ BO_ 2381468158 "Drivetrain state data
+CRC DATAID: 0x0051";
+CM_ SG_ 2381468158 DtExtTracTqIfSts "Traction torque external interface status";
+CM_ SG_ 2381468158 DtExtSpdLimIfSts "Speed limiter external interface status";
+CM_ SG_ 2381468158 LvSysSts "LV system status";
+CM_ SG_ 2381468158 HvSysSts "HV system status";
+CM_ SG_ 2381468158 DtTracTqReqFromAccrPedl "Traction torque required from accelerator pedal";
+CM_ SG_ 2381468158 DtTracTqLim "Overall traction torque limit";
+CM_ SG_ 2381468158 DtStMsgCtr "Message counter to verify the signal path from the demanding device to the controller";
+CM_ SG_ 2381468158 DtStMsgCks "Message checksum to verify the signal path from the demanding device to the controller.
+Calculated according to AUTOSAR profile 1A";
+CM_ SG_ 2381468158 DtSysSts "Drivetrain system status";
+CM_ SG_ 2381468158 DtAccrPedlPosn "Accelerator pedal position";
+CM_ BO_ 2381468670 "Simple control mode request
+CRC DATAID: 0x0053";
+CM_ SG_ 2381468670 ExtSpdLimReqAcv "Speed limiter request active";
+CM_ SG_ 2381468670 ExtSpdLimReq "External speed limit request";
+CM_ SG_ 2381468670 ExtCtlModReq "Drivetrain external control mode request:
+simple - overall torque request
+advanced - torque request by wheels";
+CM_ SG_ 2381468670 DtExtReqMsgCtr "Message counter to verify the signal path from the demanding device to the controller";
+CM_ SG_ 2381468670 DtExtReqMsgCks "Message checksum to verify the signal path from the demanding device to the controller.
+Calculated according to AUTOSAR profile 1A";
+CM_ SG_ 2381468670 ExtTqReqAcv "External torque request flag:
+Off - no external control demand
+On - external control demand is active";
+CM_ SG_ 2381468670 ExtTracTqReq "Overall traction torque request";
+CM_ BO_ 2381467902 "Vehicle limits for rear traction torque when operating in advanced control mode";
+CM_ SG_ 2381467902 DtTqReRiMin "Minimum available rear right wheel traction torque";
+CM_ SG_ 2381467902 DtTqReRiMax "Maxmimum available rear right wheel traction torque";
+CM_ SG_ 2381467902 DtTqReLeMin "Minimum available rear left wheel traction torque";
+CM_ SG_ 2381467902 DtTqReLeMax "Maxmimum available rear left wheel traction torque";
+CM_ BO_ 2381466110 "Vehicle limits for front traction torque when operating in advanced control mode";
+CM_ SG_ 2381466110 DtTqFrntRiMin "Minumun available front right wheel traction torque";
+CM_ SG_ 2381466110 DtTqFrntRiMax "Maxmimum available front right wheel traction torque";
+CM_ SG_ 2381466110 DtTqFrntLeMin "Minimum available front left wheel traction torque";
+CM_ SG_ 2381466110 DtTqFrntLeMax "Maxmimum available front left wheel traction torque";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ BO_  "Producer" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","noMsgSendType";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "Producer" "DTS";
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_ "ProtocolType" "J1939";
+BA_ "BusType" "CAN";
+BA_ "DatabaseVersion" "8.5";
+BA_ "DBName" "DT_EXT";
+BA_ "NmStationAddress" BU_ Host 254;
+BA_ "Producer" BO_ 2381470206 "ADASRT";
+BA_ "GenMsgSendType" BO_ 2381470206 0;
+BA_ "GenMsgCycleTime" BO_ 2381470206 10;
+BA_ "VFrameFormat" BO_ 2381470206 3;
+BA_ "GenMsgSendType" BO_ 2381469950 0;
+BA_ "GenMsgCycleTime" BO_ 2381469950 10;
+BA_ "VFrameFormat" BO_ 2381469950 3;
+BA_ "GenMsgSendType" BO_ 2381469694 0;
+BA_ "GenMsgCycleTime" BO_ 2381469694 5000;
+BA_ "VFrameFormat" BO_ 2381469694 3;
+BA_ "GenMsgCycleTime" BO_ 2381469438 5000;
+BA_ "GenMsgSendType" BO_ 2381469438 0;
+BA_ "VFrameFormat" BO_ 2381469438 3;
+BA_ "GenMsgSendType" BO_ 2381469182 0;
+BA_ "GenMsgCycleTime" BO_ 2381469182 10;
+BA_ "VFrameFormat" BO_ 2381469182 3;
+BA_ "GenMsgSendType" BO_ 2381468414 0;
+BA_ "GenMsgCycleTime" BO_ 2381468414 10;
+BA_ "VFrameFormat" BO_ 2381468414 3;
+BA_ "Producer" BO_ 2381468926 "ADASRT";
+BA_ "GenMsgSendType" BO_ 2381468926 0;
+BA_ "GenMsgCycleTime" BO_ 2381468926 10;
+BA_ "VFrameFormat" BO_ 2381468926 3;
+BA_ "GenMsgSendType" BO_ 2381468158 0;
+BA_ "GenMsgCycleTime" BO_ 2381468158 10;
+BA_ "VFrameFormat" BO_ 2381468158 3;
+BA_ "Producer" BO_ 2381468670 "ADASRT";
+BA_ "GenMsgSendType" BO_ 2381468670 0;
+BA_ "GenMsgCycleTime" BO_ 2381468670 10;
+BA_ "VFrameFormat" BO_ 2381468670 3;
+BA_ "GenMsgSendType" BO_ 2381467902 0;
+BA_ "GenMsgCycleTime" BO_ 2381467902 10;
+BA_ "VFrameFormat" BO_ 2381467902 3;
+BA_ "GenMsgSendType" BO_ 2381466110 0;
+BA_ "GenMsgCycleTime" BO_ 2381466110 10;
+BA_ "VFrameFormat" BO_ 2381466110 3;
+BA_ "GenSigStartValue" SG_ 2381468414 DtTqReRi 8191;
+BA_ "GenSigStartValue" SG_ 2381468414 DtTqReLe 8191;
+BA_ "GenSigStartValue" SG_ 2381468414 DtTqFrntRi 8191;
+BA_ "GenSigStartValue" SG_ 2381468414 DtTqFrntLe 8191;
+BA_ "GenSigStartValue" SG_ 2381468926 ExtTqReRiReq 8191;
+BA_ "GenSigStartValue" SG_ 2381468926 ExtTqReLeReq 8191;
+BA_ "GenSigStartValue" SG_ 2381468926 ExtTqFrntRiReq 8191;
+BA_ "GenSigStartValue" SG_ 2381468926 ExtTqFrntLeReq 8191;
+BA_ "SigType" SG_ 2381468158 DtTracTqReqFromAccrPedl 1;
+BA_ "GenSigStartValue" SG_ 2381468158 DtTracTqReqFromAccrPedl 32767;
+BA_ "SigType" SG_ 2381468158 DtTracTqLim 1;
+BA_ "GenSigStartValue" SG_ 2381468158 DtTracTqLim 32767;
+BA_ "SigType" SG_ 2381468158 DtAccrPedlPosn 1;
+BA_ "SigType" SG_ 2381468670 ExtSpdLimReq 1;
+BA_ "SigType" SG_ 2381468670 ExtTracTqReq 1;
+BA_ "GenSigStartValue" SG_ 2381468670 ExtTracTqReq 32767;
+BA_ "GenSigStartValue" SG_ 2381467902 DtTqReRiMin 8191;
+BA_ "GenSigStartValue" SG_ 2381467902 DtTqReRiMax 8191;
+BA_ "GenSigStartValue" SG_ 2381467902 DtTqReLeMin 8191;
+BA_ "GenSigStartValue" SG_ 2381467902 DtTqReLeMax 8191;
+BA_ "GenSigStartValue" SG_ 2381466110 DtTqFrntRiMin 8191;
+BA_ "GenSigStartValue" SG_ 2381466110 DtTqFrntRiMax 8191;
+BA_ "GenSigStartValue" SG_ 2381466110 DtTqFrntLeMin 8191;
+BA_ "GenSigStartValue" SG_ 2381466110 DtTqFrntLeMax 8191;
+VAL_ 2381470206 ExtGearPosnReqAcv 3 "NA" 2 "Reserved" 1 "Active" 0 "Inactive" ;
+VAL_ 2381470206 ExtGearPosnReq 6 "DTS_Error" 7 "DTS_NA" 3 "DTS_Park" 2 "DTS_Reverse" 1 "DTS_Drive" 0 "DTS_Neutral" ;
+VAL_ 2381469950 GsExtGearPosnIfSts 3 "Permanently Failed" 2 "Temporarily Limited" 1 "Active" 0 "Inactive" ;
+VAL_ 2381469950 GsGearPosn 6 "DTS_Error" 7 "DTS_NA" 3 "DTS_Park" 2 "DTS_Reverse" 1 "DTS_Drive" 0 "DTS_Neutral" ;
+VAL_ 2381469182 LvU 1023 "Not Available" 1022 "Error" ;
+VAL_ 2381469182 HvSoc 1023 "Not Available" 1022 "Error" ;
+VAL_ 2381469182 TotDst -1 "Not Available" -2 "Error" ;
+VAL_ 2381468414 DtTqReRi 16383 "Not Available" 16382 "Error" ;
+VAL_ 2381468414 DtTqReLe 16383 "Not Available" 16382 "Error" ;
+VAL_ 2381468414 DtTqFrntRi 16383 "Not Available" 16382 "Error" ;
+VAL_ 2381468414 DtTqFrntLe 16383 "Not Available" 16382 "Error" ;
+VAL_ 2381468926 ExtTqReRiReq 16383 "Not Available" 16382 "Error" ;
+VAL_ 2381468926 ExtTqReLeReq 16383 "Not Available" 16382 "Error" ;
+VAL_ 2381468926 ExtTqFrntRiReq 16383 "Not Available" 16382 "Error" ;
+VAL_ 2381468926 ExtTqFrntLeReq 16383 "Not Available" 16382 "Error" ;
+VAL_ 2381468158 DtExtTracTqIfSts 3 "Permanently Failed" 2 "Temporarily Limited" 1 "Active" 0 "Inactive" ;
+VAL_ 2381468158 DtExtSpdLimIfSts 3 "Permanently Failed" 2 "Temporarily Limited" 1 "Active" 0 "Inactive" ;
+VAL_ 2381468158 LvSysSts 3 "SS_NA" 2 "SS_Error" 1 "SS_Ok" 0 "SS_Not ready" ;
+VAL_ 2381468158 HvSysSts 3 "SS_NA" 2 "SS_Error" 1 "SS_Ok" 0 "SS_Not ready" ;
+VAL_ 2381468158 DtSysSts 3 "SS_NA" 2 "SS_Error" 1 "SS_Ok" 0 "SS_Not ready" ;
+VAL_ 2381468670 ExtSpdLimReqAcv 3 "NA" 2 "Reserved" 1 "Active" 0 "Inactive" ;
+VAL_ 2381468670 ExtCtlModReq 3 "NA" 2 "Reserved" 1 "Advanced" 0 "Simple" ;
+VAL_ 2381468670 ExtTqReqAcv 3 "NA" 2 "Reserved" 1 "Active" 0 "Inactive" ;
+VAL_ 2381467902 DtTqReRiMin 16383 "Not Available" 16382 "Error" ;
+VAL_ 2381467902 DtTqReRiMax 16383 "Not Available" 16382 "Error" ;
+VAL_ 2381467902 DtTqReLeMin 16383 "Not Available" 16382 "Error" ;
+VAL_ 2381467902 DtTqReLeMax 16383 "Not Available" 16382 "Error" ;
+VAL_ 2381466110 DtTqFrntRiMin 16383 "Not Available" 16382 "Error" ;
+VAL_ 2381466110 DtTqFrntRiMax 16383 "Not Available" 16382 "Error" ;
+VAL_ 2381466110 DtTqFrntLeMin 16383 "Not Available" 16382 "Error" ;
+VAL_ 2381466110 DtTqFrntLeMax 16383 "Not Available" 16382 "Error" ;
+

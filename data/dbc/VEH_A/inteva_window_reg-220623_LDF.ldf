@@ -1,0 +1,195 @@
+
+
+LIN_description_file;
+LIN_protocol_version = "2.1";
+LIN_language_version = "2.1";
+LIN_speed = 19.2 kbps;
+
+Nodes {
+  Master: Cabin_IO_1_2, 10 ms, 0.1 ms ;
+  Slaves: Inteva_WR ;
+}
+
+Signals {
+  Authorization: 1, 1, Cabin_IO_1_2, Inteva_WR ;
+  DEZ: 1, 0, Cabin_IO_1_2, Inteva_WR ;
+  WR_Command: 3, 0, Cabin_IO_1_2, Inteva_WR ;
+  External_Temperature: 6, 0, Cabin_IO_1_2, Inteva_WR ;
+  VehicleSpeedWnd: 5, 0, Cabin_IO_1_2, Inteva_WR ;
+  WR_Current_Position: 4, 0, Inteva_WR, Cabin_IO_1_2 ;
+  Variant_Coding_For_Continent: 2, 1, Cabin_IO_1_2, Inteva_WR ;
+  WR_Current_Relay_Command: 2, 0, Inteva_WR, Cabin_IO_1_2 ;
+  REF_State: 1, 0, Inteva_WR, Cabin_IO_1_2 ;
+  Respone_Error_Bit: 1, 0, Inteva_WR, Cabin_IO_1_2 ;
+  SW_Thermal_Protection_Current_State: 2, 0, Inteva_WR, Cabin_IO_1_2 ;
+  Current_Panel_Direction_State: 3, 0, Inteva_WR, Cabin_IO_1_2 ;
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+
+Frames {
+  IO_MODULE_CMD_Frame: 14, Cabin_IO_1_2, 5 {
+    Authorization, 0 ;
+    DEZ, 1 ;
+    WR_Command, 8 ;
+    External_Temperature, 2 ;
+    VehicleSpeedWnd, 11 ;
+    Variant_Coding_For_Continent, 32 ;
+  }
+  WR_Status_Frame: 29, Inteva_WR, 5 {
+    WR_Current_Position, 0 ;
+    WR_Current_Relay_Command, 4 ;
+    REF_State, 6 ;
+    Respone_Error_Bit, 8 ;
+    SW_Thermal_Protection_Current_State, 9 ;
+    Current_Panel_Direction_State, 16 ;
+  }
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  Inteva_WR{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0xFF ;
+    initial_NAD = 0xFF ;
+    product_id = 0x0, 0x0, 255 ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      IO_MODULE_CMD_Frame ;
+      WR_Status_Frame ;
+    }
+  }
+}
+
+Schedule_tables {
+ Main {
+    IO_MODULE_CMD_Frame delay 20 ms ;
+    WR_Status_Frame delay 10 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  Authorization_Encoding {
+    logical_value, 0, "no motion is allowed" ;
+    logical_value, 1, "motion is allowed" ;
+  }
+  Current_Panel_Direction_State_Encoding {
+    logical_value, 0, "stop" ;
+    logical_value, 1, "close" ;
+    logical_value, 2, "open" ;
+    logical_value, 3, "reverse" ;
+  }
+  Initialize_Encoding {
+    logical_value, 0, "Normal Operation" ;
+    logical_value, 1, "On rising edge, de-initialize the ECU" ;
+  }
+  REF_State_Encoding {
+    logical_value, 0, "DESINIT; Closed Reference position is unknown" ;
+    logical_value, 1, "REF_LEARNED; Closed Reference position is learned" ;
+  }
+  Respone_Error_Bit_Encoding {
+    logical_value, 0, "No_Error" ;
+    logical_value, 1, "Error" ;
+  }
+  SW_Thermal_Protection_Current_State_Encoding {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Alert" ;
+    logical_value, 2, "Critic" ;
+  }
+  Temperature_Encoding {
+    physical_value, 0, 62, 5, -40, "°C" ;
+    logical_value, 63, "Invalid Measure" ;
+  }
+  VC_CONT_Encoding {
+    logical_value, 0, "US country" ;
+    logical_value, 1, "EUR country" ;
+  }
+  VehicleSpeedWnd_Encoding {
+    physical_value, 0, 30, 10, 0, "km/h" ;
+    logical_value, 31, "Invalid Measure or NA" ;
+  }
+  WR_Current_Position_Encoding {
+    logical_value, 0, "Position unknown (System desinit)" ;
+    logical_value, 1, "Closed (at CMS or CSS)" ;
+    logical_value, 2, "open area 1" ;
+    logical_value, 3, "open area 2" ;
+    logical_value, 4, "fully open (at OMS or OSS)" ;
+  }
+  WR__Current_Relay_Command_Encoding {
+    logical_value, 0, "none" ;
+    logical_value, 1, "closing" ;
+    logical_value, 2, "opening" ;
+  }
+  Window_Reg_CMD_Encoding {
+    logical_value, 0, "No action" ;
+    logical_value, 1, "Manual closing" ;
+    logical_value, 2, "Auto closing" ;
+    logical_value, 3, "Manual opening" ;
+    logical_value, 4, "Auto opening" ;
+    logical_value, 5, "Stop" ;
+    logical_value, 6, "No action (not intended to be used)" ;
+    logical_value, 7, "No action2 (not intended to be used)" ;
+  }
+}
+
+Signal_representation {
+  Authorization_Encoding: Authorization ;
+  Current_Panel_Direction_State_Encoding: Current_Panel_Direction_State ;
+  Initialize_Encoding: DEZ ;
+  REF_State_Encoding: REF_State ;
+  Respone_Error_Bit_Encoding: Respone_Error_Bit ;
+  SW_Thermal_Protection_Current_State_Encoding: SW_Thermal_Protection_Current_State ;
+  Temperature_Encoding: External_Temperature ;
+  VC_CONT_Encoding: Variant_Coding_For_Continent ;
+  VehicleSpeedWnd_Encoding: VehicleSpeedWnd ;
+  WR_Current_Position_Encoding: WR_Current_Position ;
+  WR__Current_Relay_Command_Encoding: WR_Current_Relay_Command ;
+  Window_Reg_CMD_Encoding: WR_Command ;
+}

@@ -1,0 +1,478 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Misc TCU DCU
+VAL_TABLE_ SnsrSts 7 "Undefined Fault 2" 6 "Undefined Fault" 5 "Open circuit" 4 "Ground fault" 3 "Short to supply" 2 "Short to ground" 1 "Out of range" 0 "No Fault" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ MotAgCtrlOut : 0|8@1+ (1,-128) [-128|127] "Nm" Vector__XXX
+ SG_ GearbInSpdSrc : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DrmAgSpdErr : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DrmAgSpd : 0|10@1+ (1,-400) [-400|623] "rpm" Vector__XXX
+ SG_ EStopPsd : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MotSpdCtrlErr : 0|16@1+ (0.5,-10000) [-10000|22767.5] "rpm" Vector__XXX
+ SG_ DrmCtrlErr : 0|11@1+ (0.2,-200) [-200|209.4] "deg" Vector__XXX
+ SG_ MotAgCtrlErr : 0|13@1+ (0.5,-2048) [-2048|2047.5] "deg" Vector__XXX
+
+BO_ 2515997699 TCU_DevInfo4_1000ms: 9 TCU
+ SG_ DisengdRtryCtrSum : 64|6@1+ (1,0) [0|63] "" Vector__XXX
+ SG_ EngdRtryCtrSum : 58|6@1+ (1,0) [0|63] "" Vector__XXX
+ SG_ SpdMtchRtryCtrSum : 52|6@1+ (1,0) [0|63] "" Vector__XXX
+ SG_ ShiftFaiIntgd : 46|6@1+ (1,0) [0|63] "" Vector__XXX
+ SG_ ShiftCmplIntgd : 36|10@1+ (1,0) [0|1023] "" Vector__XXX
+ SG_ DrmClshAgPark : 24|12@1+ (0.1,0) [0|4095] "" Vector__XXX
+ SG_ DrmClshAgGear2 : 12|12@1+ (0.1,0) [0|4095] "" Vector__XXX
+ SG_ DrmClshAgGear1 : 0|12@1+ (0.1,0) [0|409.5] "" Vector__XXX
+
+BO_ 2375353088 Misc_ShiftReq_100ms: 8 Misc
+ SG_ ShiftReq : 0|3@1+ (1,0) [0|7] ""  TCU
+
+BO_ 2381779715 TCU_DevInfo3_10ms: 8 TCU
+ SG_ DrmMod : 15|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MotTqMod : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ MotAgPosn : 0|15@1+ (0.1,-1638.4) [-1638.4|1638.3] "deg" Vector__XXX
+ SG_ MotSpdCtrlOut : 47|14@1+ (0.1,-500) [-500|1138.3] "Nm" Vector__XXX
+ SG_ MotSpdCtrlFF : 33|14@1+ (0.1,-500) [-500|1138.3] "Nm" Vector__XXX
+ SG_ MotSpdRef : 17|16@1+ (0.5,-10000) [-10000|22767.5] "rpm" Vector__XXX
+
+BO_ 2381779459 TCU_DevInfo2_10ms: 8 TCU
+ SG_ TarGearStsEnum : 27|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Gear2SlipSpd : 55|9@1+ (1,-256) [-256|255] "rpm" Vector__XXX
+ SG_ Gear1SlipSpd : 46|9@1+ (1,-256) [-256|255] "rpm" Vector__XXX
+ SG_ DrmStuckDetnAcv : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DrmAg1 : 34|12@1+ (0.1,0) [0|409.5] "deg" Vector__XXX
+ SG_ DisengMotTqEst : 16|11@1+ (0.1,-100) [-100|104.7] "Nm" Vector__XXX
+ SG_ WhlTotTqDmdSatd : 0|16@1+ (0.1,-3276.8) [-3276.8|3276.7] "Nm" Vector__XXX
+
+BO_ 2381779203 TCU_DevInfo1_10ms: 8 TCU
+ SG_ ShiftReqd : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MotAgCtrlRef : 48|15@1+ (0.1,-1638.4) [-1638.4|1638.3] "deg" Vector__XXX
+ SG_ DrmCtrlOut : 37|11@1+ (0.1,-100) [-100|104.7] "%" Vector__XXX
+ SG_ DrmCtrlAgRef : 25|12@1+ (0.1,0) [0|409.5] "deg" Vector__XXX
+ SG_ MotTqDmd : 0|14@1+ (0.1,-500) [-500|1138.3] "Nm" Vector__XXX
+ SG_ DrmPWMDmd : 14|11@1+ (0.1,-100) [-100|104.7] "%" Vector__XXX
+
+BO_ 2448890371 TCU_Snsrs_100ms: 8 TCU
+ SG_ GearbOilTErr : 11|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ GearbOilT : 0|11@1+ (0.1,-50) [-50|154.7] "degC" Vector__XXX
+ SG_ ShiftReqStsEnum : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ShiftInhStsEnum : 24|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ParkLockSts : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ VRef5V0Err : 58|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ VRef5V0 : 32|8@1+ (0.05,-5) [-5|7.75] "V" Vector__XXX
+ SG_ DrmAg2Err : 52|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ DrmAg2 : 40|12@1+ (0.1,0) [0|409.5] "deg" Vector__XXX
+ SG_ DrmAg1Err : 55|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2381775107 TCU_PtSts_10ms: 8 TCU
+ SG_ GearbSpdOutErr : 40|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ WhlTotTqEstim : 15|16@1+ (0.1,-3276.8) [-3276.8|3276.7] "Nm"  DCU
+ SG_ TCUSts : 31|5@1+ (1,0) [0|15] ""  DCU
+ SG_ TCU_PtSts_Counter : 52|4@1+ (1,0) [0|15] ""  DCU
+ SG_ TCU_PtSts_Checksum : 56|8@1+ (1,0) [0|255] ""  DCU
+ SG_ IDUSts : 36|4@1+ (1,0) [0|15] ""  DCU
+ SG_ IDUPRNDSts : 45|3@1+ (1,0) [0|7] ""  DCU
+ SG_ HVConnSts : 48|4@1+ (1,0) [0|15] ""  DCU
+ SG_ GearShiftSts : 43|2@1+ (1,0) [0|3] ""  DCU
+ SG_ GearbSpdOut : 0|15@1+ (0.1,-1638.4) [-1638.4|1638.3] "rpm"  DCU
+
+BO_ 2448884227 TCU_PtInfo_100ms: 8 TCU
+ SG_ GearbSpdInErr : 17|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ GearbSpdIn : 0|16@1+ (0.5,-10000) [-10000|22767.5] "rpm" Vector__XXX
+ SG_ TCUFltSts2 : 36|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ TCUFltSts1 : 20|16@1+ (1,0) [0|65535] ""  DCU
+ SG_ TCU_PtInfo_Counter : 52|4@1+ (1,0) [0|15] ""  DCU
+ SG_ TCU_PtInfo_Checksum : 56|8@1+ (1,0) [0|255] ""  DCU
+
+BO_ 2381774851 TCU_PtLimits_10ms: 8 TCU
+ SG_ IDUTarGear : 49|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ IDUCurGear : 46|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ IDUSysEff : 38|8@1+ (0.5,0) [0|127.5] "%" Vector__XXX
+ SG_ TCU_PtLimits_Counter : 52|4@1+ (1,0) [0|15] ""  DCU
+ SG_ TCU_PtLimits_Checksum : 56|8@1+ (1,0) [0|255] ""  DCU
+ SG_ MinPtTqLimSts : 30|4@1+ (1,0) [0|15] ""  DCU
+ SG_ MinPtTqLim : 15|15@1+ (0.1,-3276) [-3276|0.700000000000273] "Nm"  DCU
+ SG_ MaxPtTqLimSts : 34|4@1+ (1,0) [0|15] ""  DCU
+ SG_ MaxPtTqLim : 0|15@1+ (0.1,0) [0|3276.7] "Nm"  DCU
+
+BO_ 2442396506 DCU_PtInfo_100ms: 8 DCU
+ SG_ DCU_PtInfo_Counter : 52|4@1+ (1,0) [0|15] ""  TCU
+ SG_ DCU_PtInfo_Checksum : 56|8@1+ (1,0) [0|255] ""  TCU
+ SG_ VehMEstim : 8|15@1+ (1,0) [0|32767] "kg"  TCU
+ SG_ VehGrdtEstim : 24|10@1+ (0.1,-50) [-50|52.3] "%"  TCU
+ SG_ VehPRNDDmd : 34|3@1+ (1,0) [0|7] ""  TCU
+ SG_ MaxAvlPtVccPwr : 0|8@1+ (0.1,0) [0|25.5] "kW"  TCU
+ SG_ HVReady : 37|1@1+ (1,0) [0|1] ""  TCU
+ SG_ FltClrReq : 23|1@1+ (1,0) [0|1] ""  TCU
+
+BO_ 2442330970 DCU_PtAvlPwr_100ms: 8 DCU
+ SG_ DCU_PtAvlPwr_Counter : 52|4@1+ (1,0) [0|15] ""  TCU
+ SG_ DCU_PtAvlPwr_Checksum : 56|8@1+ (1,0) [0|255] ""  TCU
+ SG_ MinAvlPtDcPwrPeak : 39|13@1+ (0.2,-1638) [-1638|0.200000000000045] "kW"  TCU
+ SG_ MinAvlPtDcPwrCont : 13|13@1+ (0.2,-1638) [-1638|0.200000000000045] "kW"  TCU
+ SG_ MaxAvlPtDcPwrPeak : 26|13@1+ (0.2,0) [0|1638.2] "kW"  TCU
+ SG_ MaxAvlPtDcPwrCont : 0|13@1+ (0.2,0) [0|1638.2] "kW"  TCU
+
+BO_ 2375156570 DCU_PtCmd_10ms: 8 DCU
+ SG_ AcvDchaReq : 50|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ KickdwReq : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ WhlTotTqDmdSrc : 32|4@1+ (1,0) [0|15] ""  TCU
+ SG_ WhlTotTqDmdPred : 16|16@1+ (0.1,-3276.8) [-3276.8|3276.7] "Nm"  TCU
+ SG_ WhlTotTqDmd : 0|16@1+ (0.1,-3276.8) [-3276.8|3276.7] "Nm"  TCU
+ SG_ GearShiftNotAllwd : 40|1@1+ (1,0) [0|1] ""  TCU
+ SG_ DCUFltSts : 36|4@1+ (1,0) [0|15] ""  TCU
+ SG_ DCU_PtCmd_Counter : 52|4@1+ (1,0) [0|15] ""  TCU
+ SG_ DCU_PtCmd_Checksum : 56|8@1+ (1,0) [0|255] ""  TCU
+
+
+
+CM_ "TCU dbc v0.3.0.0";
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 MotAgCtrlOut "Motor position PID controller output";
+CM_ SG_ 3221225472 GearbInSpdSrc "TCU input speed arbitration source. ";
+CM_ SG_ 3221225472 DrmAgSpdErr "Estimated drum rotational speed validity flag. If true, signal is not valid.";
+CM_ SG_ 3221225472 DrmAgSpd "Estimated drum rotational speed.";
+CM_ SG_ 3221225472 EStopPsd "TCU E-Stop triggered. If true, the E-Stop was pressed.";
+CM_ SG_ 3221225472 MotSpdCtrlErr "Motor speed controller speed error.";
+CM_ SG_ 3221225472 DrmCtrlErr "Drum controller angular position error";
+CM_ SG_ 3221225472 MotAgCtrlErr "Motor position PID controller error";
+CM_ BO_ 2515997699 "TCU slow rate CAN message to log low priority signals.";
+CM_ SG_ 2515997699 DisengdRtryCtrSum "Number of disengagement phase retries.";
+CM_ SG_ 2515997699 EngdRtryCtrSum "Number of engagement phase retries.";
+CM_ SG_ 2515997699 SpdMtchRtryCtrSum "Number of speed match phase retries.";
+CM_ SG_ 2515997699 ShiftFaiIntgd "Number of shift failed";
+CM_ SG_ 2515997699 ShiftCmplIntgd "Number of shift completed.";
+CM_ SG_ 2515997699 DrmClshAgPark "Park clutches clash angle position.";
+CM_ SG_ 2515997699 DrmClshAgGear2 "Second gear clutches clash angle position.";
+CM_ SG_ 2515997699 DrmClshAgGear1 "First gear clutches clash angle position.";
+CM_ SG_ 2375353088 ShiftReq "Manual shift request value.";
+CM_ BO_ 2381779715 "TCU development information sent by the TCU";
+CM_ SG_ 2381779715 DrmMod "Drum actuator operation mode.";
+CM_ SG_ 2381779715 MotTqMod "TCU Motor controller operation mode.";
+CM_ SG_ 2381779715 MotAgPosn "Motor position PID controller feedback value.";
+CM_ SG_ 2381779715 MotSpdCtrlOut "Motor speed controller output torque.";
+CM_ SG_ 2381779715 MotSpdCtrlFF "Motor speed controller feed forward term.";
+CM_ SG_ 2381779715 MotSpdRef "Motor speed controller speed reference";
+CM_ BO_ 2381779459 "TCU development information sent by the TCU";
+CM_ SG_ 2381779459 TarGearStsEnum "Target gear status.";
+CM_ SG_ 2381779459 Gear2SlipSpd "Speed difference between gear 2 dogs-clutch and pockets-clutch.";
+CM_ SG_ 2381779459 Gear1SlipSpd "Speed difference between gear 1 dogs-clutch and pockets-clutch.";
+CM_ SG_ 2381779459 DrmStuckDetnAcv "Flag to indicate that clutches got stuck during a gear engagement.";
+CM_ SG_ 2381779459 DrmAg1 "Drum angle 1 measurement";
+CM_ SG_ 2381779459 DisengMotTqEst "Estimated motor torque required to disengage current gear at no load.";
+CM_ SG_ 2381779459 WhlTotTqDmdSatd "Final wheel total torque demand. DCU torque demand saturated with the latest torque limits.";
+CM_ BO_ 2381779203 "TCU development information sent by the TCU";
+CM_ SG_ 2381779203 ShiftReqd "Shift requested flag.";
+CM_ SG_ 2381779203 MotAgCtrlRef "Motor position PID controller target value.";
+CM_ SG_ 2381779203 DrmCtrlOut "Drum controller output PWM.";
+CM_ SG_ 2381779203 DrmCtrlAgRef "Drum controller angular position reference.";
+CM_ SG_ 2381779203 MotTqDmd "Final motor torque demand sent to the inverter.";
+CM_ SG_ 2381779203 DrmPWMDmd "Final drum actuator PWM demand.";
+CM_ BO_ 2448890371 "IDU sensors information from the TCU";
+CM_ SG_ 2448890371 GearbOilTErr "Measured gearbox oil temperature validity flag. If not zero, measurement is not valid.";
+CM_ SG_ 2448890371 GearbOilT "Measured gearbox oil temperature";
+CM_ SG_ 2448890371 ShiftInhStsEnum "Reason that caused the inhibition of a shift.";
+CM_ SG_ 2448890371 ParkLockSts "Park Lock Status signal. This enumerated signal, describes the park lock actuator status and transitions. ";
+CM_ SG_ 2448890371 VRef5V0Err "TCU 5.0V reference measurement validity flag. If not zero, measurement is not valid.";
+CM_ SG_ 2448890371 VRef5V0 "TCU 5.0V reference measurement";
+CM_ SG_ 2448890371 DrmAg2Err "Drum angle 2 measurement validity flag. If not zero, measurement is not valid.";
+CM_ SG_ 2448890371 DrmAg2 "Drum angle 2  measurement";
+CM_ SG_ 2448890371 DrmAg1Err "Drum angle 1 measurement validity flag. If not zero, measurement is not valid.";
+CM_ BO_ 2381775107 "IDU status information from the TCU";
+CM_ SG_ 2381775107 GearbSpdOutErr "Measured gearbox output speed  validity flag. If not zero, measurement is not valid.";
+CM_ SG_ 2381775107 WhlTotTqEstim "Wheel torque estimation - Using inverter estimation, gear selection and efficiency maps";
+CM_ SG_ 2381775107 TCUSts "TCU Status - Health state - Gear shifting state machine";
+CM_ SG_ 2381775107 TCU_PtSts_Counter "Message counter.";
+CM_ SG_ 2381775107 TCU_PtSts_Checksum "Message checksum.";
+CM_ SG_ 2381775107 IDUSts "IDU Status - Health state - Main state machine";
+CM_ SG_ 2381775107 IDUPRNDSts "Current IDU gear selecion";
+CM_ SG_ 2381775107 HVConnSts "Status of the HV Connector";
+CM_ SG_ 2381775107 GearShiftSts "Gear change warning - TCU is going to execute a gear change in the next 100ms";
+CM_ SG_ 2381775107 GearbSpdOut "Gearbox output speed - before the differential. 
+The speed will always be reported positive due to an issue with the speed sensor on the Beta IDUs.";
+CM_ BO_ 2448884227 "IDU information message from the TCU";
+CM_ SG_ 2448884227 GearbSpdInErr "Gearbox input speed measurement validity flag. If not zero, measurement is not valid.";
+CM_ SG_ 2448884227 GearbSpdIn "Gearbox input speed measurement";
+CM_ SG_ 2448884227 TCUFltSts2 "TCU fault bits package 2. ";
+CM_ SG_ 2448884227 TCUFltSts1 "TCU fault bits package 1. ";
+CM_ SG_ 2448884227 TCU_PtInfo_Counter "Message counter.";
+CM_ SG_ 2448884227 TCU_PtInfo_Checksum "Message checksum.";
+CM_ BO_ 2381774851 "IDU torque limits from the TCU";
+CM_ SG_ 2381774851 IDUTarGear "Target gear - Gear to be engaged during a shift";
+CM_ SG_ 2381774851 IDUCurGear "Current gear - Actual engaged gear";
+CM_ SG_ 2381774851 IDUSysEff "Estimated total efficiency of the IDU";
+CM_ SG_ 2381774851 TCU_PtLimits_Counter "Message counter.";
+CM_ SG_ 2381774851 TCU_PtLimits_Checksum "Message checksum.";
+CM_ SG_ 2381774851 MinPtTqLimSts "Limiting reason for min torque limit";
+CM_ SG_ 2381774851 MinPtTqLim "Available IDU torque - Minimum - Summary of Inverter and Gearbox";
+CM_ SG_ 2381774851 MaxPtTqLimSts "Limiting reason for max torque limit";
+CM_ SG_ 2381774851 MaxPtTqLim "Available IDU torque - Maximum - Summary of Inverter and Gearbox";
+CM_ BO_ 2442396506 "Powertrain information message from the DCU";
+CM_ SG_ 2442396506 DCU_PtInfo_Counter "Message counter.";
+CM_ SG_ 2442396506 DCU_PtInfo_Checksum "Message checksum.";
+CM_ SG_ 2442396506 VehMEstim "Vehicle mass estimation";
+CM_ SG_ 2442396506 VehGrdtEstim "Vehicle gradient estimation";
+CM_ SG_ 2442396506 VehPRNDDmd "Vehicle gear selection - Output of the gear selector module";
+CM_ SG_ 2442396506 MaxAvlPtVccPwr "Maximum available powertrain LV supply power";
+CM_ SG_ 2442396506 HVReady "DCU flag that precharge and initialisation is complete.";
+CM_ SG_ 2442396506 FltClrReq "Request for the TCU to clear faults";
+CM_ BO_ 2442330970 "Available HV power for the powertrain";
+CM_ SG_ 2442330970 DCU_PtAvlPwr_Counter "Message counter.";
+CM_ SG_ 2442330970 DCU_PtAvlPwr_Checksum "Message checksum.";
+CM_ SG_ 2442330970 MinAvlPtDcPwrPeak "Minimum available peak powertrain HV DC power.";
+CM_ SG_ 2442330970 MinAvlPtDcPwrCont "Minimum available continuous powertrain HV DC power.";
+CM_ SG_ 2442330970 MaxAvlPtDcPwrPeak "Maximum available peak powertrain HV DC power.";
+CM_ SG_ 2442330970 MaxAvlPtDcPwrCont "Maximum available continuous powertrain HV DC power.";
+CM_ BO_ 2375156570 "Powertrain command message from the DCU";
+CM_ SG_ 2375156570 AcvDchaReq "Active Discharge request from DCU";
+CM_ SG_ 2375156570 KickdwReq "Kick down request from DCU";
+CM_ SG_ 2375156570 WhlTotTqDmdSrc "Torque demand source. Torque arbitration output.
+Value table: Driver Demand, Creep, ABS, Traction, etc.";
+CM_ SG_ 2375156570 WhlTotTqDmdPred "Predicted (2 sec) wheel total torque demand at the output of the gearbox.";
+CM_ SG_ 2375156570 WhlTotTqDmd "Wheel total torque demand at the output of the gearbox. ";
+CM_ SG_ 2375156570 GearShiftNotAllwd "Gear shift prohibition flag.";
+CM_ SG_ 2375156570 DCUFltSts "DCU fault status.Fault status of external systems that IDU needs to respond to. For now we only have one fault reaction.";
+CM_ SG_ 2375156570 DCU_PtCmd_Counter "Message counter.";
+CM_ SG_ 2375156570 DCU_PtCmd_Checksum "Message checksum.";
+BA_DEF_  "VersionNumber" INT 0 0;
+BA_DEF_  "VersionDay" INT 0 31;
+BA_DEF_  "VersionWeek" INT 0 52;
+BA_DEF_  "VersionMonth" INT 0 12;
+BA_DEF_  "VersionYear" INT 0 99;
+BA_DEF_  "Baudrate" INT 0 0;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","IfActive","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","noMsgSendType";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_DEF_  "VersionNumber" 1;
+BA_DEF_DEF_  "VersionDay" 1;
+BA_DEF_DEF_  "VersionWeek" 1;
+BA_DEF_DEF_  "VersionMonth" 1;
+BA_DEF_DEF_  "VersionYear" 20;
+BA_DEF_DEF_  "Baudrate" 500000;
+BA_DEF_DEF_  "Manufacturer" "Arrival Ltd.";
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "GenMsgSendType" "cyclic";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_ "VersionYear" 22;
+BA_ "VersionNumber" 0;
+BA_ "BusType" "CAN";
+BA_ "VersionMonth" 9;
+BA_ "VersionWeek" 35;
+BA_ "VersionDay" 2;
+BA_ "DBName" "TCU_v1";
+BA_ "NmStationAddress" BU_ Misc 245;
+BA_ "NmStationAddress" BU_ TCU 3;
+BA_ "NmStationAddress" BU_ DCU 90;
+BA_ "GenMsgCycleTime" BO_ 2515997699 1000;
+BA_ "VFrameFormat" BO_ 2515997699 3;
+BA_ "GenMsgCycleTime" BO_ 2375353088 100;
+BA_ "VFrameFormat" BO_ 2375353088 3;
+BA_ "GenMsgCycleTime" BO_ 2381779715 10;
+BA_ "VFrameFormat" BO_ 2381779715 3;
+BA_ "GenMsgCycleTime" BO_ 2381779459 10;
+BA_ "VFrameFormat" BO_ 2381779459 3;
+BA_ "GenMsgCycleTime" BO_ 2381779203 10;
+BA_ "VFrameFormat" BO_ 2381779203 3;
+BA_ "GenMsgCycleTime" BO_ 2448890371 100;
+BA_ "VFrameFormat" BO_ 2448890371 3;
+BA_ "GenMsgCycleTime" BO_ 2381775107 10;
+BA_ "VFrameFormat" BO_ 2381775107 3;
+BA_ "GenMsgCycleTime" BO_ 2448884227 100;
+BA_ "VFrameFormat" BO_ 2448884227 3;
+BA_ "GenMsgCycleTime" BO_ 2381774851 10;
+BA_ "VFrameFormat" BO_ 2381774851 3;
+BA_ "GenMsgCycleTime" BO_ 2442396506 100;
+BA_ "VFrameFormat" BO_ 2442396506 3;
+BA_ "GenMsgCycleTime" BO_ 2442330970 100;
+BA_ "VFrameFormat" BO_ 2442330970 3;
+BA_ "GenMsgCycleTime" BO_ 2375156570 10;
+BA_ "VFrameFormat" BO_ 2375156570 3;
+BA_ "GenSigStartValue" SG_ 3221225472 MotAgCtrlOut 128;
+BA_ "GenSigStartValue" SG_ 3221225472 DrmAgSpd 400;
+BA_ "GenSigStartValue" SG_ 3221225472 MotSpdCtrlErr 20000;
+BA_ "GenSigStartValue" SG_ 3221225472 DrmCtrlErr 1000;
+BA_ "GenSigStartValue" SG_ 3221225472 MotAgCtrlErr 4096;
+BA_ "GenSigStartValue" SG_ 2381779715 MotAgPosn 16384;
+BA_ "GenSigStartValue" SG_ 2381779715 MotSpdCtrlOut 5000;
+BA_ "GenSigStartValue" SG_ 2381779715 MotSpdCtrlFF 5000;
+BA_ "GenSigStartValue" SG_ 2381779715 MotSpdRef 20000;
+BA_ "GenSigStartValue" SG_ 2381779459 Gear2SlipSpd 256;
+BA_ "GenSigStartValue" SG_ 2381779459 Gear1SlipSpd 256;
+BA_ "GenSigStartValue" SG_ 2381779459 DrmAg1 2006;
+BA_ "GenSigStartValue" SG_ 2381779459 DisengMotTqEst 1000;
+BA_ "GenSigStartValue" SG_ 2381779459 WhlTotTqDmdSatd 32768;
+BA_ "GenSigStartValue" SG_ 2381779203 MotAgCtrlRef 16384;
+BA_ "GenSigStartValue" SG_ 2381779203 DrmCtrlOut 1000;
+BA_ "GenSigStartValue" SG_ 2381779203 DrmCtrlAgRef 2006;
+BA_ "GenSigStartValue" SG_ 2381779203 MotTqDmd 5000;
+BA_ "GenSigStartValue" SG_ 2381779203 DrmPWMDmd 1000;
+BA_ "GenSigStartValue" SG_ 2448890371 GearbOilT 710;
+BA_ "GenSigStartValue" SG_ 2448890371 ShiftReqStsEnum 10;
+BA_ "GenSigStartValue" SG_ 2448890371 ParkLockSts 1;
+BA_ "GenSigStartValue" SG_ 2448890371 VRef5V0 200;
+BA_ "GenSigStartValue" SG_ 2448890371 DrmAg2 2006;
+BA_ "GenSigStartValue" SG_ 2381775107 WhlTotTqEstim 32768;
+BA_ "GenSigStartValue" SG_ 2381775107 TCUSts 0;
+BA_ "SigType" SG_ 2381775107 TCU_PtSts_Counter 11;
+BA_ "SigType" SG_ 2381775107 TCU_PtSts_Checksum 12;
+BA_ "GenSigStartValue" SG_ 2381775107 TCU_PtSts_Checksum 255;
+BA_ "GenSigStartValue" SG_ 2381775107 IDUSts 0;
+BA_ "GenSigStartValue" SG_ 2381775107 IDUPRNDSts 5;
+BA_ "GenSigStartValue" SG_ 2381775107 HVConnSts 2;
+BA_ "GenSigStartValue" SG_ 2381775107 GearShiftSts 0;
+BA_ "GenSigStartValue" SG_ 2381775107 GearbSpdOut 16384;
+BA_ "GenSigStartValue" SG_ 2448884227 GearbSpdIn 20000;
+BA_ "GenSigStartValue" SG_ 2448884227 TCUFltSts2 0;
+BA_ "GenSigStartValue" SG_ 2448884227 TCUFltSts1 0;
+BA_ "SigType" SG_ 2448884227 TCU_PtInfo_Counter 11;
+BA_ "SigType" SG_ 2448884227 TCU_PtInfo_Checksum 12;
+BA_ "GenSigStartValue" SG_ 2448884227 TCU_PtInfo_Checksum 255;
+BA_ "GenSigStartValue" SG_ 2381774851 IDUTarGear 2;
+BA_ "GenSigStartValue" SG_ 2381774851 IDUCurGear 2;
+BA_ "SigType" SG_ 2381774851 TCU_PtLimits_Counter 11;
+BA_ "SigType" SG_ 2381774851 TCU_PtLimits_Checksum 12;
+BA_ "GenSigStartValue" SG_ 2381774851 TCU_PtLimits_Checksum 255;
+BA_ "GenSigStartValue" SG_ 2381774851 MinPtTqLimSts 0;
+BA_ "GenSigStartValue" SG_ 2381774851 MinPtTqLim 32760;
+BA_ "GenSigStartValue" SG_ 2381774851 MaxPtTqLimSts 0;
+BA_ "GenSigStartValue" SG_ 2381774851 MaxPtTqLim 0;
+BA_ "SigType" SG_ 2442396506 DCU_PtInfo_Counter 11;
+BA_ "SigType" SG_ 2442396506 DCU_PtInfo_Checksum 12;
+BA_ "GenSigStartValue" SG_ 2442396506 VehMEstim 0;
+BA_ "GenSigStartValue" SG_ 2442396506 VehGrdtEstim 500;
+BA_ "GenSigStartValue" SG_ 2442396506 VehPRNDDmd 0;
+BA_ "GenSigStartValue" SG_ 2442396506 MaxAvlPtVccPwr 0;
+BA_ "GenSigStartValue" SG_ 2442396506 HVReady 0;
+BA_ "GenSigStartValue" SG_ 2442396506 FltClrReq 0;
+BA_ "SigType" SG_ 2442330970 DCU_PtAvlPwr_Counter 11;
+BA_ "SigType" SG_ 2442330970 DCU_PtAvlPwr_Checksum 12;
+BA_ "GenSigStartValue" SG_ 2442330970 MinAvlPtDcPwrPeak 8190;
+BA_ "GenSigStartValue" SG_ 2442330970 MinAvlPtDcPwrCont 8190;
+BA_ "GenSigStartValue" SG_ 2375156570 WhlTotTqDmdPred 32768;
+BA_ "GenSigStartValue" SG_ 2375156570 WhlTotTqDmd 32768;
+BA_ "SigType" SG_ 2375156570 DCU_PtCmd_Counter 11;
+BA_ "SigType" SG_ 2375156570 DCU_PtCmd_Checksum 12;
+VAL_ 3221225472 GearbInSpdSrc 2 "Error" 1 "CAN Speed" 0 "Hall Sensor" ;
+VAL_ 2375353088 ShiftReq 7 "N/A" 3 "Fault" 2 "Downshift" 1 "Upshift" 0 "No request" ;
+VAL_ 2381779715 DrmMod 2 "Drum Error" 1 "Drum Enabled" 0 "Drum Disabled" ;
+VAL_ 2381779715 MotTqMod 7 "Error" 4 "Speed Control" 3 "Ramp Torque Down" 2 "Ramp Torque Up" 1 "Passthrough" 0 "No Torque" ;
+VAL_ 2381779459 TarGearStsEnum 12 "S_Reqd_LoSpd" 11 "S_Reqd_Durb" 15 "Error" 10 "S_Reqd_TqSpdMap" 9 "OvrValue" 8 "S_Reqd_ManShift" 7 "S_Reqd_OptEff" 6 "S_Reqd_WhlTqReq" 5 "S_Reqd_Overheatg" 4 "S_Reqd_OverSpd" 3 "S_Reqd_PRND" 2 "NoShift_Disad" 1 "NoShift_Inh" 0 "NoShift" ;
+VAL_ 2448890371 GearbOilTErr 7 "Undefined Fault 2" 6 "Undefined Fault" 5 "Open circuit" 4 "Ground fault" 3 "Short to supply" 2 "Short to ground" 1 "Out of range" 0 "No Fault" ;
+VAL_ 2448890371 ShiftReqStsEnum 10 "NoReq" 9 "Durb" 15 "Error" 8 "OptEff" 7 "TqSpdReq" 6 "ManShift" 5 "PRND" 4 "LoSpd" 3 "WhlTqReq" 2 "OverSpd" 1 "Overheatg" 0 "NotUsed" ;
+VAL_ 2448890371 ShiftInhStsEnum 0 "None" 15 "Error" 9 "OverSpdPrevnInh" 8 "TqItPrevn" 7 "ShiftTiInh" 6 "UndrTqPrevnInh" 5 "Regen" 4 "NVH" 3 "GearbOilTinh" 2 "DCUShiftInh" 1 "Reverse" ;
+VAL_ 2448890371 ParkLockSts 5 "Disengaged" 4 "Disengaging" 3 "Engaged" 2 "Engaging" 1 "Initializing " 0 "Error" ;
+VAL_ 2448890371 VRef5V0Err 7 "Undefined Fault 2" 6 "Undefined Fault" 5 "Open circuit" 4 "Ground fault" 3 "Short to supply" 2 "Short to ground" 1 "Out of range" 0 "No Fault" ;
+VAL_ 2448890371 DrmAg2Err 7 "Undefined Fault 2" 6 "Undefined Fault" 5 "Open circuit" 4 "Ground fault" 3 "Short to supply" 2 "Short to ground" 1 "Out of range" 0 "No Fault" ;
+VAL_ 2448890371 DrmAg1Err 7 "Undefined Fault 2" 6 "Undefined Fault" 5 "Open circuit" 4 "Ground fault" 3 "Short to supply" 2 "Short to ground" 1 "Out of range" 0 "No Fault" ;
+VAL_ 2381775107 GearbSpdOutErr 7 "Undefined Fault 2" 6 "Undefined Fault" 5 "Open circuit" 4 "Ground fault" 3 "Short to supply" 2 "Short to ground" 1 "Out of range" 0 "No Fault" ;
+VAL_ 2381775107 TCUSts 15 "Fault" 7 "Ramp Up" 6 "Engage" 5 "Speed Match" 4 "Disengage" 3 "Ramp Down" 2 "Idle" 1 "Initialize" 0 "Startup" ;
+VAL_ 2381775107 IDUSts 14 "Safe Mode" 15 "Fault" 10 "Operational" 2 "HV Initialization" 1 "LV Initialization" 0 "Startup" ;
+VAL_ 2381775107 IDUPRNDSts 6 "DirChange" 5 "Init" 7 "NA" 4 "Neutral" 3 "Reverse" 2 "Drive" 1 "ParkLock" 0 "Error" ;
+VAL_ 2381775107 HVConnSts 7 "Error" 2 "Unknown" 1 "Connected" 0 "Disconnected" ;
+VAL_ 2381775107 GearShiftSts 3 "Error" 2 "PrepareForShift" 1 "Active" 0 "Inactive" ;
+VAL_ 2448884227 GearbSpdInErr 7 "Undefined Fault 2" 6 "Undefined Fault" 5 "Open circuit" 4 "Ground fault" 3 "Short to supply" 2 "Short to ground" 1 "Out of range" 0 "No Fault" ;
+VAL_ 2381774851 IDUTarGear 7 "Error" 5 "Gear_3" 4 "Neutral_2" 3 "Gear_2" 2 "Neutral_1" 1 "Gear_1" 0 "Park" ;
+VAL_ 2381774851 IDUCurGear 7 "Error" 5 "Gear_3" 4 "Neutral_2" 3 "Gear_2" 2 "Neutral_1" 1 "Gear_1" 0 "Park" ;
+VAL_ 2381774851 MinPtTqLimSts 15 "Error" 6 "Gearb Gear Rat" 5 "TCU Status" 4 "Gearb HW Lim Pwr" 3 "Gearb HW Lim Spd" 2 "Gearb HW Lim Temp" 1 "Inverter" 0 "Gearb HW Lim Tq" ;
+VAL_ 2381774851 MaxPtTqLimSts 15 "Error" 6 "Gearb Gear Rat" 5 "TCU Status" 4 "Gearb HW Lim Pwr" 3 "Gearb HW Lim Spd" 2 "Gearb HW Lim Temp" 1 "Inverter" 0 "Gearb HW Lim Tq" ;
+VAL_ 2442396506 VehPRNDDmd 7 "NA" 4 "Neutral" 3 "Reverse" 2 "Drive" 1 "ParkLock" 0 "Error" ;
+VAL_ 2442396506 HVReady 1 "Available" 0 "NotAvailable" ;
+VAL_ 2442396506 FltClrReq 1 "Active" 0 "Inactive" ;
+VAL_ 2375156570 AcvDchaReq 3 "NA" 2 "Error" 1 "Active" 0 "Inactive" ;
+VAL_ 2375156570 KickdwReq 3 "NA" 2 "Error" 1 "Active" 0 "Inactive" ;
+VAL_ 2375156570 GearShiftNotAllwd 1 "Prohibited" 0 "Allowed" ;
+

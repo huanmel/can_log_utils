@@ -1,0 +1,420 @@
+
+
+LIN_description_file;
+LIN_protocol_version = "2.1";
+LIN_language_version = "2.1";
+LIN_speed = 19.2 kbps;
+
+Nodes {
+  Master: BCM_IntLightCmd, 1 ms, 0 ms ;
+  Slaves: Headliner_Lamp, Cargo_Lamp_1, Cargo_Lamp_2, Cargo_Lamp_3, Cargo_Lamp_4, Footwell_Left, Footwell_Right ;
+}
+
+Signals {
+  LocationId_LampLIN_HL: 8, 0, BCM_IntLightCmd, Headliner_Lamp ;
+  Intensity_LampLIN_TaskLH_HL: 7, 0, BCM_IntLightCmd, Headliner_Lamp ;
+  UpdateIntensity_LampLIN_HL: 1, 0, BCM_IntLightCmd, Headliner_Lamp ;
+  RampDuration_LampLIN_HL: 4, 0, BCM_IntLightCmd, Headliner_Lamp ;
+  Headliner_Status: 1, 0, Headliner_Lamp, BCM_IntLightCmd ;
+  Headliner_Status_OverVolt: 1, 0, Headliner_Lamp, BCM_IntLightCmd ;
+  Headliner_Status_OverTemp: 1, 0, Headliner_Lamp, BCM_IntLightCmd ;
+  Headliner_Status_ResponseError: 1, 0, Headliner_Lamp, BCM_IntLightCmd ;
+  Headliner_Intensity_TaskLH: 7, 0, Headliner_Lamp, BCM_IntLightCmd ;
+  CargoLamp_1_Status: 1, 0, Cargo_Lamp_1, BCM_IntLightCmd ;
+  CargoLamp_1_Status_OverVolt: 1, 0, Cargo_Lamp_1, BCM_IntLightCmd ;
+  CargoLamp_1_Status_ResponseError: 1, 0, Cargo_Lamp_1, BCM_IntLightCmd ;
+  CargoLamp_1_Intensity: 7, 0, Cargo_Lamp_1, BCM_IntLightCmd ;
+  CargoLamp_2_Status: 1, 0, Cargo_Lamp_2, BCM_IntLightCmd ;
+  CargoLamp_2_Status_OverVolt: 1, 0, Cargo_Lamp_2, BCM_IntLightCmd ;
+  CargoLamp_2_Status_ResponseError: 1, 0, Cargo_Lamp_2, BCM_IntLightCmd ;
+  CargoLamp_2_Intensity: 7, 0, Cargo_Lamp_2, BCM_IntLightCmd ;
+  CargoLamp_3_Status: 1, 0, Cargo_Lamp_3, BCM_IntLightCmd ;
+  CargoLamp_3_Status_OverVolt: 1, 0, Cargo_Lamp_3, BCM_IntLightCmd ;
+  CargoLamp_3_Status_ResponseError: 1, 0, Cargo_Lamp_3, BCM_IntLightCmd ;
+  CargoLamp_3_Intensity: 7, 0, Cargo_Lamp_3, BCM_IntLightCmd ;
+  CargoLamp_4_Status: 1, 0, Cargo_Lamp_4, BCM_IntLightCmd ;
+  CargoLamp_4_Status_OverVolt: 1, 0, Cargo_Lamp_4, BCM_IntLightCmd ;
+  CargoLamp_4_Status_ResponseError: 1, 0, Cargo_Lamp_4, BCM_IntLightCmd ;
+  CargoLamp_4_Intensity: 7, 0, Cargo_Lamp_4, BCM_IntLightCmd ;
+  FWLH_Status: 1, 0, Footwell_Left, BCM_IntLightCmd ;
+  FWLH_Status_OverVolt: 1, 0, Footwell_Left, BCM_IntLightCmd ;
+  FWLH_Status_OverTemp: 1, 0, Footwell_Left, BCM_IntLightCmd ;
+  FWLH_Status_ResponseError: 1, 0, Footwell_Left, BCM_IntLightCmd ;
+  FWLH_Intensity: 7, 0, Footwell_Left, BCM_IntLightCmd ;
+  FWRH_Status: 1, 0, Footwell_Right, BCM_IntLightCmd ;
+  FWRH_Status_OverVolt: 1, 0, Footwell_Right, BCM_IntLightCmd ;
+  FWRH_Status_OverTemp: 1, 0, Footwell_Right, BCM_IntLightCmd ;
+  FWRH_Status_ResponseError: 1, 0, Footwell_Right, BCM_IntLightCmd ;
+  FWRH_Intensity: 7, 0, Footwell_Right, BCM_IntLightCmd ;
+  Headliner_Intensity_TaskRH: 7, 0, Headliner_Lamp, BCM_IntLightCmd ;
+  Headliner_Intensity_Ambient: 7, 0, Headliner_Lamp, BCM_IntLightCmd ;
+  Intensity_LampLIN_TaskRH_HL: 7, 0, BCM_IntLightCmd, Headliner_Lamp ;
+  Intensity_LampLIN_Ambient_HL: 7, 0, BCM_IntLightCmd, Headliner_Lamp ;
+  Intensity_LampLIN_CL_FW: 7, 0, BCM_IntLightCmd, Cargo_Lamp_1, Cargo_Lamp_2, Cargo_Lamp_3, Cargo_Lamp_4, Footwell_Left, Footwell_Right ;
+  RampDuration_LampLIN_CL_FW: 4, 0, BCM_IntLightCmd, Cargo_Lamp_1, Cargo_Lamp_2, Cargo_Lamp_3, Cargo_Lamp_4, Footwell_Left, Footwell_Right ;
+  LocationID_Cargo1: 1, 0, BCM_IntLightCmd, Cargo_Lamp_1, Cargo_Lamp_2, Cargo_Lamp_3, Cargo_Lamp_4, Footwell_Left, Footwell_Right ;
+  LocationID_Cargo2: 1, 0, BCM_IntLightCmd, Cargo_Lamp_1, Cargo_Lamp_2, Cargo_Lamp_3, Cargo_Lamp_4, Footwell_Left, Footwell_Right ;
+  LocationID_Cargo3: 1, 0, BCM_IntLightCmd, Cargo_Lamp_1, Cargo_Lamp_2, Cargo_Lamp_3, Cargo_Lamp_4, Footwell_Left, Footwell_Right ;
+  LocationID_Cargo4: 1, 0, BCM_IntLightCmd, Cargo_Lamp_1, Cargo_Lamp_2, Cargo_Lamp_3, Cargo_Lamp_4, Footwell_Left, Footwell_Right ;
+  LocationID_Footwell_Left: 1, 0, BCM_IntLightCmd, Cargo_Lamp_1, Cargo_Lamp_2, Cargo_Lamp_3, Cargo_Lamp_4, Footwell_Left, Footwell_Right ;
+  LocationID_Footwell_Right: 1, 0, BCM_IntLightCmd, Cargo_Lamp_1, Cargo_Lamp_2, Cargo_Lamp_3, Cargo_Lamp_4, Footwell_Left, Footwell_Right ;
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+
+Frames {
+  BCM_IntLightCmd_Headliner_Lamps: 30, BCM_IntLightCmd, 5 {
+    LocationId_LampLIN_HL, 0 ;
+    Intensity_LampLIN_TaskLH_HL, 8 ;
+    UpdateIntensity_LampLIN_HL, 29 ;
+    RampDuration_LampLIN_HL, 30 ;
+    Intensity_LampLIN_TaskRH_HL, 15 ;
+    Intensity_LampLIN_Ambient_HL, 22 ;
+  }
+  Headliner_Lamp: 32, Headliner_Lamp, 4 {
+    Headliner_Status, 0 ;
+    Headliner_Status_OverVolt, 1 ;
+    Headliner_Status_OverTemp, 2 ;
+    Headliner_Status_ResponseError, 3 ;
+    Headliner_Intensity_TaskLH, 4 ;
+    Headliner_Intensity_TaskRH, 11 ;
+    Headliner_Intensity_Ambient, 18 ;
+  }
+  Cargo_Lamp_1: 34, Cargo_Lamp_1, 2 {
+    CargoLamp_1_Status, 0 ;
+    CargoLamp_1_Status_OverVolt, 1 ;
+    CargoLamp_1_Status_ResponseError, 2 ;
+    CargoLamp_1_Intensity, 3 ;
+  }
+  Cargo_Lamp_2: 36, Cargo_Lamp_2, 2 {
+    CargoLamp_2_Status, 0 ;
+    CargoLamp_2_Status_OverVolt, 1 ;
+    CargoLamp_2_Status_ResponseError, 2 ;
+    CargoLamp_2_Intensity, 3 ;
+  }
+  Cargo_Lamp_3: 38, Cargo_Lamp_3, 2 {
+    CargoLamp_3_Status, 0 ;
+    CargoLamp_3_Status_OverVolt, 1 ;
+    CargoLamp_3_Status_ResponseError, 2 ;
+    CargoLamp_3_Intensity, 3 ;
+  }
+  Cargo_Lamp_4: 40, Cargo_Lamp_4, 2 {
+    CargoLamp_4_Status, 0 ;
+    CargoLamp_4_Status_OverVolt, 1 ;
+    CargoLamp_4_Status_ResponseError, 2 ;
+    CargoLamp_4_Intensity, 3 ;
+  }
+  Footwell_Left: 8, Footwell_Left, 2 {
+    FWLH_Status, 0 ;
+    FWLH_Status_OverVolt, 1 ;
+    FWLH_Status_OverTemp, 2 ;
+    FWLH_Status_ResponseError, 3 ;
+    FWLH_Intensity, 4 ;
+  }
+  Footwell_Right: 20, Footwell_Right, 2 {
+    FWRH_Status, 0 ;
+    FWRH_Status_OverVolt, 1 ;
+    FWRH_Status_OverTemp, 2 ;
+    FWRH_Status_ResponseError, 3 ;
+    FWRH_Intensity, 4 ;
+  }
+  BCM_IntLightCmd_CL_FW_Lamps: 31, BCM_IntLightCmd, 3 {
+    Intensity_LampLIN_CL_FW, 8 ;
+    RampDuration_LampLIN_CL_FW, 15 ;
+    LocationID_Cargo1, 0 ;
+    LocationID_Cargo2, 1 ;
+    LocationID_Cargo3, 2 ;
+    LocationID_Cargo4, 3 ;
+    LocationID_Footwell_Left, 4 ;
+    LocationID_Footwell_Right, 5 ;
+  }
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  Headliner_Lamp{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x61 ;
+    initial_NAD = 0x61 ;
+    product_id = 0x9C, 0x0, 0 ;
+    response_error = Headliner_Status_ResponseError ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      BCM_IntLightCmd_Headliner_Lamps ;
+      Headliner_Lamp ;
+    }
+  }
+  Cargo_Lamp_1{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x62 ;
+    initial_NAD = 0x62 ;
+    product_id = 0x9C, 0x0, 0 ;
+    response_error = CargoLamp_1_Status_ResponseError ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      Cargo_Lamp_1 ;
+      BCM_IntLightCmd_CL_FW_Lamps ;
+    }
+  }
+  Cargo_Lamp_2{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x63 ;
+    initial_NAD = 0x63 ;
+    product_id = 0x9C, 0x0, 0 ;
+    response_error = CargoLamp_2_Status_ResponseError ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      Cargo_Lamp_2 ;
+      BCM_IntLightCmd_CL_FW_Lamps ;
+    }
+  }
+  Cargo_Lamp_3{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x64 ;
+    initial_NAD = 0x64 ;
+    product_id = 0x9C, 0x0, 0 ;
+    response_error = CargoLamp_3_Status_ResponseError ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      Cargo_Lamp_3 ;
+      BCM_IntLightCmd_CL_FW_Lamps ;
+    }
+  }
+  Cargo_Lamp_4{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x65 ;
+    initial_NAD = 0x65 ;
+    product_id = 0x9C, 0x0, 0 ;
+    response_error = CargoLamp_4_Status_ResponseError ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      Cargo_Lamp_4 ;
+      BCM_IntLightCmd_CL_FW_Lamps ;
+    }
+  }
+  Footwell_Left{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x67 ;
+    initial_NAD = 0x67 ;
+    product_id = 0x9C, 0x0, 0 ;
+    response_error = FWLH_Status_ResponseError ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      Footwell_Left ;
+      BCM_IntLightCmd_CL_FW_Lamps ;
+    }
+  }
+  Footwell_Right{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 0x68 ;
+    initial_NAD = 0x68 ;
+    product_id = 0x9C, 0x0, 0 ;
+    response_error = FWRH_Status_ResponseError ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      Footwell_Right ;
+      BCM_IntLightCmd_CL_FW_Lamps ;
+    }
+  }
+}
+
+Schedule_tables {
+ Normal_ScheduleTable {
+    BCM_IntLightCmd_Headliner_Lamps delay 20 ms ;
+    BCM_IntLightCmd_CL_FW_Lamps delay 20 ms ;
+    Headliner_Lamp delay 20 ms ;
+    Cargo_Lamp_1 delay 20 ms ;
+    Cargo_Lamp_2 delay 20 ms ;
+    Cargo_Lamp_3 delay 20 ms ;
+    Cargo_Lamp_4 delay 20 ms ;
+    Footwell_Left delay 20 ms ;
+    Footwell_Right delay 20 ms ;
+  }
+ Diagnostic_ScheduleTable {
+    SlaveResp delay 10 ms ;
+    MasterReq delay 10 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  BCM_IntLightCmd_NewSignal_Encoding {
+    physical_value, 0, 100, 1, 0, "%" ;
+  }
+  CargoLamp_Intensity_Encoding {
+    physical_value, 0, 100, 1, 0, "%" ;
+  }
+  CargoLamp_Intensity_Encoding_1 {
+    physical_value, 0, 100, 1, 0, "%" ;
+  }
+  CargoLamp_Status_Encoding {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Fault" ;
+  }
+  CargoLamp_Status_Encoding_1 {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Fault" ;
+  }
+  CargoLamp_Status_OverTemp_Encoding_1 {
+    logical_value, 0, "Temp_OK" ;
+    logical_value, 1, "Temp_Warning" ;
+  }
+  CargoLamp_Status_OverVolt_Encoding {
+    logical_value, 0, "Voltage_within_Range" ;
+    logical_value, 1, "Over_Voltage" ;
+  }
+  CargoLamp_Status_OverVolt_Encoding_1 {
+    logical_value, 0, "Voltage_within_Range" ;
+    logical_value, 1, "Over_Voltage" ;
+  }
+  CargoLamp_Status_ResponseError_Encoding {
+    logical_value, 0, "No_Error" ;
+    logical_value, 1, "Error" ;
+  }
+  CargoLamp_Status_ResponseError_Encoding_1 {
+    logical_value, 0, "No_Error" ;
+    logical_value, 1, "Error" ;
+  }
+  Headliner_Intensity_Encoding {
+    physical_value, 0, 100, 1, 0, "%" ;
+  }
+  Headliner_Status_Encoding {
+    logical_value, 0, "Normal" ;
+    logical_value, 1, "Fault" ;
+  }
+  Headliner_Status_OverVolt_Encoding {
+    logical_value, 0, "Voltage_within_Range" ;
+    logical_value, 1, "Over_Voltage" ;
+  }
+  Headliner_Status_ResponseError_Encoding {
+    logical_value, 0, "No_Error" ;
+    logical_value, 1, "Error" ;
+  }
+  Lamp_Status_Encoding {
+    logical_value, 0, "Disable" ;
+    logical_value, 1, "Enable" ;
+  }
+  LocationId_LampLIN_Encoding {
+    logical_value, 0, "Broadcast" ;
+    logical_value, 1, "HeadlinerLamps" ;
+    logical_value, 2, "Cargo Lamp 1" ;
+    logical_value, 3, "Cargo Lamp 2" ;
+    logical_value, 4, "Cargo Lamp 3" ;
+    logical_value, 5, "Cargo Lamp 4" ;
+    logical_value, 6, "IP Lamp" ;
+    logical_value, 7, "Base Cargo" ;
+    logical_value, 17, "Footwell_Left" ;
+    logical_value, 18, "Footwell_Right" ;
+  }
+  RampDuration_LampLIN_Encoding {
+    logical_value, 0, "0ms" ;
+    logical_value, 1, "100ms" ;
+    logical_value, 2, "250ms" ;
+    logical_value, 3, "500ms" ;
+    logical_value, 4, "700ms" ;
+    logical_value, 5, "900ms" ;
+    logical_value, 6, "1100ms" ;
+    logical_value, 7, "1400ms" ;
+    logical_value, 8, "1600ms" ;
+    logical_value, 9, "2000ms" ;
+    logical_value, 10, "2500ms" ;
+    logical_value, 11, "3000ms" ;
+    logical_value, 12, "3500ms" ;
+    logical_value, 13, "4000ms" ;
+    logical_value, 14, "5000ms" ;
+    logical_value, 15, "6000ms" ;
+  }
+  UpdateIntensity_LampLIN_Encoding {
+    logical_value, 0, "No_Action" ;
+    logical_value, 1, "Update_Intensity" ;
+  }
+  CargoLamp_Status_OverTemp_Encoding {
+    logical_value, 0, "Temp_OK" ;
+    logical_value, 1, "Temp_Warning" ;
+  }
+}
+
+Signal_representation {
+  BCM_IntLightCmd_NewSignal_Encoding: Intensity_LampLIN_TaskLH_HL ;
+  CargoLamp_Intensity_Encoding: CargoLamp_2_Intensity, CargoLamp_3_Intensity, CargoLamp_4_Intensity, FWLH_Intensity, FWRH_Intensity, Intensity_LampLIN_CL_FW ;
+  CargoLamp_Intensity_Encoding_1: CargoLamp_1_Intensity ;
+  CargoLamp_Status_Encoding: CargoLamp_2_Status, CargoLamp_4_Status, FWRH_Status ;
+  CargoLamp_Status_Encoding_1: CargoLamp_1_Status ;
+  CargoLamp_Status_OverTemp_Encoding_1: Headliner_Status_OverTemp, FWLH_Status_OverTemp, FWRH_Status_OverTemp ;
+  CargoLamp_Status_OverVolt_Encoding: CargoLamp_2_Status_OverVolt, CargoLamp_3_Status_OverVolt, CargoLamp_4_Status_OverVolt, FWLH_Status_OverVolt, FWRH_Status_OverVolt ;
+  CargoLamp_Status_OverVolt_Encoding_1: CargoLamp_1_Status_OverVolt ;
+  CargoLamp_Status_ResponseError_Encoding: CargoLamp_2_Status_ResponseError, CargoLamp_3_Status_ResponseError, CargoLamp_4_Status_ResponseError, FWLH_Status_ResponseError, FWRH_Status_ResponseError ;
+  CargoLamp_Status_ResponseError_Encoding_1: CargoLamp_1_Status_ResponseError ;
+  Headliner_Intensity_Encoding: Headliner_Intensity_TaskLH, Headliner_Intensity_TaskRH, Headliner_Intensity_Ambient, Intensity_LampLIN_TaskRH_HL, Intensity_LampLIN_Ambient_HL ;
+  Headliner_Status_Encoding: Headliner_Status, CargoLamp_3_Status, FWLH_Status ;
+  Headliner_Status_OverVolt_Encoding: Headliner_Status_OverVolt ;
+  Headliner_Status_ResponseError_Encoding: Headliner_Status_ResponseError ;
+  Lamp_Status_Encoding: LocationID_Cargo1, LocationID_Cargo2, LocationID_Cargo3, LocationID_Cargo4, LocationID_Footwell_Left, LocationID_Footwell_Right ;
+  LocationId_LampLIN_Encoding: LocationId_LampLIN_HL ;
+  RampDuration_LampLIN_Encoding: RampDuration_LampLIN_HL, RampDuration_LampLIN_CL_FW ;
+  UpdateIntensity_LampLIN_Encoding: UpdateIntensity_LampLIN_HL ;
+}

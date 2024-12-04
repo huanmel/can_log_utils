@@ -1,0 +1,355 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ HVPSSM_HVState 7 "HVState_Service" 6 "HVState_Fault" 5 "HVState_Discharging" 4 "HVState_ShuttingDown" 3 "HVState_Activating" 2 "HVState_Active" 1 "HVState_Off" 0 "HVState_Initializing" ;
+VAL_TABLE_ HVPSSM_HVStateReq 3 "HVStateReq_EmergDisconnect" 2 "HVStateReq_Connect" 1 "HVStateReq_Activate" 0 "HVStateReq_Disconnect" ;
+VAL_TABLE_ HVPSSM_BattPackState 7 "BattPack_NA" 6 "BattPack_Service" 5 "BattPack_Fault" 4 "BattPack_Disconnecting" 3 "BattPack_Active" 2 "BattPack_Precharge" 1 "BattPack_Ready" 0 "BattPack_Disconnected" ;
+VAL_TABLE_ HVPSSM_MSDState 1 "MSD_Opened" 0 "MSD_Connected" ;
+VAL_TABLE_ HVPSSM_VSMReqHV 2 "VSMReqHV_NA" 1 "VSMReqHV_On" 0 "VSMReqHV_Off" ;
+VAL_TABLE_ HVInsulState 3 "Insul_Crit" 2 "Insul_Warn" 1 "Insul_Ok" 0 "Insul_Init" ;
+VAL_TABLE_ HV_IntgrState 2 "Intgr_Fault" 1 "Intgr_Ok" 0 "Intgr_Init" ;
+VAL_TABLE_ HV_CommState 2 "Comm_Fault" 1 "Comm_Ok" 0 "Comm_Init" ;
+
+
+BO_ 2483027966 HVPSSM_Signals: 8 Vector__XXX
+ SG_ HVPSSM_HVStateReq : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HVPSSM_BattPackState : 3|3@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HVPSSM_MSDState : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HVPSSM_VSMReqHV : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2281701374 PnP_Signals1: 8 Vector__XXX
+ SG_ OFF_ON_ERR_NA : 33|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ uint8Signal : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BoolSignal : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Int16Signal : 16|16@1+ (1,-32768) [-32768|32767] "" Vector__XXX
+ SG_ FloatSignal : 0|16@1+ (0.1,-3276.8) [-3276.8|3276.7] "" Vector__XXX
+
+BO_ 2415919102 HVPS_BattPack_Diagnostic: 40 Vector__XXX
+ SG_ BadHVBS : 288|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellShortCircuit_1 : 287|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellShortCircuit_2 : 286|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellShortCircuit_3 : 285|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellShortCircuit_4 : 284|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellShortCircuit_5 : 283|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellShortCircuit_6 : 282|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellShortCircuit_7 : 281|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellShortCircuit_8 : 280|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellShortCircuit_9 : 279|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellShortCircuit_10 : 278|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellShortCircuit_11 : 277|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellShortCircuit_12 : 276|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellShortCircuit_13 : 275|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellShortCircuit_14 : 274|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellShortCircuit_15 : 273|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CellShortCircuit_16 : 272|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MaxPackCellTemperature_1 : 264|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ MaxPackCellTemperature_2 : 256|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ MaxPackCellTemperature_3 : 248|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ MaxPackCellTemperature_4 : 240|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ MaxPackCellTemperature_5 : 232|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ MaxPackCellTemperature_6 : 224|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ MaxPackCellTemperature_7 : 216|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ MaxPackCellTemperature_8 : 208|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ MaxPackCellTemperature_9 : 200|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ MaxPackCellTemperature_10 : 192|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ MaxPackCellTemperature_11 : 184|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ MaxPackCellTemperature_12 : 176|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ MaxPackCellTemperature_13 : 168|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ MaxPackCellTemperature_14 : 160|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ MaxPackCellTemperature_15 : 152|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ MaxPackCellTemperature_16 : 144|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ Pack_HVBMCommLostCount_1 : 136|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Pack_HVBMCommLostCount_2 : 128|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Pack_HVBMCommLostCount_3 : 120|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Pack_HVBMCommLostCount_4 : 112|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Pack_HVBMCommLostCount_5 : 104|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Pack_HVBMCommLostCount_6 : 96|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Pack_HVBMCommLostCount_7 : 88|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Pack_HVBMCommLostCount_8 : 80|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Pack_HVBMCommLostCount_9 : 72|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Pack_HVBMCommLostCount_10 : 64|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Pack_HVBMCommLostCount_11 : 56|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Pack_HVBMCommLostCount_12 : 48|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Pack_HVBMCommLostCount_13 : 40|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Pack_HVBMCommLostCount_14 : 32|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Pack_HVBMCommLostCount_15 : 24|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Pack_HVBMCommLostCount_16 : 16|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Pack_st_TempSensorFault_1 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_st_TempSensorFault_2 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_st_TempSensorFault_3 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_st_TempSensorFault_4 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_st_TempSensorFault_5 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_st_TempSensorFault_6 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_st_TempSensorFault_7 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_st_TempSensorFault_8 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_st_TempSensorFault_9 : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_st_TempSensorFault_10 : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_st_TempSensorFault_11 : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_st_TempSensorFault_12 : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_st_TempSensorFault_13 : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_st_TempSensorFault_14 : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_st_TempSensorFault_15 : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_st_TempSensorFault_16 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2348810238 HVPS_TEDU_Info: 40 Vector__XXX
+ SG_ SensorCommFail_1 : 287|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorCommFail_2 : 286|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorCommFail_3 : 285|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorCommFail_4 : 284|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorCommFail_5 : 283|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorCommFail_6 : 282|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorCommFail_7 : 281|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorCommFail_8 : 280|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorCommFail_9 : 279|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorCommFail_10 : 278|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorCommFail_11 : 277|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorCommFail_12 : 276|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorCommFail_13 : 275|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorCommFail_14 : 274|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorCommFail_15 : 273|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorCommFail_16 : 272|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensValue_1 : 256|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ SensValue_2 : 240|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ SensValue_3 : 224|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ SensValue_4 : 208|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ SensValue_5 : 192|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ SensValue_6 : 176|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ SensValue_7 : 160|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ SensValue_8 : 144|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ SensValue_9 : 128|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ SensValue_10 : 112|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ SensValue_11 : 96|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ SensValue_12 : 80|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ SensValue_13 : 64|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ SensValue_14 : 48|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ SensValue_15 : 32|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ SensValue_16 : 16|16@1+ (0.1,0) [0|6553.5] "ppm" Vector__XXX
+ SG_ SensorFault_1 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorFault_2 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorFault_3 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorFault_4 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorFault_5 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorFault_6 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorFault_7 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorFault_8 : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorFault_9 : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorFault_10 : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorFault_11 : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorFault_12 : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorFault_13 : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorFault_14 : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorFault_15 : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SensorFault_16 : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2550136830 BattPack_Humidity: 24 Vector__XXX
+ SG_ SensValue_1 : 182|10@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ SensValue_2 : 172|10@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ SensValue_3 : 162|10@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ SensValue_4 : 152|10@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ SensValue_5 : 142|10@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ SensValue_6 : 132|10@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ SensValue_7 : 122|10@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ SensValue_8 : 112|10@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ SensValue_9 : 102|10@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ SensValue_10 : 92|10@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ SensValue_11 : 82|10@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ SensValue_12 : 72|10@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ SensValue_13 : 62|10@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ SensValue_14 : 52|10@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ SensValue_15 : 42|10@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ SensValue_16 : 32|10@1+ (0.1,0) [0|100] "%" Vector__XXX
+ SG_ SensorStatus_1 : 30|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SensorStatus_2 : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SensorStatus_3 : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SensorStatus_4 : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SensorStatus_5 : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SensorStatus_6 : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SensorStatus_7 : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SensorStatus_8 : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SensorStatus_9 : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SensorStatus_10 : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SensorStatus_11 : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SensorStatus_12 : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SensorStatus_13 : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SensorStatus_14 : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SensorStatus_15 : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SensorStatus_16 : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+
+
+CM_ "$File: //depot/auto/dbc/EtalonMessages/HVPS/0.1.0.0/HVPS_etalon.dbc $
+$Change: 215847 $
+$DateTime: 2024/08/14 16:22:19 $
+$Revision: #1 $";
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","IfActive","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","noMsgSendType";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "SendOnChange" ENUM  "No","Yes";
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "SendOnChange" "";
+BA_ "DBName" "HVPS_etalon";
+BA_ "SendOnChange" BO_ 2483027966 1;
+BA_ "GenMsgSendType" BO_ 2483027966 0;
+BA_ "VFrameFormat" BO_ 2483027966 3;
+BA_ "VFrameFormat" BO_ 2281701374 3;
+BA_ "VFrameFormat" BO_ 2415919102 3;
+BA_ "GenMsgSendType" BO_ 2348810238 0;
+BA_ "SendOnChange" BO_ 2348810238 1;
+BA_ "VFrameFormat" BO_ 2348810238 3;
+BA_ "GenMsgSendType" BO_ 2550136830 0;
+BA_ "GenMsgCycleTime" BO_ 2550136830 500;
+BA_ "VFrameFormat" BO_ 2550136830 3;
+BA_ "GenSigStartValue" SG_ 2483027966 HVPSSM_HVStateReq 0;
+BA_ "GenSigStartValue" SG_ 2483027966 HVPSSM_BattPackState 0;
+BA_ "GenSigStartValue" SG_ 2483027966 HVPSSM_MSDState 0;
+BA_ "GenSigStartValue" SG_ 2483027966 HVPSSM_VSMReqHV 0;
+BA_ "GenSigStartValue" SG_ 2281701374 OFF_ON_ERR_NA 3;
+BA_ "GenSigStartValue" SG_ 2281701374 FloatSignal 32768;
+BA_ "GenSigStartValue" SG_ 2415919102 MaxPackCellTemperature_1 50;
+BA_ "GenSigStartValue" SG_ 2415919102 MaxPackCellTemperature_2 50;
+BA_ "GenSigStartValue" SG_ 2415919102 MaxPackCellTemperature_3 50;
+BA_ "GenSigStartValue" SG_ 2415919102 MaxPackCellTemperature_4 50;
+BA_ "GenSigStartValue" SG_ 2415919102 MaxPackCellTemperature_5 50;
+BA_ "GenSigStartValue" SG_ 2415919102 MaxPackCellTemperature_6 50;
+BA_ "GenSigStartValue" SG_ 2415919102 MaxPackCellTemperature_7 50;
+BA_ "GenSigStartValue" SG_ 2415919102 MaxPackCellTemperature_8 50;
+BA_ "GenSigStartValue" SG_ 2415919102 MaxPackCellTemperature_9 50;
+BA_ "GenSigStartValue" SG_ 2415919102 MaxPackCellTemperature_10 50;
+BA_ "GenSigStartValue" SG_ 2415919102 MaxPackCellTemperature_11 50;
+BA_ "GenSigStartValue" SG_ 2415919102 MaxPackCellTemperature_12 50;
+BA_ "GenSigStartValue" SG_ 2415919102 MaxPackCellTemperature_13 50;
+BA_ "GenSigStartValue" SG_ 2415919102 MaxPackCellTemperature_14 50;
+BA_ "GenSigStartValue" SG_ 2415919102 MaxPackCellTemperature_15 50;
+BA_ "GenSigStartValue" SG_ 2415919102 MaxPackCellTemperature_16 50;
+BA_ "GenSigStartValue" SG_ 2550136830 SensorStatus_1 3;
+BA_ "GenSigStartValue" SG_ 2550136830 SensorStatus_2 3;
+BA_ "GenSigStartValue" SG_ 2550136830 SensorStatus_3 3;
+BA_ "GenSigStartValue" SG_ 2550136830 SensorStatus_4 3;
+BA_ "GenSigStartValue" SG_ 2550136830 SensorStatus_5 3;
+BA_ "GenSigStartValue" SG_ 2550136830 SensorStatus_6 3;
+BA_ "GenSigStartValue" SG_ 2550136830 SensorStatus_7 3;
+BA_ "GenSigStartValue" SG_ 2550136830 SensorStatus_8 3;
+BA_ "GenSigStartValue" SG_ 2550136830 SensorStatus_9 3;
+BA_ "GenSigStartValue" SG_ 2550136830 SensorStatus_10 3;
+BA_ "GenSigStartValue" SG_ 2550136830 SensorStatus_11 3;
+BA_ "GenSigStartValue" SG_ 2550136830 SensorStatus_12 3;
+BA_ "GenSigStartValue" SG_ 2550136830 SensorStatus_13 3;
+BA_ "GenSigStartValue" SG_ 2550136830 SensorStatus_14 3;
+BA_ "GenSigStartValue" SG_ 2550136830 SensorStatus_15 3;
+BA_ "GenSigStartValue" SG_ 2550136830 SensorStatus_16 3;
+VAL_ 2483027966 HVPSSM_HVStateReq 3 "HVStateReq_EmergDisconnect" 2 "HVStateReq_Connect" 1 "HVStateReq_Activate" 0 "HVStateReq_Disconnect" ;
+VAL_ 2483027966 HVPSSM_BattPackState 7 "BattPack_NA" 6 "BattPack_Service" 5 "BattPack_Fault" 4 "BattPack_Disconnecting" 3 "BattPack_Active" 2 "BattPack_Precharge" 1 "BattPack_Ready" 0 "BattPack_Disconnected" ;
+VAL_ 2483027966 HVPSSM_MSDState 1 "MSD_Opened" 0 "MSD_Connected" ;
+VAL_ 2483027966 HVPSSM_VSMReqHV 2 "VSMReqHV_NA" 1 "VSMReqHV_On" 0 "VSMReqHV_Off" ;
+VAL_ 2281701374 OFF_ON_ERR_NA 3 "Not Available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2550136830 SensorStatus_1 0 "NotUsed" 1 "OK" 2 "Error" 3 "CommFault" ;
+VAL_ 2550136830 SensorStatus_2 0 "NotUsed" 1 "OK" 2 "Error" 3 "CommFault" ;
+VAL_ 2550136830 SensorStatus_3 0 "NotUsed" 1 "OK" 2 "Error" 3 "CommFault" ;
+VAL_ 2550136830 SensorStatus_4 0 "NotUsed" 1 "OK" 2 "Error" 3 "CommFault" ;
+VAL_ 2550136830 SensorStatus_5 0 "NotUsed" 1 "OK" 2 "Error" 3 "CommFault" ;
+VAL_ 2550136830 SensorStatus_6 0 "NotUsed" 1 "OK" 2 "Error" 3 "CommFault" ;
+VAL_ 2550136830 SensorStatus_7 0 "NotUsed" 1 "OK" 2 "Error" 3 "CommFault" ;
+VAL_ 2550136830 SensorStatus_8 0 "NotUsed" 1 "OK" 2 "Error" 3 "CommFault" ;
+VAL_ 2550136830 SensorStatus_9 0 "NotUsed" 1 "OK" 2 "Error" 3 "CommFault" ;
+VAL_ 2550136830 SensorStatus_10 0 "NotUsed" 1 "OK" 2 "Error" 3 "CommFault" ;
+VAL_ 2550136830 SensorStatus_11 0 "NotUsed" 1 "OK" 2 "Error" 3 "CommFault" ;
+VAL_ 2550136830 SensorStatus_12 0 "NotUsed" 1 "OK" 2 "Error" 3 "CommFault" ;
+VAL_ 2550136830 SensorStatus_13 0 "NotUsed" 1 "OK" 2 "Error" 3 "CommFault" ;
+VAL_ 2550136830 SensorStatus_14 0 "NotUsed" 1 "OK" 2 "Error" 3 "CommFault" ;
+VAL_ 2550136830 SensorStatus_15 0 "NotUsed" 1 "OK" 2 "Error" 3 "CommFault" ;
+VAL_ 2550136830 SensorStatus_16 0 "NotUsed" 1 "OK" 2 "Error" 3 "CommFault" ;

@@ -1,0 +1,183 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: HMI ADAS ELS
+
+
+BO_ 2365556990 BSM1: 8 ADAS
+ SG_ BsmWarnReqRi : 6|2@1+ (1,0) [0|3] ""  HMI,ELS
+ SG_ BsmWarnReqLe : 4|2@1+ (1,0) [0|3] ""  HMI,ELS
+ SG_ BsmSt : 0|4@1+ (1,0) [0|15] ""  HMI
+
+BO_ 2365550846 BSMC: 8 HMI
+ SG_ BsmDrvrAcvnDmd : 0|2@1+ (1,0) [0|3] ""  ADAS
+
+BO_ 2365557246 BSMDS: 8 ELS
+ SG_ BsmWarnLampStRi : 2|2@1+ (1,0) [0|3] ""  ADAS
+ SG_ BsmWarnLampStLe : 0|2@1+ (1,0) [0|3] ""  ADAS
+
+
+
+CM_ "$File: //depot/auto/dbc/Software_Modules/ADAS/BSM/0.2.1.0/BSM.dbc $
+$Change: 215967 $
+$DateTime: 2024/08/21 09:55:46 $
+$Revision: #1 $";
+CM_ BO_ 2365556990 "The Blind Spot Monitoring 1 message includes the function state and required warning for systems that are monitoring zone around the vehicle.";
+CM_ SG_ 2365556990 BsmSt "Current operational state of the blind spot monitroing function. 
+
+0000b = system is not ready (initialization not finished) 
+0001b = system is temporarily not available (e.g. due to boundary conditions necessary for operation) 
+0010b = system ...";
+CM_ BO_ 2365550846 "Blind Spot Monitoring Command
+Message containing commands, sent to the blind spot detector";
+CM_ SG_ 2365550846 BsmDrvrAcvnDmd "Indicates that the operator has requested to deactivate the blind spot monitoring (BSM) function.";
+CM_ BO_ 2365557246 "This message is a feedback for BSM mirror indicators";
+CM_ SG_ 2365557246 BsmWarnLampStRi "This parameter provides measured data from a Blind Spot Monitoring lamp indicators
+
+00 De activated
+01 Activated
+10 Fault Detected
+11 Not Available";
+CM_ SG_ 2365557246 BsmWarnLampStLe "This parameter provides measured data from a Blind Spot Monitoring lamp indicators
+
+00 De activated
+01 Activated
+10 Fault Detected
+11 Not Available";
+BA_DEF_ BO_  "FsJ1939UseCrcAndCounter" STRING ;
+BA_DEF_ BO_  "FsJ1939NeedsSHM" ENUM  "No","Yes";
+BA_DEF_ BO_  "FsJ1939Delay" INT 0 1000;
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","IfActive","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","noMsgSendType";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BO_  "SendOnChange" ENUM  "No","Yes";
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "Producer" STRING ;
+BA_DEF_DEF_  "FsJ1939UseCrcAndCounter" "";
+BA_DEF_DEF_  "FsJ1939NeedsSHM" "No";
+BA_DEF_DEF_  "FsJ1939Delay" 0;
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SendOnChange" "No";
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_ "DBName" "BSM";
+BA_ "NmStationAddress" BU_ HMI 23;
+BA_ "NmStationAddress" BU_ ADAS 17;
+BA_ "GenMsgCycleTimeFast" BO_ 2365556990 10;
+BA_ "GenMsgCycleTime" BO_ 2365556990 50;
+BA_ "SendOnChange" BO_ 2365556990 1;
+BA_ "VFrameFormat" BO_ 2365556990 3;
+BA_ "GenMsgSendType" BO_ 2365550846 0;
+BA_ "GenMsgCycleTime" BO_ 2365550846 250;
+BA_ "VFrameFormat" BO_ 2365550846 3;
+BA_ "GenMsgDelayTime" BO_ 2365557246 10;
+BA_ "GenMsgCycleTime" BO_ 2365557246 1000;
+BA_ "GenMsgSendType" BO_ 2365557246 0;
+BA_ "GenMsgCycleTimeFast" BO_ 2365557246 10;
+BA_ "SendOnChange" BO_ 2365557246 1;
+BA_ "VFrameFormat" BO_ 2365557246 3;
+BA_ "SPN" SG_ 2365556990 BsmSt 12286;
+BA_ "GenSigSendType" SG_ 2365556990 BsmSt 3;
+BA_ "GenSigStartValue" SG_ 2365556990 BsmSt 15;
+BA_ "GenSigStartValue" SG_ 2365550846 BsmDrvrAcvnDmd 3;
+BA_ "GenSigStartValue" SG_ 2365557246 BsmWarnLampStRi 3;
+BA_ "GenSigStartValue" SG_ 2365557246 BsmWarnLampStLe 3;
+BA_ "Producer" BO_ 2365557246 "ELS";
+VAL_ 2365556990 BsmWarnReqRi 3 "Not Avaialble" 2 "Warning Level 2" 1 "Warning Level 1" 0 "No Warning" ;
+VAL_ 2365556990 BsmWarnReqLe 3 "Not Avaialble" 2 "Warning Level 2" 1 "Warning Level 1" 0 "No Warning" ;
+VAL_ 2365556990 BsmSt 15 "not available / not installed" 14 "error indication" 13 "reserved for future use" 12 "reserved for future use" 11 "reserved for future use" 10 "reserved for future use" 9 "reserved for future use" 8 "system performance and/or sensitivity limited" 7 "reserved" 6 "collision warning with additional system response" 5 "collision warning active with visual/audio cues" 4 "driver overrides system" 3 "system is ready and activated" 2 "system is deactivated by driver" 1 "system is temporarily not available" 0 "system is not ready" ;
+VAL_ 2365550846 BsmDrvrAcvnDmd 3 "Not available" 2 "Error" 1 "Blind Spot Monitoring is requested to be deactived" 0 "Blind Spot Monitoring is not requested to be deactived" ;
+VAL_ 2365557246 BsmWarnLampStRi 3 "Not Available" 2 "Fault Detected" 1 "Activated" 0 "De activated" ;
+VAL_ 2365557246 BsmWarnLampStLe 3 "Not Available" 2 "Fault Detected" 1 "Activated" 0 "De activated" ;
+

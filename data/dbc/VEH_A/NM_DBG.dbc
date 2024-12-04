@@ -1,0 +1,282 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ DBG_NM_VSM_Substate 4 "SUBSTATE4_NM_DBG" 3 "SUBSTATE3_NM_DBG" 2 "SUBSTATE2_NM_DBG" 1 "SUBSTATE1_NM_DBG" 0 "DEFAULT_NM_DBG" ;
+VAL_TABLE_ DBG_NM_VSM_State 6 "NA_NM_DBG" 5 "LONGTERM PARK_NM_DBG" 4 "MAINTENANCE_NM_DBG" 3 "CHARGING_NM_DBG" 2 "READY_NM_DBG" 1 "AWAKE_NM_DBG" 0 "SLEEP_NM_DBG" ;
+VAL_TABLE_ DBG_NM_com_vAction_t 3 "TAKENOACTION_NM_DBG" 2 "RESERVED_NM_DBG" 1 "ON_NM_DBG" 0 "OFF_NM_DBG" ;
+
+
+BO_ 2600457982 NM_DEBUG_OUT_3: 8 Vector__XXX
+ SG_ NM_DBG_VehSpeed : 8|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ NM_DBG_VSMState : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ NM_DBG_VSMSubstate : 3|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2600457726 NM_DEBUG_OUT_2: 8 Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_RRIO2 : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_RRIO1 : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_CBIO3 : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_CBIO2 : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_CBIO1 : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_FBIO4 : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_FBIO2 : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_FBIO1 : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_BMS : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_COMM : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_ARVLCC : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_STPCSD : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_STPCBD : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_STPRD : 43|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_STPLD : 42|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_AVAS : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_FBIO3 : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_HMI : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveWakeUpCmd_IDU : 38|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_RRIO2 : 37|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_RRIO1 : 36|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_CBIO3 : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_CBIO2 : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_CBIO1 : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_FBIO4 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_FBIO2 : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_FBIO1 : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_BMS : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_COMM : 28|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_ARVLCC : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_STPCSD : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_STPCBD : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_STPRD : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_STPLD : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_AVAS : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_FBIO3 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_HMI : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd_IDU : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_RRIO2 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_RRIO1 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_CBIO3 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_CBIO2 : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_CBIO1 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_FBIO4 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_FBIO2 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_FBIO1 : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_BMS : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_COMM : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_ARVLCC : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_STPCSD : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_STPCBD : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_STPRD : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_STPLD : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_AVAS : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_FBIO3 : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_HMI : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_NodesAlive_IDU : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2600457470 NM_DEBUG_OUT_1: 8 Vector__XXX
+ SG_ NM_VSMFullySleep : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_IsSpdOk : 10|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NM_MNG_ShtDwnTimer : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_MNG_ShtDwnSysRdy : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_IsHWOk : 9|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NM_Ready2Sleep_Inv : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Ready2Sleep_Sys15 : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Ready2Sleep_Sys14 : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Ready2Sleep_Sys13 : 28|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Wakeup_Sys22 : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Ready2Sleep_Sys12 : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Ready2Sleep_Sys11 : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Ready2Sleep_Sys10 : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Ready2Sleep_Sys9 : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_BoardShutDown : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NM_NTWKTaskStatus : 5|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NM_SlaveSleepCmd : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NM_SlaveWakeupCmd : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NM_SleepCmd_BMS : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NM_Wakeup_Sys21 : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Wakeup_Sys14 : 38|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Wakeup_Sys12 : 37|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Wakeup_Sys7 : 36|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Wakeup_Sys6 : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Wakeup_Sys5 : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Wakeup_Sys3 : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Wakeup_Sys1 : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Ready2Sleep_Sys8 : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Ready2Sleep_Sys7 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Ready2Sleep_Sys6 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Ready2Sleep_Sys5 : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Ready2Sleep_Sys4 : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Ready2Sleep_Sys3 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Ready2Sleep_Sys2 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_Ready2Sleep_Sys1 : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NM_MNGR_VSMNtwkReq : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+
+
+CM_ SG_ 2600457470 NM_VSMFullySleep "VSM Fully Sleep and HWOk and SpdOk ";
+CM_ SG_ 2600457470 NM_MNG_ShtDwnTimer "Shutdown timer expired";
+CM_ SG_ 2600457470 NM_MNG_ShtDwnSysRdy "shut down timer systems checks: all needed systems are ready to sleep";
+CM_ SG_ 2600457470 NM_Ready2Sleep_Inv "Inverter ready2sleep";
+CM_ SG_ 2600457470 NM_Ready2Sleep_Sys15 "Thermal";
+CM_ SG_ 2600457470 NM_Ready2Sleep_Sys14 "HV";
+CM_ SG_ 2600457470 NM_Ready2Sleep_Sys13 "STR";
+CM_ SG_ 2600457470 NM_Wakeup_Sys22 "DoorOrSTP";
+CM_ SG_ 2600457470 NM_Ready2Sleep_Sys12 "HVBS";
+CM_ SG_ 2600457470 NM_Ready2Sleep_Sys11 "ELS";
+CM_ SG_ 2600457470 NM_Ready2Sleep_Sys10 "DT";
+CM_ SG_ 2600457470 NM_Ready2Sleep_Sys9 "CAS";
+CM_ SG_ 2600457470 NM_SlaveSleepCmd "Flag that there's at least one active cmd to sleep slaves
+";
+CM_ SG_ 2600457470 NM_SlaveWakeupCmd "Flag that there's at least one active cmd to wake up slaves";
+CM_ SG_ 2600457470 NM_Wakeup_Sys21 "SeatMat";
+CM_ SG_ 2600457470 NM_Wakeup_Sys14 "HVPS";
+CM_ SG_ 2600457470 NM_Wakeup_Sys12 "HVBS";
+CM_ SG_ 2600457470 NM_Wakeup_Sys7 "LV";
+CM_ SG_ 2600457470 NM_Wakeup_Sys6 "Comm";
+CM_ SG_ 2600457470 NM_Wakeup_Sys5 "HMIUsrIntrctn";
+CM_ SG_ 2600457470 NM_Wakeup_Sys3 "CHRG";
+CM_ SG_ 2600457470 NM_Wakeup_Sys1 "Security";
+CM_ SG_ 2600457470 NM_Ready2Sleep_Sys8 "CMS";
+CM_ SG_ 2600457470 NM_Ready2Sleep_Sys7 "LV";
+CM_ SG_ 2600457470 NM_Ready2Sleep_Sys6 "Comm";
+CM_ SG_ 2600457470 NM_Ready2Sleep_Sys5 "
+HMI";
+CM_ SG_ 2600457470 NM_Ready2Sleep_Sys4 "HMI_KB_BRK";
+CM_ SG_ 2600457470 NM_Ready2Sleep_Sys3 "CHRG";
+CM_ SG_ 2600457470 NM_Ready2Sleep_Sys2 "ADS";
+CM_ SG_ 2600457470 NM_Ready2Sleep_Sys1 "Security";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BO_  "Producer" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","IfActive","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","noMsgSendType";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "SAE_J1939_21_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_71_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_73_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_75_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_81_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_DA_SpecVersion" STRING ;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ BO_  "SendOnChange" ENUM  "No","Yes";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl";
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_ "Producer" "VSS" ;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_DEF_DEF_  "SAE_J1939_21_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_71_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_73_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_75_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_81_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_DA_SpecVersion" "";
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "SendOnChange" "No";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_ "DBName" "CHRG_MS3_DCU";
+BA_ "GenMsgCycleTime" BO_ 2600457982 100;
+BA_ "GenMsgSendType" BO_ 2600457982 0;
+BA_ "VFrameFormat" BO_ 2600457982 3;
+BA_ "SendOnChange" BO_ 2600457726 1;
+BA_ "GenMsgSendType" BO_ 2600457726 0;
+BA_ "GenMsgCycleTime" BO_ 2600457726 1000;
+BA_ "GenMsgDelayTime" BO_ 2600457726 100;
+BA_ "VFrameFormat" BO_ 2600457726 3;
+BA_ "SendOnChange" BO_ 2600457470 1;
+BA_ "GenMsgSendType" BO_ 2600457470 0;
+BA_ "GenMsgCycleTime" BO_ 2600457470 1000;
+BA_ "GenMsgDelayTime" BO_ 2600457470 100;
+BA_ "VFrameFormat" BO_ 2600457470 3;
+BA_ "GenSigStartValue" SG_ 2600457982 NM_DBG_VehSpeed 0;
+BA_ "GenSigStartValue" SG_ 2600457982 NM_DBG_VSMState 7;
+BA_ "GenSigStartValue" SG_ 2600457982 NM_DBG_VSMSubstate 0;
+VAL_ 2600457982 NM_DBG_VSMState 7 "NA_NM_DBG" 5 "LONGTERM PARK_NM_DBG" 4 "MAINTENANCE_NM_DBG" 3 "CHARGING_NM_DBG" 2 "READY_NM_DBG" 1 "AWAKE_NM_DBG" 0 "SLEEP_NM_DBG" ;
+VAL_ 2600457982 NM_DBG_VSMSubstate 4 "SUBSTATE4_NM_DBG" 3 "SUBSTATE3_NM_DBG" 2 "SUBSTATE2_NM_DBG" 1 "SUBSTATE1_NM_DBG" 0 "DEFAULT_NM_DBG" ;
+VAL_ 2600457470 NM_MNGR_VSMNtwkReq 3 "TAKENOACTION_NM_DBG" 2 "RESERVED_NM_DBG" 1 "ON_NM_DBG" 0 "OFF_NM_DBG" ;
+

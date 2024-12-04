@@ -1,0 +1,217 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: DCU
+VAL_TABLE_ vt_TMSPumpControlMode 21 "NA" 2 "ParkMode" 1 "ChargeMode" 0 "DriveMode" ;
+VAL_TABLE_ vtHVHeaterTempSP 3 "NA" 2 "TempSP2" 1 "TempSP1" 0 "NA1" ;
+VAL_TABLE_ ChargeFaultState 4 "NEVER_ENABLE" 3 "FAULT_DELAY_BEFORE_EN" 2 "IGN_DISABLE" 1 "FAULT_DELAY_BEFORE_DIS" 0 "NO_FAULT" ;
+VAL_TABLE_ ChargeOverride 3 "ChargingFault" 2 "ChargeAcOverrideEn" 1 "ChargeChademoOverrideEn" 0 "ChargeOverrideDis" ;
+VAL_TABLE_ LvOverideStatus 3 "LvOverrideEn" 2 "LvOverrideEn_5minWait" 1 "LvThrCheckHVSock" 0 "LvOverideDis" ;
+VAL_TABLE_ HVHeterPWMCMD_t 15 "NA" 13 "STANDBY1" 12 "OVERHEAT_UNLOCK" 11 "P8" 10 "P7" 9 "P6" 8 "P5" 7 "P4" 6 "P3" 5 "P2" 4 "P1" 3 "TEMP_SP2" 2 "TEMP_SP1" 1 "STANDBY" 0 "OFF" ;
+VAL_TABLE_ HVHeaterPWMSTAT_t 15 "NA" 13 "LOCKED_PERM" 12 "LOCKED_OVERHEAT" 11 "LOCKED_TEMPOR" 10 "Ta75_PaSP" 9 "Tb75_PaSP" 8 "Tb40_PaSP" 7 "Tb0_PaSP" 6 "Ta75_PbSP" 5 "Tb75_PbSP" 4 "Tb40_PbSP" 3 "Tb0_PbSP" 2 "SP2" 1 "SP1" 0 "OFF" ;
+VAL_TABLE_ HVDrStat_t 11 "ERRCHANGESP" 10 "HV_POWER_PROBLEM" 15 "NA" 9 "ERROR" 8 "FLOWNOTREADY" 7 "LOCKED_PERM" 6 "LOCKED_OVERHEAT" 5 "LOCKED_TEMPOR" 4 "SP_Request" 3 "SP_above" 2 "SP_below" 1 "STANDBY" 0 "OFF" ;
+VAL_TABLE_ CabinBlowDirectionTbl 7 "NA" 0 "Reserved" 4 "Take_no_Action" 3 "Down" 2 "Med" 1 "Up" ;
+VAL_TABLE_ vAction_t 3 "va_Take_no_action" 2 "va_Reserved" 1 "va_On" 0 "va_Off" ;
+VAL_TABLE_ vtEnergyMode 7 "Not Available" 1 "RangeExtender" 0 "PureElectric" ;
+VAL_TABLE_ vtOnOff 3 "Not available" 2 "Error" 1 "On" 0 "Off" ;
+
+
+BO_ 2617311230 DcuNvramData: 70 DCU
+ SG_ LastSecurityEvent_Year : 484|12@1+ (1,0) [0|2255] "" Vector__XXX
+ SG_ LastSecurityEvent_Month : 480|4@1+ (1,0) [0|12] "" Vector__XXX
+ SG_ LastSecurityEvent_Day : 475|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ LastSecurityEvent_Hour : 470|5@1+ (1,0) [0|23] "" Vector__XXX
+ SG_ LastSecurityEvent_Minutes : 464|6@1+ (1,0) [0|59] "" Vector__XXX
+ SG_ LastSecurityEvent_Seconds : 458|6@1+ (1,0) [0|59] "" Vector__XXX
+ SG_ LastSecurityEvent_Distance : 426|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ LastSecurityEvent_DTC : 406|20@1+ (1,0) [0|1048575] "" Vector__XXX
+ SG_ FirstSecurityEvent_Year : 394|12@1+ (1,0) [0|2255] "" Vector__XXX
+ SG_ FirstSecurityEvent_Month : 390|4@1+ (1,0) [0|12] "" Vector__XXX
+ SG_ FirstSecurityEvent_Day : 385|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ FirstSecurityEvent_Hour : 380|5@1+ (1,0) [0|23] "" Vector__XXX
+ SG_ FirstSecurityEvent_Minutes : 374|6@1+ (1,0) [0|59] "" Vector__XXX
+ SG_ FirstSecurityEvent_Seconds : 368|6@1+ (1,0) [0|59] "" Vector__XXX
+ SG_ FirstSecurityEvent_Distance : 336|32@1+ (1,0) [0|4294967295] "m" Vector__XXX
+ SG_ FirstSecurityEvent_DTC : 316|20@1+ (1,0) [0|1048575] "" Vector__XXX
+ SG_ CrashType : 308|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DT_FLT_SS05_state : 262|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DT_FLT_SS05_counter : 264|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ DT_FLT_SS03_state : 261|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DT_FLT_SS03_counter : 268|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ DT_FLT_SS02_state : 260|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DT_FLT_SS02_counter : 272|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ nextServiceMaintenanceMileage : 276|32@1+ (5,0) [0|21055406075] "m" Vector__XXX
+ SG_ StoredHVInsulState : 258|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ StoredHVIntgrState : 256|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ StoredBatterySOC : 240|16@1+ (0.0015625,0) [0|100.3984375] "%" Vector__XXX
+ SG_ BoardShutDownCorrect : 225|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HiResTotalVehicleDistance_valid : 224|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ SuspensionLevelingRequest_FRAM : 226|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ AcceleratorMode_forFRAM : 229|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ FuelLevel1 : 232|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+ SG_ LastUptime : 192|32@1+ (1,0) [0|0] "sec" Vector__XXX
+ SG_ TotalECURunTime : 160|32@1+ (0.05,0) [0|210554060.75] "h" Vector__XXX
+ SG_ TripPowerConsumed : 128|32@1+ (5,0) [0|21055406075] "Wh" Vector__XXX
+ SG_ TripChargedByRequperation : 96|32@1+ (5,0) [0|21055406075] "Wh" Vector__XXX
+ SG_ TripChargedByGenerator : 64|32@1+ (5,0) [0|21055406075] "Wh" Vector__XXX
+ SG_ HighResolutionTripDistance : 32|32@1+ (5,0) [0|21055406075] "m" Vector__XXX
+ SG_ HghRsolutionTotalVehicleDistance : 0|32@1+ (5,0) [0|21055406075] "m" Vector__XXX
+
+
+
+CM_ SG_ 2617311230 SuspensionLevelingRequest_FRAM "Write to memory last choice of SuspensionLevel request from HMI";
+CM_ SG_ 2617311230 AcceleratorMode_forFRAM "Choose accelerator mode table";
+CM_ SG_ 2617311230 TotalECURunTime "Total time accumulated over the life of the ECU, from ignition switch ON to ignition switch OFF.  When the ECU is replaced this value shall be reset.";
+CM_ SG_ 2617311230 HighResolutionTripDistance "Distance traveled during all or part of a journey.
+
+NOTE - See SPN 244 for alternate resolution.";
+CM_ SG_ 2617311230 HghRsolutionTotalVehicleDistance "Accumulated distance traveled by the vehicle during its operation.
+
+NOTE - See SPN 245 for alternate resolution.";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","noMsgSendType";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_  "SAE_J1939_DA_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_81_SpecVersion" STRING ;
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "SAE_J1939_75_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_21_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_73_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_71_SpecVersion" STRING ;
+BA_DEF_ BO_  "SendOnChange" ENUM  "No","Yes";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "SAE_J1939_DA_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_81_SpecVersion" "";
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "SAE_J1939_75_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_21_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_73_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_71_SpecVersion" "";
+BA_DEF_DEF_  "SendOnChange" "No";
+BA_ "SAE_J1939_DA_SpecVersion" "2015-01";
+BA_ "SAE_J1939_81_SpecVersion" "2012-05";
+BA_ "DatabaseVersion" "8.5";
+BA_ "BusType" "CAN";
+BA_ "ProtocolType" "J1939";
+BA_ "SAE_J1939_75_SpecVersion" "2012-05";
+BA_ "SAE_J1939_21_SpecVersion" "2006-10";
+BA_ "SAE_J1939_73_SpecVersion" "2012-10";
+BA_ "SAE_J1939_71_SpecVersion" "2012-10";
+BA_ "DBName" "Arrival_DCU_P2";
+BA_ "NmStationAddress" BU_ DCU 90;
+BA_ "VFrameFormat" BO_ 2617311230 3;
+BA_ "GenSigStartValue" SG_ 2617311230 LastSecurityEvent_Month 0;
+BA_ "GenSigStartValue" SG_ 2617311230 LastSecurityEvent_Day 0;
+BA_ "GenSigStartValue" SG_ 2617311230 FirstSecurityEvent_Month 0;
+BA_ "GenSigStartValue" SG_ 2617311230 FirstSecurityEvent_Day 0;
+BA_ "SigType" SG_ 2617311230 nextServiceMaintenanceMileage 1;
+BA_ "GenSigStartValue" SG_ 2617311230 StoredBatterySOC 64000;
+BA_ "GenSigStartValue" SG_ 2617311230 AcceleratorMode_forFRAM 1;
+BA_ "SigType" SG_ 2617311230 FuelLevel1 1;
+BA_ "SigType" SG_ 2617311230 LastUptime 1;
+BA_ "SPN" SG_ 2617311230 TotalECURunTime 1033;
+BA_ "SigType" SG_ 2617311230 TotalECURunTime 1;
+BA_ "SigType" SG_ 2617311230 TripPowerConsumed 1;
+BA_ "SigType" SG_ 2617311230 TripChargedByRequperation 1;
+BA_ "SigType" SG_ 2617311230 TripChargedByGenerator 1;
+BA_ "SPN" SG_ 2617311230 HighResolutionTripDistance 918;
+BA_ "SigType" SG_ 2617311230 HighResolutionTripDistance 1;
+BA_ "SPN" SG_ 2617311230 HghRsolutionTotalVehicleDistance 917;
+BA_ "SigType" SG_ 2617311230 HghRsolutionTotalVehicleDistance 1;
+VAL_ 2617311230 StoredHVInsulState 3 "HVInsul_Crit" 2 "HVInsul_Warn" 1 "HVInsul_Ok" 0 "HVInsul_Init" ;
+VAL_ 2617311230 StoredHVIntgrState 3 "HVIntgr_NA" 2 "HVIntgr_Fault" 1 "HVIntgr_Ok" 0 "HVIntgr_Init" ;
+

@@ -1,0 +1,607 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: TPMS_HMI_ECU
+VAL_TABLE_ TireLocation_MUX 51 "TirePress_33_MUX_51" 50 "TirePress_32_MUX_50" 49 "TirePress_31_MUX_49" 48 "TirePress_30_MUX_48" 35 "TirePress_23_MUX_35" 34 "TirePress_22_MUX_34" 33 "TirePress_21_MUX_33" 32 "TirePress_20_MUX_32" 19 "TirePress_13_MUX_19" 18 "TirePress_12_MUX_18" 17 "TirePress_11_MUX_17" 16 "TirePress_10_MUX_16" 1 "TirePress_01_MUX_1" 0 "TirePress_00_MUX_0" ;
+
+
+BO_ 2566845694 TIRE1: 8 Vector__XXX
+ SG_ ExTirePressSupport : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TirePressThresholdDetection_13 m19 : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ TirePressThresholdDetection_12 m18 : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ TirePressThresholdDetection_11 m17 : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ TirePressThresholdDetection_10 m16 : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ TirePressThresholdDetection_01 m1 : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ TirePress_33 m51 : 8|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+ SG_ TirePress_32 m50 : 8|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+ SG_ TirePress_31 m49 : 8|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+ SG_ TirePress_30 m48 : 8|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+ SG_ TirePress_23 m35 : 8|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+ SG_ TirePress_22 m34 : 8|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+ SG_ TirePress_21 m33 : 8|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+ SG_ TirePress_20 m32 : 8|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+ SG_ TirePress_13 m19 : 8|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+ SG_ TirePress_12 m18 : 8|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+ SG_ TirePress_11 m17 : 8|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+ SG_ TirePress_10 m16 : 8|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+ SG_ TireAirLeakageRate_33 m51 : 40|16@1+ (0.1,0) [0|6425.5] "Pa/s" Vector__XXX
+ SG_ TireAirLeakageRate_32 m50 : 40|16@1+ (0.1,0) [0|6425.5] "Pa/s" Vector__XXX
+ SG_ TireAirLeakageRate_31 m49 : 40|16@1+ (0.1,0) [0|6425.5] "Pa/s" Vector__XXX
+ SG_ TireAirLeakageRate_30 m48 : 40|16@1+ (0.1,0) [0|6425.5] "Pa/s" Vector__XXX
+ SG_ TireAirLeakageRate_23 m35 : 40|16@1+ (0.1,0) [0|6425.5] "Pa/s" Vector__XXX
+ SG_ TireAirLeakageRate_22 m34 : 40|16@1+ (0.1,0) [0|6425.5] "Pa/s" Vector__XXX
+ SG_ TireAirLeakageRate_21 m33 : 40|16@1+ (0.1,0) [0|6425.5] "Pa/s" Vector__XXX
+ SG_ TireAirLeakageRate_20 m32 : 40|16@1+ (0.1,0) [0|6425.5] "Pa/s" Vector__XXX
+ SG_ TireAirLeakageRate_13 m19 : 40|16@1+ (0.1,0) [0|6425.5] "Pa/s" Vector__XXX
+ SG_ TireAirLeakageRate_12 m18 : 40|16@1+ (0.1,0) [0|6425.5] "Pa/s" Vector__XXX
+ SG_ TireAirLeakageRate_11 m17 : 40|16@1+ (0.1,0) [0|6425.5] "Pa/s" Vector__XXX
+ SG_ TireAirLeakageRate_10 m16 : 40|16@1+ (0.1,0) [0|6425.5] "Pa/s" Vector__XXX
+ SG_ TireAirLeakageRate_01 m1 : 40|16@1+ (0.1,0) [0|6425.5] "Pa/s" Vector__XXX
+ SG_ TireAirLeakageRate_00 m0 : 40|16@1+ (0.1,0) [0|6425.5] "Pa/s" Vector__XXX
+ SG_ CTIWheelSensorStatus_33 m51 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelSensorStatus_32 m50 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelSensorStatus_31 m49 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelSensorStatus_30 m48 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelSensorStatus_23 m35 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelSensorStatus_22 m34 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelSensorStatus_21 m33 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelSensorStatus_20 m32 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelSensorStatus_13 m19 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelSensorStatus_12 m18 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelSensorStatus_11 m17 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelSensorStatus_10 m16 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelSensorStatus_01 m1 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelEndElectricalFault_33 m51 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelEndElectricalFault_32 m50 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelEndElectricalFault_31 m49 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelEndElectricalFault_30 m48 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelEndElectricalFault_23 m35 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelEndElectricalFault_22 m34 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelEndElectricalFault_21 m33 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelEndElectricalFault_20 m32 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelEndElectricalFault_13 m19 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelEndElectricalFault_12 m18 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelEndElectricalFault_11 m17 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelEndElectricalFault_10 m16 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelEndElectricalFault_01 m1 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTITireStatus_33 m51 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTITireStatus_32 m50 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTITireStatus_31 m49 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTITireStatus_30 m48 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTITireStatus_23 m35 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTITireStatus_22 m34 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTITireStatus_21 m33 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTITireStatus_20 m32 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTITireStatus_13 m19 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTITireStatus_12 m18 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTITireStatus_11 m17 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTITireStatus_10 m16 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTITireStatus_01 m1 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TireTemp_11 m17 : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ TireTemp_33 m51 : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ TireTemp_32 m50 : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ TireTemp_31 m49 : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ TireTemp_30 m48 : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ TireTemp_23 m35 : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ TireTemp_22 m34 : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ TireTemp_21 m33 : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ TireTemp_20 m32 : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ TireTemp_13 m19 : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ TireTemp_12 m18 : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ TireTemp_10 m16 : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ TireTemp_01 m1 : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ TireTemp_00 m0 : 16|16@1+ (0.03125,-273) [-273|1735] "°C" Vector__XXX
+ SG_ TirePressThresholdDetection_33 m51 : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ TirePressThresholdDetection_32 m50 : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ TirePressThresholdDetection_31 m49 : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ TirePressThresholdDetection_30 m48 : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ TirePressThresholdDetection_23 m35 : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ TirePressThresholdDetection_22 m34 : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ TirePressThresholdDetection_21 m33 : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ TirePressThresholdDetection_20 m32 : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ TirePressThresholdDetection_00 m0 : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ TirePress_01 m1 : 8|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+ SG_ TirePress_00 m0 : 8|8@1+ (4,0) [0|1000] "kPa" Vector__XXX
+ SG_ CTIWheelSensorStatus_00 m0 : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTIWheelEndElectricalFault_00 m0 : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CTITireStatus_00 m0 : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TireLocation M : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+
+
+CM_ "$File: //depot/auto/dbc/Software_Modules/TPMS/j1939_TPMS/0.0.3.0/j1939_TPMS.dbc $
+$Change: 216205 $
+$DateTime: 2024/08/26 10:14:53 $
+$Revision: #1 $";
+CM_ BO_ 2566845694 "Tire Condition Message 1
+Tire Condition Message
+NOTE – Multiple instances of this message will be required to transmit data for all tire locations.  When reporting data for multiple tire locations, each successive message, which provides data for ...";
+CM_ SG_ 2566845694 ExTirePressSupport "Defines the choice of using the tire pressure (PGN 65268) or Extended Tire Pressure (PGN 64578). The state value '01' indicates the extended tire pressure SPN is used for the pressure data. Any other value indicates the extended tire pressure SPN is ...";
+CM_ SG_ 2566845694 TirePressThresholdDetection_13 "Signal indicating the pressure level of the tire.";
+CM_ SG_ 2566845694 TirePressThresholdDetection_12 "Signal indicating the pressure level of the tire.";
+CM_ SG_ 2566845694 TirePressThresholdDetection_11 "Signal indicating the pressure level of the tire.";
+CM_ SG_ 2566845694 TirePressThresholdDetection_10 "Signal indicating the pressure level of the tire.";
+CM_ SG_ 2566845694 TirePressThresholdDetection_01 "Signal indicating the pressure level of the tire.";
+CM_ SG_ 2566845694 TirePress_33 "Pressure at which air is contained in cavity formed by tire and rim.";
+CM_ SG_ 2566845694 TirePress_32 "Pressure at which air is contained in cavity formed by tire and rim.";
+CM_ SG_ 2566845694 TirePress_31 "Pressure at which air is contained in cavity formed by tire and rim.";
+CM_ SG_ 2566845694 TirePress_30 "Pressure at which air is contained in cavity formed by tire and rim.";
+CM_ SG_ 2566845694 TirePress_23 "Pressure at which air is contained in cavity formed by tire and rim.";
+CM_ SG_ 2566845694 TirePress_22 "Pressure at which air is contained in cavity formed by tire and rim.";
+CM_ SG_ 2566845694 TirePress_21 "Pressure at which air is contained in cavity formed by tire and rim.";
+CM_ SG_ 2566845694 TirePress_20 "Pressure at which air is contained in cavity formed by tire and rim.";
+CM_ SG_ 2566845694 TirePress_13 "Pressure at which air is contained in cavity formed by tire and rim.";
+CM_ SG_ 2566845694 TirePress_12 "Pressure at which air is contained in cavity formed by tire and rim.";
+CM_ SG_ 2566845694 TirePress_11 "Pressure at which air is contained in cavity formed by tire and rim.";
+CM_ SG_ 2566845694 TirePress_10 "Pressure at which air is contained in cavity formed by tire and rim.";
+CM_ SG_ 2566845694 TireAirLeakageRate_33 "The pressure loss rate of a tire.";
+CM_ SG_ 2566845694 TireAirLeakageRate_32 "The pressure loss rate of a tire.";
+CM_ SG_ 2566845694 TireAirLeakageRate_31 "The pressure loss rate of a tire.";
+CM_ SG_ 2566845694 TireAirLeakageRate_30 "The pressure loss rate of a tire.";
+CM_ SG_ 2566845694 TireAirLeakageRate_23 "The pressure loss rate of a tire.";
+CM_ SG_ 2566845694 TireAirLeakageRate_22 "The pressure loss rate of a tire.";
+CM_ SG_ 2566845694 TireAirLeakageRate_21 "The pressure loss rate of a tire.";
+CM_ SG_ 2566845694 TireAirLeakageRate_20 "The pressure loss rate of a tire.";
+CM_ SG_ 2566845694 TireAirLeakageRate_13 "The pressure loss rate of a tire.";
+CM_ SG_ 2566845694 TireAirLeakageRate_12 "The pressure loss rate of a tire.";
+CM_ SG_ 2566845694 TireAirLeakageRate_11 "The pressure loss rate of a tire.";
+CM_ SG_ 2566845694 TireAirLeakageRate_10 "The pressure loss rate of a tire.";
+CM_ SG_ 2566845694 TireAirLeakageRate_01 "The pressure loss rate of a tire.";
+CM_ SG_ 2566845694 TireAirLeakageRate_00 "The pressure loss rate of a tire.";
+CM_ SG_ 2566845694 CTIWheelSensorStatus_33 "Indicates whether the wheel is being monitored by the CTI controller.";
+CM_ SG_ 2566845694 CTIWheelSensorStatus_32 "Indicates whether the wheel is being monitored by the CTI controller.";
+CM_ SG_ 2566845694 CTIWheelSensorStatus_31 "Indicates whether the wheel is being monitored by the CTI controller.";
+CM_ SG_ 2566845694 CTIWheelSensorStatus_30 "Indicates whether the wheel is being monitored by the CTI controller.";
+CM_ SG_ 2566845694 CTIWheelSensorStatus_23 "Indicates whether the wheel is being monitored by the CTI controller.";
+CM_ SG_ 2566845694 CTIWheelSensorStatus_22 "Indicates whether the wheel is being monitored by the CTI controller.";
+CM_ SG_ 2566845694 CTIWheelSensorStatus_21 "Indicates whether the wheel is being monitored by the CTI controller.";
+CM_ SG_ 2566845694 CTIWheelSensorStatus_20 "Indicates whether the wheel is being monitored by the CTI controller.";
+CM_ SG_ 2566845694 CTIWheelSensorStatus_13 "Indicates whether the wheel is being monitored by the CTI controller.";
+CM_ SG_ 2566845694 CTIWheelSensorStatus_12 "Indicates whether the wheel is being monitored by the CTI controller.";
+CM_ SG_ 2566845694 CTIWheelSensorStatus_11 "Indicates whether the wheel is being monitored by the CTI controller.";
+CM_ SG_ 2566845694 CTIWheelSensorStatus_10 "Indicates whether the wheel is being monitored by the CTI controller.";
+CM_ SG_ 2566845694 CTIWheelSensorStatus_01 "Indicates whether the wheel is being monitored by the CTI controller.";
+CM_ SG_ 2566845694 CTIWheelEndElectricalFault_33 "Indicates the status of electrical fault on CTI wheel interface.";
+CM_ SG_ 2566845694 CTIWheelEndElectricalFault_32 "Indicates the status of electrical fault on CTI wheel interface.";
+CM_ SG_ 2566845694 CTIWheelEndElectricalFault_31 "Indicates the status of electrical fault on CTI wheel interface.";
+CM_ SG_ 2566845694 CTIWheelEndElectricalFault_30 "Indicates the status of electrical fault on CTI wheel interface.";
+CM_ SG_ 2566845694 CTIWheelEndElectricalFault_23 "Indicates the status of electrical fault on CTI wheel interface.";
+CM_ SG_ 2566845694 CTIWheelEndElectricalFault_22 "Indicates the status of electrical fault on CTI wheel interface.";
+CM_ SG_ 2566845694 CTIWheelEndElectricalFault_21 "Indicates the status of electrical fault on CTI wheel interface.";
+CM_ SG_ 2566845694 CTIWheelEndElectricalFault_20 "Indicates the status of electrical fault on CTI wheel interface.";
+CM_ SG_ 2566845694 CTIWheelEndElectricalFault_13 "Indicates the status of electrical fault on CTI wheel interface.";
+CM_ SG_ 2566845694 CTIWheelEndElectricalFault_12 "Indicates the status of electrical fault on CTI wheel interface.";
+CM_ SG_ 2566845694 CTIWheelEndElectricalFault_11 "Indicates the status of electrical fault on CTI wheel interface.";
+CM_ SG_ 2566845694 CTIWheelEndElectricalFault_10 "Indicates the status of electrical fault on CTI wheel interface.";
+CM_ SG_ 2566845694 CTIWheelEndElectricalFault_01 "Indicates the status of electrical fault on CTI wheel interface.";
+CM_ SG_ 2566845694 CTITireStatus_33 "Indicates the status of the tire.";
+CM_ SG_ 2566845694 CTITireStatus_32 "Indicates the status of the tire.";
+CM_ SG_ 2566845694 CTITireStatus_31 "Indicates the status of the tire.";
+CM_ SG_ 2566845694 CTITireStatus_30 "Indicates the status of the tire.";
+CM_ SG_ 2566845694 CTITireStatus_23 "Indicates the status of the tire.";
+CM_ SG_ 2566845694 CTITireStatus_22 "Indicates the status of the tire.";
+CM_ SG_ 2566845694 CTITireStatus_21 "Indicates the status of the tire.";
+CM_ SG_ 2566845694 CTITireStatus_20 "Indicates the status of the tire.";
+CM_ SG_ 2566845694 CTITireStatus_13 "Indicates the status of the tire.";
+CM_ SG_ 2566845694 CTITireStatus_12 "Indicates the status of the tire.";
+CM_ SG_ 2566845694 CTITireStatus_11 "Indicates the status of the tire.";
+CM_ SG_ 2566845694 CTITireStatus_10 "Indicates the status of the tire.";
+CM_ SG_ 2566845694 CTITireStatus_01 "Indicates the status of the tire.";
+CM_ SG_ 2566845694 TireTemp_11 "Temperature at the surface of the tire sidewall.";
+CM_ SG_ 2566845694 TireTemp_33 "Temperature at the surface of the tire sidewall.";
+CM_ SG_ 2566845694 TireTemp_32 "Temperature at the surface of the tire sidewall.";
+CM_ SG_ 2566845694 TireTemp_31 "Temperature at the surface of the tire sidewall.";
+CM_ SG_ 2566845694 TireTemp_30 "Temperature at the surface of the tire sidewall.";
+CM_ SG_ 2566845694 TireTemp_23 "Temperature at the surface of the tire sidewall.";
+CM_ SG_ 2566845694 TireTemp_22 "Temperature at the surface of the tire sidewall.";
+CM_ SG_ 2566845694 TireTemp_21 "Temperature at the surface of the tire sidewall.";
+CM_ SG_ 2566845694 TireTemp_20 "Temperature at the surface of the tire sidewall.";
+CM_ SG_ 2566845694 TireTemp_13 "Temperature at the surface of the tire sidewall.";
+CM_ SG_ 2566845694 TireTemp_12 "Temperature at the surface of the tire sidewall.";
+CM_ SG_ 2566845694 TireTemp_10 "Temperature at the surface of the tire sidewall.";
+CM_ SG_ 2566845694 TireTemp_01 "Temperature at the surface of the tire sidewall.";
+CM_ SG_ 2566845694 TireTemp_00 "Temperature at the surface of the tire sidewall.";
+CM_ SG_ 2566845694 TirePressThresholdDetection_33 "Signal indicating the pressure level of the tire.";
+CM_ SG_ 2566845694 TirePressThresholdDetection_32 "Signal indicating the pressure level of the tire.";
+CM_ SG_ 2566845694 TirePressThresholdDetection_31 "Signal indicating the pressure level of the tire.";
+CM_ SG_ 2566845694 TirePressThresholdDetection_30 "Signal indicating the pressure level of the tire.";
+CM_ SG_ 2566845694 TirePressThresholdDetection_23 "Signal indicating the pressure level of the tire.";
+CM_ SG_ 2566845694 TirePressThresholdDetection_22 "Signal indicating the pressure level of the tire.";
+CM_ SG_ 2566845694 TirePressThresholdDetection_21 "Signal indicating the pressure level of the tire.";
+CM_ SG_ 2566845694 TirePressThresholdDetection_20 "Signal indicating the pressure level of the tire.";
+CM_ SG_ 2566845694 TirePressThresholdDetection_00 "Signal indicating the pressure level of the tire.";
+CM_ SG_ 2566845694 TirePress_01 "Pressure at which air is contained in cavity formed by tire and rim.";
+CM_ SG_ 2566845694 TirePress_00 "Pressure at which air is contained in cavity formed by tire and rim.";
+CM_ SG_ 2566845694 CTIWheelSensorStatus_00 "Indicates whether the wheel is being monitored by the CTI controller.";
+CM_ SG_ 2566845694 CTIWheelEndElectricalFault_00 "Indicates the status of electrical fault on CTI wheel interface.";
+CM_ SG_ 2566845694 CTITireStatus_00 "Indicates the status of the tire.";
+CM_ SG_ 2566845694 TireLocation "Identifies which tire is associated with the parametric data in this PGN.
+The low order 4 bits represent a position number, counting left to right when facing in the direction of normal vehicle travel (forward).
+The high order 4 bits represent a ...";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","noMsgSendType";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BO_  "SendOnChange" ENUM  "No","Yes";
+BA_DEF_ BO_  "Producer" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_  "SAE_J1939_DA_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_81_SpecVersion" STRING ;
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "SAE_J1939_75_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_21_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_73_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_71_SpecVersion" STRING ;
+BA_DEF_DEF_  "DBName" "j1939_TPMS";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SendOnChange" "No";
+BA_DEF_DEF_  "Producer" "TPMS";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "SAE_J1939_DA_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_81_SpecVersion" "";
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "SAE_J1939_75_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_21_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_73_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_71_SpecVersion" "";
+BA_ "SAE_J1939_DA_SpecVersion" "2015-01";
+BA_ "SAE_J1939_81_SpecVersion" "2012-05";
+BA_ "DatabaseVersion" "8.5";
+BA_ "BusType" "CAN";
+BA_ "ProtocolType" "J1939";
+BA_ "SAE_J1939_75_SpecVersion" "2012-05";
+BA_ "SAE_J1939_21_SpecVersion" "2006-10";
+BA_ "SAE_J1939_73_SpecVersion" "2012-10";
+BA_ "SAE_J1939_71_SpecVersion" "2012-10";
+BA_ "DBName" "J1939_TPMS";
+BA_ "GenMsgSendType" BO_ 2566845694 0;
+BA_ "GenMsgCycleTime" BO_ 2566845694 500;
+BA_ "VFrameFormat" BO_ 2566845694 3;
+BA_ "SigType" SG_ 2566845694 ExTirePressSupport 4;
+BA_ "SPN" SG_ 2566845694 ExTirePressSupport 6990;
+BA_ "SigType" SG_ 2566845694 TirePressThresholdDetection_13 0;
+BA_ "SPN" SG_ 2566845694 TirePressThresholdDetection_13 521613;
+BA_ "SigType" SG_ 2566845694 TirePressThresholdDetection_12 0;
+BA_ "SPN" SG_ 2566845694 TirePressThresholdDetection_12 521612;
+BA_ "SigType" SG_ 2566845694 TirePressThresholdDetection_11 0;
+BA_ "SPN" SG_ 2566845694 TirePressThresholdDetection_11 521611;
+BA_ "SigType" SG_ 2566845694 TirePressThresholdDetection_10 0;
+BA_ "SPN" SG_ 2566845694 TirePressThresholdDetection_10 521610;
+BA_ "SigType" SG_ 2566845694 TirePressThresholdDetection_01 0;
+BA_ "SPN" SG_ 2566845694 TirePressThresholdDetection_01 521601;
+BA_ "SigType" SG_ 2566845694 TirePress_33 1;
+BA_ "SPN" SG_ 2566845694 TirePress_33 521033;
+BA_ "SigType" SG_ 2566845694 TirePress_32 1;
+BA_ "SPN" SG_ 2566845694 TirePress_32 521032;
+BA_ "SigType" SG_ 2566845694 TirePress_31 1;
+BA_ "SPN" SG_ 2566845694 TirePress_31 521031;
+BA_ "SigType" SG_ 2566845694 TirePress_30 1;
+BA_ "SPN" SG_ 2566845694 TirePress_30 521030;
+BA_ "SigType" SG_ 2566845694 TirePress_23 1;
+BA_ "SPN" SG_ 2566845694 TirePress_23 521023;
+BA_ "SigType" SG_ 2566845694 TirePress_22 1;
+BA_ "SPN" SG_ 2566845694 TirePress_22 521022;
+BA_ "SigType" SG_ 2566845694 TirePress_21 1;
+BA_ "SPN" SG_ 2566845694 TirePress_21 521021;
+BA_ "SigType" SG_ 2566845694 TirePress_20 1;
+BA_ "SPN" SG_ 2566845694 TirePress_20 521020;
+BA_ "SigType" SG_ 2566845694 TirePress_13 1;
+BA_ "SPN" SG_ 2566845694 TirePress_13 521013;
+BA_ "SigType" SG_ 2566845694 TirePress_12 1;
+BA_ "SPN" SG_ 2566845694 TirePress_12 521012;
+BA_ "SigType" SG_ 2566845694 TirePress_11 1;
+BA_ "SPN" SG_ 2566845694 TirePress_11 521011;
+BA_ "SigType" SG_ 2566845694 TirePress_10 1;
+BA_ "SPN" SG_ 2566845694 TirePress_10 521010;
+BA_ "SigType" SG_ 2566845694 TireAirLeakageRate_33 1;
+BA_ "SPN" SG_ 2566845694 TireAirLeakageRate_33 521533;
+BA_ "SigType" SG_ 2566845694 TireAirLeakageRate_32 1;
+BA_ "SPN" SG_ 2566845694 TireAirLeakageRate_32 521532;
+BA_ "SigType" SG_ 2566845694 TireAirLeakageRate_31 1;
+BA_ "SPN" SG_ 2566845694 TireAirLeakageRate_31 521531;
+BA_ "SigType" SG_ 2566845694 TireAirLeakageRate_30 1;
+BA_ "SPN" SG_ 2566845694 TireAirLeakageRate_30 521530;
+BA_ "SigType" SG_ 2566845694 TireAirLeakageRate_23 1;
+BA_ "SPN" SG_ 2566845694 TireAirLeakageRate_23 521523;
+BA_ "SigType" SG_ 2566845694 TireAirLeakageRate_22 1;
+BA_ "SPN" SG_ 2566845694 TireAirLeakageRate_22 521522;
+BA_ "SigType" SG_ 2566845694 TireAirLeakageRate_21 1;
+BA_ "SPN" SG_ 2566845694 TireAirLeakageRate_21 521521;
+BA_ "SigType" SG_ 2566845694 TireAirLeakageRate_20 1;
+BA_ "SPN" SG_ 2566845694 TireAirLeakageRate_20 521520;
+BA_ "SigType" SG_ 2566845694 TireAirLeakageRate_13 1;
+BA_ "SPN" SG_ 2566845694 TireAirLeakageRate_13 521513;
+BA_ "SigType" SG_ 2566845694 TireAirLeakageRate_12 1;
+BA_ "SPN" SG_ 2566845694 TireAirLeakageRate_12 521512;
+BA_ "SigType" SG_ 2566845694 TireAirLeakageRate_11 1;
+BA_ "SPN" SG_ 2566845694 TireAirLeakageRate_11 521511;
+BA_ "SigType" SG_ 2566845694 TireAirLeakageRate_10 1;
+BA_ "SPN" SG_ 2566845694 TireAirLeakageRate_10 521510;
+BA_ "SigType" SG_ 2566845694 TireAirLeakageRate_01 1;
+BA_ "SPN" SG_ 2566845694 TireAirLeakageRate_01 521501;
+BA_ "SigType" SG_ 2566845694 TireAirLeakageRate_00 1;
+BA_ "SPN" SG_ 2566845694 TireAirLeakageRate_00 521500;
+BA_ "SigType" SG_ 2566845694 CTIWheelSensorStatus_33 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelSensorStatus_33 521433;
+BA_ "SigType" SG_ 2566845694 CTIWheelSensorStatus_32 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelSensorStatus_32 521432;
+BA_ "SigType" SG_ 2566845694 CTIWheelSensorStatus_31 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelSensorStatus_31 521431;
+BA_ "SigType" SG_ 2566845694 CTIWheelSensorStatus_30 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelSensorStatus_30 521430;
+BA_ "SigType" SG_ 2566845694 CTIWheelSensorStatus_23 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelSensorStatus_23 521423;
+BA_ "SigType" SG_ 2566845694 CTIWheelSensorStatus_22 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelSensorStatus_22 521422;
+BA_ "SigType" SG_ 2566845694 CTIWheelSensorStatus_21 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelSensorStatus_21 521421;
+BA_ "SigType" SG_ 2566845694 CTIWheelSensorStatus_20 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelSensorStatus_20 521420;
+BA_ "SigType" SG_ 2566845694 CTIWheelSensorStatus_13 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelSensorStatus_13 521413;
+BA_ "SigType" SG_ 2566845694 CTIWheelSensorStatus_12 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelSensorStatus_12 521412;
+BA_ "SigType" SG_ 2566845694 CTIWheelSensorStatus_11 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelSensorStatus_11 521411;
+BA_ "SigType" SG_ 2566845694 CTIWheelSensorStatus_10 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelSensorStatus_10 521410;
+BA_ "SigType" SG_ 2566845694 CTIWheelSensorStatus_01 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelSensorStatus_01 521401;
+BA_ "SigType" SG_ 2566845694 CTIWheelEndElectricalFault_33 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelEndElectricalFault_33 521233;
+BA_ "SigType" SG_ 2566845694 CTIWheelEndElectricalFault_32 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelEndElectricalFault_32 521232;
+BA_ "SigType" SG_ 2566845694 CTIWheelEndElectricalFault_31 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelEndElectricalFault_31 521231;
+BA_ "SigType" SG_ 2566845694 CTIWheelEndElectricalFault_30 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelEndElectricalFault_30 521230;
+BA_ "SigType" SG_ 2566845694 CTIWheelEndElectricalFault_23 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelEndElectricalFault_23 521223;
+BA_ "SigType" SG_ 2566845694 CTIWheelEndElectricalFault_22 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelEndElectricalFault_22 521222;
+BA_ "SigType" SG_ 2566845694 CTIWheelEndElectricalFault_21 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelEndElectricalFault_21 521221;
+BA_ "SigType" SG_ 2566845694 CTIWheelEndElectricalFault_20 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelEndElectricalFault_20 521220;
+BA_ "SigType" SG_ 2566845694 CTIWheelEndElectricalFault_13 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelEndElectricalFault_13 521213;
+BA_ "SigType" SG_ 2566845694 CTIWheelEndElectricalFault_12 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelEndElectricalFault_12 521212;
+BA_ "SigType" SG_ 2566845694 CTIWheelEndElectricalFault_11 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelEndElectricalFault_11 521211;
+BA_ "SigType" SG_ 2566845694 CTIWheelEndElectricalFault_10 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelEndElectricalFault_10 521210;
+BA_ "SigType" SG_ 2566845694 CTIWheelEndElectricalFault_01 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelEndElectricalFault_01 521201;
+BA_ "SigType" SG_ 2566845694 CTITireStatus_33 4;
+BA_ "SPN" SG_ 2566845694 CTITireStatus_33 521333;
+BA_ "SigType" SG_ 2566845694 CTITireStatus_32 4;
+BA_ "SPN" SG_ 2566845694 CTITireStatus_32 521332;
+BA_ "SigType" SG_ 2566845694 CTITireStatus_31 4;
+BA_ "SPN" SG_ 2566845694 CTITireStatus_31 521331;
+BA_ "SigType" SG_ 2566845694 CTITireStatus_30 4;
+BA_ "SPN" SG_ 2566845694 CTITireStatus_30 521330;
+BA_ "SigType" SG_ 2566845694 CTITireStatus_23 4;
+BA_ "SPN" SG_ 2566845694 CTITireStatus_23 521323;
+BA_ "SigType" SG_ 2566845694 CTITireStatus_22 4;
+BA_ "SPN" SG_ 2566845694 CTITireStatus_22 521322;
+BA_ "SigType" SG_ 2566845694 CTITireStatus_21 4;
+BA_ "SPN" SG_ 2566845694 CTITireStatus_21 521321;
+BA_ "SigType" SG_ 2566845694 CTITireStatus_20 4;
+BA_ "SPN" SG_ 2566845694 CTITireStatus_20 521320;
+BA_ "SigType" SG_ 2566845694 CTITireStatus_13 4;
+BA_ "SPN" SG_ 2566845694 CTITireStatus_13 521313;
+BA_ "SigType" SG_ 2566845694 CTITireStatus_12 4;
+BA_ "SPN" SG_ 2566845694 CTITireStatus_12 521312;
+BA_ "SigType" SG_ 2566845694 CTITireStatus_11 4;
+BA_ "SPN" SG_ 2566845694 CTITireStatus_11 521311;
+BA_ "SigType" SG_ 2566845694 CTITireStatus_10 4;
+BA_ "SPN" SG_ 2566845694 CTITireStatus_10 521310;
+BA_ "SigType" SG_ 2566845694 CTITireStatus_01 4;
+BA_ "SPN" SG_ 2566845694 CTITireStatus_01 521301;
+BA_ "SigType" SG_ 2566845694 TireTemp_11 1;
+BA_ "SPN" SG_ 2566845694 TireTemp_11 521111;
+BA_ "SigType" SG_ 2566845694 TireTemp_33 1;
+BA_ "SPN" SG_ 2566845694 TireTemp_33 521133;
+BA_ "SigType" SG_ 2566845694 TireTemp_32 1;
+BA_ "SPN" SG_ 2566845694 TireTemp_32 521132;
+BA_ "SigType" SG_ 2566845694 TireTemp_31 1;
+BA_ "SPN" SG_ 2566845694 TireTemp_31 521131;
+BA_ "SigType" SG_ 2566845694 TireTemp_30 1;
+BA_ "SPN" SG_ 2566845694 TireTemp_30 521130;
+BA_ "SigType" SG_ 2566845694 TireTemp_23 1;
+BA_ "SPN" SG_ 2566845694 TireTemp_23 521123;
+BA_ "SigType" SG_ 2566845694 TireTemp_22 1;
+BA_ "SPN" SG_ 2566845694 TireTemp_22 521122;
+BA_ "SigType" SG_ 2566845694 TireTemp_21 1;
+BA_ "SPN" SG_ 2566845694 TireTemp_21 521121;
+BA_ "SigType" SG_ 2566845694 TireTemp_20 1;
+BA_ "SPN" SG_ 2566845694 TireTemp_20 521120;
+BA_ "SigType" SG_ 2566845694 TireTemp_13 1;
+BA_ "SPN" SG_ 2566845694 TireTemp_13 521113;
+BA_ "SigType" SG_ 2566845694 TireTemp_12 1;
+BA_ "SPN" SG_ 2566845694 TireTemp_12 521112;
+BA_ "SigType" SG_ 2566845694 TireTemp_10 1;
+BA_ "SPN" SG_ 2566845694 TireTemp_10 521110;
+BA_ "SigType" SG_ 2566845694 TireTemp_01 1;
+BA_ "SPN" SG_ 2566845694 TireTemp_01 521101;
+BA_ "SigType" SG_ 2566845694 TireTemp_00 1;
+BA_ "SPN" SG_ 2566845694 TireTemp_00 521100;
+BA_ "SigType" SG_ 2566845694 TirePressThresholdDetection_33 0;
+BA_ "SPN" SG_ 2566845694 TirePressThresholdDetection_33 521633;
+BA_ "SigType" SG_ 2566845694 TirePressThresholdDetection_32 0;
+BA_ "SPN" SG_ 2566845694 TirePressThresholdDetection_32 521632;
+BA_ "SigType" SG_ 2566845694 TirePressThresholdDetection_31 0;
+BA_ "SPN" SG_ 2566845694 TirePressThresholdDetection_31 521631;
+BA_ "SigType" SG_ 2566845694 TirePressThresholdDetection_30 0;
+BA_ "SPN" SG_ 2566845694 TirePressThresholdDetection_30 521630;
+BA_ "SigType" SG_ 2566845694 TirePressThresholdDetection_23 0;
+BA_ "SPN" SG_ 2566845694 TirePressThresholdDetection_23 521623;
+BA_ "SigType" SG_ 2566845694 TirePressThresholdDetection_22 0;
+BA_ "SPN" SG_ 2566845694 TirePressThresholdDetection_22 521622;
+BA_ "SigType" SG_ 2566845694 TirePressThresholdDetection_21 0;
+BA_ "SPN" SG_ 2566845694 TirePressThresholdDetection_21 521621;
+BA_ "SigType" SG_ 2566845694 TirePressThresholdDetection_20 0;
+BA_ "SPN" SG_ 2566845694 TirePressThresholdDetection_20 521620;
+BA_ "SigType" SG_ 2566845694 TirePressThresholdDetection_00 0;
+BA_ "SPN" SG_ 2566845694 TirePressThresholdDetection_00 521600;
+BA_ "SigType" SG_ 2566845694 TirePress_01 1;
+BA_ "SPN" SG_ 2566845694 TirePress_01 521001;
+BA_ "SigType" SG_ 2566845694 TirePress_00 1;
+BA_ "SPN" SG_ 2566845694 TirePress_00 521000;
+BA_ "SigType" SG_ 2566845694 CTIWheelSensorStatus_00 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelSensorStatus_00 521400;
+BA_ "SigType" SG_ 2566845694 CTIWheelEndElectricalFault_00 4;
+BA_ "SPN" SG_ 2566845694 CTIWheelEndElectricalFault_00 521200;
+BA_ "SigType" SG_ 2566845694 CTITireStatus_00 4;
+BA_ "SPN" SG_ 2566845694 CTITireStatus_00 521300;
+BA_ "SPN" SG_ 2566845694 TireLocation 929;
+VAL_ 2566845694 ExTirePressSupport 3 "Not Available/Not Supported" 2 "Error" 1 "Using Extended Tire Pressure" 0 "Not Using Extended Tire Pressure" ;
+VAL_ 2566845694 TirePressThresholdDetection_13 7 "NotAvailable" 6 "ErrorIndicator" 5 "NotDefined" 4 "ExtrmUndrPrssTrPrssrIsAtALvlWhr" 3 "UndrPrssTrPrssrIsLwrThnThPrssrD" 2 "NWrnngPrssTrPrssrIsWthnThThrshl" 1 "OvrPrssTrPrssrIsHghrThnThPrssrD" 0 "ExtrmOvrPrssTrPrssrIsAtALvlWhrT" ;
+VAL_ 2566845694 TirePressThresholdDetection_12 7 "NotAvailable" 6 "ErrorIndicator" 5 "NotDefined" 4 "ExtrmUndrPrssTrPrssrIsAtALvlWhr" 3 "UndrPrssTrPrssrIsLwrThnThPrssrD" 2 "NWrnngPrssTrPrssrIsWthnThThrshl" 1 "OvrPrssTrPrssrIsHghrThnThPrssrD" 0 "ExtrmOvrPrssTrPrssrIsAtALvlWhrT" ;
+VAL_ 2566845694 TirePressThresholdDetection_11 7 "NotAvailable" 6 "ErrorIndicator" 5 "NotDefined" 4 "ExtrmUndrPrssTrPrssrIsAtALvlWhr" 3 "UndrPrssTrPrssrIsLwrThnThPrssrD" 2 "NWrnngPrssTrPrssrIsWthnThThrshl" 1 "OvrPrssTrPrssrIsHghrThnThPrssrD" 0 "ExtrmOvrPrssTrPrssrIsAtALvlWhrT" ;
+VAL_ 2566845694 TirePressThresholdDetection_10 7 "NotAvailable" 6 "ErrorIndicator" 5 "NotDefined" 4 "ExtrmUndrPrssTrPrssrIsAtALvlWhr" 3 "UndrPrssTrPrssrIsLwrThnThPrssrD" 2 "NWrnngPrssTrPrssrIsWthnThThrshl" 1 "OvrPrssTrPrssrIsHghrThnThPrssrD" 0 "ExtrmOvrPrssTrPrssrIsAtALvlWhrT" ;
+VAL_ 2566845694 TirePressThresholdDetection_01 7 "NotAvailable" 6 "ErrorIndicator" 5 "NotDefined" 4 "ExtrmUndrPrssTrPrssrIsAtALvlWhr" 3 "UndrPrssTrPrssrIsLwrThnThPrssrD" 2 "NWrnngPrssTrPrssrIsWthnThThrshl" 1 "OvrPrssTrPrssrIsHghrThnThPrssrD" 0 "ExtrmOvrPrssTrPrssrIsAtALvlWhrT" ;
+VAL_ 2566845694 CTIWheelSensorStatus_33 3 "NotSupported" 2 "NotDefined" 1 "On" 0 "Off_IsolatedFromCTIPressCtrl" ;
+VAL_ 2566845694 CTIWheelSensorStatus_32 3 "NotSupported" 2 "NotDefined" 1 "On" 0 "Off_IsolatedFromCTIPressCtrl" ;
+VAL_ 2566845694 CTIWheelSensorStatus_31 3 "NotSupported" 2 "NotDefined" 1 "On" 0 "Off_IsolatedFromCTIPressCtrl" ;
+VAL_ 2566845694 CTIWheelSensorStatus_30 3 "NotSupported" 2 "NotDefined" 1 "On" 0 "Off_IsolatedFromCTIPressCtrl" ;
+VAL_ 2566845694 CTIWheelSensorStatus_23 3 "NotSupported" 2 "NotDefined" 1 "On" 0 "Off_IsolatedFromCTIPressCtrl" ;
+VAL_ 2566845694 CTIWheelSensorStatus_22 3 "NotSupported" 2 "NotDefined" 1 "On" 0 "Off_IsolatedFromCTIPressCtrl" ;
+VAL_ 2566845694 CTIWheelSensorStatus_21 3 "NotSupported" 2 "NotDefined" 1 "On" 0 "Off_IsolatedFromCTIPressCtrl" ;
+VAL_ 2566845694 CTIWheelSensorStatus_20 3 "NotSupported" 2 "NotDefined" 1 "On" 0 "Off_IsolatedFromCTIPressCtrl" ;
+VAL_ 2566845694 CTIWheelSensorStatus_13 3 "NotSupported" 2 "NotDefined" 1 "On" 0 "Off_IsolatedFromCTIPressCtrl" ;
+VAL_ 2566845694 CTIWheelSensorStatus_12 3 "NotSupported" 2 "NotDefined" 1 "On" 0 "Off_IsolatedFromCTIPressCtrl" ;
+VAL_ 2566845694 CTIWheelSensorStatus_11 3 "NotSupported" 2 "NotDefined" 1 "On" 0 "Off_IsolatedFromCTIPressCtrl" ;
+VAL_ 2566845694 CTIWheelSensorStatus_10 3 "NotSupported" 2 "NotDefined" 1 "On" 0 "Off_IsolatedFromCTIPressCtrl" ;
+VAL_ 2566845694 CTIWheelSensorStatus_01 3 "NotSupported" 2 "NotDefined" 1 "On" 0 "Off_IsolatedFromCTIPressCtrl" ;
+VAL_ 2566845694 CTIWheelEndElectricalFault_33 3 "NotSupported" 2 "Error" 1 "NotDefined" 0 "Ok" ;
+VAL_ 2566845694 CTIWheelEndElectricalFault_32 3 "NotSupported" 2 "Error" 1 "NotDefined" 0 "Ok" ;
+VAL_ 2566845694 CTIWheelEndElectricalFault_31 3 "NotSupported" 2 "Error" 1 "NotDefined" 0 "Ok" ;
+VAL_ 2566845694 CTIWheelEndElectricalFault_30 3 "NotSupported" 2 "Error" 1 "NotDefined" 0 "Ok" ;
+VAL_ 2566845694 CTIWheelEndElectricalFault_23 3 "NotSupported" 2 "Error" 1 "NotDefined" 0 "Ok" ;
+VAL_ 2566845694 CTIWheelEndElectricalFault_22 3 "NotSupported" 2 "Error" 1 "NotDefined" 0 "Ok" ;
+VAL_ 2566845694 CTIWheelEndElectricalFault_21 3 "NotSupported" 2 "Error" 1 "NotDefined" 0 "Ok" ;
+VAL_ 2566845694 CTIWheelEndElectricalFault_20 3 "NotSupported" 2 "Error" 1 "NotDefined" 0 "Ok" ;
+VAL_ 2566845694 CTIWheelEndElectricalFault_13 3 "NotSupported" 2 "Error" 1 "NotDefined" 0 "Ok" ;
+VAL_ 2566845694 CTIWheelEndElectricalFault_12 3 "NotSupported" 2 "Error" 1 "NotDefined" 0 "Ok" ;
+VAL_ 2566845694 CTIWheelEndElectricalFault_11 3 "NotSupported" 2 "Error" 1 "NotDefined" 0 "Ok" ;
+VAL_ 2566845694 CTIWheelEndElectricalFault_10 3 "NotSupported" 2 "Error" 1 "NotDefined" 0 "Ok" ;
+VAL_ 2566845694 CTIWheelEndElectricalFault_01 3 "NotSupported" 2 "Error" 1 "NotDefined" 0 "Ok" ;
+VAL_ 2566845694 CTITireStatus_33 3 "NotSupported" 2 "Error" 1 "TireLeakDetected" 0 "Ok" ;
+VAL_ 2566845694 CTITireStatus_32 3 "NotSupported" 2 "Error" 1 "TireLeakDetected" 0 "Ok" ;
+VAL_ 2566845694 CTITireStatus_31 3 "NotSupported" 2 "Error" 1 "TireLeakDetected" 0 "Ok" ;
+VAL_ 2566845694 CTITireStatus_30 3 "NotSupported" 2 "Error" 1 "TireLeakDetected" 0 "Ok" ;
+VAL_ 2566845694 CTITireStatus_23 3 "NotSupported" 2 "Error" 1 "TireLeakDetected" 0 "Ok" ;
+VAL_ 2566845694 CTITireStatus_22 3 "NotSupported" 2 "Error" 1 "TireLeakDetected" 0 "Ok" ;
+VAL_ 2566845694 CTITireStatus_21 3 "NotSupported" 2 "Error" 1 "TireLeakDetected" 0 "Ok" ;
+VAL_ 2566845694 CTITireStatus_20 3 "NotSupported" 2 "Error" 1 "TireLeakDetected" 0 "Ok" ;
+VAL_ 2566845694 CTITireStatus_13 3 "NotSupported" 2 "Error" 1 "TireLeakDetected" 0 "Ok" ;
+VAL_ 2566845694 CTITireStatus_12 3 "NotSupported" 2 "Error" 1 "TireLeakDetected" 0 "Ok" ;
+VAL_ 2566845694 CTITireStatus_11 3 "NotSupported" 2 "Error" 1 "TireLeakDetected" 0 "Ok" ;
+VAL_ 2566845694 CTITireStatus_10 3 "NotSupported" 2 "Error" 1 "TireLeakDetected" 0 "Ok" ;
+VAL_ 2566845694 CTITireStatus_01 3 "NotSupported" 2 "Error" 1 "TireLeakDetected" 0 "Ok" ;
+VAL_ 2566845694 TirePressThresholdDetection_33 7 "NotAvailable" 6 "ErrorIndicator" 5 "NotDefined" 4 "ExtrmUndrPrssTrPrssrIsAtALvlWhr" 3 "UndrPrssTrPrssrIsLwrThnThPrssrD" 2 "NWrnngPrssTrPrssrIsWthnThThrshl" 1 "OvrPrssTrPrssrIsHghrThnThPrssrD" 0 "ExtrmOvrPrssTrPrssrIsAtALvlWhrT" ;
+VAL_ 2566845694 TirePressThresholdDetection_32 7 "NotAvailable" 6 "ErrorIndicator" 5 "NotDefined" 4 "ExtrmUndrPrssTrPrssrIsAtALvlWhr" 3 "UndrPrssTrPrssrIsLwrThnThPrssrD" 2 "NWrnngPrssTrPrssrIsWthnThThrshl" 1 "OvrPrssTrPrssrIsHghrThnThPrssrD" 0 "ExtrmOvrPrssTrPrssrIsAtALvlWhrT" ;
+VAL_ 2566845694 TirePressThresholdDetection_31 7 "NotAvailable" 6 "ErrorIndicator" 5 "NotDefined" 4 "ExtrmUndrPrssTrPrssrIsAtALvlWhr" 3 "UndrPrssTrPrssrIsLwrThnThPrssrD" 2 "NWrnngPrssTrPrssrIsWthnThThrshl" 1 "OvrPrssTrPrssrIsHghrThnThPrssrD" 0 "ExtrmOvrPrssTrPrssrIsAtALvlWhrT" ;
+VAL_ 2566845694 TirePressThresholdDetection_30 7 "NotAvailable" 6 "ErrorIndicator" 5 "NotDefined" 4 "ExtrmUndrPrssTrPrssrIsAtALvlWhr" 3 "UndrPrssTrPrssrIsLwrThnThPrssrD" 2 "NWrnngPrssTrPrssrIsWthnThThrshl" 1 "OvrPrssTrPrssrIsHghrThnThPrssrD" 0 "ExtrmOvrPrssTrPrssrIsAtALvlWhrT" ;
+VAL_ 2566845694 TirePressThresholdDetection_23 7 "NotAvailable" 6 "ErrorIndicator" 5 "NotDefined" 4 "ExtrmUndrPrssTrPrssrIsAtALvlWhr" 3 "UndrPrssTrPrssrIsLwrThnThPrssrD" 2 "NWrnngPrssTrPrssrIsWthnThThrshl" 1 "OvrPrssTrPrssrIsHghrThnThPrssrD" 0 "ExtrmOvrPrssTrPrssrIsAtALvlWhrT" ;
+VAL_ 2566845694 TirePressThresholdDetection_22 7 "NotAvailable" 6 "ErrorIndicator" 5 "NotDefined" 4 "ExtrmUndrPrssTrPrssrIsAtALvlWhr" 3 "UndrPrssTrPrssrIsLwrThnThPrssrD" 2 "NWrnngPrssTrPrssrIsWthnThThrshl" 1 "OvrPrssTrPrssrIsHghrThnThPrssrD" 0 "ExtrmOvrPrssTrPrssrIsAtALvlWhrT" ;
+VAL_ 2566845694 TirePressThresholdDetection_21 7 "NotAvailable" 6 "ErrorIndicator" 5 "NotDefined" 4 "ExtrmUndrPrssTrPrssrIsAtALvlWhr" 3 "UndrPrssTrPrssrIsLwrThnThPrssrD" 2 "NWrnngPrssTrPrssrIsWthnThThrshl" 1 "OvrPrssTrPrssrIsHghrThnThPrssrD" 0 "ExtrmOvrPrssTrPrssrIsAtALvlWhrT" ;
+VAL_ 2566845694 TirePressThresholdDetection_20 7 "NotAvailable" 6 "ErrorIndicator" 5 "NotDefined" 4 "ExtrmUndrPrssTrPrssrIsAtALvlWhr" 3 "UndrPrssTrPrssrIsLwrThnThPrssrD" 2 "NWrnngPrssTrPrssrIsWthnThThrshl" 1 "OvrPrssTrPrssrIsHghrThnThPrssrD" 0 "ExtrmOvrPrssTrPrssrIsAtALvlWhrT" ;
+VAL_ 2566845694 TirePressThresholdDetection_00 7 "NotAvailable" 6 "ErrorIndicator" 5 "NotDefined" 4 "ExtrmUndrPrssTrPrssrIsAtALvlWhr" 3 "UndrPrssTrPrssrIsLwrThnThPrssrD" 2 "NWrnngPrssTrPrssrIsWthnThThrshl" 1 "OvrPrssTrPrssrIsHghrThnThPrssrD" 0 "ExtrmOvrPrssTrPrssrIsAtALvlWhrT" ;
+VAL_ 2566845694 CTIWheelSensorStatus_00 3 "NotSupported" 2 "NotDefined" 1 "On" 0 "Off_IsolatedFromCTIPressCtrl" ;
+VAL_ 2566845694 CTIWheelEndElectricalFault_00 3 "NotSupported" 2 "Error" 1 "NotDefined" 0 "Ok" ;
+VAL_ 2566845694 CTITireStatus_00 3 "NotSupported" 2 "Error" 1 "TireLeakDetected" 0 "Ok" ;
+VAL_ 2566845694 TireLocation 51 "Axle3_Position3" 50 "Axle3_Position2" 49 "Axle3_Position1" 35 "Axle2_Position3" 34 "Axle2_Position2" 33 "Axle2_Position1" 19 "Axle1_Position3" 18 "Axle1_Position2" 17 "Axle1_Position1" 1 "Axle0_Position1" 48 "Axle3_Position0" 32 "Axle2_Position0" 16 "Axle1_Position0" 0 "Axle0_Position0" ;
+

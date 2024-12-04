@@ -1,0 +1,94 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 2583063294 CWC: 2 Vector__XXX
+ SG_ PassWindowStatus : 11|3@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DriverWindowStatus : 8|3@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ WindowPosCmd : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+
+
+
+CM_ "$File: //depot/auto/dbc/Software_Modules/Closures_System/WindowControl/0.0.1.0/WindowControl.dbc $
+$Change: 215972 $
+$DateTime: 2024/08/21 10:02:39 $
+$Revision: #1 $";
+CM_ BO_ 2583063294 "Cab Door Control
+This message requests or commands the cabin windows";
+CM_ SG_ 2583063294 WindowPosCmd "Commands position change of the right rear window.
+
+000 = Window move up
+001 = Window move down
+010 = Window auto up
+011 = Window auto down
+100 = Reserved
+101 = Reserved
+110 = Reserved
+111 = Take no action";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ BO_  "SendOnChange" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","noMsgSendType";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "Producer" STRING ;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "SendOnChange" "";
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "VFrameFormat" "";
+BA_ "ProtocolType" "J1939";
+BA_ "BusType" "CAN";
+BA_ "DBName" "WndwCntrl";
+BA_ "SendOnChange" BO_ 2583063294 1;
+BA_ "GenMsgDelayTime" BO_ 2583063294 100;
+BA_ "GenMsgSendType" BO_ 2583063294 0;
+BA_ "GenMsgCycleTime" BO_ 2583063294 1000;
+BA_ "VFrameFormat" BO_ 2583063294 3;
+BA_ "GenSigStartValue" SG_ 2583063294 WindowPosCmd 7;
+BA_ "Producer" BO_ 2583063294 "CLS";
+VAL_ 2583063294 PassWindowStatus 3 "NA" 2 "Error" 1 "Open" 0 "Closed" ;
+VAL_ 2583063294 DriverWindowStatus 3 "NA" 2 "Error" 1 "Open" 0 "Closed" ;
+VAL_ 2583063294 WindowPosCmd 7 "Take no action" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Window auto down" 2 "Window auto up" 1 "Window move down" 0 "Window move up" ;
+

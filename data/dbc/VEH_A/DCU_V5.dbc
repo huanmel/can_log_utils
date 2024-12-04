@@ -1,0 +1,2324 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Device Host
+VAL_TABLE_ vtBridgeOperation 0 "Freewheeling" 1 "Forward" 2 "Reverse" 3 "Brake" 6 "Error" 7 "Not Available" ;
+VAL_TABLE_ vtBridgeStatus 0 "OK" 1 "Shutdown" 2 "Unconfigured" 3 "Not Available" ;
+VAL_TABLE_ vtDigitalInput 0 "InputLow" 1 "InputHigh" 2 "Error" 3 "Not Available" ;
+VAL_TABLE_ vtOnOff 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_TABLE_ vtPinMode 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_TABLE_ vtPinPullMode 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_TABLE_ vtPwmFreq 0 "1 Hz" 1 "2 Hz" 2 "5 Hz" 3 "10 Hz" 4 "20 Hz" 5 "50 Hz" 6 "100 Hz" 7 "200 Hz" 8 "500 Hz" 9 "1 KHz" 10 "2 KHz" 11 "5 KHz" 14 "Error" 15 "Not Available" ;
+VAL_TABLE_ vtQEncoderDirection 0 "Stopped" 1 "Forward" 2 "Reverse" 3 "NotAvailable" ;
+
+
+BO_ 2369322750 IoCommandBridge1: 8 Host
+ SG_ BridgeModeCommand_b01 : 0|3@1+ (1,0) [0|7] ""  Device
+ SG_ BridgeModeCommand_b02 : 3|3@1+ (1,0) [0|7] ""  Device
+ SG_ BridgeModeCommand_b03 : 6|3@1+ (1,0) [0|7] ""  Device
+ SG_ BridgeModeCommand_b04 : 9|3@1+ (1,0) [0|7] ""  Device
+
+BO_ 2369650430 IoCommandDuty1: 8 Host
+ SG_ DutyCommand_X1_22 : 0|8@1+ (0.5,0) [0|100] "%"  Device
+ SG_ DutyCommand_X1_37 : 8|8@1+ (0.5,0) [0|100] "%"  Device
+ SG_ DutyCommand_X1_23 : 16|8@1+ (0.5,0) [0|100] "%"  Device
+ SG_ DutyCommand_X1_38 : 24|8@1+ (0.5,0) [0|100] "%"  Device
+ SG_ DutyCommand_X2_9 : 32|8@1+ (0.5,0) [0|100] "%"  Device
+ SG_ DutyCommand_X2_24 : 40|8@1+ (0.5,0) [0|100] "%"  Device
+ SG_ DutyCommand_X2_10 : 48|8@1+ (0.5,0) [0|100] "%"  Device
+ SG_ DutyCommand_X2_25 : 56|8@1+ (0.5,0) [0|100] "%"  Device
+
+BO_ 2370043646 IoCommandDutyFD: 32 Host
+ SG_ DutyCommand_X1_22 : 0|8@1+ (0.5,0) [0|100] "%"  Device
+ SG_ DutyCommand_X1_37 : 8|8@1+ (0.5,0) [0|100] "%"  Device
+ SG_ DutyCommand_X1_23 : 16|8@1+ (0.5,0) [0|100] "%"  Device
+ SG_ DutyCommand_X1_38 : 24|8@1+ (0.5,0) [0|100] "%"  Device
+ SG_ DutyCommand_X2_9 : 32|8@1+ (0.5,0) [0|100] "%"  Device
+ SG_ DutyCommand_X2_24 : 40|8@1+ (0.5,0) [0|100] "%"  Device
+ SG_ DutyCommand_X2_10 : 48|8@1+ (0.5,0) [0|100] "%"  Device
+ SG_ DutyCommand_X2_25 : 56|8@1+ (0.5,0) [0|100] "%"  Device
+
+BO_ 2369388286 IoCommandPinMode1: 8 Host
+ SG_ PinModeCommand_X1_22 : 0|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X1_22 : 4|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X1_22 : 6|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X1_37 : 8|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X1_37 : 12|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X1_37 : 14|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X1_23 : 16|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X1_23 : 20|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X1_23 : 22|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X1_38 : 24|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X1_38 : 28|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X1_38 : 30|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X2_9 : 32|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X2_9 : 36|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X2_9 : 38|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X2_24 : 40|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X2_24 : 44|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X2_24 : 46|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X2_10 : 48|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X2_10 : 52|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X2_10 : 54|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X2_25 : 56|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X2_25 : 60|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X2_25 : 62|2@1+ (1,0) [0|0] ""  Device
+
+BO_ 2369453822 IoCommandPinMode2: 8 Host
+ SG_ PinModeCommand_X1_10 : 0|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X1_10 : 4|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X1_10 : 6|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X1_25 : 8|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X1_25 : 12|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X1_25 : 14|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X1_11 : 16|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X1_11 : 20|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X1_11 : 22|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X1_26 : 24|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X1_26 : 28|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X1_26 : 30|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X1_12 : 32|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X1_12 : 36|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X1_12 : 38|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X1_27 : 40|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X1_27 : 44|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X1_27 : 46|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X2_6 : 48|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X2_6 : 52|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X2_6 : 54|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X2_5 : 56|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X2_5 : 60|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X2_5 : 62|2@1+ (1,0) [0|0] ""  Device
+
+BO_ 2369519358 IoCommandPinMode3: 8 Host
+ SG_ PinModeCommand_X1_19 : 0|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X1_19 : 4|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X1_19 : 6|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X1_34 : 8|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X1_34 : 12|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X1_34 : 14|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X2_18 : 16|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X2_18 : 20|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X2_18 : 22|2@1+ (1,0) [0|0] ""  Device
+ SG_ PinModeCommand_X2_33 : 24|4@1+ (1,0) [0|0] ""  Device
+ SG_ PinPullModeCommand_X2_33 : 28|2@1+ (1,0) [0|0] ""  Device
+ SG_ LoadDetectionCommand_X2_33 : 30|2@1+ (1,0) [0|0] ""  Device
+
+BO_ 2369912574 IoCommandPwmFreq1: 8 Host
+ SG_ PwmFrequencyCommand_X1_22 : 0|4@1+ (1,0) [0|15] ""  Device
+ SG_ PwmFrequencyCommand_X1_37 : 4|4@1+ (1,0) [0|15] ""  Device
+ SG_ PwmFrequencyCommand_X1_23 : 8|4@1+ (1,0) [0|15] ""  Device
+ SG_ PwmFrequencyCommand_X1_38 : 12|4@1+ (1,0) [0|15] ""  Device
+ SG_ PwmFrequencyCommand_X2_9 : 16|4@1+ (1,0) [0|15] ""  Device
+ SG_ PwmFrequencyCommand_X2_24 : 20|4@1+ (1,0) [0|15] ""  Device
+ SG_ PwmFrequencyCommand_X2_10 : 24|4@1+ (1,0) [0|15] ""  Device
+ SG_ PwmFrequencyCommand_X2_25 : 28|4@1+ (1,0) [0|15] ""  Device
+
+BO_ 2583656702 IoDigitalDutyStatus1: 8 Device
+ SG_ PinDutyStatus_X1_22 : 0|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ PinDutyStatus_X1_37 : 8|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ PinDutyStatus_X1_23 : 16|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ PinDutyStatus_X1_38 : 24|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ PinDutyStatus_X2_9 : 32|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ PinDutyStatus_X2_24 : 40|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ PinDutyStatus_X2_10 : 48|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ PinDutyStatus_X2_25 : 56|8@1+ (0.5,0) [0|100] "%"  Host
+
+BO_ 2583656446 IoDigitalFrequencyStatus1: 8 Device
+ SG_ PinFrequencyStatus_X1_22 : 0|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PinFrequencyStatus_X1_37 : 16|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PinFrequencyStatus_X1_23 : 32|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PinFrequencyStatus_X1_38 : 48|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+
+BO_ 2583646462 IoDigitalFrequencyStatus2: 8 Device
+ SG_ PinFrequencyStatus_X2_9 : 0|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PinFrequencyStatus_X2_24 : 16|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PinFrequencyStatus_X2_10 : 32|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PinFrequencyStatus_X2_25 : 48|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+
+BO_ 2583656190 IoStatusBridge1: 8 Device
+ SG_ BridgeModeStatus_b01 : 0|3@1+ (1,0) [0|7] ""  Host
+ SG_ BridgeStatus_b01 : 3|3@1+ (1,0) [0|7] ""  Host
+ SG_ BridgeModeStatus_b02 : 8|3@1+ (1,0) [0|7] ""  Host
+ SG_ BridgeStatus_b02 : 11|3@1+ (1,0) [0|7] ""  Host
+ SG_ BridgeModeStatus_b03 : 16|3@1+ (1,0) [0|7] ""  Host
+ SG_ BridgeStatus_b03 : 19|3@1+ (1,0) [0|7] ""  Host
+ SG_ BridgeModeStatus_b04 : 24|3@1+ (1,0) [0|7] ""  Host
+ SG_ BridgeStatus_b04 : 27|3@1+ (1,0) [0|7] ""  Host
+
+BO_ 2583647742 IoStatusCurrent1: 8 Device
+ SG_ CurrentStatus_X1_22 : 0|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ CurrentStatus_X1_37 : 16|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ CurrentStatus_X1_23 : 32|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ CurrentStatus_X1_38 : 48|16@1+ (0.01,-320) [-320|320] "A"  Host
+
+BO_ 2583647998 IoStatusCurrent2: 8 Device
+ SG_ CurrentStatus_X2_9 : 0|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ CurrentStatus_X2_24 : 16|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ CurrentStatus_X2_10 : 32|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ CurrentStatus_X2_25 : 48|16@1+ (0.01,-320) [-320|320] "A"  Host
+
+BO_ 2582845950 IoStatusCurrentFD: 64 Device
+ SG_ CurrentStatus_X1_22 : 0|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ CurrentStatus_X1_37 : 16|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ CurrentStatus_X1_23 : 32|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ CurrentStatus_X1_38 : 48|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ CurrentStatus_X2_9 : 64|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ CurrentStatus_X2_24 : 80|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ CurrentStatus_X2_10 : 96|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ CurrentStatus_X2_25 : 112|16@1+ (0.01,-320) [-320|320] "A"  Host
+
+BO_ 2583648766 IoStatusDiagnostic1: 8 Device
+ SG_ DiagnosticStatus_X1_22 : 0|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_37 : 4|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_23 : 8|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_38 : 12|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X2_9 : 16|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X2_24 : 20|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X2_10 : 24|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X2_25 : 28|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_10 : 32|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_25 : 36|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_11 : 40|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_26 : 44|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_12 : 48|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_27 : 52|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X2_6 : 56|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X2_5 : 60|4@1+ (1,0) [0|0] ""  Host
+
+BO_ 2583649022 IoStatusDiagnostic2: 8 Device
+ SG_ DiagnosticStatus_X1_19 : 0|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_34 : 4|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X2_18 : 8|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X2_33 : 12|4@1+ (1,0) [0|0] ""  Host
+
+BO_ 2582847486 IoStatusDiagnosticFD: 16 Device
+ SG_ DiagnosticStatus_X1_22 : 0|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_37 : 4|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_23 : 8|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_38 : 12|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X2_9 : 16|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X2_24 : 20|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X2_10 : 24|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X2_25 : 28|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_10 : 32|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_25 : 36|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_11 : 40|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_26 : 44|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_12 : 48|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_27 : 52|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X2_6 : 56|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X2_5 : 60|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_19 : 64|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X1_34 : 68|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X2_18 : 72|4@1+ (1,0) [0|0] ""  Host
+ SG_ DiagnosticStatus_X2_33 : 76|4@1+ (1,0) [0|0] ""  Host
+
+BO_ 2583651326 IoStatusDuty1: 8 Device
+ SG_ DutyStatus_X1_22 : 0|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ DutyStatus_X1_37 : 8|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ DutyStatus_X1_23 : 16|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ DutyStatus_X1_38 : 24|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ DutyStatus_X2_9 : 32|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ DutyStatus_X2_24 : 40|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ DutyStatus_X2_10 : 48|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ DutyStatus_X2_25 : 56|8@1+ (0.5,0) [0|100] "%"  Host
+
+BO_ 2582847742 IoStatusDutyFD: 32 Device
+ SG_ DutyStatus_X1_22 : 0|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ DutyStatus_X1_37 : 8|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ DutyStatus_X1_23 : 16|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ DutyStatus_X1_38 : 24|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ DutyStatus_X2_9 : 32|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ DutyStatus_X2_24 : 40|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ DutyStatus_X2_10 : 48|8@1+ (0.5,0) [0|100] "%"  Host
+ SG_ DutyStatus_X2_25 : 56|8@1+ (0.5,0) [0|100] "%"  Host
+
+BO_ 2582843646 IoStatusFaultCount1: 8 Device
+ SG_ FaultCountStatus_X1_22 : 0|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_37 : 16|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_23 : 32|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_38 : 48|16@1+ (1,0) [0|64255] ""  Host
+
+BO_ 2582843902 IoStatusFaultCount2: 8 Device
+ SG_ FaultCountStatus_X2_9 : 0|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X2_24 : 16|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X2_10 : 32|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X2_25 : 48|16@1+ (1,0) [0|64255] ""  Host
+
+BO_ 2582844158 IoStatusFaultCount3: 8 Device
+ SG_ FaultCountStatus_X1_10 : 0|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_25 : 16|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_11 : 32|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_26 : 48|16@1+ (1,0) [0|64255] ""  Host
+
+BO_ 2582844414 IoStatusFaultCount4: 8 Device
+ SG_ FaultCountStatus_X1_12 : 0|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_27 : 16|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X2_6 : 32|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X2_5 : 48|16@1+ (1,0) [0|64255] ""  Host
+
+BO_ 2582844670 IoStatusFaultCount5: 8 Device
+ SG_ FaultCountStatus_X1_19 : 0|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_34 : 16|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X2_18 : 32|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X2_33 : 48|16@1+ (1,0) [0|64255] ""  Host
+
+BO_ 2582846206 IoStatusFaultCountFD: 64 Device
+ SG_ FaultCountStatus_X1_22 : 0|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_37 : 16|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_23 : 32|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_38 : 48|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X2_9 : 64|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X2_24 : 80|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X2_10 : 96|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X2_25 : 112|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_10 : 128|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_25 : 144|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_11 : 160|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_26 : 176|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_12 : 192|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_27 : 208|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X2_6 : 224|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X2_5 : 240|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_19 : 256|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X1_34 : 272|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X2_18 : 288|16@1+ (1,0) [0|64255] ""  Host
+ SG_ FaultCountStatus_X2_33 : 304|16@1+ (1,0) [0|64255] ""  Host
+
+BO_ 2582839550 IoStatusFaultCurrent1: 8 Device
+ SG_ FaultCurrentStatus_X1_22 : 0|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ FaultCurrentStatus_X1_37 : 16|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ FaultCurrentStatus_X1_23 : 32|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ FaultCurrentStatus_X1_38 : 48|16@1+ (0.01,-320) [-320|320] "A"  Host
+
+BO_ 2582839806 IoStatusFaultCurrent2: 8 Device
+ SG_ FaultCurrentStatus_X2_9 : 0|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ FaultCurrentStatus_X2_24 : 16|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ FaultCurrentStatus_X2_10 : 32|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ FaultCurrentStatus_X2_25 : 48|16@1+ (0.01,-320) [-320|320] "A"  Host
+
+BO_ 2582846462 IoStatusFaultCurrentFD: 64 Device
+ SG_ FaultCurrentStatus_X1_22 : 0|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ FaultCurrentStatus_X1_37 : 16|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ FaultCurrentStatus_X1_23 : 32|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ FaultCurrentStatus_X1_38 : 48|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ FaultCurrentStatus_X2_9 : 64|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ FaultCurrentStatus_X2_24 : 80|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ FaultCurrentStatus_X2_10 : 96|16@1+ (0.01,-320) [-320|320] "A"  Host
+ SG_ FaultCurrentStatus_X2_25 : 112|16@1+ (0.01,-320) [-320|320] "A"  Host
+
+BO_ 2582841598 IoStatusFaultVoltage1: 8 Device
+ SG_ FaultVoltageStatus_X1_22 : 0|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_37 : 16|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_23 : 32|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_38 : 48|16@1+ (0.001,0) [0|64.255] "V"  Host
+
+BO_ 2582841854 IoStatusFaultVoltage2: 8 Device
+ SG_ FaultVoltageStatus_X2_9 : 0|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X2_24 : 16|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X2_10 : 32|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X2_25 : 48|16@1+ (0.001,0) [0|64.255] "V"  Host
+
+BO_ 2582842110 IoStatusFaultVoltage3: 8 Device
+ SG_ FaultVoltageStatus_X1_10 : 0|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_25 : 16|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_11 : 32|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_26 : 48|16@1+ (0.001,0) [0|64.255] "V"  Host
+
+BO_ 2582842366 IoStatusFaultVoltage4: 8 Device
+ SG_ FaultVoltageStatus_X1_12 : 0|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_27 : 16|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X2_6 : 32|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X2_5 : 48|16@1+ (0.001,0) [0|64.255] "V"  Host
+
+BO_ 2582842622 IoStatusFaultVoltage5: 8 Device
+ SG_ FaultVoltageStatus_X1_19 : 0|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_34 : 16|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X2_18 : 32|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X2_33 : 48|16@1+ (0.001,0) [0|64.255] "V"  Host
+
+BO_ 2582846718 IoStatusFaultVoltageFD: 64 Device
+ SG_ FaultVoltageStatus_X1_22 : 0|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_37 : 16|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_23 : 32|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_38 : 48|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X2_9 : 64|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X2_24 : 80|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X2_10 : 96|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X2_25 : 112|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_10 : 128|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_25 : 144|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_11 : 160|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_26 : 176|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_12 : 192|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_27 : 208|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X2_6 : 224|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X2_5 : 240|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_19 : 256|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X1_34 : 272|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X2_18 : 288|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ FaultVoltageStatus_X2_33 : 304|16@1+ (0.001,0) [0|64.255] "V"  Host
+
+BO_ 2583650046 IoStatusInputVoltage1: 8 Device
+ SG_ VoltageStatus_X1_22 : 0|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_37 : 16|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_23 : 32|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_38 : 48|16@1+ (0.001,0) [0|64.255] "V"  Host
+
+BO_ 2583650302 IoStatusInputVoltage2: 8 Device
+ SG_ VoltageStatus_X2_9 : 0|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X2_24 : 16|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X2_10 : 32|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X2_25 : 48|16@1+ (0.001,0) [0|64.255] "V"  Host
+
+BO_ 2583650558 IoStatusInputVoltage3: 8 Device
+ SG_ VoltageStatus_X1_10 : 0|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_25 : 16|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_11 : 32|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_26 : 48|16@1+ (0.001,0) [0|64.255] "V"  Host
+
+BO_ 2583650814 IoStatusInputVoltage4: 8 Device
+ SG_ VoltageStatus_X1_12 : 0|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_27 : 16|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X2_6 : 32|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X2_5 : 48|16@1+ (0.001,0) [0|64.255] "V"  Host
+
+BO_ 2583651070 IoStatusInputVoltage5: 8 Device
+ SG_ VoltageStatus_X1_19 : 0|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_34 : 16|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X2_18 : 32|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X2_33 : 48|16@1+ (0.001,0) [0|64.255] "V"  Host
+
+BO_ 2582845694 IoStatusInputVoltageFD: 64 Device
+ SG_ VoltageStatus_X1_22 : 0|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_37 : 16|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_23 : 32|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_38 : 48|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X2_9 : 64|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X2_24 : 80|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X2_10 : 96|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X2_25 : 112|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_10 : 128|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_25 : 144|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_11 : 160|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_26 : 176|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_12 : 192|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_27 : 208|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X2_6 : 224|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X2_5 : 240|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_19 : 256|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X1_34 : 272|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X2_18 : 288|16@1+ (0.001,0) [0|64.255] "V"  Host
+ SG_ VoltageStatus_X2_33 : 304|16@1+ (0.001,0) [0|64.255] "V"  Host
+
+BO_ 2583646718 IoStatusPinMode1: 8 Device
+ SG_ PinModeStatus_X1_22 : 0|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_22 : 4|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_22 : 6|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_37 : 8|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_37 : 12|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_37 : 14|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_23 : 16|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_23 : 20|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_23 : 22|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_38 : 24|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_38 : 28|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_38 : 30|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X2_9 : 32|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X2_9 : 36|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X2_9 : 38|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X2_24 : 40|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X2_24 : 44|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X2_24 : 46|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X2_10 : 48|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X2_10 : 52|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X2_10 : 54|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X2_25 : 56|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X2_25 : 60|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X2_25 : 62|2@1+ (1,0) [0|0] ""  Host
+
+BO_ 2583646974 IoStatusPinMode2: 8 Device
+ SG_ PinModeStatus_X1_10 : 0|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_10 : 4|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_10 : 6|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_25 : 8|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_25 : 12|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_25 : 14|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_11 : 16|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_11 : 20|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_11 : 22|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_26 : 24|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_26 : 28|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_26 : 30|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_12 : 32|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_12 : 36|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_12 : 38|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_27 : 40|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_27 : 44|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_27 : 46|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X2_6 : 48|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X2_6 : 52|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X2_6 : 54|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X2_5 : 56|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X2_5 : 60|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X2_5 : 62|2@1+ (1,0) [0|0] ""  Host
+
+BO_ 2583647230 IoStatusPinMode3: 8 Device
+ SG_ PinModeStatus_X1_19 : 0|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_19 : 4|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_19 : 6|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_34 : 8|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_34 : 12|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_34 : 14|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X2_18 : 16|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X2_18 : 20|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X2_18 : 22|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X2_33 : 24|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X2_33 : 28|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X2_33 : 30|2@1+ (1,0) [0|0] ""  Host
+
+BO_ 2582846974 IoStatusPinModeFD: 32 Device
+ SG_ PinModeStatus_X1_22 : 0|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_22 : 4|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_22 : 6|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_37 : 8|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_37 : 12|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_37 : 14|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_23 : 16|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_23 : 20|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_23 : 22|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_38 : 24|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_38 : 28|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_38 : 30|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X2_9 : 32|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X2_9 : 36|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X2_9 : 38|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X2_24 : 40|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X2_24 : 44|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X2_24 : 46|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X2_10 : 48|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X2_10 : 52|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X2_10 : 54|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X2_25 : 56|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X2_25 : 60|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X2_25 : 62|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_10 : 64|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_10 : 68|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_10 : 70|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_25 : 72|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_25 : 76|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_25 : 78|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_11 : 80|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_11 : 84|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_11 : 86|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_26 : 88|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_26 : 92|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_26 : 94|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_12 : 96|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_12 : 100|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_12 : 102|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_27 : 104|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_27 : 108|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_27 : 110|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X2_6 : 112|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X2_6 : 116|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X2_6 : 118|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X2_5 : 120|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X2_5 : 124|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X2_5 : 126|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_19 : 128|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_19 : 132|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_19 : 134|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X1_34 : 136|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X1_34 : 140|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X1_34 : 142|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X2_18 : 144|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X2_18 : 148|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X2_18 : 150|2@1+ (1,0) [0|0] ""  Host
+ SG_ PinModeStatus_X2_33 : 152|4@1+ (1,0) [0|0] ""  Host
+ SG_ PinPullModeStatus_X2_33 : 156|2@1+ (1,0) [0|0] ""  Host
+ SG_ LoadDetectionStatus_X2_33 : 158|2@1+ (1,0) [0|0] ""  Host
+
+BO_ 2650761214 IoStatusPwmFrequency1: 8 Device
+ SG_ PwmFrequencyStatus_X1_22 : 0|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PwmFrequencyStatus_X1_37 : 16|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PwmFrequencyStatus_X1_23 : 32|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PwmFrequencyStatus_X1_38 : 48|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+
+BO_ 2650761470 IoStatusPwmFrequency2: 8 Device
+ SG_ PwmFrequencyStatus_X2_9 : 0|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PwmFrequencyStatus_X2_24 : 16|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PwmFrequencyStatus_X2_10 : 32|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PwmFrequencyStatus_X2_25 : 48|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+
+BO_ 2649956094 IoStatusPwmFrequencyFD: 64 Device
+ SG_ PwmFrequencyStatus_X1_22 : 0|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PwmFrequencyStatus_X1_37 : 16|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PwmFrequencyStatus_X1_23 : 32|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PwmFrequencyStatus_X1_38 : 48|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PwmFrequencyStatus_X2_9 : 64|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PwmFrequencyStatus_X2_24 : 80|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PwmFrequencyStatus_X2_10 : 96|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+ SG_ PwmFrequencyStatus_X2_25 : 112|16@1+ (0.1,0) [0|6425.5] "Hz"  Host
+
+BO_ 2582847998 IoStatusQEncoder1: 8 Device
+ SG_ QEncoderDirection_Q01 : 0|2@1+ (1,0) [0|0] ""  Host
+ SG_ QEncoderCounter_Q01 : 8|24@1+ (1,-8000000) [-8000000|8000000] ""  Host
+
+BO_ 2583649790 IoStatusTemperature1: 8 Device
+ SG_ TemperatureStatus_PCB : 0|8@1+ (1,-40) [-40|210] "C"  Host
+
+
+
+CM_ "Universal IO (UIO) messages
+$File: //system_software/dbc/UIO/head/Arrival_uio.dbc $
+$Change: 54229 $
+$DateTime: 2021/03/06 21:51:08 $
+$Revision: #1 $";
+CM_ BO_ 2369322750 "Bridge management command";
+CM_ BO_ 2369650430 "Comand to change pin duty value. This value will be used if pin on HighSide, LowSide or Bridge mode.";
+CM_ BO_ 2370043646 "Comand to change pin duty value. This value will be used if pin on HighSide, LowSide or Bridge mode.";
+CM_ BO_ 2369388286 "Command to change pin mode on fly";
+CM_ SG_ 2369388286 PinModeCommand_X1_22 "Pin mode Command";
+CM_ SG_ 2369388286 PinPullModeCommand_X1_22 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369388286 LoadDetectionCommand_X1_22 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369388286 PinModeCommand_X1_37 "Pin mode Command";
+CM_ SG_ 2369388286 PinPullModeCommand_X1_37 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369388286 LoadDetectionCommand_X1_37 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369388286 PinModeCommand_X1_23 "Pin mode Command";
+CM_ SG_ 2369388286 PinPullModeCommand_X1_23 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369388286 LoadDetectionCommand_X1_23 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369388286 PinModeCommand_X1_38 "Pin mode Command";
+CM_ SG_ 2369388286 PinPullModeCommand_X1_38 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369388286 LoadDetectionCommand_X1_38 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369388286 PinModeCommand_X2_9 "Pin mode Command";
+CM_ SG_ 2369388286 PinPullModeCommand_X2_9 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369388286 LoadDetectionCommand_X2_9 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369388286 PinModeCommand_X2_24 "Pin mode Command";
+CM_ SG_ 2369388286 PinPullModeCommand_X2_24 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369388286 LoadDetectionCommand_X2_24 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369388286 PinModeCommand_X2_10 "Pin mode Command";
+CM_ SG_ 2369388286 PinPullModeCommand_X2_10 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369388286 LoadDetectionCommand_X2_10 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369388286 PinModeCommand_X2_25 "Pin mode Command";
+CM_ SG_ 2369388286 PinPullModeCommand_X2_25 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369388286 LoadDetectionCommand_X2_25 "Enable/disable load detection diagnostic";
+CM_ BO_ 2369453822 "Command to change pin mode on fly";
+CM_ SG_ 2369453822 PinModeCommand_X1_10 "Pin mode Command";
+CM_ SG_ 2369453822 PinPullModeCommand_X1_10 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369453822 LoadDetectionCommand_X1_10 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369453822 PinModeCommand_X1_25 "Pin mode Command";
+CM_ SG_ 2369453822 PinPullModeCommand_X1_25 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369453822 LoadDetectionCommand_X1_25 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369453822 PinModeCommand_X1_11 "Pin mode Command";
+CM_ SG_ 2369453822 PinPullModeCommand_X1_11 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369453822 LoadDetectionCommand_X1_11 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369453822 PinModeCommand_X1_26 "Pin mode Command";
+CM_ SG_ 2369453822 PinPullModeCommand_X1_26 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369453822 LoadDetectionCommand_X1_26 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369453822 PinModeCommand_X1_12 "Pin mode Command";
+CM_ SG_ 2369453822 PinPullModeCommand_X1_12 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369453822 LoadDetectionCommand_X1_12 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369453822 PinModeCommand_X1_27 "Pin mode Command";
+CM_ SG_ 2369453822 PinPullModeCommand_X1_27 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369453822 LoadDetectionCommand_X1_27 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369453822 PinModeCommand_X2_6 "Pin mode Command";
+CM_ SG_ 2369453822 PinPullModeCommand_X2_6 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369453822 LoadDetectionCommand_X2_6 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369453822 PinModeCommand_X2_5 "Pin mode Command";
+CM_ SG_ 2369453822 PinPullModeCommand_X2_5 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369453822 LoadDetectionCommand_X2_5 "Enable/disable load detection diagnostic";
+CM_ BO_ 2369519358 "Command to change pin mode on fly";
+CM_ SG_ 2369519358 PinModeCommand_X1_19 "Pin mode Command";
+CM_ SG_ 2369519358 PinPullModeCommand_X1_19 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369519358 LoadDetectionCommand_X1_19 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369519358 PinModeCommand_X1_34 "Pin mode Command";
+CM_ SG_ 2369519358 PinPullModeCommand_X1_34 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369519358 LoadDetectionCommand_X1_34 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369519358 PinModeCommand_X2_18 "Pin mode Command";
+CM_ SG_ 2369519358 PinPullModeCommand_X2_18 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369519358 LoadDetectionCommand_X2_18 "Enable/disable load detection diagnostic";
+CM_ SG_ 2369519358 PinModeCommand_X2_33 "Pin mode Command";
+CM_ SG_ 2369519358 PinPullModeCommand_X2_33 "Pin pullup/pulldown mode Command";
+CM_ SG_ 2369519358 LoadDetectionCommand_X2_33 "Enable/disable load detection diagnostic";
+CM_ BO_ 2369912574 "Comand to change pin PWM frequency value. This value will be used if pin on HighSide, LowSide or Bridge mode.";
+CM_ BO_ 2583656702 "Measured frequency on inputs 1";
+CM_ SG_ 2583656702 PinDutyStatus_X1_22 "Measured PWM duty in input";
+CM_ SG_ 2583656702 PinDutyStatus_X1_37 "Measured PWM duty in input";
+CM_ SG_ 2583656702 PinDutyStatus_X1_23 "Measured PWM duty in input";
+CM_ SG_ 2583656702 PinDutyStatus_X1_38 "Measured PWM duty in input";
+CM_ SG_ 2583656702 PinDutyStatus_X2_9 "Measured PWM duty in input";
+CM_ SG_ 2583656702 PinDutyStatus_X2_24 "Measured PWM duty in input";
+CM_ SG_ 2583656702 PinDutyStatus_X2_10 "Measured PWM duty in input";
+CM_ SG_ 2583656702 PinDutyStatus_X2_25 "Measured PWM duty in input";
+CM_ BO_ 2583656446 "Measured frequency on inputs 1";
+CM_ SG_ 2583656446 PinFrequencyStatus_X1_22 "Measured frequency on input 01";
+CM_ SG_ 2583656446 PinFrequencyStatus_X1_37 "Measured frequency on input 02";
+CM_ SG_ 2583656446 PinFrequencyStatus_X1_23 "Measured frequency on input 03";
+CM_ SG_ 2583656446 PinFrequencyStatus_X1_38 "Measured frequency on input 04";
+CM_ BO_ 2583646462 "Measured frequency on inputs 2";
+CM_ SG_ 2583646462 PinFrequencyStatus_X2_9 "Measured frequency on input 05";
+CM_ SG_ 2583646462 PinFrequencyStatus_X2_24 "Measured frequency on input 06";
+CM_ SG_ 2583646462 PinFrequencyStatus_X2_10 "Measured frequency on input 07";
+CM_ SG_ 2583646462 PinFrequencyStatus_X2_25 "Measured frequency on input 08";
+CM_ BO_ 2583656190 "Bridge status";
+CM_ BO_ 2583647742 "Measured output current";
+CM_ BO_ 2583647998 "Measured output current";
+CM_ BO_ 2582845950 "Measured output current";
+CM_ BO_ 2583648766 "Diagnostic state";
+CM_ BO_ 2583649022 "Diagnostic state";
+CM_ BO_ 2582847486 "Diagnostic state";
+CM_ BO_ 2583651326 "Current configured output duty value";
+CM_ SG_ 2583651326 DutyStatus_X1_22 "Configured PWM duty on output";
+CM_ SG_ 2583651326 DutyStatus_X1_37 "Configured PWM duty on output";
+CM_ SG_ 2583651326 DutyStatus_X1_23 "Configured PWM duty on output";
+CM_ SG_ 2583651326 DutyStatus_X1_38 "Configured PWM duty on output";
+CM_ SG_ 2583651326 DutyStatus_X2_9 "Configured PWM duty on output";
+CM_ SG_ 2583651326 DutyStatus_X2_24 "Configured PWM duty on output";
+CM_ SG_ 2583651326 DutyStatus_X2_10 "Configured PWM duty on output";
+CM_ SG_ 2583651326 DutyStatus_X2_25 "Configured PWM duty on output";
+CM_ BO_ 2582847742 "Current configured output duty value";
+CM_ SG_ 2582847742 DutyStatus_X1_22 "Configured PWM duty on output";
+CM_ SG_ 2582847742 DutyStatus_X1_37 "Configured PWM duty on output";
+CM_ SG_ 2582847742 DutyStatus_X1_23 "Configured PWM duty on output";
+CM_ SG_ 2582847742 DutyStatus_X1_38 "Configured PWM duty on output";
+CM_ SG_ 2582847742 DutyStatus_X2_9 "Configured PWM duty on output";
+CM_ SG_ 2582847742 DutyStatus_X2_24 "Configured PWM duty on output";
+CM_ SG_ 2582847742 DutyStatus_X2_10 "Configured PWM duty on output";
+CM_ SG_ 2582847742 DutyStatus_X2_25 "Configured PWM duty on output";
+CM_ BO_ 2582843646 "Faults count";
+CM_ SG_ 2582843646 FaultCountStatus_X1_22 "Detected faults count";
+CM_ SG_ 2582843646 FaultCountStatus_X1_37 "Detected faults count";
+CM_ SG_ 2582843646 FaultCountStatus_X1_23 "Detected faults count";
+CM_ SG_ 2582843646 FaultCountStatus_X1_38 "Detected faults count";
+CM_ BO_ 2582843902 "Faults count";
+CM_ SG_ 2582843902 FaultCountStatus_X2_9 "Detected faults count";
+CM_ SG_ 2582843902 FaultCountStatus_X2_24 "Detected faults count";
+CM_ SG_ 2582843902 FaultCountStatus_X2_10 "Detected faults count";
+CM_ SG_ 2582843902 FaultCountStatus_X2_25 "Detected faults count";
+CM_ BO_ 2582844158 "Faults count";
+CM_ SG_ 2582844158 FaultCountStatus_X1_10 "Detected faults count";
+CM_ SG_ 2582844158 FaultCountStatus_X1_25 "Detected faults count";
+CM_ SG_ 2582844158 FaultCountStatus_X1_11 "Detected faults count";
+CM_ SG_ 2582844158 FaultCountStatus_X1_26 "Detected faults count";
+CM_ BO_ 2582844414 "Faults count";
+CM_ SG_ 2582844414 FaultCountStatus_X1_12 "Detected faults count";
+CM_ SG_ 2582844414 FaultCountStatus_X1_27 "Detected faults count";
+CM_ SG_ 2582844414 FaultCountStatus_X2_6 "Detected faults count";
+CM_ SG_ 2582844414 FaultCountStatus_X2_5 "Detected faults count";
+CM_ BO_ 2582844670 "Faults count";
+CM_ SG_ 2582844670 FaultCountStatus_X1_19 "Detected faults count";
+CM_ SG_ 2582844670 FaultCountStatus_X1_34 "Detected faults count";
+CM_ SG_ 2582844670 FaultCountStatus_X2_18 "Detected faults count";
+CM_ SG_ 2582844670 FaultCountStatus_X2_33 "Detected faults count";
+CM_ BO_ 2582846206 "Faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X1_22 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X1_37 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X1_23 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X1_38 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X2_9 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X2_24 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X2_10 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X2_25 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X1_10 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X1_25 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X1_11 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X1_26 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X1_12 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X1_27 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X2_6 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X2_5 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X1_19 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X1_34 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X2_18 "Detected faults count";
+CM_ SG_ 2582846206 FaultCountStatus_X2_33 "Detected faults count";
+CM_ BO_ 2582839550 "Measured output current when fault occured";
+CM_ SG_ 2582839550 FaultCurrentStatus_X1_22 "Measured current when fault detected";
+CM_ SG_ 2582839550 FaultCurrentStatus_X1_37 "Measured current when fault detected";
+CM_ SG_ 2582839550 FaultCurrentStatus_X1_23 "Measured current when fault detected";
+CM_ SG_ 2582839550 FaultCurrentStatus_X1_38 "Measured current when fault detected";
+CM_ BO_ 2582839806 "Measured output current when fault occured";
+CM_ SG_ 2582839806 FaultCurrentStatus_X2_9 "Measured current when fault detected";
+CM_ SG_ 2582839806 FaultCurrentStatus_X2_24 "Measured current when fault detected";
+CM_ SG_ 2582839806 FaultCurrentStatus_X2_10 "Measured current when fault detected";
+CM_ SG_ 2582839806 FaultCurrentStatus_X2_25 "Measured current when fault detected";
+CM_ BO_ 2582846462 "Measured output current when fault occured";
+CM_ SG_ 2582846462 FaultCurrentStatus_X1_22 "Measured current when fault detected";
+CM_ SG_ 2582846462 FaultCurrentStatus_X1_37 "Measured current when fault detected";
+CM_ SG_ 2582846462 FaultCurrentStatus_X1_23 "Measured current when fault detected";
+CM_ SG_ 2582846462 FaultCurrentStatus_X1_38 "Measured current when fault detected";
+CM_ SG_ 2582846462 FaultCurrentStatus_X2_9 "Measured current when fault detected";
+CM_ SG_ 2582846462 FaultCurrentStatus_X2_24 "Measured current when fault detected";
+CM_ SG_ 2582846462 FaultCurrentStatus_X2_10 "Measured current when fault detected";
+CM_ SG_ 2582846462 FaultCurrentStatus_X2_25 "Measured current when fault detected";
+CM_ BO_ 2582841598 "Measured input voltage when fault occured";
+CM_ SG_ 2582841598 FaultVoltageStatus_X1_22 "Measured voltage when fault occured";
+CM_ SG_ 2582841598 FaultVoltageStatus_X1_37 "Measured voltage when fault occured";
+CM_ SG_ 2582841598 FaultVoltageStatus_X1_23 "Measured voltage when fault occured";
+CM_ SG_ 2582841598 FaultVoltageStatus_X1_38 "Measured voltage when fault occured";
+CM_ BO_ 2582841854 "Measured input voltage when fault occured";
+CM_ SG_ 2582841854 FaultVoltageStatus_X2_9 "Measured voltage when fault occured";
+CM_ SG_ 2582841854 FaultVoltageStatus_X2_24 "Measured voltage when fault occured";
+CM_ SG_ 2582841854 FaultVoltageStatus_X2_10 "Measured voltage when fault occured";
+CM_ SG_ 2582841854 FaultVoltageStatus_X2_25 "Measured voltage when fault occured";
+CM_ BO_ 2582842110 "Measured input voltage when fault occured";
+CM_ SG_ 2582842110 FaultVoltageStatus_X1_10 "Measured voltage when fault occured";
+CM_ SG_ 2582842110 FaultVoltageStatus_X1_25 "Measured voltage when fault occured";
+CM_ SG_ 2582842110 FaultVoltageStatus_X1_11 "Measured voltage when fault occured";
+CM_ SG_ 2582842110 FaultVoltageStatus_X1_26 "Measured voltage when fault occured";
+CM_ BO_ 2582842366 "Measured input voltage when fault occured";
+CM_ SG_ 2582842366 FaultVoltageStatus_X1_12 "Measured voltage when fault occured";
+CM_ SG_ 2582842366 FaultVoltageStatus_X1_27 "Measured voltage when fault occured";
+CM_ SG_ 2582842366 FaultVoltageStatus_X2_6 "Measured voltage when fault occured";
+CM_ SG_ 2582842366 FaultVoltageStatus_X2_5 "Measured voltage when fault occured";
+CM_ BO_ 2582842622 "Measured input voltage when fault occured";
+CM_ SG_ 2582842622 FaultVoltageStatus_X1_19 "Measured voltage when fault occured";
+CM_ SG_ 2582842622 FaultVoltageStatus_X1_34 "Measured voltage when fault occured";
+CM_ SG_ 2582842622 FaultVoltageStatus_X2_18 "Measured voltage when fault occured";
+CM_ SG_ 2582842622 FaultVoltageStatus_X2_33 "Measured voltage when fault occured";
+CM_ BO_ 2582846718 "Measured input voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X1_22 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X1_37 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X1_23 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X1_38 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X2_9 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X2_24 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X2_10 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X2_25 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X1_10 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X1_25 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X1_11 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X1_26 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X1_12 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X1_27 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X2_6 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X2_5 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X1_19 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X1_34 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X2_18 "Measured voltage when fault occured";
+CM_ SG_ 2582846718 FaultVoltageStatus_X2_33 "Measured voltage when fault occured";
+CM_ BO_ 2583650046 "Measured inputs voltages";
+CM_ BO_ 2583650302 "Measured inputs voltages";
+CM_ BO_ 2583650558 "Measured inputs voltages";
+CM_ BO_ 2583650814 "Measured inputs voltages";
+CM_ BO_ 2583651070 "Measured inputs voltages";
+CM_ BO_ 2582845694 "Measured inputs voltages";
+CM_ BO_ 2583646718 "This mesage reports current pin mode";
+CM_ SG_ 2583646718 PinModeStatus_X1_22 "Pin mode status";
+CM_ SG_ 2583646718 PinPullModeStatus_X1_22 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583646718 LoadDetectionStatus_X1_22 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583646718 PinModeStatus_X1_37 "Pin mode status";
+CM_ SG_ 2583646718 PinPullModeStatus_X1_37 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583646718 LoadDetectionStatus_X1_37 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583646718 PinModeStatus_X1_23 "Pin mode status";
+CM_ SG_ 2583646718 PinPullModeStatus_X1_23 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583646718 LoadDetectionStatus_X1_23 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583646718 PinModeStatus_X1_38 "Pin mode status";
+CM_ SG_ 2583646718 PinPullModeStatus_X1_38 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583646718 LoadDetectionStatus_X1_38 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583646718 PinModeStatus_X2_9 "Pin mode status";
+CM_ SG_ 2583646718 PinPullModeStatus_X2_9 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583646718 LoadDetectionStatus_X2_9 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583646718 PinModeStatus_X2_24 "Pin mode status";
+CM_ SG_ 2583646718 PinPullModeStatus_X2_24 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583646718 LoadDetectionStatus_X2_24 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583646718 PinModeStatus_X2_10 "Pin mode status";
+CM_ SG_ 2583646718 PinPullModeStatus_X2_10 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583646718 LoadDetectionStatus_X2_10 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583646718 PinModeStatus_X2_25 "Pin mode status";
+CM_ SG_ 2583646718 PinPullModeStatus_X2_25 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583646718 LoadDetectionStatus_X2_25 "Report status of enabled/disabled load detection mode";
+CM_ BO_ 2583646974 "This mesage reports current pin mode";
+CM_ SG_ 2583646974 PinModeStatus_X1_10 "Pin mode status";
+CM_ SG_ 2583646974 PinPullModeStatus_X1_10 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583646974 LoadDetectionStatus_X1_10 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583646974 PinModeStatus_X1_25 "Pin mode status";
+CM_ SG_ 2583646974 PinPullModeStatus_X1_25 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583646974 LoadDetectionStatus_X1_25 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583646974 PinModeStatus_X1_11 "Pin mode status";
+CM_ SG_ 2583646974 PinPullModeStatus_X1_11 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583646974 LoadDetectionStatus_X1_11 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583646974 PinModeStatus_X1_26 "Pin mode status";
+CM_ SG_ 2583646974 PinPullModeStatus_X1_26 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583646974 LoadDetectionStatus_X1_26 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583646974 PinModeStatus_X1_12 "Pin mode status";
+CM_ SG_ 2583646974 PinPullModeStatus_X1_12 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583646974 LoadDetectionStatus_X1_12 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583646974 PinModeStatus_X1_27 "Pin mode status";
+CM_ SG_ 2583646974 PinPullModeStatus_X1_27 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583646974 LoadDetectionStatus_X1_27 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583646974 PinModeStatus_X2_6 "Pin mode status";
+CM_ SG_ 2583646974 PinPullModeStatus_X2_6 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583646974 LoadDetectionStatus_X2_6 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583646974 PinModeStatus_X2_5 "Pin mode status";
+CM_ SG_ 2583646974 PinPullModeStatus_X2_5 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583646974 LoadDetectionStatus_X2_5 "Report status of enabled/disabled load detection mode";
+CM_ BO_ 2583647230 "This mesage reports current pin mode";
+CM_ SG_ 2583647230 PinModeStatus_X1_19 "Pin mode status";
+CM_ SG_ 2583647230 PinPullModeStatus_X1_19 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583647230 LoadDetectionStatus_X1_19 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583647230 PinModeStatus_X1_34 "Pin mode status";
+CM_ SG_ 2583647230 PinPullModeStatus_X1_34 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583647230 LoadDetectionStatus_X1_34 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583647230 PinModeStatus_X2_18 "Pin mode status";
+CM_ SG_ 2583647230 PinPullModeStatus_X2_18 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583647230 LoadDetectionStatus_X2_18 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2583647230 PinModeStatus_X2_33 "Pin mode status";
+CM_ SG_ 2583647230 PinPullModeStatus_X2_33 "Pin pullup/pulldown mode status";
+CM_ SG_ 2583647230 LoadDetectionStatus_X2_33 "Report status of enabled/disabled load detection mode";
+CM_ BO_ 2582846974 "This mesage reports current pin mode";
+CM_ SG_ 2582846974 PinModeStatus_X1_22 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X1_22 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X1_22 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X1_37 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X1_37 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X1_37 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X1_23 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X1_23 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X1_23 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X1_38 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X1_38 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X1_38 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X2_9 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X2_9 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X2_9 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X2_24 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X2_24 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X2_24 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X2_10 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X2_10 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X2_10 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X2_25 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X2_25 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X2_25 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X1_10 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X1_10 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X1_10 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X1_25 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X1_25 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X1_25 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X1_11 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X1_11 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X1_11 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X1_26 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X1_26 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X1_26 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X1_12 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X1_12 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X1_12 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X1_27 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X1_27 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X1_27 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X2_6 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X2_6 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X2_6 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X2_5 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X2_5 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X2_5 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X1_19 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X1_19 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X1_19 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X1_34 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X1_34 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X1_34 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X2_18 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X2_18 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X2_18 "Report status of enabled/disabled load detection mode";
+CM_ SG_ 2582846974 PinModeStatus_X2_33 "Pin mode status";
+CM_ SG_ 2582846974 PinPullModeStatus_X2_33 "Pin pullup/pulldown mode status";
+CM_ SG_ 2582846974 LoadDetectionStatus_X2_33 "Report status of enabled/disabled load detection mode";
+CM_ BO_ 2650761214 "PWM Outputs Frequencies";
+CM_ SG_ 2650761214 PwmFrequencyStatus_X1_22 "PWM Frequency on output 01";
+CM_ SG_ 2650761214 PwmFrequencyStatus_X1_37 "PWM Frequency on output 02";
+CM_ SG_ 2650761214 PwmFrequencyStatus_X1_23 "PWM Frequency on output 03";
+CM_ SG_ 2650761214 PwmFrequencyStatus_X1_38 "PWM Frequency on output 04";
+CM_ BO_ 2650761470 "PWM Outputs Frequencies";
+CM_ SG_ 2650761470 PwmFrequencyStatus_X2_9 "PWM Frequency on output 05";
+CM_ SG_ 2650761470 PwmFrequencyStatus_X2_24 "PWM Frequency on output 06";
+CM_ SG_ 2650761470 PwmFrequencyStatus_X2_10 "PWM Frequency on output 07";
+CM_ SG_ 2650761470 PwmFrequencyStatus_X2_25 "PWM Frequency on output 08";
+CM_ BO_ 2649956094 "PWM Outputs Frequencies";
+CM_ SG_ 2649956094 PwmFrequencyStatus_X1_22 "PWM Frequency on output 01";
+CM_ SG_ 2649956094 PwmFrequencyStatus_X1_37 "PWM Frequency on output 02";
+CM_ SG_ 2649956094 PwmFrequencyStatus_X1_23 "PWM Frequency on output 03";
+CM_ SG_ 2649956094 PwmFrequencyStatus_X1_38 "PWM Frequency on output 04";
+CM_ SG_ 2649956094 PwmFrequencyStatus_X2_9 "PWM Frequency on output 05";
+CM_ SG_ 2649956094 PwmFrequencyStatus_X2_24 "PWM Frequency on output 06";
+CM_ SG_ 2649956094 PwmFrequencyStatus_X2_10 "PWM Frequency on output 07";
+CM_ SG_ 2649956094 PwmFrequencyStatus_X2_25 "PWM Frequency on output 08";
+CM_ BO_ 2582847998 "Current configured output duty value";
+CM_ SG_ 2582847998 QEncoderDirection_Q01 "Quadrature encoder direction";
+CM_ SG_ 2582847998 QEncoderCounter_Q01 "Quadrature encoder impulse counter";
+CM_ BO_ 2583649790 "Measured output temperature 1";
+CM_ SG_ 2583649790 TemperatureStatus_PCB "Temperature sensor 1";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","noMsgSendType";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "SAE_J1939_21_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_71_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_73_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_75_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_81_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_DA_SpecVersion" STRING ;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ BO_  "SendOnChange" ENUM  "No","Yes";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "SAE_J1939_21_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_71_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_73_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_75_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_81_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_DA_SpecVersion" "";
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "SendOnChange" "No";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_ "BusType" "CAN";
+BA_ "DBName" "DCU_V5_Generic";
+BA_ "DatabaseVersion" "8.5";
+BA_ "ProtocolType" "J1939";
+BA_ "SAE_J1939_21_SpecVersion" "2006-10";
+BA_ "SAE_J1939_71_SpecVersion" "2012-10";
+BA_ "SAE_J1939_73_SpecVersion" "2012-10";
+BA_ "SAE_J1939_75_SpecVersion" "2012-05";
+BA_ "SAE_J1939_81_SpecVersion" "2012-05";
+BA_ "SAE_J1939_DA_SpecVersion" "2015-01";
+BA_ "GenMsgCycleTime" BO_ 2369322750 100;
+BA_ "GenMsgRequestable" BO_ 2369322750 0;
+BA_ "GenMsgSendType" BO_ 2369322750 0;
+BA_ "SendOnChange" BO_ 2369322750 1;
+BA_ "VFrameFormat" BO_ 2369322750 3;
+BA_ "GenMsgCycleTime" BO_ 2369650430 100;
+BA_ "GenMsgRequestable" BO_ 2369650430 0;
+BA_ "GenMsgSendType" BO_ 2369650430 0;
+BA_ "SendOnChange" BO_ 2369650430 1;
+BA_ "VFrameFormat" BO_ 2369650430 3;
+BA_ "GenMsgCycleTime" BO_ 2370043646 100;
+BA_ "GenMsgRequestable" BO_ 2370043646 0;
+BA_ "GenMsgSendType" BO_ 2370043646 0;
+BA_ "VFrameFormat" BO_ 2370043646 3;
+BA_ "GenMsgCycleTime" BO_ 2369388286 100;
+BA_ "GenMsgRequestable" BO_ 2369388286 0;
+BA_ "GenMsgSendType" BO_ 2369388286 0;
+BA_ "SendOnChange" BO_ 2369388286 1;
+BA_ "VFrameFormat" BO_ 2369388286 3;
+BA_ "GenMsgCycleTime" BO_ 2369453822 100;
+BA_ "GenMsgRequestable" BO_ 2369453822 0;
+BA_ "GenMsgSendType" BO_ 2369453822 0;
+BA_ "SendOnChange" BO_ 2369453822 1;
+BA_ "VFrameFormat" BO_ 2369453822 3;
+BA_ "GenMsgCycleTime" BO_ 2369519358 100;
+BA_ "GenMsgRequestable" BO_ 2369519358 0;
+BA_ "GenMsgSendType" BO_ 2369519358 0;
+BA_ "SendOnChange" BO_ 2369519358 1;
+BA_ "VFrameFormat" BO_ 2369519358 3;
+BA_ "GenMsgCycleTime" BO_ 2369912574 10000;
+BA_ "GenMsgRequestable" BO_ 2369912574 0;
+BA_ "GenMsgSendType" BO_ 2369912574 0;
+BA_ "SendOnChange" BO_ 2369912574 1;
+BA_ "VFrameFormat" BO_ 2369912574 3;
+BA_ "GenMsgCycleTime" BO_ 2583656702 100;
+BA_ "GenMsgRequestable" BO_ 2583656702 0;
+BA_ "GenMsgSendType" BO_ 2583656702 0;
+BA_ "VFrameFormat" BO_ 2583656702 3;
+BA_ "GenMsgCycleTime" BO_ 2583656446 100;
+BA_ "GenMsgRequestable" BO_ 2583656446 0;
+BA_ "GenMsgSendType" BO_ 2583656446 0;
+BA_ "VFrameFormat" BO_ 2583656446 3;
+BA_ "GenMsgCycleTime" BO_ 2583646462 100;
+BA_ "GenMsgRequestable" BO_ 2583646462 0;
+BA_ "GenMsgSendType" BO_ 2583646462 0;
+BA_ "VFrameFormat" BO_ 2583646462 3;
+BA_ "GenMsgCycleTime" BO_ 2583656190 100;
+BA_ "GenMsgRequestable" BO_ 2583656190 0;
+BA_ "GenMsgSendType" BO_ 2583656190 0;
+BA_ "VFrameFormat" BO_ 2583656190 3;
+BA_ "GenMsgCycleTime" BO_ 2583647742 100;
+BA_ "GenMsgRequestable" BO_ 2583647742 0;
+BA_ "GenMsgSendType" BO_ 2583647742 0;
+BA_ "VFrameFormat" BO_ 2583647742 3;
+BA_ "GenMsgCycleTime" BO_ 2583647998 100;
+BA_ "GenMsgRequestable" BO_ 2583647998 0;
+BA_ "GenMsgSendType" BO_ 2583647998 0;
+BA_ "VFrameFormat" BO_ 2583647998 3;
+BA_ "GenMsgCycleTime" BO_ 2582845950 100;
+BA_ "GenMsgRequestable" BO_ 2582845950 0;
+BA_ "GenMsgSendType" BO_ 2582845950 0;
+BA_ "VFrameFormat" BO_ 2582845950 3;
+BA_ "GenMsgCycleTime" BO_ 2583648766 10000;
+BA_ "GenMsgRequestable" BO_ 2583648766 0;
+BA_ "GenMsgSendType" BO_ 2583648766 0;
+BA_ "VFrameFormat" BO_ 2583648766 3;
+BA_ "GenMsgCycleTime" BO_ 2583649022 10000;
+BA_ "GenMsgRequestable" BO_ 2583649022 0;
+BA_ "GenMsgSendType" BO_ 2583649022 0;
+BA_ "VFrameFormat" BO_ 2583649022 3;
+BA_ "GenMsgCycleTime" BO_ 2582847486 10000;
+BA_ "GenMsgRequestable" BO_ 2582847486 0;
+BA_ "GenMsgSendType" BO_ 2582847486 0;
+BA_ "VFrameFormat" BO_ 2582847486 3;
+BA_ "GenMsgCycleTime" BO_ 2583651326 100;
+BA_ "GenMsgRequestable" BO_ 2583651326 0;
+BA_ "GenMsgSendType" BO_ 2583651326 0;
+BA_ "VFrameFormat" BO_ 2583651326 3;
+BA_ "GenMsgCycleTime" BO_ 2582847742 100;
+BA_ "GenMsgRequestable" BO_ 2582847742 0;
+BA_ "GenMsgSendType" BO_ 2582847742 0;
+BA_ "VFrameFormat" BO_ 2582847742 3;
+BA_ "GenMsgCycleTime" BO_ 2582843646 10000;
+BA_ "GenMsgRequestable" BO_ 2582843646 0;
+BA_ "GenMsgSendType" BO_ 2582843646 0;
+BA_ "VFrameFormat" BO_ 2582843646 3;
+BA_ "GenMsgCycleTime" BO_ 2582843902 10000;
+BA_ "GenMsgRequestable" BO_ 2582843902 0;
+BA_ "GenMsgSendType" BO_ 2582843902 0;
+BA_ "VFrameFormat" BO_ 2582843902 3;
+BA_ "GenMsgCycleTime" BO_ 2582844158 10000;
+BA_ "GenMsgRequestable" BO_ 2582844158 0;
+BA_ "GenMsgSendType" BO_ 2582844158 0;
+BA_ "VFrameFormat" BO_ 2582844158 3;
+BA_ "GenMsgCycleTime" BO_ 2582844414 10000;
+BA_ "GenMsgRequestable" BO_ 2582844414 0;
+BA_ "GenMsgSendType" BO_ 2582844414 0;
+BA_ "VFrameFormat" BO_ 2582844414 3;
+BA_ "GenMsgCycleTime" BO_ 2582844670 10000;
+BA_ "GenMsgRequestable" BO_ 2582844670 0;
+BA_ "GenMsgSendType" BO_ 2582844670 0;
+BA_ "VFrameFormat" BO_ 2582844670 3;
+BA_ "GenMsgCycleTime" BO_ 2582846206 10000;
+BA_ "GenMsgRequestable" BO_ 2582846206 0;
+BA_ "GenMsgSendType" BO_ 2582846206 0;
+BA_ "VFrameFormat" BO_ 2582846206 3;
+BA_ "GenMsgCycleTime" BO_ 2582839550 10000;
+BA_ "GenMsgRequestable" BO_ 2582839550 0;
+BA_ "GenMsgSendType" BO_ 2582839550 0;
+BA_ "VFrameFormat" BO_ 2582839550 3;
+BA_ "GenMsgCycleTime" BO_ 2582839806 10000;
+BA_ "GenMsgRequestable" BO_ 2582839806 0;
+BA_ "GenMsgSendType" BO_ 2582839806 0;
+BA_ "VFrameFormat" BO_ 2582839806 3;
+BA_ "GenMsgCycleTime" BO_ 2582846462 10000;
+BA_ "GenMsgRequestable" BO_ 2582846462 0;
+BA_ "GenMsgSendType" BO_ 2582846462 0;
+BA_ "VFrameFormat" BO_ 2582846462 3;
+BA_ "GenMsgCycleTime" BO_ 2582841598 10000;
+BA_ "GenMsgRequestable" BO_ 2582841598 0;
+BA_ "GenMsgSendType" BO_ 2582841598 0;
+BA_ "VFrameFormat" BO_ 2582841598 3;
+BA_ "GenMsgCycleTime" BO_ 2582841854 10000;
+BA_ "GenMsgRequestable" BO_ 2582841854 0;
+BA_ "GenMsgSendType" BO_ 2582841854 0;
+BA_ "VFrameFormat" BO_ 2582841854 3;
+BA_ "GenMsgCycleTime" BO_ 2582842110 10000;
+BA_ "GenMsgRequestable" BO_ 2582842110 0;
+BA_ "GenMsgSendType" BO_ 2582842110 0;
+BA_ "VFrameFormat" BO_ 2582842110 3;
+BA_ "GenMsgCycleTime" BO_ 2582842366 10000;
+BA_ "GenMsgRequestable" BO_ 2582842366 0;
+BA_ "GenMsgSendType" BO_ 2582842366 0;
+BA_ "VFrameFormat" BO_ 2582842366 3;
+BA_ "GenMsgCycleTime" BO_ 2582842622 10000;
+BA_ "GenMsgRequestable" BO_ 2582842622 0;
+BA_ "GenMsgSendType" BO_ 2582842622 0;
+BA_ "VFrameFormat" BO_ 2582842622 3;
+BA_ "GenMsgCycleTime" BO_ 2582846718 10000;
+BA_ "GenMsgRequestable" BO_ 2582846718 0;
+BA_ "GenMsgSendType" BO_ 2582846718 0;
+BA_ "VFrameFormat" BO_ 2582846718 3;
+BA_ "GenMsgCycleTime" BO_ 2583650046 100;
+BA_ "GenMsgRequestable" BO_ 2583650046 0;
+BA_ "GenMsgSendType" BO_ 2583650046 0;
+BA_ "VFrameFormat" BO_ 2583650046 3;
+BA_ "GenMsgCycleTime" BO_ 2583650302 100;
+BA_ "GenMsgRequestable" BO_ 2583650302 0;
+BA_ "GenMsgSendType" BO_ 2583650302 0;
+BA_ "VFrameFormat" BO_ 2583650302 3;
+BA_ "GenMsgCycleTime" BO_ 2583650558 100;
+BA_ "GenMsgRequestable" BO_ 2583650558 0;
+BA_ "GenMsgSendType" BO_ 2583650558 0;
+BA_ "VFrameFormat" BO_ 2583650558 3;
+BA_ "GenMsgCycleTime" BO_ 2583650814 100;
+BA_ "GenMsgRequestable" BO_ 2583650814 0;
+BA_ "GenMsgSendType" BO_ 2583650814 0;
+BA_ "VFrameFormat" BO_ 2583650814 3;
+BA_ "GenMsgCycleTime" BO_ 2583651070 100;
+BA_ "GenMsgRequestable" BO_ 2583651070 0;
+BA_ "GenMsgSendType" BO_ 2583651070 0;
+BA_ "VFrameFormat" BO_ 2583651070 3;
+BA_ "GenMsgCycleTime" BO_ 2582845694 100;
+BA_ "GenMsgRequestable" BO_ 2582845694 0;
+BA_ "GenMsgSendType" BO_ 2582845694 0;
+BA_ "VFrameFormat" BO_ 2582845694 3;
+BA_ "GenMsgCycleTime" BO_ 2583646718 10000;
+BA_ "GenMsgRequestable" BO_ 2583646718 0;
+BA_ "GenMsgSendType" BO_ 2583646718 0;
+BA_ "VFrameFormat" BO_ 2583646718 3;
+BA_ "GenMsgCycleTime" BO_ 2583646974 10000;
+BA_ "GenMsgRequestable" BO_ 2583646974 0;
+BA_ "GenMsgSendType" BO_ 2583646974 0;
+BA_ "VFrameFormat" BO_ 2583646974 3;
+BA_ "GenMsgCycleTime" BO_ 2583647230 10000;
+BA_ "GenMsgRequestable" BO_ 2583647230 0;
+BA_ "GenMsgSendType" BO_ 2583647230 0;
+BA_ "VFrameFormat" BO_ 2583647230 3;
+BA_ "GenMsgCycleTime" BO_ 2582846974 10000;
+BA_ "GenMsgRequestable" BO_ 2582846974 0;
+BA_ "GenMsgSendType" BO_ 2582846974 0;
+BA_ "VFrameFormat" BO_ 2582846974 3;
+BA_ "GenMsgCycleTime" BO_ 2650761214 10000;
+BA_ "GenMsgSendType" BO_ 2650761214 0;
+BA_ "VFrameFormat" BO_ 2650761214 3;
+BA_ "GenMsgCycleTime" BO_ 2650761470 10000;
+BA_ "GenMsgSendType" BO_ 2650761470 0;
+BA_ "VFrameFormat" BO_ 2650761470 3;
+BA_ "GenMsgCycleTime" BO_ 2649956094 10000;
+BA_ "GenMsgSendType" BO_ 2649956094 0;
+BA_ "VFrameFormat" BO_ 2649956094 3;
+BA_ "GenMsgCycleTime" BO_ 2582847998 100;
+BA_ "GenMsgRequestable" BO_ 2582847998 0;
+BA_ "GenMsgSendType" BO_ 2582847998 0;
+BA_ "VFrameFormat" BO_ 2582847998 3;
+BA_ "GenMsgCycleTime" BO_ 2583649790 100;
+BA_ "GenMsgRequestable" BO_ 2583649790 0;
+BA_ "GenMsgSendType" BO_ 2583649790 0;
+BA_ "VFrameFormat" BO_ 2583649790 3;
+BA_ "GenSigStartValue" SG_ 2369322750 BridgeModeCommand_b01 0;
+BA_ "SPN" SG_ 2369322750 BridgeModeCommand_b01 516600;
+BA_ "GenSigStartValue" SG_ 2369322750 BridgeModeCommand_b02 0;
+BA_ "SPN" SG_ 2369322750 BridgeModeCommand_b02 516601;
+BA_ "GenSigStartValue" SG_ 2369322750 BridgeModeCommand_b03 0;
+BA_ "SPN" SG_ 2369322750 BridgeModeCommand_b03 516602;
+BA_ "GenSigStartValue" SG_ 2369322750 BridgeModeCommand_b04 0;
+BA_ "SPN" SG_ 2369322750 BridgeModeCommand_b04 516603;
+BA_ "GenSigStartValue" SG_ 2369650430 DutyCommand_X1_22 0;
+BA_ "SPN" SG_ 2369650430 DutyCommand_X1_22 516608;
+BA_ "SigType" SG_ 2369650430 DutyCommand_X1_22 1;
+BA_ "GenSigStartValue" SG_ 2369650430 DutyCommand_X1_37 0;
+BA_ "SPN" SG_ 2369650430 DutyCommand_X1_37 516609;
+BA_ "SigType" SG_ 2369650430 DutyCommand_X1_37 1;
+BA_ "GenSigStartValue" SG_ 2369650430 DutyCommand_X1_23 0;
+BA_ "SPN" SG_ 2369650430 DutyCommand_X1_23 516610;
+BA_ "SigType" SG_ 2369650430 DutyCommand_X1_23 1;
+BA_ "GenSigStartValue" SG_ 2369650430 DutyCommand_X1_38 0;
+BA_ "SPN" SG_ 2369650430 DutyCommand_X1_38 516611;
+BA_ "SigType" SG_ 2369650430 DutyCommand_X1_38 1;
+BA_ "GenSigStartValue" SG_ 2369650430 DutyCommand_X2_9 0;
+BA_ "SPN" SG_ 2369650430 DutyCommand_X2_9 516612;
+BA_ "SigType" SG_ 2369650430 DutyCommand_X2_9 1;
+BA_ "GenSigStartValue" SG_ 2369650430 DutyCommand_X2_24 0;
+BA_ "SPN" SG_ 2369650430 DutyCommand_X2_24 516613;
+BA_ "SigType" SG_ 2369650430 DutyCommand_X2_24 1;
+BA_ "GenSigStartValue" SG_ 2369650430 DutyCommand_X2_10 0;
+BA_ "SPN" SG_ 2369650430 DutyCommand_X2_10 516614;
+BA_ "SigType" SG_ 2369650430 DutyCommand_X2_10 1;
+BA_ "GenSigStartValue" SG_ 2369650430 DutyCommand_X2_25 0;
+BA_ "SPN" SG_ 2369650430 DutyCommand_X2_25 516615;
+BA_ "SigType" SG_ 2369650430 DutyCommand_X2_25 1;
+BA_ "GenSigStartValue" SG_ 2370043646 DutyCommand_X1_22 0;
+BA_ "SPN" SG_ 2370043646 DutyCommand_X1_22 516608;
+BA_ "SigType" SG_ 2370043646 DutyCommand_X1_22 1;
+BA_ "GenSigStartValue" SG_ 2370043646 DutyCommand_X1_37 0;
+BA_ "SPN" SG_ 2370043646 DutyCommand_X1_37 516609;
+BA_ "SigType" SG_ 2370043646 DutyCommand_X1_37 1;
+BA_ "GenSigStartValue" SG_ 2370043646 DutyCommand_X1_23 0;
+BA_ "SPN" SG_ 2370043646 DutyCommand_X1_23 516610;
+BA_ "SigType" SG_ 2370043646 DutyCommand_X1_23 1;
+BA_ "GenSigStartValue" SG_ 2370043646 DutyCommand_X1_38 0;
+BA_ "SPN" SG_ 2370043646 DutyCommand_X1_38 516611;
+BA_ "SigType" SG_ 2370043646 DutyCommand_X1_38 1;
+BA_ "GenSigStartValue" SG_ 2370043646 DutyCommand_X2_9 0;
+BA_ "SPN" SG_ 2370043646 DutyCommand_X2_9 516612;
+BA_ "SigType" SG_ 2370043646 DutyCommand_X2_9 1;
+BA_ "GenSigStartValue" SG_ 2370043646 DutyCommand_X2_24 0;
+BA_ "SPN" SG_ 2370043646 DutyCommand_X2_24 516613;
+BA_ "SigType" SG_ 2370043646 DutyCommand_X2_24 1;
+BA_ "GenSigStartValue" SG_ 2370043646 DutyCommand_X2_10 0;
+BA_ "SPN" SG_ 2370043646 DutyCommand_X2_10 516614;
+BA_ "SigType" SG_ 2370043646 DutyCommand_X2_10 1;
+BA_ "GenSigStartValue" SG_ 2370043646 DutyCommand_X2_25 0;
+BA_ "SPN" SG_ 2370043646 DutyCommand_X2_25 516615;
+BA_ "SigType" SG_ 2370043646 DutyCommand_X2_25 1;
+BA_ "SPN" SG_ 2369388286 PinModeCommand_X1_22 516640;
+BA_ "SPN" SG_ 2369388286 PinPullModeCommand_X1_22 516641;
+BA_ "SPN" SG_ 2369388286 LoadDetectionCommand_X1_22 516642;
+BA_ "SPN" SG_ 2369388286 PinModeCommand_X1_37 516643;
+BA_ "SPN" SG_ 2369388286 PinPullModeCommand_X1_37 516644;
+BA_ "SPN" SG_ 2369388286 LoadDetectionCommand_X1_37 516645;
+BA_ "SPN" SG_ 2369388286 PinModeCommand_X1_23 516646;
+BA_ "SPN" SG_ 2369388286 PinPullModeCommand_X1_23 516647;
+BA_ "SPN" SG_ 2369388286 LoadDetectionCommand_X1_23 516648;
+BA_ "SPN" SG_ 2369388286 PinModeCommand_X1_38 516649;
+BA_ "SPN" SG_ 2369388286 PinPullModeCommand_X1_38 516650;
+BA_ "SPN" SG_ 2369388286 LoadDetectionCommand_X1_38 516651;
+BA_ "SPN" SG_ 2369388286 PinModeCommand_X2_9 516652;
+BA_ "SPN" SG_ 2369388286 PinPullModeCommand_X2_9 516653;
+BA_ "SPN" SG_ 2369388286 LoadDetectionCommand_X2_9 516654;
+BA_ "SPN" SG_ 2369388286 PinModeCommand_X2_24 516655;
+BA_ "SPN" SG_ 2369388286 PinPullModeCommand_X2_24 516656;
+BA_ "SPN" SG_ 2369388286 LoadDetectionCommand_X2_24 516657;
+BA_ "SPN" SG_ 2369388286 PinModeCommand_X2_10 516658;
+BA_ "SPN" SG_ 2369388286 PinPullModeCommand_X2_10 516659;
+BA_ "SPN" SG_ 2369388286 LoadDetectionCommand_X2_10 516660;
+BA_ "SPN" SG_ 2369388286 PinModeCommand_X2_25 516661;
+BA_ "SPN" SG_ 2369388286 PinPullModeCommand_X2_25 516662;
+BA_ "SPN" SG_ 2369388286 LoadDetectionCommand_X2_25 516663;
+BA_ "SPN" SG_ 2369453822 PinModeCommand_X1_10 516664;
+BA_ "SPN" SG_ 2369453822 PinPullModeCommand_X1_10 516665;
+BA_ "SPN" SG_ 2369453822 LoadDetectionCommand_X1_10 516666;
+BA_ "SPN" SG_ 2369453822 PinModeCommand_X1_25 516667;
+BA_ "SPN" SG_ 2369453822 PinPullModeCommand_X1_25 516668;
+BA_ "SPN" SG_ 2369453822 LoadDetectionCommand_X1_25 516669;
+BA_ "SPN" SG_ 2369453822 PinModeCommand_X1_11 516670;
+BA_ "SPN" SG_ 2369453822 PinPullModeCommand_X1_11 516671;
+BA_ "SPN" SG_ 2369453822 LoadDetectionCommand_X1_11 516672;
+BA_ "SPN" SG_ 2369453822 PinModeCommand_X1_26 516673;
+BA_ "SPN" SG_ 2369453822 PinPullModeCommand_X1_26 516674;
+BA_ "SPN" SG_ 2369453822 LoadDetectionCommand_X1_26 516675;
+BA_ "SPN" SG_ 2369453822 PinModeCommand_X1_12 516676;
+BA_ "SPN" SG_ 2369453822 PinPullModeCommand_X1_12 516677;
+BA_ "SPN" SG_ 2369453822 LoadDetectionCommand_X1_12 516678;
+BA_ "SPN" SG_ 2369453822 PinModeCommand_X1_27 516679;
+BA_ "SPN" SG_ 2369453822 PinPullModeCommand_X1_27 516680;
+BA_ "SPN" SG_ 2369453822 LoadDetectionCommand_X1_27 516681;
+BA_ "SPN" SG_ 2369453822 PinModeCommand_X2_6 516682;
+BA_ "SPN" SG_ 2369453822 PinPullModeCommand_X2_6 516683;
+BA_ "SPN" SG_ 2369453822 LoadDetectionCommand_X2_6 516684;
+BA_ "SPN" SG_ 2369453822 PinModeCommand_X2_5 516685;
+BA_ "SPN" SG_ 2369453822 PinPullModeCommand_X2_5 516686;
+BA_ "SPN" SG_ 2369453822 LoadDetectionCommand_X2_5 516687;
+BA_ "SPN" SG_ 2369519358 PinModeCommand_X1_19 516688;
+BA_ "SPN" SG_ 2369519358 PinPullModeCommand_X1_19 516689;
+BA_ "SPN" SG_ 2369519358 LoadDetectionCommand_X1_19 516690;
+BA_ "SPN" SG_ 2369519358 PinModeCommand_X1_34 516691;
+BA_ "SPN" SG_ 2369519358 PinPullModeCommand_X1_34 516692;
+BA_ "SPN" SG_ 2369519358 LoadDetectionCommand_X1_34 516693;
+BA_ "SPN" SG_ 2369519358 PinModeCommand_X2_18 516694;
+BA_ "SPN" SG_ 2369519358 PinPullModeCommand_X2_18 516695;
+BA_ "SPN" SG_ 2369519358 LoadDetectionCommand_X2_18 516696;
+BA_ "SPN" SG_ 2369519358 PinModeCommand_X2_33 516697;
+BA_ "SPN" SG_ 2369519358 PinPullModeCommand_X2_33 516698;
+BA_ "SPN" SG_ 2369519358 LoadDetectionCommand_X2_33 516699;
+BA_ "SPN" SG_ 2369912574 PwmFrequencyCommand_X1_22 516736;
+BA_ "SPN" SG_ 2369912574 PwmFrequencyCommand_X1_37 516737;
+BA_ "SPN" SG_ 2369912574 PwmFrequencyCommand_X1_23 516738;
+BA_ "SPN" SG_ 2369912574 PwmFrequencyCommand_X1_38 516739;
+BA_ "SPN" SG_ 2369912574 PwmFrequencyCommand_X2_9 516740;
+BA_ "SPN" SG_ 2369912574 PwmFrequencyCommand_X2_24 516741;
+BA_ "SPN" SG_ 2369912574 PwmFrequencyCommand_X2_10 516742;
+BA_ "SPN" SG_ 2369912574 PwmFrequencyCommand_X2_25 516743;
+BA_ "GenSigStartValue" SG_ 2583656702 PinDutyStatus_X1_22 0;
+BA_ "SPN" SG_ 2583656702 PinDutyStatus_X1_22 516768;
+BA_ "SigType" SG_ 2583656702 PinDutyStatus_X1_22 1;
+BA_ "GenSigStartValue" SG_ 2583656702 PinDutyStatus_X1_37 0;
+BA_ "SPN" SG_ 2583656702 PinDutyStatus_X1_37 516769;
+BA_ "SigType" SG_ 2583656702 PinDutyStatus_X1_37 1;
+BA_ "GenSigStartValue" SG_ 2583656702 PinDutyStatus_X1_23 0;
+BA_ "SPN" SG_ 2583656702 PinDutyStatus_X1_23 516770;
+BA_ "SigType" SG_ 2583656702 PinDutyStatus_X1_23 1;
+BA_ "GenSigStartValue" SG_ 2583656702 PinDutyStatus_X1_38 0;
+BA_ "SPN" SG_ 2583656702 PinDutyStatus_X1_38 516771;
+BA_ "SigType" SG_ 2583656702 PinDutyStatus_X1_38 1;
+BA_ "GenSigStartValue" SG_ 2583656702 PinDutyStatus_X2_9 0;
+BA_ "SPN" SG_ 2583656702 PinDutyStatus_X2_9 516772;
+BA_ "SigType" SG_ 2583656702 PinDutyStatus_X2_9 1;
+BA_ "GenSigStartValue" SG_ 2583656702 PinDutyStatus_X2_24 0;
+BA_ "SPN" SG_ 2583656702 PinDutyStatus_X2_24 516773;
+BA_ "SigType" SG_ 2583656702 PinDutyStatus_X2_24 1;
+BA_ "GenSigStartValue" SG_ 2583656702 PinDutyStatus_X2_10 0;
+BA_ "SPN" SG_ 2583656702 PinDutyStatus_X2_10 516774;
+BA_ "SigType" SG_ 2583656702 PinDutyStatus_X2_10 1;
+BA_ "GenSigStartValue" SG_ 2583656702 PinDutyStatus_X2_25 0;
+BA_ "SPN" SG_ 2583656702 PinDutyStatus_X2_25 516775;
+BA_ "SigType" SG_ 2583656702 PinDutyStatus_X2_25 1;
+BA_ "SPN" SG_ 2583656446 PinFrequencyStatus_X1_22 516776;
+BA_ "SigType" SG_ 2583656446 PinFrequencyStatus_X1_22 1;
+BA_ "SPN" SG_ 2583656446 PinFrequencyStatus_X1_37 516777;
+BA_ "SigType" SG_ 2583656446 PinFrequencyStatus_X1_37 1;
+BA_ "SPN" SG_ 2583656446 PinFrequencyStatus_X1_23 516778;
+BA_ "SigType" SG_ 2583656446 PinFrequencyStatus_X1_23 1;
+BA_ "SPN" SG_ 2583656446 PinFrequencyStatus_X1_38 516779;
+BA_ "SigType" SG_ 2583656446 PinFrequencyStatus_X1_38 1;
+BA_ "SPN" SG_ 2583646462 PinFrequencyStatus_X2_9 516780;
+BA_ "SigType" SG_ 2583646462 PinFrequencyStatus_X2_9 1;
+BA_ "SPN" SG_ 2583646462 PinFrequencyStatus_X2_24 516781;
+BA_ "SigType" SG_ 2583646462 PinFrequencyStatus_X2_24 1;
+BA_ "SPN" SG_ 2583646462 PinFrequencyStatus_X2_10 516782;
+BA_ "SigType" SG_ 2583646462 PinFrequencyStatus_X2_10 1;
+BA_ "SPN" SG_ 2583646462 PinFrequencyStatus_X2_25 516783;
+BA_ "SigType" SG_ 2583646462 PinFrequencyStatus_X2_25 1;
+BA_ "GenSigStartValue" SG_ 2583656190 BridgeModeStatus_b01 0;
+BA_ "SPN" SG_ 2583656190 BridgeModeStatus_b01 516784;
+BA_ "GenSigStartValue" SG_ 2583656190 BridgeStatus_b01 0;
+BA_ "SPN" SG_ 2583656190 BridgeStatus_b01 516785;
+BA_ "GenSigStartValue" SG_ 2583656190 BridgeModeStatus_b02 0;
+BA_ "SPN" SG_ 2583656190 BridgeModeStatus_b02 516786;
+BA_ "GenSigStartValue" SG_ 2583656190 BridgeStatus_b02 0;
+BA_ "SPN" SG_ 2583656190 BridgeStatus_b02 516787;
+BA_ "GenSigStartValue" SG_ 2583656190 BridgeModeStatus_b03 0;
+BA_ "SPN" SG_ 2583656190 BridgeModeStatus_b03 516788;
+BA_ "GenSigStartValue" SG_ 2583656190 BridgeStatus_b03 0;
+BA_ "SPN" SG_ 2583656190 BridgeStatus_b03 516789;
+BA_ "GenSigStartValue" SG_ 2583656190 BridgeModeStatus_b04 0;
+BA_ "SPN" SG_ 2583656190 BridgeModeStatus_b04 516790;
+BA_ "GenSigStartValue" SG_ 2583656190 BridgeStatus_b04 0;
+BA_ "SPN" SG_ 2583656190 BridgeStatus_b04 516791;
+BA_ "GenSigStartValue" SG_ 2583647742 CurrentStatus_X1_22 32000;
+BA_ "SPN" SG_ 2583647742 CurrentStatus_X1_22 516900;
+BA_ "SigType" SG_ 2583647742 CurrentStatus_X1_22 1;
+BA_ "GenSigStartValue" SG_ 2583647742 CurrentStatus_X1_37 32000;
+BA_ "SPN" SG_ 2583647742 CurrentStatus_X1_37 516901;
+BA_ "SigType" SG_ 2583647742 CurrentStatus_X1_37 1;
+BA_ "GenSigStartValue" SG_ 2583647742 CurrentStatus_X1_23 32000;
+BA_ "SPN" SG_ 2583647742 CurrentStatus_X1_23 516902;
+BA_ "SigType" SG_ 2583647742 CurrentStatus_X1_23 1;
+BA_ "GenSigStartValue" SG_ 2583647742 CurrentStatus_X1_38 32000;
+BA_ "SPN" SG_ 2583647742 CurrentStatus_X1_38 516903;
+BA_ "SigType" SG_ 2583647742 CurrentStatus_X1_38 1;
+BA_ "GenSigStartValue" SG_ 2583647998 CurrentStatus_X2_9 32000;
+BA_ "SPN" SG_ 2583647998 CurrentStatus_X2_9 516904;
+BA_ "SigType" SG_ 2583647998 CurrentStatus_X2_9 1;
+BA_ "GenSigStartValue" SG_ 2583647998 CurrentStatus_X2_24 32000;
+BA_ "SPN" SG_ 2583647998 CurrentStatus_X2_24 516905;
+BA_ "SigType" SG_ 2583647998 CurrentStatus_X2_24 1;
+BA_ "GenSigStartValue" SG_ 2583647998 CurrentStatus_X2_10 32000;
+BA_ "SPN" SG_ 2583647998 CurrentStatus_X2_10 516906;
+BA_ "SigType" SG_ 2583647998 CurrentStatus_X2_10 1;
+BA_ "GenSigStartValue" SG_ 2583647998 CurrentStatus_X2_25 32000;
+BA_ "SPN" SG_ 2583647998 CurrentStatus_X2_25 516907;
+BA_ "SigType" SG_ 2583647998 CurrentStatus_X2_25 1;
+BA_ "GenSigStartValue" SG_ 2582845950 CurrentStatus_X1_22 32000;
+BA_ "SPN" SG_ 2582845950 CurrentStatus_X1_22 516900;
+BA_ "SigType" SG_ 2582845950 CurrentStatus_X1_22 1;
+BA_ "GenSigStartValue" SG_ 2582845950 CurrentStatus_X1_37 32000;
+BA_ "SPN" SG_ 2582845950 CurrentStatus_X1_37 516901;
+BA_ "SigType" SG_ 2582845950 CurrentStatus_X1_37 1;
+BA_ "GenSigStartValue" SG_ 2582845950 CurrentStatus_X1_23 32000;
+BA_ "SPN" SG_ 2582845950 CurrentStatus_X1_23 516902;
+BA_ "SigType" SG_ 2582845950 CurrentStatus_X1_23 1;
+BA_ "GenSigStartValue" SG_ 2582845950 CurrentStatus_X1_38 32000;
+BA_ "SPN" SG_ 2582845950 CurrentStatus_X1_38 516903;
+BA_ "SigType" SG_ 2582845950 CurrentStatus_X1_38 1;
+BA_ "GenSigStartValue" SG_ 2582845950 CurrentStatus_X2_9 32000;
+BA_ "SPN" SG_ 2582845950 CurrentStatus_X2_9 516904;
+BA_ "SigType" SG_ 2582845950 CurrentStatus_X2_9 1;
+BA_ "GenSigStartValue" SG_ 2582845950 CurrentStatus_X2_24 32000;
+BA_ "SPN" SG_ 2582845950 CurrentStatus_X2_24 516905;
+BA_ "SigType" SG_ 2582845950 CurrentStatus_X2_24 1;
+BA_ "GenSigStartValue" SG_ 2582845950 CurrentStatus_X2_10 32000;
+BA_ "SPN" SG_ 2582845950 CurrentStatus_X2_10 516906;
+BA_ "SigType" SG_ 2582845950 CurrentStatus_X2_10 1;
+BA_ "GenSigStartValue" SG_ 2582845950 CurrentStatus_X2_25 32000;
+BA_ "SPN" SG_ 2582845950 CurrentStatus_X2_25 516907;
+BA_ "SigType" SG_ 2582845950 CurrentStatus_X2_25 1;
+BA_ "SPN" SG_ 2583648766 DiagnosticStatus_X1_22 516932;
+BA_ "SigType" SG_ 2583648766 DiagnosticStatus_X1_22 4;
+BA_ "SPN" SG_ 2583648766 DiagnosticStatus_X1_37 516933;
+BA_ "SPN" SG_ 2583648766 DiagnosticStatus_X1_23 516934;
+BA_ "SPN" SG_ 2583648766 DiagnosticStatus_X1_38 516935;
+BA_ "SPN" SG_ 2583648766 DiagnosticStatus_X2_9 516936;
+BA_ "SPN" SG_ 2583648766 DiagnosticStatus_X2_24 516937;
+BA_ "SPN" SG_ 2583648766 DiagnosticStatus_X2_10 516938;
+BA_ "SPN" SG_ 2583648766 DiagnosticStatus_X2_25 516939;
+BA_ "SPN" SG_ 2583648766 DiagnosticStatus_X1_10 516940;
+BA_ "SPN" SG_ 2583648766 DiagnosticStatus_X1_25 516941;
+BA_ "SPN" SG_ 2583648766 DiagnosticStatus_X1_11 516942;
+BA_ "SPN" SG_ 2583648766 DiagnosticStatus_X1_26 516943;
+BA_ "SPN" SG_ 2583648766 DiagnosticStatus_X1_12 516944;
+BA_ "SPN" SG_ 2583648766 DiagnosticStatus_X1_27 516945;
+BA_ "SPN" SG_ 2583648766 DiagnosticStatus_X2_6 516946;
+BA_ "SPN" SG_ 2583648766 DiagnosticStatus_X2_5 516947;
+BA_ "SPN" SG_ 2583649022 DiagnosticStatus_X1_19 516948;
+BA_ "SPN" SG_ 2583649022 DiagnosticStatus_X1_34 516949;
+BA_ "SPN" SG_ 2583649022 DiagnosticStatus_X2_18 516950;
+BA_ "SPN" SG_ 2583649022 DiagnosticStatus_X2_33 516951;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X1_22 516932;
+BA_ "SigType" SG_ 2582847486 DiagnosticStatus_X1_22 4;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X1_37 516933;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X1_23 516934;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X1_38 516935;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X2_9 516936;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X2_24 516937;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X2_10 516938;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X2_25 516939;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X1_10 516940;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X1_25 516941;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X1_11 516942;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X1_26 516943;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X1_12 516944;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X1_27 516945;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X2_6 516946;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X2_5 516947;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X1_19 516948;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X1_34 516949;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X2_18 516950;
+BA_ "SPN" SG_ 2582847486 DiagnosticStatus_X2_33 516951;
+BA_ "GenSigStartValue" SG_ 2583651326 DutyStatus_X1_22 0;
+BA_ "SPN" SG_ 2583651326 DutyStatus_X1_22 516964;
+BA_ "SigType" SG_ 2583651326 DutyStatus_X1_22 1;
+BA_ "GenSigStartValue" SG_ 2583651326 DutyStatus_X1_37 0;
+BA_ "SPN" SG_ 2583651326 DutyStatus_X1_37 516965;
+BA_ "SigType" SG_ 2583651326 DutyStatus_X1_37 1;
+BA_ "GenSigStartValue" SG_ 2583651326 DutyStatus_X1_23 0;
+BA_ "SPN" SG_ 2583651326 DutyStatus_X1_23 516966;
+BA_ "SigType" SG_ 2583651326 DutyStatus_X1_23 1;
+BA_ "GenSigStartValue" SG_ 2583651326 DutyStatus_X1_38 0;
+BA_ "SPN" SG_ 2583651326 DutyStatus_X1_38 516967;
+BA_ "SigType" SG_ 2583651326 DutyStatus_X1_38 1;
+BA_ "GenSigStartValue" SG_ 2583651326 DutyStatus_X2_9 0;
+BA_ "SPN" SG_ 2583651326 DutyStatus_X2_9 516968;
+BA_ "SigType" SG_ 2583651326 DutyStatus_X2_9 1;
+BA_ "GenSigStartValue" SG_ 2583651326 DutyStatus_X2_24 0;
+BA_ "SPN" SG_ 2583651326 DutyStatus_X2_24 516969;
+BA_ "SigType" SG_ 2583651326 DutyStatus_X2_24 1;
+BA_ "GenSigStartValue" SG_ 2583651326 DutyStatus_X2_10 0;
+BA_ "SPN" SG_ 2583651326 DutyStatus_X2_10 516970;
+BA_ "SigType" SG_ 2583651326 DutyStatus_X2_10 1;
+BA_ "GenSigStartValue" SG_ 2583651326 DutyStatus_X2_25 0;
+BA_ "SPN" SG_ 2583651326 DutyStatus_X2_25 516971;
+BA_ "SigType" SG_ 2583651326 DutyStatus_X2_25 1;
+BA_ "GenSigStartValue" SG_ 2582847742 DutyStatus_X1_22 0;
+BA_ "SPN" SG_ 2582847742 DutyStatus_X1_22 516964;
+BA_ "SigType" SG_ 2582847742 DutyStatus_X1_22 1;
+BA_ "GenSigStartValue" SG_ 2582847742 DutyStatus_X1_37 0;
+BA_ "SPN" SG_ 2582847742 DutyStatus_X1_37 516965;
+BA_ "SigType" SG_ 2582847742 DutyStatus_X1_37 1;
+BA_ "GenSigStartValue" SG_ 2582847742 DutyStatus_X1_23 0;
+BA_ "SPN" SG_ 2582847742 DutyStatus_X1_23 516966;
+BA_ "SigType" SG_ 2582847742 DutyStatus_X1_23 1;
+BA_ "GenSigStartValue" SG_ 2582847742 DutyStatus_X1_38 0;
+BA_ "SPN" SG_ 2582847742 DutyStatus_X1_38 516967;
+BA_ "SigType" SG_ 2582847742 DutyStatus_X1_38 1;
+BA_ "GenSigStartValue" SG_ 2582847742 DutyStatus_X2_9 0;
+BA_ "SPN" SG_ 2582847742 DutyStatus_X2_9 516968;
+BA_ "SigType" SG_ 2582847742 DutyStatus_X2_9 1;
+BA_ "GenSigStartValue" SG_ 2582847742 DutyStatus_X2_24 0;
+BA_ "SPN" SG_ 2582847742 DutyStatus_X2_24 516969;
+BA_ "SigType" SG_ 2582847742 DutyStatus_X2_24 1;
+BA_ "GenSigStartValue" SG_ 2582847742 DutyStatus_X2_10 0;
+BA_ "SPN" SG_ 2582847742 DutyStatus_X2_10 516970;
+BA_ "SigType" SG_ 2582847742 DutyStatus_X2_10 1;
+BA_ "GenSigStartValue" SG_ 2582847742 DutyStatus_X2_25 0;
+BA_ "SPN" SG_ 2582847742 DutyStatus_X2_25 516971;
+BA_ "SigType" SG_ 2582847742 DutyStatus_X2_25 1;
+BA_ "GenSigStartValue" SG_ 2582843646 FaultCountStatus_X1_22 0;
+BA_ "SPN" SG_ 2582843646 FaultCountStatus_X1_22 516996;
+BA_ "SigType" SG_ 2582843646 FaultCountStatus_X1_22 1;
+BA_ "GenSigStartValue" SG_ 2582843646 FaultCountStatus_X1_37 0;
+BA_ "SPN" SG_ 2582843646 FaultCountStatus_X1_37 516997;
+BA_ "SigType" SG_ 2582843646 FaultCountStatus_X1_37 1;
+BA_ "GenSigStartValue" SG_ 2582843646 FaultCountStatus_X1_23 0;
+BA_ "SPN" SG_ 2582843646 FaultCountStatus_X1_23 516998;
+BA_ "SigType" SG_ 2582843646 FaultCountStatus_X1_23 1;
+BA_ "GenSigStartValue" SG_ 2582843646 FaultCountStatus_X1_38 0;
+BA_ "SPN" SG_ 2582843646 FaultCountStatus_X1_38 516999;
+BA_ "SigType" SG_ 2582843646 FaultCountStatus_X1_38 1;
+BA_ "GenSigStartValue" SG_ 2582843902 FaultCountStatus_X2_9 0;
+BA_ "SPN" SG_ 2582843902 FaultCountStatus_X2_9 519000;
+BA_ "SigType" SG_ 2582843902 FaultCountStatus_X2_9 1;
+BA_ "GenSigStartValue" SG_ 2582843902 FaultCountStatus_X2_24 0;
+BA_ "SPN" SG_ 2582843902 FaultCountStatus_X2_24 519001;
+BA_ "SigType" SG_ 2582843902 FaultCountStatus_X2_24 1;
+BA_ "GenSigStartValue" SG_ 2582843902 FaultCountStatus_X2_10 0;
+BA_ "SPN" SG_ 2582843902 FaultCountStatus_X2_10 519002;
+BA_ "SigType" SG_ 2582843902 FaultCountStatus_X2_10 1;
+BA_ "GenSigStartValue" SG_ 2582843902 FaultCountStatus_X2_25 0;
+BA_ "SPN" SG_ 2582843902 FaultCountStatus_X2_25 519003;
+BA_ "SigType" SG_ 2582843902 FaultCountStatus_X2_25 1;
+BA_ "GenSigStartValue" SG_ 2582844158 FaultCountStatus_X1_10 0;
+BA_ "SPN" SG_ 2582844158 FaultCountStatus_X1_10 519004;
+BA_ "SigType" SG_ 2582844158 FaultCountStatus_X1_10 1;
+BA_ "GenSigStartValue" SG_ 2582844158 FaultCountStatus_X1_25 0;
+BA_ "SPN" SG_ 2582844158 FaultCountStatus_X1_25 519005;
+BA_ "SigType" SG_ 2582844158 FaultCountStatus_X1_25 1;
+BA_ "GenSigStartValue" SG_ 2582844158 FaultCountStatus_X1_11 0;
+BA_ "SPN" SG_ 2582844158 FaultCountStatus_X1_11 519006;
+BA_ "SigType" SG_ 2582844158 FaultCountStatus_X1_11 1;
+BA_ "GenSigStartValue" SG_ 2582844158 FaultCountStatus_X1_26 0;
+BA_ "SPN" SG_ 2582844158 FaultCountStatus_X1_26 519007;
+BA_ "SigType" SG_ 2582844158 FaultCountStatus_X1_26 1;
+BA_ "GenSigStartValue" SG_ 2582844414 FaultCountStatus_X1_12 0;
+BA_ "SPN" SG_ 2582844414 FaultCountStatus_X1_12 519008;
+BA_ "SigType" SG_ 2582844414 FaultCountStatus_X1_12 1;
+BA_ "GenSigStartValue" SG_ 2582844414 FaultCountStatus_X1_27 0;
+BA_ "SPN" SG_ 2582844414 FaultCountStatus_X1_27 519009;
+BA_ "SigType" SG_ 2582844414 FaultCountStatus_X1_27 1;
+BA_ "GenSigStartValue" SG_ 2582844414 FaultCountStatus_X2_6 0;
+BA_ "SPN" SG_ 2582844414 FaultCountStatus_X2_6 519010;
+BA_ "SigType" SG_ 2582844414 FaultCountStatus_X2_6 1;
+BA_ "GenSigStartValue" SG_ 2582844414 FaultCountStatus_X2_5 0;
+BA_ "SPN" SG_ 2582844414 FaultCountStatus_X2_5 519011;
+BA_ "SigType" SG_ 2582844414 FaultCountStatus_X2_5 1;
+BA_ "GenSigStartValue" SG_ 2582844670 FaultCountStatus_X1_19 0;
+BA_ "SPN" SG_ 2582844670 FaultCountStatus_X1_19 519012;
+BA_ "SigType" SG_ 2582844670 FaultCountStatus_X1_19 1;
+BA_ "GenSigStartValue" SG_ 2582844670 FaultCountStatus_X1_34 0;
+BA_ "SPN" SG_ 2582844670 FaultCountStatus_X1_34 519013;
+BA_ "SigType" SG_ 2582844670 FaultCountStatus_X1_34 1;
+BA_ "GenSigStartValue" SG_ 2582844670 FaultCountStatus_X2_18 0;
+BA_ "SPN" SG_ 2582844670 FaultCountStatus_X2_18 519014;
+BA_ "SigType" SG_ 2582844670 FaultCountStatus_X2_18 1;
+BA_ "GenSigStartValue" SG_ 2582844670 FaultCountStatus_X2_33 0;
+BA_ "SPN" SG_ 2582844670 FaultCountStatus_X2_33 519015;
+BA_ "SigType" SG_ 2582844670 FaultCountStatus_X2_33 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X1_22 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X1_22 516996;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X1_22 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X1_37 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X1_37 516997;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X1_37 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X1_23 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X1_23 516998;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X1_23 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X1_38 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X1_38 516999;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X1_38 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X2_9 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X2_9 519000;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X2_9 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X2_24 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X2_24 519001;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X2_24 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X2_10 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X2_10 519002;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X2_10 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X2_25 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X2_25 519003;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X2_25 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X1_10 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X1_10 519004;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X1_10 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X1_25 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X1_25 519005;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X1_25 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X1_11 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X1_11 519006;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X1_11 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X1_26 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X1_26 519007;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X1_26 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X1_12 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X1_12 519008;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X1_12 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X1_27 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X1_27 519009;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X1_27 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X2_6 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X2_6 519010;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X2_6 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X2_5 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X2_5 519011;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X2_5 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X1_19 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X1_19 519012;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X1_19 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X1_34 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X1_34 519013;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X1_34 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X2_18 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X2_18 519014;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X2_18 1;
+BA_ "GenSigStartValue" SG_ 2582846206 FaultCountStatus_X2_33 0;
+BA_ "SPN" SG_ 2582846206 FaultCountStatus_X2_33 519015;
+BA_ "SigType" SG_ 2582846206 FaultCountStatus_X2_33 1;
+BA_ "GenSigStartValue" SG_ 2582839550 FaultCurrentStatus_X1_22 32000;
+BA_ "SPN" SG_ 2582839550 FaultCurrentStatus_X1_22 519028;
+BA_ "SigType" SG_ 2582839550 FaultCurrentStatus_X1_22 1;
+BA_ "GenSigStartValue" SG_ 2582839550 FaultCurrentStatus_X1_37 32000;
+BA_ "SPN" SG_ 2582839550 FaultCurrentStatus_X1_37 519029;
+BA_ "SigType" SG_ 2582839550 FaultCurrentStatus_X1_37 1;
+BA_ "GenSigStartValue" SG_ 2582839550 FaultCurrentStatus_X1_23 32000;
+BA_ "SPN" SG_ 2582839550 FaultCurrentStatus_X1_23 519030;
+BA_ "SigType" SG_ 2582839550 FaultCurrentStatus_X1_23 1;
+BA_ "GenSigStartValue" SG_ 2582839550 FaultCurrentStatus_X1_38 32000;
+BA_ "SPN" SG_ 2582839550 FaultCurrentStatus_X1_38 519031;
+BA_ "SigType" SG_ 2582839550 FaultCurrentStatus_X1_38 1;
+BA_ "GenSigStartValue" SG_ 2582839806 FaultCurrentStatus_X2_9 32000;
+BA_ "SPN" SG_ 2582839806 FaultCurrentStatus_X2_9 519032;
+BA_ "SigType" SG_ 2582839806 FaultCurrentStatus_X2_9 1;
+BA_ "GenSigStartValue" SG_ 2582839806 FaultCurrentStatus_X2_24 32000;
+BA_ "SPN" SG_ 2582839806 FaultCurrentStatus_X2_24 519033;
+BA_ "SigType" SG_ 2582839806 FaultCurrentStatus_X2_24 1;
+BA_ "GenSigStartValue" SG_ 2582839806 FaultCurrentStatus_X2_10 32000;
+BA_ "SPN" SG_ 2582839806 FaultCurrentStatus_X2_10 519034;
+BA_ "SigType" SG_ 2582839806 FaultCurrentStatus_X2_10 1;
+BA_ "GenSigStartValue" SG_ 2582839806 FaultCurrentStatus_X2_25 32000;
+BA_ "SPN" SG_ 2582839806 FaultCurrentStatus_X2_25 519035;
+BA_ "SigType" SG_ 2582839806 FaultCurrentStatus_X2_25 1;
+BA_ "GenSigStartValue" SG_ 2582846462 FaultCurrentStatus_X1_22 32000;
+BA_ "SPN" SG_ 2582846462 FaultCurrentStatus_X1_22 519028;
+BA_ "SigType" SG_ 2582846462 FaultCurrentStatus_X1_22 1;
+BA_ "GenSigStartValue" SG_ 2582846462 FaultCurrentStatus_X1_37 32000;
+BA_ "SPN" SG_ 2582846462 FaultCurrentStatus_X1_37 519029;
+BA_ "SigType" SG_ 2582846462 FaultCurrentStatus_X1_37 1;
+BA_ "GenSigStartValue" SG_ 2582846462 FaultCurrentStatus_X1_23 32000;
+BA_ "SPN" SG_ 2582846462 FaultCurrentStatus_X1_23 519030;
+BA_ "SigType" SG_ 2582846462 FaultCurrentStatus_X1_23 1;
+BA_ "GenSigStartValue" SG_ 2582846462 FaultCurrentStatus_X1_38 32000;
+BA_ "SPN" SG_ 2582846462 FaultCurrentStatus_X1_38 519031;
+BA_ "SigType" SG_ 2582846462 FaultCurrentStatus_X1_38 1;
+BA_ "GenSigStartValue" SG_ 2582846462 FaultCurrentStatus_X2_9 32000;
+BA_ "SPN" SG_ 2582846462 FaultCurrentStatus_X2_9 519032;
+BA_ "SigType" SG_ 2582846462 FaultCurrentStatus_X2_9 1;
+BA_ "GenSigStartValue" SG_ 2582846462 FaultCurrentStatus_X2_24 32000;
+BA_ "SPN" SG_ 2582846462 FaultCurrentStatus_X2_24 519033;
+BA_ "SigType" SG_ 2582846462 FaultCurrentStatus_X2_24 1;
+BA_ "GenSigStartValue" SG_ 2582846462 FaultCurrentStatus_X2_10 32000;
+BA_ "SPN" SG_ 2582846462 FaultCurrentStatus_X2_10 519034;
+BA_ "SigType" SG_ 2582846462 FaultCurrentStatus_X2_10 1;
+BA_ "GenSigStartValue" SG_ 2582846462 FaultCurrentStatus_X2_25 32000;
+BA_ "SPN" SG_ 2582846462 FaultCurrentStatus_X2_25 519035;
+BA_ "SigType" SG_ 2582846462 FaultCurrentStatus_X2_25 1;
+BA_ "SPN" SG_ 2582841598 FaultVoltageStatus_X1_22 519060;
+BA_ "SigType" SG_ 2582841598 FaultVoltageStatus_X1_22 1;
+BA_ "SPN" SG_ 2582841598 FaultVoltageStatus_X1_37 519061;
+BA_ "SigType" SG_ 2582841598 FaultVoltageStatus_X1_37 1;
+BA_ "SPN" SG_ 2582841598 FaultVoltageStatus_X1_23 519062;
+BA_ "SigType" SG_ 2582841598 FaultVoltageStatus_X1_23 1;
+BA_ "SPN" SG_ 2582841598 FaultVoltageStatus_X1_38 519063;
+BA_ "SigType" SG_ 2582841598 FaultVoltageStatus_X1_38 1;
+BA_ "SPN" SG_ 2582841854 FaultVoltageStatus_X2_9 519064;
+BA_ "SigType" SG_ 2582841854 FaultVoltageStatus_X2_9 1;
+BA_ "SPN" SG_ 2582841854 FaultVoltageStatus_X2_24 519065;
+BA_ "SigType" SG_ 2582841854 FaultVoltageStatus_X2_24 1;
+BA_ "SPN" SG_ 2582841854 FaultVoltageStatus_X2_10 519066;
+BA_ "SigType" SG_ 2582841854 FaultVoltageStatus_X2_10 1;
+BA_ "SPN" SG_ 2582841854 FaultVoltageStatus_X2_25 519067;
+BA_ "SigType" SG_ 2582841854 FaultVoltageStatus_X2_25 1;
+BA_ "SPN" SG_ 2582842110 FaultVoltageStatus_X1_10 519068;
+BA_ "SigType" SG_ 2582842110 FaultVoltageStatus_X1_10 1;
+BA_ "SPN" SG_ 2582842110 FaultVoltageStatus_X1_25 519069;
+BA_ "SigType" SG_ 2582842110 FaultVoltageStatus_X1_25 1;
+BA_ "SPN" SG_ 2582842110 FaultVoltageStatus_X1_11 519070;
+BA_ "SigType" SG_ 2582842110 FaultVoltageStatus_X1_11 1;
+BA_ "SPN" SG_ 2582842110 FaultVoltageStatus_X1_26 519071;
+BA_ "SigType" SG_ 2582842110 FaultVoltageStatus_X1_26 1;
+BA_ "SPN" SG_ 2582842366 FaultVoltageStatus_X1_12 519072;
+BA_ "SigType" SG_ 2582842366 FaultVoltageStatus_X1_12 1;
+BA_ "SPN" SG_ 2582842366 FaultVoltageStatus_X1_27 519073;
+BA_ "SigType" SG_ 2582842366 FaultVoltageStatus_X1_27 1;
+BA_ "SPN" SG_ 2582842366 FaultVoltageStatus_X2_6 519074;
+BA_ "SigType" SG_ 2582842366 FaultVoltageStatus_X2_6 1;
+BA_ "SPN" SG_ 2582842366 FaultVoltageStatus_X2_5 519075;
+BA_ "SigType" SG_ 2582842366 FaultVoltageStatus_X2_5 1;
+BA_ "SPN" SG_ 2582842622 FaultVoltageStatus_X1_19 519076;
+BA_ "SigType" SG_ 2582842622 FaultVoltageStatus_X1_19 1;
+BA_ "SPN" SG_ 2582842622 FaultVoltageStatus_X1_34 519077;
+BA_ "SigType" SG_ 2582842622 FaultVoltageStatus_X1_34 1;
+BA_ "SPN" SG_ 2582842622 FaultVoltageStatus_X2_18 519078;
+BA_ "SigType" SG_ 2582842622 FaultVoltageStatus_X2_18 1;
+BA_ "SPN" SG_ 2582842622 FaultVoltageStatus_X2_33 519079;
+BA_ "SigType" SG_ 2582842622 FaultVoltageStatus_X2_33 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X1_22 519060;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X1_22 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X1_37 519061;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X1_37 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X1_23 519062;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X1_23 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X1_38 519063;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X1_38 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X2_9 519064;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X2_9 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X2_24 519065;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X2_24 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X2_10 519066;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X2_10 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X2_25 519067;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X2_25 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X1_10 519068;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X1_10 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X1_25 519069;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X1_25 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X1_11 519070;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X1_11 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X1_26 519071;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X1_26 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X1_12 519072;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X1_12 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X1_27 519073;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X1_27 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X2_6 519074;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X2_6 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X2_5 519075;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X2_5 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X1_19 519076;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X1_19 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X1_34 519077;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X1_34 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X2_18 519078;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X2_18 1;
+BA_ "SPN" SG_ 2582846718 FaultVoltageStatus_X2_33 519079;
+BA_ "SigType" SG_ 2582846718 FaultVoltageStatus_X2_33 1;
+BA_ "SPN" SG_ 2583650046 VoltageStatus_X1_22 519092;
+BA_ "SigType" SG_ 2583650046 VoltageStatus_X1_22 1;
+BA_ "SPN" SG_ 2583650046 VoltageStatus_X1_37 519093;
+BA_ "SigType" SG_ 2583650046 VoltageStatus_X1_37 1;
+BA_ "SPN" SG_ 2583650046 VoltageStatus_X1_23 519094;
+BA_ "SigType" SG_ 2583650046 VoltageStatus_X1_23 1;
+BA_ "SPN" SG_ 2583650046 VoltageStatus_X1_38 519095;
+BA_ "SigType" SG_ 2583650046 VoltageStatus_X1_38 1;
+BA_ "SPN" SG_ 2583650302 VoltageStatus_X2_9 519096;
+BA_ "SigType" SG_ 2583650302 VoltageStatus_X2_9 1;
+BA_ "SPN" SG_ 2583650302 VoltageStatus_X2_24 519097;
+BA_ "SigType" SG_ 2583650302 VoltageStatus_X2_24 1;
+BA_ "SPN" SG_ 2583650302 VoltageStatus_X2_10 519098;
+BA_ "SigType" SG_ 2583650302 VoltageStatus_X2_10 1;
+BA_ "SPN" SG_ 2583650302 VoltageStatus_X2_25 519099;
+BA_ "SigType" SG_ 2583650302 VoltageStatus_X2_25 1;
+BA_ "SPN" SG_ 2583650558 VoltageStatus_X1_10 519100;
+BA_ "SigType" SG_ 2583650558 VoltageStatus_X1_10 1;
+BA_ "SPN" SG_ 2583650558 VoltageStatus_X1_25 519101;
+BA_ "SigType" SG_ 2583650558 VoltageStatus_X1_25 1;
+BA_ "SPN" SG_ 2583650558 VoltageStatus_X1_11 519102;
+BA_ "SigType" SG_ 2583650558 VoltageStatus_X1_11 1;
+BA_ "SPN" SG_ 2583650558 VoltageStatus_X1_26 519103;
+BA_ "SigType" SG_ 2583650558 VoltageStatus_X1_26 1;
+BA_ "SPN" SG_ 2583650814 VoltageStatus_X1_12 519104;
+BA_ "SigType" SG_ 2583650814 VoltageStatus_X1_12 1;
+BA_ "SPN" SG_ 2583650814 VoltageStatus_X1_27 519105;
+BA_ "SigType" SG_ 2583650814 VoltageStatus_X1_27 1;
+BA_ "SPN" SG_ 2583650814 VoltageStatus_X2_6 519106;
+BA_ "SigType" SG_ 2583650814 VoltageStatus_X2_6 1;
+BA_ "SPN" SG_ 2583650814 VoltageStatus_X2_5 519107;
+BA_ "SigType" SG_ 2583650814 VoltageStatus_X2_5 1;
+BA_ "SPN" SG_ 2583651070 VoltageStatus_X1_19 519108;
+BA_ "SigType" SG_ 2583651070 VoltageStatus_X1_19 1;
+BA_ "SPN" SG_ 2583651070 VoltageStatus_X1_34 519109;
+BA_ "SigType" SG_ 2583651070 VoltageStatus_X1_34 1;
+BA_ "SPN" SG_ 2583651070 VoltageStatus_X2_18 519110;
+BA_ "SigType" SG_ 2583651070 VoltageStatus_X2_18 1;
+BA_ "SPN" SG_ 2583651070 VoltageStatus_X2_33 519111;
+BA_ "SigType" SG_ 2583651070 VoltageStatus_X2_33 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X1_22 519092;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X1_22 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X1_37 519093;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X1_37 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X1_23 519094;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X1_23 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X1_38 519095;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X1_38 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X2_9 519096;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X2_9 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X2_24 519097;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X2_24 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X2_10 519098;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X2_10 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X2_25 519099;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X2_25 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X1_10 519100;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X1_10 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X1_25 519101;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X1_25 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X1_11 519102;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X1_11 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X1_26 519103;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X1_26 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X1_12 519104;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X1_12 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X1_27 519105;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X1_27 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X2_6 519106;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X2_6 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X2_5 519107;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X2_5 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X1_19 519108;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X1_19 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X1_34 519109;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X1_34 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X2_18 519110;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X2_18 1;
+BA_ "SPN" SG_ 2582845694 VoltageStatus_X2_33 519111;
+BA_ "SigType" SG_ 2582845694 VoltageStatus_X2_33 1;
+BA_ "SPN" SG_ 2583646718 PinModeStatus_X1_22 519124;
+BA_ "SPN" SG_ 2583646718 PinPullModeStatus_X1_22 519125;
+BA_ "SPN" SG_ 2583646718 LoadDetectionStatus_X1_22 519126;
+BA_ "SPN" SG_ 2583646718 PinModeStatus_X1_37 519127;
+BA_ "SPN" SG_ 2583646718 PinPullModeStatus_X1_37 519128;
+BA_ "SPN" SG_ 2583646718 LoadDetectionStatus_X1_37 519129;
+BA_ "SPN" SG_ 2583646718 PinModeStatus_X1_23 519130;
+BA_ "SPN" SG_ 2583646718 PinPullModeStatus_X1_23 519131;
+BA_ "SPN" SG_ 2583646718 LoadDetectionStatus_X1_23 519132;
+BA_ "SPN" SG_ 2583646718 PinModeStatus_X1_38 519133;
+BA_ "SPN" SG_ 2583646718 PinPullModeStatus_X1_38 519134;
+BA_ "SPN" SG_ 2583646718 LoadDetectionStatus_X1_38 519135;
+BA_ "SPN" SG_ 2583646718 PinModeStatus_X2_9 519136;
+BA_ "SPN" SG_ 2583646718 PinPullModeStatus_X2_9 519137;
+BA_ "SPN" SG_ 2583646718 LoadDetectionStatus_X2_9 519138;
+BA_ "SPN" SG_ 2583646718 PinModeStatus_X2_24 519139;
+BA_ "SPN" SG_ 2583646718 PinPullModeStatus_X2_24 519140;
+BA_ "SPN" SG_ 2583646718 LoadDetectionStatus_X2_24 519141;
+BA_ "SPN" SG_ 2583646718 PinModeStatus_X2_10 519142;
+BA_ "SPN" SG_ 2583646718 PinPullModeStatus_X2_10 519143;
+BA_ "SPN" SG_ 2583646718 LoadDetectionStatus_X2_10 519144;
+BA_ "SPN" SG_ 2583646718 PinModeStatus_X2_25 519145;
+BA_ "SPN" SG_ 2583646718 PinPullModeStatus_X2_25 519146;
+BA_ "SPN" SG_ 2583646718 LoadDetectionStatus_X2_25 519147;
+BA_ "SPN" SG_ 2583646974 PinModeStatus_X1_10 519148;
+BA_ "SPN" SG_ 2583646974 PinPullModeStatus_X1_10 519149;
+BA_ "SPN" SG_ 2583646974 LoadDetectionStatus_X1_10 519150;
+BA_ "SPN" SG_ 2583646974 PinModeStatus_X1_25 519151;
+BA_ "SPN" SG_ 2583646974 PinPullModeStatus_X1_25 519152;
+BA_ "SPN" SG_ 2583646974 LoadDetectionStatus_X1_25 519153;
+BA_ "SPN" SG_ 2583646974 PinModeStatus_X1_11 519154;
+BA_ "SPN" SG_ 2583646974 PinPullModeStatus_X1_11 519155;
+BA_ "SPN" SG_ 2583646974 LoadDetectionStatus_X1_11 519156;
+BA_ "SPN" SG_ 2583646974 PinModeStatus_X1_26 519157;
+BA_ "SPN" SG_ 2583646974 PinPullModeStatus_X1_26 519158;
+BA_ "SPN" SG_ 2583646974 LoadDetectionStatus_X1_26 519159;
+BA_ "SPN" SG_ 2583646974 PinModeStatus_X1_12 519160;
+BA_ "SPN" SG_ 2583646974 PinPullModeStatus_X1_12 519161;
+BA_ "SPN" SG_ 2583646974 LoadDetectionStatus_X1_12 519162;
+BA_ "SPN" SG_ 2583646974 PinModeStatus_X1_27 519163;
+BA_ "SPN" SG_ 2583646974 PinPullModeStatus_X1_27 519164;
+BA_ "SPN" SG_ 2583646974 LoadDetectionStatus_X1_27 519165;
+BA_ "SPN" SG_ 2583646974 PinModeStatus_X2_6 519166;
+BA_ "SPN" SG_ 2583646974 PinPullModeStatus_X2_6 519167;
+BA_ "SPN" SG_ 2583646974 LoadDetectionStatus_X2_6 519168;
+BA_ "SPN" SG_ 2583646974 PinModeStatus_X2_5 519169;
+BA_ "SPN" SG_ 2583646974 PinPullModeStatus_X2_5 519170;
+BA_ "SPN" SG_ 2583646974 LoadDetectionStatus_X2_5 519171;
+BA_ "SPN" SG_ 2583647230 PinModeStatus_X1_19 519172;
+BA_ "SPN" SG_ 2583647230 PinPullModeStatus_X1_19 519173;
+BA_ "SPN" SG_ 2583647230 LoadDetectionStatus_X1_19 519174;
+BA_ "SPN" SG_ 2583647230 PinModeStatus_X1_34 519175;
+BA_ "SPN" SG_ 2583647230 PinPullModeStatus_X1_34 519176;
+BA_ "SPN" SG_ 2583647230 LoadDetectionStatus_X1_34 519177;
+BA_ "SPN" SG_ 2583647230 PinModeStatus_X2_18 519178;
+BA_ "SPN" SG_ 2583647230 PinPullModeStatus_X2_18 519179;
+BA_ "SPN" SG_ 2583647230 LoadDetectionStatus_X2_18 519180;
+BA_ "SPN" SG_ 2583647230 PinModeStatus_X2_33 519181;
+BA_ "SPN" SG_ 2583647230 PinPullModeStatus_X2_33 519182;
+BA_ "SPN" SG_ 2583647230 LoadDetectionStatus_X2_33 519183;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X1_22 519124;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X1_22 519125;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X1_22 519126;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X1_37 519127;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X1_37 519128;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X1_37 519129;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X1_23 519130;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X1_23 519131;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X1_23 519132;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X1_38 519133;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X1_38 519134;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X1_38 519135;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X2_9 519136;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X2_9 519137;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X2_9 519138;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X2_24 519139;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X2_24 519140;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X2_24 519141;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X2_10 519142;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X2_10 519143;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X2_10 519144;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X2_25 519145;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X2_25 519146;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X2_25 519147;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X1_10 519148;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X1_10 519149;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X1_10 519150;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X1_25 519151;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X1_25 519152;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X1_25 519153;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X1_11 519154;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X1_11 519155;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X1_11 519156;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X1_26 519157;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X1_26 519158;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X1_26 519159;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X1_12 519160;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X1_12 519161;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X1_12 519162;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X1_27 519163;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X1_27 519164;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X1_27 519165;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X2_6 519166;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X2_6 519167;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X2_6 519168;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X2_5 519169;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X2_5 519170;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X2_5 519171;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X1_19 519172;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X1_19 519173;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X1_19 519174;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X1_34 519175;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X1_34 519176;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X1_34 519177;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X2_18 519178;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X2_18 519179;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X2_18 519180;
+BA_ "SPN" SG_ 2582846974 PinModeStatus_X2_33 519181;
+BA_ "SPN" SG_ 2582846974 PinPullModeStatus_X2_33 519182;
+BA_ "SPN" SG_ 2582846974 LoadDetectionStatus_X2_33 519183;
+BA_ "SPN" SG_ 2650761214 PwmFrequencyStatus_X1_22 519220;
+BA_ "SigType" SG_ 2650761214 PwmFrequencyStatus_X1_22 1;
+BA_ "SPN" SG_ 2650761214 PwmFrequencyStatus_X1_37 519221;
+BA_ "SigType" SG_ 2650761214 PwmFrequencyStatus_X1_37 1;
+BA_ "SPN" SG_ 2650761214 PwmFrequencyStatus_X1_23 519222;
+BA_ "SigType" SG_ 2650761214 PwmFrequencyStatus_X1_23 1;
+BA_ "SPN" SG_ 2650761214 PwmFrequencyStatus_X1_38 519223;
+BA_ "SigType" SG_ 2650761214 PwmFrequencyStatus_X1_38 1;
+BA_ "SPN" SG_ 2650761470 PwmFrequencyStatus_X2_9 519224;
+BA_ "SigType" SG_ 2650761470 PwmFrequencyStatus_X2_9 1;
+BA_ "SPN" SG_ 2650761470 PwmFrequencyStatus_X2_24 519225;
+BA_ "SigType" SG_ 2650761470 PwmFrequencyStatus_X2_24 1;
+BA_ "SPN" SG_ 2650761470 PwmFrequencyStatus_X2_10 519226;
+BA_ "SigType" SG_ 2650761470 PwmFrequencyStatus_X2_10 1;
+BA_ "SPN" SG_ 2650761470 PwmFrequencyStatus_X2_25 519227;
+BA_ "SigType" SG_ 2650761470 PwmFrequencyStatus_X2_25 1;
+BA_ "SPN" SG_ 2649956094 PwmFrequencyStatus_X1_22 519220;
+BA_ "SigType" SG_ 2649956094 PwmFrequencyStatus_X1_22 1;
+BA_ "SPN" SG_ 2649956094 PwmFrequencyStatus_X1_37 519221;
+BA_ "SigType" SG_ 2649956094 PwmFrequencyStatus_X1_37 1;
+BA_ "SPN" SG_ 2649956094 PwmFrequencyStatus_X1_23 519222;
+BA_ "SigType" SG_ 2649956094 PwmFrequencyStatus_X1_23 1;
+BA_ "SPN" SG_ 2649956094 PwmFrequencyStatus_X1_38 519223;
+BA_ "SigType" SG_ 2649956094 PwmFrequencyStatus_X1_38 1;
+BA_ "SPN" SG_ 2649956094 PwmFrequencyStatus_X2_9 519224;
+BA_ "SigType" SG_ 2649956094 PwmFrequencyStatus_X2_9 1;
+BA_ "SPN" SG_ 2649956094 PwmFrequencyStatus_X2_24 519225;
+BA_ "SigType" SG_ 2649956094 PwmFrequencyStatus_X2_24 1;
+BA_ "SPN" SG_ 2649956094 PwmFrequencyStatus_X2_10 519226;
+BA_ "SigType" SG_ 2649956094 PwmFrequencyStatus_X2_10 1;
+BA_ "SPN" SG_ 2649956094 PwmFrequencyStatus_X2_25 519227;
+BA_ "SigType" SG_ 2649956094 PwmFrequencyStatus_X2_25 1;
+BA_ "SPN" SG_ 2582847998 QEncoderDirection_Q01 519260;
+BA_ "GenSigStartValue" SG_ 2582847998 QEncoderCounter_Q01 8000000;
+BA_ "SPN" SG_ 2582847998 QEncoderCounter_Q01 519261;
+BA_ "SigType" SG_ 2582847998 QEncoderCounter_Q01 1;
+BA_ "GenSigStartValue" SG_ 2583649790 TemperatureStatus_PCB 40;
+BA_ "SPN" SG_ 2583649790 TemperatureStatus_PCB 519252;
+BA_ "SigType" SG_ 2583649790 TemperatureStatus_PCB 1;
+VAL_ 2369322750 BridgeModeCommand_b01 0 "Freewheeling" 1 "Forward" 2 "Reverse" 3 "Brake" 6 "Error" 7 "Not Available" ;
+VAL_ 2369322750 BridgeModeCommand_b02 0 "Freewheeling" 1 "Forward" 2 "Reverse" 3 "Brake" 6 "Error" 7 "Not Available" ;
+VAL_ 2369322750 BridgeModeCommand_b03 0 "Freewheeling" 1 "Forward" 2 "Reverse" 3 "Brake" 6 "Error" 7 "Not Available" ;
+VAL_ 2369322750 BridgeModeCommand_b04 0 "Freewheeling" 1 "Forward" 2 "Reverse" 3 "Brake" 6 "Error" 7 "Not Available" ;
+VAL_ 2369388286 PinModeCommand_X1_22 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369388286 PinPullModeCommand_X1_22 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369388286 LoadDetectionCommand_X1_22 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369388286 PinModeCommand_X1_37 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369388286 PinPullModeCommand_X1_37 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369388286 LoadDetectionCommand_X1_37 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369388286 PinModeCommand_X1_23 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369388286 PinPullModeCommand_X1_23 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369388286 LoadDetectionCommand_X1_23 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369388286 PinModeCommand_X1_38 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369388286 PinPullModeCommand_X1_38 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369388286 LoadDetectionCommand_X1_38 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369388286 PinModeCommand_X2_9 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369388286 PinPullModeCommand_X2_9 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369388286 LoadDetectionCommand_X2_9 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369388286 PinModeCommand_X2_24 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369388286 PinPullModeCommand_X2_24 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369388286 LoadDetectionCommand_X2_24 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369388286 PinModeCommand_X2_10 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369388286 PinPullModeCommand_X2_10 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369388286 LoadDetectionCommand_X2_10 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369388286 PinModeCommand_X2_25 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369388286 PinPullModeCommand_X2_25 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369388286 LoadDetectionCommand_X2_25 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369453822 PinModeCommand_X1_10 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369453822 PinPullModeCommand_X1_10 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369453822 LoadDetectionCommand_X1_10 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369453822 PinModeCommand_X1_25 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369453822 PinPullModeCommand_X1_25 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369453822 LoadDetectionCommand_X1_25 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369453822 PinModeCommand_X1_11 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369453822 PinPullModeCommand_X1_11 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369453822 LoadDetectionCommand_X1_11 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369453822 PinModeCommand_X1_26 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369453822 PinPullModeCommand_X1_26 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369453822 LoadDetectionCommand_X1_26 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369453822 PinModeCommand_X1_12 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369453822 PinPullModeCommand_X1_12 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369453822 LoadDetectionCommand_X1_12 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369453822 PinModeCommand_X1_27 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369453822 PinPullModeCommand_X1_27 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369453822 LoadDetectionCommand_X1_27 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369453822 PinModeCommand_X2_6 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369453822 PinPullModeCommand_X2_6 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369453822 LoadDetectionCommand_X2_6 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369453822 PinModeCommand_X2_5 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369453822 PinPullModeCommand_X2_5 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369453822 LoadDetectionCommand_X2_5 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369519358 PinModeCommand_X1_19 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369519358 PinPullModeCommand_X1_19 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369519358 LoadDetectionCommand_X1_19 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369519358 PinModeCommand_X1_34 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369519358 PinPullModeCommand_X1_34 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369519358 LoadDetectionCommand_X1_34 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369519358 PinModeCommand_X2_18 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369519358 PinPullModeCommand_X2_18 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369519358 LoadDetectionCommand_X2_18 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369519358 PinModeCommand_X2_33 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2369519358 PinPullModeCommand_X2_33 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2369519358 LoadDetectionCommand_X2_33 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2369912574 PwmFrequencyCommand_X1_22 0 "1 Hz" 1 "2 Hz" 2 "5 Hz" 3 "10 Hz" 4 "20 Hz" 5 "50 Hz" 6 "100 Hz" 7 "200 Hz" 8 "500 Hz" 9 "1 KHz" 10 "2 KHz" 11 "5 KHz" 12 "Custom 1" 13 "Custom 2" 14 "Custom 3" 15 "Not Available" ;
+VAL_ 2369912574 PwmFrequencyCommand_X1_37 0 "1 Hz" 1 "2 Hz" 2 "5 Hz" 3 "10 Hz" 4 "20 Hz" 5 "50 Hz" 6 "100 Hz" 7 "200 Hz" 8 "500 Hz" 9 "1 KHz" 10 "2 KHz" 11 "5 KHz" 12 "Custom 1" 13 "Custom 2" 14 "Custom 3" 15 "Not Available" ;
+VAL_ 2369912574 PwmFrequencyCommand_X1_23 0 "1 Hz" 1 "2 Hz" 2 "5 Hz" 3 "10 Hz" 4 "20 Hz" 5 "50 Hz" 6 "100 Hz" 7 "200 Hz" 8 "500 Hz" 9 "1 KHz" 10 "2 KHz" 11 "5 KHz" 12 "Custom 1" 13 "Custom 2" 14 "Custom 3" 15 "Not Available" ;
+VAL_ 2369912574 PwmFrequencyCommand_X1_38 0 "1 Hz" 1 "2 Hz" 2 "5 Hz" 3 "10 Hz" 4 "20 Hz" 5 "50 Hz" 6 "100 Hz" 7 "200 Hz" 8 "500 Hz" 9 "1 KHz" 10 "2 KHz" 11 "5 KHz" 12 "Custom 1" 13 "Custom 2" 14 "Custom 3" 15 "Not Available" ;
+VAL_ 2369912574 PwmFrequencyCommand_X2_9 0 "1 Hz" 1 "2 Hz" 2 "5 Hz" 3 "10 Hz" 4 "20 Hz" 5 "50 Hz" 6 "100 Hz" 7 "200 Hz" 8 "500 Hz" 9 "1 KHz" 10 "2 KHz" 11 "5 KHz" 12 "Custom 1" 13 "Custom 2" 14 "Custom 3" 15 "Not Available" ;
+VAL_ 2369912574 PwmFrequencyCommand_X2_24 0 "1 Hz" 1 "2 Hz" 2 "5 Hz" 3 "10 Hz" 4 "20 Hz" 5 "50 Hz" 6 "100 Hz" 7 "200 Hz" 8 "500 Hz" 9 "1 KHz" 10 "2 KHz" 11 "5 KHz" 12 "Custom 1" 13 "Custom 2" 14 "Custom 3" 15 "Not Available" ;
+VAL_ 2369912574 PwmFrequencyCommand_X2_10 0 "1 Hz" 1 "2 Hz" 2 "5 Hz" 3 "10 Hz" 4 "20 Hz" 5 "50 Hz" 6 "100 Hz" 7 "200 Hz" 8 "500 Hz" 9 "1 KHz" 10 "2 KHz" 11 "5 KHz" 12 "Custom 1" 13 "Custom 2" 14 "Custom 3" 15 "Not Available" ;
+VAL_ 2369912574 PwmFrequencyCommand_X2_25 0 "1 Hz" 1 "2 Hz" 2 "5 Hz" 3 "10 Hz" 4 "20 Hz" 5 "50 Hz" 6 "100 Hz" 7 "200 Hz" 8 "500 Hz" 9 "1 KHz" 10 "2 KHz" 11 "5 KHz" 12 "Custom 1" 13 "Custom 2" 14 "Custom 3" 15 "Not Available" ;
+VAL_ 2583656190 BridgeModeStatus_b01 0 "Freewheeling" 1 "Forward" 2 "Reverse" 3 "Brake" 6 "Error" 7 "Not Available" ;
+VAL_ 2583656190 BridgeStatus_b01 0 "OK" 1 "Shutdown" 2 "Unconfigured" 7 "Not Available" ;
+VAL_ 2583656190 BridgeModeStatus_b02 0 "Freewheeling" 1 "Forward" 2 "Reverse" 3 "Brake" 6 "Error" 7 "Not Available" ;
+VAL_ 2583656190 BridgeStatus_b02 0 "OK" 1 "Shutdown" 2 "Unconfigured" 7 "Not Available" ;
+VAL_ 2583656190 BridgeModeStatus_b03 0 "Freewheeling" 1 "Forward" 2 "Reverse" 3 "Brake" 6 "Error" 7 "Not Available" ;
+VAL_ 2583656190 BridgeStatus_b03 0 "OK" 1 "Shutdown" 2 "Unconfigured" 7 "Not Available" ;
+VAL_ 2583656190 BridgeModeStatus_b04 0 "Freewheeling" 1 "Forward" 2 "Reverse" 3 "Brake" 6 "Error" 7 "Not Available" ;
+VAL_ 2583656190 BridgeStatus_b04 0 "OK" 1 "Shutdown" 2 "Unconfigured" 7 "Not Available" ;
+VAL_ 2583648766 DiagnosticStatus_X1_22 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583648766 DiagnosticStatus_X1_37 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583648766 DiagnosticStatus_X1_23 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583648766 DiagnosticStatus_X1_38 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583648766 DiagnosticStatus_X2_9 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583648766 DiagnosticStatus_X2_24 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583648766 DiagnosticStatus_X2_10 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583648766 DiagnosticStatus_X2_25 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583648766 DiagnosticStatus_X1_10 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583648766 DiagnosticStatus_X1_25 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583648766 DiagnosticStatus_X1_11 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583648766 DiagnosticStatus_X1_26 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583648766 DiagnosticStatus_X1_12 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583648766 DiagnosticStatus_X1_27 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583648766 DiagnosticStatus_X2_6 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583648766 DiagnosticStatus_X2_5 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583649022 DiagnosticStatus_X1_19 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583649022 DiagnosticStatus_X1_34 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583649022 DiagnosticStatus_X2_18 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583649022 DiagnosticStatus_X2_33 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X1_22 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X1_37 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X1_23 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X1_38 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X2_9 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X2_24 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X2_10 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X2_25 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X1_10 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X1_25 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X1_11 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X1_26 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X1_12 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X1_27 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X2_6 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X2_5 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X1_19 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X1_34 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X2_18 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2582847486 DiagnosticStatus_X2_33 0 "OK" 1 "Open Load" 2 "Short to VBAT" 3 "Short to GND" 4 "Over-current" 5 "Over temperature" 6 "Under voltage" 7 "Over voltage" 8 "Bad Configuration" 9 "HW Fault Detected" 10 "Vbat Error" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646718 PinModeStatus_X1_22 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646718 PinPullModeStatus_X1_22 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583646718 LoadDetectionStatus_X1_22 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583646718 PinModeStatus_X1_37 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646718 PinPullModeStatus_X1_37 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583646718 LoadDetectionStatus_X1_37 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583646718 PinModeStatus_X1_23 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646718 PinPullModeStatus_X1_23 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583646718 LoadDetectionStatus_X1_23 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583646718 PinModeStatus_X1_38 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646718 PinPullModeStatus_X1_38 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583646718 LoadDetectionStatus_X1_38 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583646718 PinModeStatus_X2_9 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646718 PinPullModeStatus_X2_9 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583646718 LoadDetectionStatus_X2_9 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583646718 PinModeStatus_X2_24 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646718 PinPullModeStatus_X2_24 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583646718 LoadDetectionStatus_X2_24 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583646718 PinModeStatus_X2_10 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646718 PinPullModeStatus_X2_10 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583646718 LoadDetectionStatus_X2_10 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583646718 PinModeStatus_X2_25 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646718 PinPullModeStatus_X2_25 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583646718 LoadDetectionStatus_X2_25 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583646974 PinModeStatus_X1_10 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646974 PinPullModeStatus_X1_10 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583646974 LoadDetectionStatus_X1_10 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583646974 PinModeStatus_X1_25 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646974 PinPullModeStatus_X1_25 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583646974 LoadDetectionStatus_X1_25 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583646974 PinModeStatus_X1_11 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646974 PinPullModeStatus_X1_11 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583646974 LoadDetectionStatus_X1_11 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583646974 PinModeStatus_X1_26 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646974 PinPullModeStatus_X1_26 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583646974 LoadDetectionStatus_X1_26 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583646974 PinModeStatus_X1_12 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646974 PinPullModeStatus_X1_12 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583646974 LoadDetectionStatus_X1_12 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583646974 PinModeStatus_X1_27 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646974 PinPullModeStatus_X1_27 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583646974 LoadDetectionStatus_X1_27 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583646974 PinModeStatus_X2_6 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646974 PinPullModeStatus_X2_6 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583646974 LoadDetectionStatus_X2_6 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583646974 PinModeStatus_X2_5 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583646974 PinPullModeStatus_X2_5 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583646974 LoadDetectionStatus_X2_5 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583647230 PinModeStatus_X1_19 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583647230 PinPullModeStatus_X1_19 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583647230 LoadDetectionStatus_X1_19 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583647230 PinModeStatus_X1_34 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583647230 PinPullModeStatus_X1_34 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583647230 LoadDetectionStatus_X1_34 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583647230 PinModeStatus_X2_18 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583647230 PinPullModeStatus_X2_18 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583647230 LoadDetectionStatus_X2_18 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2583647230 PinModeStatus_X2_33 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2583647230 PinPullModeStatus_X2_33 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2583647230 LoadDetectionStatus_X2_33 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X1_22 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X1_22 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X1_22 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X1_37 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X1_37 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X1_37 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X1_23 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X1_23 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X1_23 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X1_38 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X1_38 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X1_38 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X2_9 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X2_9 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X2_9 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X2_24 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X2_24 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X2_24 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X2_10 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X2_10 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X2_10 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X2_25 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X2_25 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X2_25 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X1_10 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X1_10 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X1_10 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X1_25 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X1_25 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X1_25 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X1_11 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X1_11 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X1_11 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X1_26 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X1_26 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X1_26 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X1_12 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X1_12 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X1_12 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X1_27 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X1_27 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X1_27 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X2_6 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X2_6 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X2_6 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X2_5 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X2_5 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X2_5 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X1_19 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X1_19 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X1_19 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X1_34 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X1_34 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X1_34 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X2_18 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X2_18 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X2_18 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582846974 PinModeStatus_X2_33 0 "Disabled" 1 "VREF" 2 "HighSide" 3 "LowSide" 4 "InputOnly" 5 "Bridge" 14 "Error" 15 "Not Available" ;
+VAL_ 2582846974 PinPullModeStatus_X2_33 0 "None" 1 "PullDown" 2 "PullUp" 3 "Not Available" ;
+VAL_ 2582846974 LoadDetectionStatus_X2_33 0 "Off" 1 "On" 2 "Error" 3 "Not Available" ;
+VAL_ 2582847998 QEncoderDirection_Q01 0 "Stopped" 1 "Forward" 2 "Reverse" 3 "NotAvailable" ;
+

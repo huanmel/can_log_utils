@@ -1,0 +1,773 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: DCU ElectricalChargingSystem InstrumentCluster Vector
+VAL_TABLE_ PlugLock_Voltages 3 "NA" 2 "Error" 1 "24 V" 0 "12 V" ;
+VAL_TABLE_ CC_PlugTemp 255 "SNA" ;
+VAL_TABLE_ Chademo_Errors 15 "ErrNA" 11 "A12" 10 "A11" 9 "A10" 8 "A9" 7 "A8" 6 "A7" 5 "A6" 4 "A5" 3 "A4" 2 "A3" 1 "A2" 0 "A1" ;
+VAL_TABLE_ Chademo_Events 15 "ENA" 9 "E10" 8 "E9" 7 "E8" 6 "E7" 5 "E6" 4 "E5" 3 "E4" 2 "E3" 1 "E2" 0 "E1" ;
+VAL_TABLE_ Chademo_Mode 31 "NA" 21 "TO11" 20 "TO10" 19 "T009" 18 "TO08" 17 "TO07" 16 "TO06" 15 "TO05" 14 "TO04" 13 "TO03" 12 "TO02" 11 "TO01" 10 "EoC" 9 "Termination" 8 "Charging" 7 "w_Charging" 6 "w_Charger" 5 "w_Connected" 4 "Connection" 3 "w_D2" 2 "w_ConnectorLock" 1 "w_EVSE_CAN" 0 "Init" ;
+VAL_TABLE_ Req_Battery_Connect 3 "NA" 2 "EmergencyCloseContactors" 1 "CloseContactor" 0 "OpenContactors" ;
+VAL_TABLE_ cc_slac_res 4 "msg_set_key_cnf" 3 "msg_slac_match_cnf" 2 "msg_atten_char_ind" 1 "msg_parm_cnf" 0 "msg_idle" ;
+VAL_TABLE_ cc_slac_req 6 "msg_set_key_req" 5 "msg_slac_match_req" 4 "msg_atten_char_rsp" 3 "mes_mnbc_sound_ind" 2 "mes_star_atten_char_ind" 1 "msg_parm_req" 0 "msg_idle" ;
+VAL_TABLE_ bms_Mode 0 "FW_Init" 1 "SW_Init" 2 "Diag" 3 "Ready" 4 "Precharge" 5 "Drive" 6 "HV_Disconnecting" 7 "Sleep" 8 "SleepPrep" 9 "PowerOff" 10 "Fault" 11 "Service" 15 "NA" ;
+VAL_TABLE_ mm_Mode 0 "Init" 1 "Diag" 2 "Operation" 3 "Emergency" 7 "NA" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ CC_PDU_Mode : 0|4@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCI_ACDCPlugLockRequest : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ DC_VehicleChargePermission : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DC_ReqIsoMonitorDisable : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DC_TempDerateFlag : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_EVSEPresentVoltage : 0|10@1+ (1,0) [0|1023] "" Vector__XXX
+ SG_ EVSE_Status : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ CC_LL_MacFault : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2382254334 CHRG_IsolationMeasurement: 8 Vector__XXX
+ SG_ Isolation_Resistance : 8|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Isolation_Status : 4|4@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Isolation_FaultCode : 0|4@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2180925694 CHRG_Service: 8 Vector__XXX
+ SG_ req_NegCntctr_RstCnt m0 : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ req_PosCntctr_RstCnt m0 : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DebugMsgs_Enable m1 : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ req_Reboot : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ IsolationWarning m2 : 8|16@1+ (1,0) [0|50000] "" Vector__XXX
+ SG_ IsolationCritical m2 : 24|16@1+ (1,0) [0|50000] "" Vector__XXX
+ SG_ IsolationCheck_Enable m2 : 40|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HighVoltageFeedback m1 : 11|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ContactorsType m1 : 12|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ContactorsFeedback m1 : 8|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ J1939_address m1 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PlugTemperRiseDelta m1 : 48|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ DeratePlugTemperature m1 : 32|16@1+ (1,0) [0|150] "" Vector__XXX
+ SG_ CritPlugTemperature m1 : 16|16@1+ (1,0) [0|150] "" Vector__XXX
+ SG_ InletTemperSnsrType m1 : 13|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PlugLock_Voltage m1 : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TempFault_Enable m1 : 14|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TempDerate_Enable m1 : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PlugLock_Enable m2 : 41|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Params_ReadWrite_mux : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Service_mux M : 0|5@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ req_ACC_RstFltLvl7 m0 : 9|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ req_MemClr m0 : 8|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ req_DC_RstFltLvl7 m0 : 11|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ req_CCI_RstFltLvl7 m0 : 12|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ req_AC_RstFltLvl7 m0 : 10|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ req_Service : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2180927486 CHRG_DC_Diag: 8 Vector__XXX
+ SG_ CC_CntctrSOHperc : 48|7@1+ (1,0) [0|127] "%" Vector__XXX
+ SG_ CCI_V2g_V2gFault : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_sts_CntctrSOH : 38|3@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CC_V2G_RespFault : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_EVSEFault : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_RelayFb2Fault : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_RelayFb1Fault : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ DC_DCChargingDeratedFlag : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_PDU_FaultDetn : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_DCFaultLvlDetected : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCI_DC_FaultManageStates : 41|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CC_V2G_WeldDetResTimeOut : 37|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_WeldDetResFail : 36|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_SuppAppProtResFail : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_StopSessionResFail : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_ShutDownResFail : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_SessionSetupResFail : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_ServiceDiscoResFail : 31|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_PwrDelivStopResFail : 30|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_PwrDelivSartResFail : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_PwrDeliveryStopTimeOut : 28|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_PwrDeliveryStartTimeOut : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_PreChResFail : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_PreChargeTimeOut : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_PayDetailResFail : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_ParDiscSeqTimeOut : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_EVSEMalfunctionFault : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_CurrDemandTimeOut : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_ContractAuthResFail : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_ChParamResFail : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_CableCheckTimeOut : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_CableCheckResFail : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_SLAC_WaitAtenIndFault : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_SLAC_ParmCnfFault : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_SLAC_MatchCnfFault : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCS_Fault : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2180927230 CHRG_ChSysDiag: 8 Vector__XXX
+ SG_ CC_PP_MaxCableCurrent : 32|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ CC_PDU_DconnFailure : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_PDU_ConnFailure : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_PDU_PosCntctrSt : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CC_PDU_PosCntctrErrSt : 27|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CC_PDU_NegCntctrSt : 25|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CC_PDU_NegCntctrErrSt : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CC_EV_Target_Voltage : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ CC_EV_Target_Current : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ CCI_ChargePermission : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ DC_ChrgContactorState : 19|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ DC_ChrgCntrClsCmd : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_DriverModeACDC : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2180926974 CHRG_IsolationState: 8 Vector__XXX
+ SG_ CC_SIM100_PowerErr : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_SIM100_PosConn : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_SIM100_NegConn : 57|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_SIM100_LowBattVolt : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_SIM100_HWErr : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_SIM100_HighUncertanty : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_SIM100_HiBatteryVolt : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_SIM100_ExitationVoltErr : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_SIM100_ConnErr : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_SIM100_ChassisErr : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IsolationState_Counter : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ IsolationState_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ CC_PDU_VoltageEVSE : 36|16@1- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ CC_PDU_VoltageBatt : 20|16@1- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+ SG_ Isolation_FaultCode : 16|4@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Isolation_Status : 12|4@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2180926718 CHRG_CCI_Diag: 8 Vector__XXX
+ SG_ CC_LL_TempSensWarn : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_CNV_NvramFlt : 63|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CC_IDA_PlugTRiseFlt : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_RelaysFbFault : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_TempSensFault : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_HCL_TarReqFlt : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_CCIFaultLvlDetected : 59|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CC_CCI_CANInputFlt : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_VEHMsgLost : 57|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_TCOMsgLost : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_HVPSMsgLost : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_HVPMMsgLost : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_HMIMsgLost : 53|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_CHRGPortMsgLost : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_CCI_PlugLckFlt : 51|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_CCI_PlugDetnFlt : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_CCI_PpFlt : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_CCI_HVPSDerateFlg : 37|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_CCI_CpStateFFlt : 35|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_CC_CANInputFlt : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_FaultManageStates : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCI_PL_AcDcUnlckRetryFault : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_PL_AcDcLockRetryFault : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_Sim100Fault : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_PlugTempCritical : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_PlugTempSensWarning : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_PLCFault : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_IgnitionFault : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_HVSFault : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_HvilLoopFault : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_EthernetFault : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_ElcokFault : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_CANFault : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_5vOutputFault : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_LL_5vHVILFault : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2180926462 CHRG_ACDCPortCmd: 8 Vector__XXX
+ SG_ ACDCPortCmd_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ACDCPortCmd_Counter : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ CCI_ACDCPlugLockRequest : 58|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCI_ACDCHatchCloseCmd : 61|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2180924414 CHRG_PortState: 8 Vector__XXX
+ SG_ CCI_ACPlugLockPosition : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCI_ACDCPlugConnectionEvent : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_ACDCPortHatchState : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCI_ACPortHatchState : 5|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCI_ACPortButtonState : 3|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCI_ACDCPortButtonState : 1|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCI_ACPlugConnectionEvent : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2180924158 CHRG_SysState: 8 Vector__XXX
+ SG_ CCI_ACPortPlugType : 13|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ SysState_Counter : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ SysState_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ HV_TotalActualCurrent : 48|16@1+ (0.01,-327) [-327|328.35] "A" Vector__XXX
+ SG_ CC_ExtFeedbackReq : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_ACFaultLvlDetected : 43|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CC_DCFaultLvlDetected : 40|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CC_CCIFaultLvlDetected : 35|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CC_CriticalChargeSysFault : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_HealthStatus : 32|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CC_ReadyToSleep : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DC_ChrgContactorState : 29|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ AC_ActualACChargingState : 26|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ DC_ActualDCChargingState : 23|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCI_ActualChargingState : 20|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCI_ACDCPortPlugType : 16|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2180925950 CHRG_AC_Diag: 8 Vector__XXX
+ SG_ AC_OBCErrMsgLostFlt : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_OBCAcMsgLostFlt : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_OBC_WarnFault : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_OBC_ShDwnFault : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_OBC_EmrgShDwnFault : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_ACChargingDeratedFlag : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_MetaSysFlt : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_MetaSysShutdownFlt : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_ACFaultLvlDetected : 3|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ AC_OBCLimMsgLostFlt : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_MetaSysActFlt : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_ACDerateFlg : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_AC_FaultManageStates : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2180925438 CHRG_ChSysDebugV2g: 8 Vector__XXX
+ SG_ CCI_V2g_StatusV2g : 44|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ CCI_V2g_V2gFltSts : 40|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ CC_V2G_DiagFault : 32|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ CC_SLAC_Res : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ CC_SLAC_Req : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ CC_V2G_EVSE_Progres : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CC_V2G_Response : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CC_V2G_Request : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CC_V2G_EVSEStatusCode : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CC_V2G_EVSERespCode : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2180924926 CHRG_ChSysDebug2: 8 Vector__XXX
+ SG_ AC_OBCFaultStateRes : 53|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CC_V2G_ChargeProgress : 50|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ SLAC_Fault : 56|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_V2g_CommReset : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_V2g_EndCommsReq : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_V2G_EVSEPresentVoltage : 8|10@1+ (1,0) [0|1023] "" Vector__XXX
+ SG_ CC_V2G_EVSEPresentCurrent : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ CC_PlugTemp2 : 39|9@1- (1,0) [-256|255] "" Vector__XXX
+ SG_ CC_PlugTemp1 : 30|9@1- (1,0) [-256|255] "" Vector__XXX
+ SG_ CC_CP_st_S2Swt : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_CP_Duty : 19|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ CC_LL_CP_Volt : 26|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2180924670 CHRG_ChSysDiag2: 8 Vector__XXX
+ SG_ CCI_CCP_HVPSChBlkStopCh : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_CCP_GearStopCh : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_CCP_LVFltStopCh : 60|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_CCP_DcChrgLimStopCh : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_CCP_BtnPressStopCh : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_CCP_HVIntgrtyStopCh : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AC_AcDcMetaysCommLossStopCh : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ OBC_FaultStateACDC : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CCI_SM_CANCommLossStopCh : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_CCP_BMSFaultStopCh : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_SM_VehSpdStopCh : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_SM_UsrReqStopCh : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_SM_HvStStopCh : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_SM_ChCmplStopCh : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CCI_SM_BmsStStopCh : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2180923902 CHRG_SysInfo: 8 Vector__XXX
+ SG_ HV_MaxChargingCurrent : 48|16@1- (0.1,0) [-3276.8|3276.7] "A" Vector__XXX
+ SG_ HV_MinGenPowerReq : 16|16@1+ (0.02,0) [0|1310.7] "kW" Vector__XXX
+ SG_ HV_MinConsPowerReq : 0|16@1+ (0.02,0) [0|1310.7] "kW" Vector__XXX
+
+BO_ 2180923646 CHRG_States: 8 Vector__XXX
+ SG_ CCI_ACDCPlugLockState : 52|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CCI_HatchState : 28|4@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ EV_Ready : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CC_IM_InitMode : 20|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ CC_PDU_Mode : 16|4@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CC_V2G_Mode : 41|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ SLAC_Mode : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ CP_Mode : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ SM_SystemMode : 33|8@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ PP_Mode : 0|4@1+ (1,0) [0|8] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 CC_PDU_Mode "PDU mode ";
+CM_ SG_ 3221225472 CCI_ACDCPlugLockRequest "CCI Plug lock request";
+CM_ SG_ 3221225472 DC_VehicleChargePermission "Permissioin to charge from DC Charging State Machine to Charging driver.";
+CM_ SG_ 3221225472 DC_ReqIsoMonitorDisable "Request from Charging System to disable BMS Isolation Monitor for DC Charging.";
+CM_ SG_ 3221225472 DC_TempDerateFlag "If True a current derate is active due to high Plug temperature ";
+CM_ SG_ 3221225472 CC_V2G_EVSEPresentVoltage "EVSE Voltage value in the Precharge respond message";
+CM_ SG_ 3221225472 CC_LL_MacFault "LL has detected a CCs_LL_st_HWReady that is related to a MAC alocation fault ";
+CM_ SG_ 2382254334 Isolation_Resistance "Minimum resistance value.";
+CM_ SG_ 2382254334 Isolation_Status "Status of isolation monitor. 0 - no faults, 1 - isolation warning, 2 - isolation fault, 3 - not available";
+CM_ SG_ 2382254334 Isolation_FaultCode "Type of isolation error. 0 - no faults, 1 - Possible communication error, 2 - Isolation warning, 3 - Isolation fault, 4 - Measurements timeout reached, 5 - Isolation monitor HW fault, 6 - Communication error";
+CM_ BO_ 2180925694 "Service mode control signals";
+CM_ SG_ 2180925694 req_NegCntctr_RstCnt "Reset switches counter for negative contactor";
+CM_ SG_ 2180925694 req_PosCntctr_RstCnt "Reset switches counter for positive contactor";
+CM_ SG_ 2180925694 DebugMsgs_Enable "Parameter used to enable (1) and disable (0) diagnstoics messages.";
+CM_ SG_ 2180925694 req_Reboot "Request for device reboot. Applicable in Service mode only.";
+CM_ SG_ 2180925694 IsolationWarning "Warning isolation resistance, kOhms";
+CM_ SG_ 2180925694 IsolationCritical "Critical isolation resistance, kOhms";
+CM_ SG_ 2180925694 IsolationCheck_Enable "Isolation check. 0 - disabled, 1 - enabled";
+CM_ SG_ 2180925694 HighVoltageFeedback "HV voltage feedback for EVSE and EV side presence. 0 - not present, 1 - present";
+CM_ SG_ 2180925694 ContactorsType "Contactors type. 0 - No economizer(PWM driven) 1 - Economizer(DC driven)";
+CM_ SG_ 2180925694 ContactorsFeedback "Contactors feedback presence. 0 - not present 1 - present";
+CM_ SG_ 2180925694 J1939_address "J1939 Source address for this device";
+CM_ SG_ 2180925694 PlugTemperRiseDelta "Temperature delta within 0.5 sec, that will trigger a fault.";
+CM_ SG_ 2180925694 DeratePlugTemperature "Plug temperature at which current derating begins";
+CM_ SG_ 2180925694 CritPlugTemperature "Maximum allowable plug temperature";
+CM_ SG_ 2180925694 InletTemperSnsrType "Temperature sensor selection. 0 - PT1000, 1 - NTC";
+CM_ SG_ 2180925694 PlugLock_Voltage "Plug lock voltage. 0 - 12 V, 1 - 24 V.";
+CM_ SG_ 2180925694 TempFault_Enable "Inlet overtemperature causes fault. 0 - disable, 1 - enable (complex setting, affects various ACC parameters)";
+CM_ SG_ 2180925694 TempDerate_Enable "Current derating based on inlet temperature. 0 - disabled, 1 - enabled (complex setting, affects various ACC parameters)";
+CM_ SG_ 2180925694 PlugLock_Enable "Plug lock support. 0 - disabled, 1 - enabled (complex setting, affects various ACC parameters)";
+CM_ SG_ 2180925694 Params_ReadWrite_mux "Read/write parameters switch. 0 - read current values and send to CAN, 1 - write received values to memory.";
+CM_ SG_ 2180925694 Service_mux "Service message contents; 0 - NVRAM management, 1 - first part of params, 2 - second part of params";
+CM_ SG_ 2180925694 req_ACC_RstFltLvl7 "Request to reset all ACC fault levels: CCI, DC and AC.";
+CM_ SG_ 2180925694 req_MemClr "Request to clear NVRAM";
+CM_ SG_ 2180925694 req_DC_RstFltLvl7 "Request to reset DCFL7";
+CM_ SG_ 2180925694 req_CCI_RstFltLvl7 "Request to reset CCI FL7";
+CM_ SG_ 2180925694 req_AC_RstFltLvl7 "Request to reset AC FL7";
+CM_ SG_ 2180925694 req_Service "Request for switching to Service Mode";
+CM_ SG_ 2180927486 CC_CntctrSOHperc "Aggregated SOH of contactors in percentage.";
+CM_ SG_ 2180927486 CCI_V2g_V2gFault "Fault triggered due to issue with V2G communication on LL.";
+CM_ SG_ 2180927486 CC_sts_CntctrSOH "Status contactors' SOH: 0 - ok, 1 - warning, 2 -alarm, 3 - critical, 7 - NA";
+CM_ SG_ 2180927486 CC_V2G_RespFault "EVSE Response Fault";
+CM_ SG_ 2180927486 CC_LL_EVSEFault "Under voltage from Station detected";
+CM_ SG_ 2180927486 CC_LL_RelayFb2Fault "Relay feedback fault ";
+CM_ SG_ 2180927486 CC_LL_RelayFb1Fault "Relay feedback 1 fault";
+CM_ SG_ 2180927486 DC_DCChargingDeratedFlag "ACDC port charging derated flag, if True charging is derated via ACDC port";
+CM_ SG_ 2180927486 CC_PDU_FaultDetn "Fault detected from PDU.";
+CM_ SG_ 2180927486 CCI_DC_FaultManageStates "DC Fault Management state
+0 - No Faults 
+1 - Shutdown L4
+2 - Shutdown completed L4
+3 - Temp Lock L6
+4 - Permanent lock L7";
+CM_ SG_ 2180927486 CC_V2G_WeldDetResTimeOut "Welding detection time out fault CCp_V2G_T_WeldDetSeq > 40";
+CM_ SG_ 2180927486 CC_V2G_WeldDetResFail "Welding detection response from EVSE fail";
+CM_ SG_ 2180927486 CC_V2G_SuppAppProtResFail "Support Application Protocol Response fail from EVSE";
+CM_ SG_ 2180927486 CC_V2G_StopSessionResFail "Stop session response  from EVSE fail";
+CM_ SG_ 2180927486 CC_V2G_ShutDownResFail "Shut down response from EVSE fail";
+CM_ SG_ 2180927486 CC_V2G_SessionSetupResFail "Session setup response from EVSE fail";
+CM_ SG_ 2180927486 CC_V2G_ServiceDiscoResFail "Service descovery response EVSE fail";
+CM_ SG_ 2180927486 CC_V2G_PwrDelivStopResFail "Power delivery start response from EVSE fail";
+CM_ SG_ 2180927486 CC_V2G_PwrDelivSartResFail "Power delivery start response from EVSE fail";
+CM_ SG_ 2180927486 CC_V2G_PwrDeliveryStopTimeOut "Power delivery stop time out fault CCp_V2G_T_PowDelSeq >40s";
+CM_ SG_ 2180927486 CC_V2G_PwrDeliveryStartTimeOut "Power delivery start time out fault CCp_V2G_T_PowDelSeq >40s";
+CM_ SG_ 2180927486 CC_V2G_PreChResFail "Precharge response from EVSE fail";
+CM_ SG_ 2180927486 CC_V2G_PreChargeTimeOut "Pre charge time out fault CCp_V2G_T_PreChSeq > 40s";
+CM_ SG_ 2180927486 CC_V2G_PayDetailResFail "Pay details response from EVSE fail";
+CM_ SG_ 2180927486 CC_V2G_ParDiscSeqTimeOut "Parameter discovery sequence time out  CCp_V2G_T_ParDiscSeq > 5s";
+CM_ SG_ 2180927486 CC_V2G_EVSEMalfunctionFault "EVSE Malfunction fault response";
+CM_ SG_ 2180927486 CC_V2G_CurrDemandTimeOut "Current demand time out fault CCp_V2G_T_CurrDemTimeOut >250ms";
+CM_ SG_ 2180927486 CC_V2G_ContractAuthResFail "Contract autentification response from EVSE fail";
+CM_ SG_ 2180927486 CC_V2G_ChParamResFail "Charge parameter response from EVSE fail";
+CM_ SG_ 2180927486 CC_V2G_CableCheckTimeOut "Cable check time out fault CCp_V2G_T_CabCheckSeq > 40s";
+CM_ SG_ 2180927486 CC_V2G_CableCheckResFail "Cabele check (isolation) response from EVSE fail";
+CM_ SG_ 2180927486 CC_SLAC_WaitAtenIndFault "SLAC match CNF reached max retryes CCp_SLAC_cnt_MatchRetry or time out is reached CCp_SLAC_T_MatchSession";
+CM_ SG_ 2180927486 CC_SLAC_ParmCnfFault "SLAC Match response retry > CCp_SLAC_cnt_MatchRetry";
+CM_ SG_ 2180927486 CC_SLAC_MatchCnfFault "SLAC Attenuation time out > CCp_SLAC_T_AttenRes";
+CM_ SG_ 2180927486 CCS_Fault "CCS System Mode goes to fault because of comm time out";
+CM_ BO_ 2180927230 "Charging system diagnostics";
+CM_ SG_ 2180927230 CC_PDU_DconnFailure "PDU disconnection failure";
+CM_ SG_ 2180927230 CC_PDU_ConnFailure "PDU connection failure";
+CM_ SG_ 2180927230 CC_PDU_PosCntctrSt "PDU positive contactor status";
+CM_ SG_ 2180927230 CC_PDU_PosCntctrErrSt "PDU positive contactor status";
+CM_ SG_ 2180927230 CC_PDU_NegCntctrSt "PDU negative contactor status";
+CM_ SG_ 2180927230 CC_PDU_NegCntctrErrSt "PDU negative contactor status";
+CM_ SG_ 2180927230 CC_EV_Target_Voltage "EV is sending CC the target voltage";
+CM_ SG_ 2180927230 CC_EV_Target_Current "EV is sending CC the target current";
+CM_ SG_ 2180927230 CCI_ChargePermission "Vehicle charging permission, will asses vehicle readynes to charge";
+CM_ SG_ 2180927230 DC_ChrgContactorState "State of DC Charging Contactors.";
+CM_ SG_ 2180927230 DC_ChrgCntrClsCmd "Command from DC Charging driver to close contactors (1: close, 0: open)";
+CM_ SG_ 2180927230 OBC_DriverModeACDC "Mode of the driver controlling the OBC on the ACDC port.";
+CM_ SG_ 2180926974 CC_SIM100_PowerErr "Power supply level is out of rangebyte";
+CM_ SG_ 2180926974 CC_SIM100_PosConn "connection is good (SIM100 to battery positive terminal connection)";
+CM_ SG_ 2180926974 CC_SIM100_NegConn "connection is good (SIM100 to battery negative terminal connection)";
+CM_ SG_ 2180926974 CC_SIM100_LowBattVolt "Observed battery voltage less than 15 V";
+CM_ SG_ 2180926974 CC_SIM100_HWErr "Hardware error.";
+CM_ SG_ 2180926974 CC_SIM100_HighUncertanty "Uncertainty of calculated values is less than 5%";
+CM_ SG_ 2180926974 CC_SIM100_HiBatteryVolt "The observed battery voltage value is higher than the specified maximum working voltage value";
+CM_ SG_ 2180926974 CC_SIM100_ExitationVoltErr "Excitation voltage level is out of specs";
+CM_ SG_ 2180926974 CC_SIM100_ConnErr "VX1 and VX2 connections are reversed";
+CM_ SG_ 2180926974 CC_SIM100_ChassisErr "CH1 and CH2 connections are good (chassis connections)";
+CM_ SG_ 2180926974 IsolationState_Counter "Counter for Isolation State message.";
+CM_ SG_ 2180926974 IsolationState_CRC "CRC for CHRG_IsolationState message.";
+CM_ SG_ 2180926974 Isolation_FaultCode "Type of isolation error. 0 - no faults, 1 - Possible communication error, 2 - Isolation warning, 3 - Isolation fault, 4 - Measurements timeout reached, 5 - Isolation monitor HW fault, 6 - Communication error";
+CM_ SG_ 2180926974 Isolation_Status "Status of isolation monitor. 0 - no faults, 1 - isolation warning, 2 - isolation fault, 3 - not available";
+CM_ SG_ 2180926718 CC_LL_TempSensWarn "A temperature sensor is in fault.";
+CM_ SG_ 2180926718 CC_CNV_NvramFlt "NVRAM fault occurred";
+CM_ SG_ 2180926718 CC_IDA_PlugTRiseFlt "Fault detected due to one of the temperature sensors on the charging port, indicating that the temperature has increased more than an allowed amount, in a certain amount of time. I.e a rapid increase of temperature. ";
+CM_ SG_ 2180926718 CC_LL_RelaysFbFault "Relays 1 and 2 are both in fault.";
+CM_ SG_ 2180926718 CC_LL_TempSensFault "Fault with one (or both) of the temperature sensors whilst derating charging current.";
+CM_ SG_ 2180926718 CC_HCL_TarReqFlt "Actual charging current/ voltage is higher than what is requested by HVPS.";
+CM_ SG_ 2180926718 CC_CCI_CANInputFlt "CCI CAN Input message lostt fault.";
+CM_ SG_ 2180926718 CCI_VEHMsgLost "Vehicle message lost.";
+CM_ SG_ 2180926718 CCI_TCOMsgLost "TCO message lost.";
+CM_ SG_ 2180926718 CCI_HVPSMsgLost "HVPS messsage lost.";
+CM_ SG_ 2180926718 CCI_HVPMMsgLost "HVPM message lost.";
+CM_ SG_ 2180926718 CCI_HMIMsgLost "HMI message lost.";
+CM_ SG_ 2180926718 CCI_CHRGPortMsgLost "Charge Port message lost.";
+CM_ SG_ 2180926718 CC_CCI_PlugLckFlt "ACDC or AC plug lock failed.";
+CM_ SG_ 2180926718 CC_CCI_PlugDetnFlt "Plug detection fialed.";
+CM_ SG_ 2180926718 CC_CCI_PpFlt "Pp voltage feedback in unrecognised range.";
+CM_ SG_ 2180926718 CC_CCI_HVPSDerateFlg "Derated charging flag from Cahrging Limits.";
+CM_ SG_ 2180926718 CC_CCI_CpStateFFlt "Cp mode gives EVSE state F fault";
+CM_ SG_ 2180926718 CC_CC_CANInputFlt "CC CAN Input message lost fault.";
+CM_ SG_ 2180926718 CCI_FaultManageStates "CCI Fault Management state
+0 - No Faults 
+1 - Shutdown L4
+2 - Shutdown completed L4
+3 - Temp Lock L6
+4 - Permanent lock L7";
+CM_ SG_ 2180926718 CCI_PL_AcDcUnlckRetryFault "Plug unlock retry fault on ACDC charging socket. ";
+CM_ SG_ 2180926718 CCI_PL_AcDcLockRetryFault "Plug lock retry fault on ACDC charging socket. ";
+CM_ SG_ 2180926718 CC_LL_Sim100Fault "Sim100 supply voltage fault";
+CM_ SG_ 2180926718 CC_LL_PlugTempCritical "Plug temperature sensor fault. Either temperature above critical value, or both temperature sensors inputting NaN value (disconnected).";
+CM_ SG_ 2180926718 CC_LL_PlugTempSensWarning "Plug temperature sensor fault. Either temp over warning value, or 1 temp sensor inputting NaN value (not connected).";
+CM_ SG_ 2180926718 CC_LL_PLCFault "PLC 5v  fault";
+CM_ SG_ 2180926718 CC_LL_IgnitionFault "Ignition fault";
+CM_ SG_ 2180926718 CC_LL_HvilLoopFault "Hvil loop interuption fault";
+CM_ SG_ 2180926718 CC_LL_ElcokFault "Electric lock fault";
+CM_ SG_ 2180926718 CC_LL_CANFault "CAN voltage supply fault";
+CM_ SG_ 2180926718 CC_LL_5vOutputFault "5v output fault";
+CM_ SG_ 2180926718 CC_LL_5vHVILFault "HVIL loop fault";
+CM_ SG_ 2180926462 ACDCPortCmd_CRC "CRC for CHRG_ACDCPortCmd message.";
+CM_ SG_ 2180926462 ACDCPortCmd_Counter "Counter for CHRG_ACDCPortCmd message.";
+CM_ SG_ 2180926462 CCI_ACDCPlugLockRequest "CCI Plug lock request";
+CM_ SG_ 2180926462 CCI_ACDCHatchCloseCmd "ACDC Charging port hatch close permission.";
+CM_ SG_ 2180924414 CCI_ACPlugLockPosition "Lock position of the plug lock on the AC side charging port lock.";
+CM_ SG_ 2180924414 CCI_ACDCPlugConnectionEvent "ACDC charging port plug connection event.";
+CM_ SG_ 2180924414 CCI_ACDCPortHatchState "State of the ACDC port charging hatch";
+CM_ SG_ 2180924414 CCI_ACPortHatchState "State of the AC port charging hatch";
+CM_ SG_ 2180924414 CCI_ACPortButtonState "AC Charging port button state.";
+CM_ SG_ 2180924414 CCI_ACDCPortButtonState "ACDC Charging port button state.";
+CM_ SG_ 2180924414 CCI_ACPlugConnectionEvent "AC charging port plug connection event.";
+CM_ SG_ 2180924158 CCI_ACPortPlugType "AC charging port plug type";
+CM_ SG_ 2180924158 SysState_Counter "Counter for CHRG_SysState message";
+CM_ SG_ 2180924158 SysState_CRC "CRC for CHRG_SysState message";
+CM_ SG_ 2180924158 HV_TotalActualCurrent "Actual charging current.";
+CM_ SG_ 2180924158 CC_ExtFeedbackReq "Signal used for visual and audiable display of charging status (lights and sounds).";
+CM_ SG_ 2180924158 CC_CriticalChargeSysFault "Will present a request to HVSO to shutdown HV when all safety measures of the Charging system fail to shutdown the system in case of a fault:
+Request HV Emergency Disconnect : True
+Do not Request HV Emergency Disconnect: False";
+CM_ SG_ 2180924158 CC_HealthStatus "CC Health Status.";
+CM_ SG_ 2180924158 CC_ReadyToSleep "Charge controller ready to sleep status.";
+CM_ SG_ 2180924158 DC_ChrgContactorState "State of DC Charging Contactors.";
+CM_ SG_ 2180924158 AC_ActualACChargingState "Actual AC Charging State";
+CM_ SG_ 2180924158 DC_ActualDCChargingState "DC charging state";
+CM_ SG_ 2180924158 CCI_ActualChargingState "Actual Charging Control and Indication state";
+CM_ SG_ 2180924158 CCI_ACDCPortPlugType "ACDC charging port plug type";
+CM_ SG_ 2180925950 AC_OBCErrMsgLostFlt "OBC_ACT_ERR message lost.";
+CM_ SG_ 2180925950 AC_OBCAcMsgLostFlt "OBC_ACT_AC message lost.";
+CM_ SG_ 2180925950 AC_OBC_WarnFault "A collection of warnings from OBC. This flag will represent a warning condition, and that possible derating might occur.";
+CM_ SG_ 2180925950 AC_OBC_ShDwnFault "A collection of faults from OBC indicating charging cannot occur. If this flag is raised, a normaly shutdown sequence will be initiated. ";
+CM_ SG_ 2180925950 AC_OBC_EmrgShDwnFault "Colletion of critical faults from OBC will trigger this flag. If this flag is raised, an emergency shutdown sequence will be initiated.";
+CM_ SG_ 2180925950 AC_ACChargingDeratedFlag "AC Charging Derated flag, if True charging is derated";
+CM_ SG_ 2180925950 AC_MetaSysFlt "Meta Systems reports a fault.";
+CM_ SG_ 2180925950 AC_MetaSysShutdownFlt "Shutdown attempt fail";
+CM_ SG_ 2180925950 AC_OBCLimMsgLostFlt "OBC_ACT_LIM message lost fault.";
+CM_ SG_ 2180925950 AC_MetaSysActFlt "Meta Systems  charge active fault";
+CM_ SG_ 2180925950 AC_ACDerateFlg "AC SM charging derating flag.";
+CM_ SG_ 2180925950 CCI_AC_FaultManageStates "AC Fault Management state
+0 - No Faults 
+1 - Shutdown L4
+2 - Shutdown completed L4
+3 - Temp Lock L6
+4 - Permanent lock L7";
+CM_ SG_ 2180925438 CCI_V2g_StatusV2g " 0 - v2g_status_stop,    
+ 1 - v2g_status_setup,   
+ 2 - v2g_status_ready,
+ 3 - v2g_status_busy,
+ 4 - v2g_status_fault";
+CM_ SG_ 2180925438 CCI_V2g_V2gFltSts " 0 - v2g_fault_qca,    
+ 1 - v2g_fault_icmp,   
+ 2 - v2g_fault_sdp,  
+ 3 - v2g_fault_tcp_session,
+ 4 - v2g_fault_tcp_timeout,
+ 5 - v2g_fault_exi";
+CM_ SG_ 2180925438 CC_SLAC_Res "Enum data for EVSE respond messages, that EV recieves from EVSE via SLAC communication ";
+CM_ SG_ 2180925438 CC_SLAC_Req "Enum data for EV request messages, that it sends to EVSE via SLAC communication ";
+CM_ SG_ 2180925438 CC_V2G_EVSE_Progres "Enumeration variable for v2g responds from the EVSE, that show status of progress for message formation";
+CM_ SG_ 2180925438 CC_V2G_Response "Enumeration variable for v2g response for charging communication between vehicle and grid";
+CM_ SG_ 2180925438 CC_V2G_Request "Enumeration variable for v2g requests for charging communication between vehicle and grid";
+CM_ SG_ 2180925438 CC_V2G_EVSERespCode "Enumeration variable for v2g requests for charging communication between vehicle and grid, that show if communication is succsessfully going on";
+CM_ SG_ 2180924926 AC_OBCFaultStateRes "Fault state of OBC.";
+CM_ SG_ 2180924926 CC_V2G_ChargeProgress "Enumeration variable for v2g requests for charging communication between vehicle and grid";
+CM_ SG_ 2180924926 SLAC_Fault "SLAC communication Faults";
+CM_ SG_ 2180924926 CCI_V2g_CommReset "Request sent to LL to reset values associated with V2G communication.";
+CM_ SG_ 2180924926 CCI_V2g_EndCommsReq "Request for LL to end communication with EVSE.";
+CM_ SG_ 2180924926 CC_V2G_EVSEPresentVoltage "EVSE Voltage value in the Precharge respond message";
+CM_ SG_ 2180924926 CC_PlugTemp2 "Temperature values for temperature sensor 2";
+CM_ SG_ 2180924926 CC_PlugTemp1 "Temperature values for temperature sensor 1";
+CM_ SG_ 2180924926 CC_CP_Duty "The duty cycle of Control Pilot PWM";
+CM_ BO_ 2180924670 "Charging System diagnostics- reasons for charging stopped.";
+CM_ SG_ 2180924670 CCI_CCP_HVPSChBlkStopCh "HVPS Charge Block fault flag, will be true is Value is not 1 (Off)";
+CM_ SG_ 2180924670 CCI_CCP_GearStopCh "Gear is not in park. Therefore charging not permitted. ";
+CM_ SG_ 2180924670 CCI_CCP_LVFltStopCh "LV in fault state indicating charging not allowed.";
+CM_ SG_ 2180924670 CCI_CCP_DcChrgLimStopCh "Requested current falls below EVSE minimum valuie. Therefore charging is stopped.";
+CM_ SG_ 2180924670 CCI_CCP_BtnPressStopCh "Button pressed indicating potential stop charging";
+CM_ SG_ 2180924670 CCI_CCP_HVIntgrtyStopCh "HV integrity fault indicating charging not allowed.";
+CM_ SG_ 2180924670 AC_AcDcMetaysCommLossStopCh "Stop will be stop or not initialized if this is true";
+CM_ SG_ 2180924670 OBC_FaultStateACDC "Interpreted fault state of the OBC on the ACDC port.";
+CM_ SG_ 2180924670 CCI_SM_CANCommLossStopCh "CAN communication issue stopped charging process.";
+CM_ SG_ 2180924670 CCI_CCP_BMSFaultStopCh "BMS fault level greater than 4. Emergency shutdown on CC needed.";
+CM_ SG_ 2180924670 CCI_SM_VehSpdStopCh "Vehicle speed stopped charging process.";
+CM_ SG_ 2180924670 CCI_SM_UsrReqStopCh "User request stopped charging process.";
+CM_ SG_ 2180924670 CCI_SM_HvStStopCh "HV System State stopped charging process.";
+CM_ SG_ 2180924670 CCI_SM_ChCmplStopCh "Charge complete signal from MBMS stopped charging process.";
+CM_ SG_ 2180924670 CCI_SM_BmsStStopCh "BMS state stopped charging process - (not in drive).";
+CM_ SG_ 2180923902 HV_MaxChargingCurrent "Maximum allowable charging current.";
+CM_ SG_ 2180923646 CCI_ACDCPlugLockState "ACDC charging port plug lock state";
+CM_ SG_ 2180923646 EV_Ready "If TRUE EV is ready to charge";
+CM_ SG_ 2180923646 CC_IM_InitMode "Charge controller initialisation mode.";
+CM_ SG_ 2180923646 CC_PDU_Mode "PDU mode ";
+CM_ SG_ 2180923646 SLAC_Mode "SLAC mode";
+CM_ SG_ 2180923646 CP_Mode "Enumeration variable for Control Pilot states";
+CM_ SG_ 2180923646 SM_SystemMode "Charge controller modes";
+CM_ SG_ 2180923646 PP_Mode "Status of Proximity Pilot";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","noMsgSendType";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "SAE_J1939_21_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_71_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_73_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_75_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_81_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_DA_SpecVersion" STRING ;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ BO_  "SendOnChange" ENUM  "No","Yes";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "SAE_J1939_21_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_71_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_73_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_75_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_81_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_DA_SpecVersion" "";
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "SendOnChange" "No";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_ "BusType" "CAN";
+BA_ "DatabaseVersion" "8.5";
+BA_ "ProtocolType" "J1939";
+BA_ "SAE_J1939_21_SpecVersion" "2006-10";
+BA_ "SAE_J1939_71_SpecVersion" "2012-10";
+BA_ "SAE_J1939_73_SpecVersion" "2012-10";
+BA_ "SAE_J1939_75_SpecVersion" "2012-05";
+BA_ "SAE_J1939_81_SpecVersion" "2012-05";
+BA_ "SAE_J1939_DA_SpecVersion" "2015-01";
+BA_ "DBName" "Arrival_Charging_Controller";
+BA_ "NmStationAddress" BU_ DCU 90;
+BA_ "NmStationAddress" BU_ ElectricalChargingSystem 26;
+BA_ "NmStationAddress" BU_ InstrumentCluster 23;
+BA_ "NmStationAddress" BU_ Vector 249;
+BA_ "GenMsgCycleTime" BO_ 2382254334 100;
+BA_ "VFrameFormat" BO_ 2382254334 3;
+BA_ "GenMsgSendType" BO_ 2180925694 0;
+BA_ "GenMsgCycleTime" BO_ 2180925694 1000;
+BA_ "VFrameFormat" BO_ 2180925694 3;
+BA_ "GenMsgCycleTime" BO_ 2180927486 1000;
+BA_ "VFrameFormat" BO_ 2180927486 3;
+BA_ "GenMsgSendType" BO_ 2180927230 0;
+BA_ "GenMsgCycleTime" BO_ 2180927230 100;
+BA_ "VFrameFormat" BO_ 2180927230 3;
+BA_ "GenMsgSendType" BO_ 2180926974 0;
+BA_ "GenMsgCycleTime" BO_ 2180926974 100;
+BA_ "VFrameFormat" BO_ 2180926974 3;
+BA_ "GenMsgCycleTime" BO_ 2180926718 1000;
+BA_ "GenMsgSendType" BO_ 2180926718 0;
+BA_ "VFrameFormat" BO_ 2180926718 3;
+BA_ "GenMsgSendType" BO_ 2180926462 0;
+BA_ "GenMsgCycleTime" BO_ 2180926462 100;
+BA_ "VFrameFormat" BO_ 2180926462 3;
+BA_ "GenMsgSendType" BO_ 2180924414 0;
+BA_ "GenMsgCycleTime" BO_ 2180924414 1000;
+BA_ "GenMsgDelayTime" BO_ 2180924414 50;
+BA_ "SendOnChange" BO_ 2180924414 1;
+BA_ "VFrameFormat" BO_ 2180924414 3;
+BA_ "GenMsgCycleTime" BO_ 2180924158 100;
+BA_ "GenMsgSendType" BO_ 2180924158 0;
+BA_ "VFrameFormat" BO_ 2180924158 3;
+BA_ "GenMsgCycleTime" BO_ 2180925950 1000;
+BA_ "VFrameFormat" BO_ 2180925950 3;
+BA_ "GenMsgCycleTime" BO_ 2180925438 10;
+BA_ "VFrameFormat" BO_ 2180925438 3;
+BA_ "GenMsgCycleTime" BO_ 2180924926 100;
+BA_ "VFrameFormat" BO_ 2180924926 3;
+BA_ "GenMsgCycleTime" BO_ 2180924670 100;
+BA_ "VFrameFormat" BO_ 2180924670 3;
+BA_ "GenMsgSendType" BO_ 2180923902 0;
+BA_ "GenMsgCycleTime" BO_ 2180923902 100;
+BA_ "VFrameFormat" BO_ 2180923902 3;
+BA_ "GenMsgCycleTime" BO_ 2180923646 10;
+BA_ "VFrameFormat" BO_ 2180923646 3;
+BA_ "GenSigStartValue" SG_ 2180925694 DebugMsgs_Enable 1;
+BA_ "GenSigStartValue" SG_ 2180925694 IsolationWarning 500;
+BA_ "GenSigStartValue" SG_ 2180925694 IsolationCritical 250;
+BA_ "GenSigStartValue" SG_ 2180925694 J1939_address 73;
+BA_ "GenSigStartValue" SG_ 2180925694 PlugTemperRiseDelta 40;
+BA_ "GenSigStartValue" SG_ 2180925694 DeratePlugTemperature 70;
+BA_ "GenSigStartValue" SG_ 2180925694 CritPlugTemperature 85;
+BA_ "SigType" SG_ 2180926974 IsolationState_Counter 11;
+BA_ "SigType" SG_ 2180926974 IsolationState_CRC 12;
+BA_ "SigType" SG_ 2180926462 ACDCPortCmd_CRC 12;
+BA_ "SigType" SG_ 2180926462 ACDCPortCmd_Counter 11;
+BA_ "SigType" SG_ 2180924158 SysState_Counter 11;
+BA_ "SigType" SG_ 2180924158 SysState_CRC 12;
+BA_ "GenSigStartValue" SG_ 2180924158 HV_TotalActualCurrent 32700;
+VAL_ 3221225472 CC_PDU_Mode 7 "False Closed" 6 "False Open" 5 "Contacts Opening" 4 "Contacts Closed" 3 "Contacts Connecting" 2 "Pack Connected" 1 "Contacts Open" 0 "Init" ;
+VAL_ 3221225472 CCI_ACDCPlugLockRequest 7 "ACDCPlugLock NA" 2 "ACDCPlugLock Unlock" 1 "ACDCPlugLock Lock" 0 "ACDCPlugLock No Request" ;
+VAL_ 3221225472 EVSE_Status 255 "NA" 6 "Malfunction" 5 "EmergencyShutdown" 4 "ISOMoniActive" 3 "UtilInterEvent" 2 "Shutdown" 1 "Ready" 0 "Not Ready" ;
+VAL_ 2382254334 Isolation_Status 3 "Unavailable" 2 "Critical" 1 "Warning" 0 "NoFaults" ;
+VAL_ 2382254334 Isolation_FaultCode 7 "NA" 6 "CommError" 5 "HWerror" 4 "MeasurementTimeout" 3 "IsolationFault" 2 "IsolationWarning" 1 "PossibleCommError" 0 "NoFault" ;
+VAL_ 2180925694 PlugLock_Voltage 1 "24 V" 0 "12 V" ;
+VAL_ 2180927486 CC_sts_CntctrSOH 7 "NA" 3 "Critical" 2 "Alarm" 1 "Warning" 0 "Normal" ;
+VAL_ 2180927230 CC_PDU_PosCntctrSt 3 "NA" 2 "Error" 1 "Closed" 0 "Open" ;
+VAL_ 2180927230 CC_PDU_PosCntctrErrSt 3 "NA" 2 "False Closed" 1 "False Open" 0 "Ok" ;
+VAL_ 2180927230 CC_PDU_NegCntctrSt 3 "NA" 2 "Error" 1 "Closed" 0 "Open" ;
+VAL_ 2180927230 CC_PDU_NegCntctrErrSt 3 "NA" 2 "False Closed" 1 "False Open" 0 "Ok" ;
+VAL_ 2180927230 CCI_ChargePermission 5 "Vehicle_CriticalFault" 4 "Vehicle_Fault" 3 "Permission_NotReady" 2 "Not_Permitted" 1 "Permitted_Ready" 0 "N/A" ;
+VAL_ 2180927230 DC_ChrgContactorState 4 "ChrgContact_SNA" 3 "False Open" 2 "False Close" 1 "Closed" 0 "Open" ;
+VAL_ 2180927230 OBC_DriverModeACDC 5 "DriverFault" 4 "ShuttingDown" 3 "Charging" 2 "ReadyToCharge" 1 "Standby" 0 "DriverNotEnabled" ;
+VAL_ 2180926974 Isolation_FaultCode 7 "NA" 6 "CommError" 5 "HWerror" 4 "MeasurementTimeout" 3 "IsolationFault" 2 "IsolationWarning" 1 "PossibleCommError" 0 "NoFault" ;
+VAL_ 2180926974 Isolation_Status 3 "Unavailable" 2 "Critical" 1 "Warning" 0 "NoFaults" ;
+VAL_ 2180926462 CCI_ACDCPlugLockRequest 7 "ACDCPlugLock NA" 2 "ACDCPlugLock Unlock" 1 "ACDCPlugLock Lock" 0 "ACDCPlugLock No Request" ;
+VAL_ 2180926462 CCI_ACDCHatchCloseCmd 7 "ACDCHatchSt NA" 2 "ACDCHatchSt Open" 1 "ACDCHatchSt Close" 0 "ACDCHatchSt No Request" ;
+VAL_ 2180924414 CCI_ACPlugLockPosition 2 "Not Locked" 1 "Locked" 0 "Unlocked" ;
+VAL_ 2180924414 CCI_ACDCPortHatchState 2 "Hatch fully opened" 1 "Hatch closed" 0 "Hatch not closed" ;
+VAL_ 2180924414 CCI_ACPortHatchState 2 "Hatch fully opened" 1 "Hatch closed" 0 "Hatch not closed" ;
+VAL_ 2180924414 CCI_ACPortButtonState 3 "Reserve" 2 "Released" 1 "Pressed" 0 "Unknown" ;
+VAL_ 2180924414 CCI_ACDCPortButtonState 3 "Reserve" 2 "Released" 1 "Pressed" 0 "Unknown" ;
+VAL_ 2180924158 CCI_ACPortPlugType 7 "ACPlug_NA" 3 "Failed To Recognise" 2 "AC" 1 "Detecting" 0 "Not Connected" ;
+VAL_ 2180924158 CC_HealthStatus 7 "Health_NA" 2 "Health_Critical" 1 "Health_Warning" 0 "Health_Normal" ;
+VAL_ 2180924158 CC_ReadyToSleep 3 "NA" 2 "Reserve" 1 "True" 0 "False" ;
+VAL_ 2180924158 DC_ChrgContactorState 4 "ChrgContact_SNA" 3 "False Open" 2 "False Close" 1 "Closed" 0 "Open" ;
+VAL_ 2180924158 AC_ActualACChargingState 7 "AC_ChState_NA" 4 "AC Critical Charging Fault" 3 "AC Charging Fault" 2 "AC Stop Charging" 1 "AC Charging Active" 0 "AC Standby" ;
+VAL_ 2180924158 DC_ActualDCChargingState 7 "DC_ChState_NA" 4 "DC Critical Charging Fault" 3 "DC Charging Fault" 2 "DC Stop Charging" 1 "DC Charging Active" 0 "DC Standby" ;
+VAL_ 2180924158 CCI_ActualChargingState 7 "CCIState_NA" 5 "Fault" 4 "Charging Stopped" 3 "DC Charging" 2 "AC Charging" 1 "Standby" 0 "Sleep" ;
+VAL_ 2180924158 CCI_ACDCPortPlugType 7 "ACDCPlug_NA" 4 "Failed To Recognise" 3 "DC" 2 "AC" 1 "Detecting" 0 "Not Connected" ;
+VAL_ 2180925438 CCI_V2g_StatusV2g 4 "v2g_status_fault" 3 "v2g_status_busy" 2 "v2g_status_ready" 1 "v2g_status_setup" 0 "v2g_status_stop" ;
+VAL_ 2180925438 CCI_V2g_V2gFltSts 9 "Unrecognised Fault" 8 "EXI Fault" 7 "Session Not Closed" 6 "Session Not Established" 5 "TCP Reset Recieved" 4 "TCP Connection Lost" 3 "SDP Fault" 2 "ICMP Fault" 1 "QCA Fault" 0 "Idle" ;
+VAL_ 2180925438 CC_V2G_DiagFault 21 "EVSEMalfulnctionFault" 20 "WeldDetResTimeOut" 19 "PwrDeliveryStopTimeOut" 18 "CurrDemandTimeOut" 17 "PwrDeliveryStartTimeOut" 16 "PreChargeTimeOut" 15 "CableCheckTimeOut" 14 "ParDiscSeqTimeOut" 13 "ShutDownResFail" 12 "StopSesionResFail" 11 "WeldDetResFail" 10 "PwrDeliveryStopResFail" 9 "PwrDeliveryStartResFail" 8 "PreChResFail" 7 "CableCheckResFail" 6 "ChParamResFail" 5 "ContractAuthenResFail" 4 "PayDetailResFail" 3 "SrvDiscResFail" 2 "SessionSetupResFail" 1 "SuppAppProtResFail" 0 "V2GNoFault" ;
+VAL_ 2180925438 CC_SLAC_Res 5 "NA" 4 "msg_set_key_cnf" 3 "msg_slac_match_cnf" 2 "msg_atten_char_ind" 1 "msg_parm_cnf" 0 "msg_idle" ;
+VAL_ 2180925438 CC_SLAC_Req 6 "msg_set_key_req" 5 "msg_slac_match_req" 4 "msg_atten_char_rsp" 3 "mes_mnbc_sound_ind" 2 "mes_star_atten_char_ind" 1 "msg_parm_req" 0 "msg_idle" ;
+VAL_ 2180925438 CC_V2G_EVSE_Progres 4 "NA" 3 "Failed" 2 "Finished" 1 "Ongoing" 0 "idle" ;
+VAL_ 2180925438 CC_V2G_Response 255 "NA" 12 "SessionStopRes" 11 "WeldingDetectionRes" 10 "CurrentDemandRes" 9 "PowerDeliveryRes" 8 "PreChargeRes" 7 "CableCheckRes" 6 "ChargeParamDiscoveryRes" 5 "ContractAuthenRes" 4 "PaymentDetailRes" 3 "ServiceDiscoveryRes" 2 "SessionSetupRes" 1 "SuppAppProtocolRes" 0 "idle" ;
+VAL_ 2180925438 CC_V2G_Request 14 "NA" 12 "SessionStopReq" 11 "WeldingDetectionReq" 10 "CurrentDemandReq" 9 "PowerDeliveryReq" 8 "PreChargeReq" 7 "CableCheckReq" 6 "ChargeParamDiscoveryReq" 5 "ContractAuthentReq" 4 "PaymentDetailReq" 3 "ServiceDiscoverReq" 2 "SessionSetupReq" 1 "SuppAppProtocolReq" 0 "idle" ;
+VAL_ 2180925438 CC_V2G_EVSEStatusCode 255 "NA" 6 "EVSEMalfulnction" 5 "EVSEEmergencyShutdown" 4 "EVSEIsolationMonitoringActive" 3 "EVSEUtilityInterrEvent" 2 "EVSEShutdown" 1 "EVSEReady" 0 "EVSENotReady" ;
+VAL_ 2180925438 CC_V2G_EVSERespCode 255 "NA" 2 "Failed" 1 "OK" 0 "idle" ;
+VAL_ 2180924926 AC_OBCFaultStateRes 2 "Critical Fault" 1 "Warning" 0 "No Fault" ;
+VAL_ 2180924926 CC_V2G_ChargeProgress 4 "NA" 3 "Stop" 2 "Renegot" 1 "Start" 0 "idle" ;
+VAL_ 2180924926 SLAC_Fault 6 "WaitLinkDetect" 5 "StartAttChar" 4 "MNBCSound" 3 "SlacMatchCNF" 2 "WaitAttenInd" 1 "ParmCNF" 0 "NoError" ;
+VAL_ 2180924926 CC_PlugTemp2 255 "SNA" ;
+VAL_ 2180924926 CC_PlugTemp1 255 "SNA" ;
+VAL_ 2180924670 OBC_FaultStateACDC 2 "ACDC_Critical Fault" 1 "ACDC_Warning" 0 "ACDC_No Fault" ;
+VAL_ 2180923646 CCI_ACDCPlugLockState 7 "ACDC_NA" 4 "ACDC_Failed" 3 "ACDC_Locking" 2 "ACDC_Unlocking" 1 "ACDC_Locked" 0 "ACDC_Unlocked" ;
+VAL_ 2180923646 CCI_HatchState 2 "ACDCHatch_Open" 1 "ACDCHatch_Close" 0 "ACDCHatch_NA" ;
+VAL_ 2180923646 CC_IM_InitMode 5 "InitMode_Fault" 4 "Service" 3 "SW Stable" 2 "Diagnostics" 1 "SW Initialisation" 0 "FW Initialisation" ;
+VAL_ 2180923646 CC_PDU_Mode 7 "False Closed" 6 "False Open" 5 "Contacts Opening" 4 "Contacts Closed" 3 "Contacts Connecting" 2 "Pack Connected" 1 "Contacts Open" 0 "Init" ;
+VAL_ 2180923646 CC_V2G_Mode 17 "Fault" 16 "WeldingDetection" 15 "RespondError" 14 "TimeOutError" 13 "EndOfCharge" 12 "PowerDeliveryResStart" 11 "SessionStop" 10 "PowerDeliveryStop" 9 "CurrentDemand" 8 "PowerDelivery" 7 "Precharge" 6 "CheckCable" 5 "ChargeParamDisc" 4 "ContractAuth" 3 "PayDetail" 2 "ServiceDisc" 1 "SessionSetup" 0 "SuppAppProt" ;
+VAL_ 2180923646 SLAC_Mode 12 "Fault" 11 "TimeOut" 10 "LinkFail" 9 "SLAC_Stop" 8 "SLACLink" 7 "SLAC_KeySet" 6 "SLAC_MatchReq" 5 "SLAC_AttenResponse" 4 "SLAC_Sound" 3 "SLAC_Atten" 2 "SLAC_CNF" 1 "SLAC_ParamReqest" 0 "SLAC_Initialization" ;
+VAL_ 2180923646 CP_Mode 11 "NotRecognised" 10 "StateF" 9 "StateE" 8 "StateD2" 7 "StateD1" 6 "StateC2" 5 "StateC1" 4 "StateB2" 3 "StateB1" 2 "StateA2" 1 "StateA1" 0 "Not connected" ;
+VAL_ 2180923646 SM_SystemMode 12 "Fault" 11 "SleepPrep" 10 "CommStop" 9 "StopCharging" 8 "Charge" 7 "Precharge" 6 "CC_ChargeReady" 5 "VehPermission" 4 "V2G_Initialization" 3 "SECC_Initialization" 2 "SLAC_Initialization" 1 "CC_Ready" 0 "Init" ;
+VAL_ 2180923646 PP_Mode 5 "BtnPressed" 4 "NotRecognised" 3 "ConnBtnPsd" 2 "NotConnected" 1 "Connected" 0 "NotAvailable" ;
+SIG_GROUP_ 2180925694 Parameters_2 1 : DebugMsgs_Enable PlugLock_Enable IsolationWarning IsolationCritical IsolationCheck_Enable;
+SIG_GROUP_ 2180925694 Parameters_1 1 : HighVoltageFeedback ContactorsType ContactorsFeedback J1939_address PlugTemperRiseDelta DeratePlugTemperature CritPlugTemperature InletTemperSnsrType PlugLock_Voltage TempFault_Enable TempDerate_Enable;
+SIG_GROUP_ 2180925694 NvramManagement 1 : req_NegCntctr_RstCnt req_PosCntctr_RstCnt req_AC_RstFltLvl7 req_CCI_RstFltLvl7 req_DC_RstFltLvl7 req_MemClr req_ACC_RstFltLvl7;
+
+SG_MUL_VAL_ 2180925694 DebugMsgs_Enable Service_mux 1-1, 18-18;
+SG_MUL_VAL_ 2180925694 IsolationWarning Service_mux 2-2, 17-17;
+SG_MUL_VAL_ 2180925694 IsolationCritical Service_mux 2-2, 16-16;
+SG_MUL_VAL_ 2180925694 IsolationCheck_Enable Service_mux 2-2, 15-15;
+SG_MUL_VAL_ 2180925694 HighVoltageFeedback Service_mux 1-1, 7-7;
+SG_MUL_VAL_ 2180925694 ContactorsType Service_mux 1-1, 4-4;
+SG_MUL_VAL_ 2180925694 ContactorsFeedback Service_mux 1-1, 3-3;
+SG_MUL_VAL_ 2180925694 J1939_address Service_mux 1-1, 9-9;
+SG_MUL_VAL_ 2180925694 PlugTemperRiseDelta Service_mux 1-1, 12-12;
+SG_MUL_VAL_ 2180925694 DeratePlugTemperature Service_mux 1-1, 6-6;
+SG_MUL_VAL_ 2180925694 CritPlugTemperature Service_mux 1-1, 5-5;
+SG_MUL_VAL_ 2180925694 InletTemperSnsrType Service_mux 1-1, 8-8;
+SG_MUL_VAL_ 2180925694 PlugLock_Voltage Service_mux 1-1, 11-11;
+SG_MUL_VAL_ 2180925694 TempFault_Enable Service_mux 1-1, 14-14;
+SG_MUL_VAL_ 2180925694 TempDerate_Enable Service_mux 1-1, 13-13;
+SG_MUL_VAL_ 2180925694 PlugLock_Enable Service_mux 2-2, 10-10;

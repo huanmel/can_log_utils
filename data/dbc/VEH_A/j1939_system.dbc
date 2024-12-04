@@ -1,0 +1,988 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: AerodynamicControl Aftertreatment_1_GasIntake Aftertreatment_1_GasOutlet Aftertreatment_2_GasIntake Aftertreatment_2_GasOutlet AtmosphericSensor AuxiliaryHeater1 AuxiliaryHeater2 AuxiliaryValveControl AxleDrive1 AxleDrive2 AxleSteering BodyController BrakesDriveAxle1 BrakesDriveAxle2 BrakesSteerAxle BrakesSystemController CabController1 CabController2 CabDisplay1 CabDisplay2 ChassisController1 ChassisController2 ClimateControl1 ClimateControl2 ClutchUnit CommunicationUnitCellular CommunicationUnitRadio CommunicationUnitSatellite CruiseControl DieselPartFilterControl ElectricalChargingSystem ElectricalSystem EnduranceBrakingSystem Engine1 Engine2 EngineValveControl ExhaustEmissionController FanDriveController FileServer FuelSystem HeadwayController HitchControl HydraulicPumpController IgnitionController1 IgnitionController2 InformationSystem1 InstrumentCluster LightingOperatorControl ManagementComputer OffBoardDiagnosticTool1 OffBoardDiagnosticTool2 OffVehicleGateway OilSensor OnBoardDataLogger OnBoardDiagnosticUnit ParkingBrakeController PneumaticSystemController PowerTakeOff PowerTakeOffFront PowertrainControlModule PropulsionBatteryCharger RampControl RearAxleSteeringController RetarderDriveline RetarderEngine RetarderExhaustEngine1 RetarderExhaustEngine2 SafetyRestraintSystem1 SafetyRestraintSystem2 SeatController1 SeatController2 ShiftConsolePrimary ShiftConsoleSecondary StarterSystem SteeringColumnUnit SteeringController SuspensionDriveAxle1 SuspensionDriveAxle2 SuspensionSteerAxle SuspensionSystemController1 SuspensionSystemController2 TirePressureController TractorTrailerBridge1 Transmission1 Transmission2 TransmissionDisplay1 TransmissionDisplay2 TripRecorder Turbocharger VehicleDynamicStability VehicleNavigation VehicleSecurity VirtualTerminal WaterPumpController
+VAL_TABLE_ FMI 0 "Above normal (most severe)" 1 "Below normal (most severe)" 2 "Data erratic" 3 "Voltage above normal" 4 "Voltage below normal" 5 "Current below normal" 6 "Current above normal" 7 "Mechanical system not responding" 8 "Abnormal frequency" 9 "Abnormal update rate" 10 "Abnormal rate of change" 11 "Root cause not known" 12 "Bad intelligent device" 13 "Out of calibration" 14 "Special intstructions" 15 "Above normal (least severe)" 16 "Above normal (moderately severe)" 17 "Below normal (least severe)" 18 "Below normal (moderately severe)" 19 "Received network data in error" 20 "Received Network Data In Error" 21 "Data Drifted High" 22 "Data Drifted Low" 31 "Condition Exists" ;
+VAL_TABLE_ TireLocation_MUX 0 "TirePress_00_MUX_0" 1 "TirePress_01_MUX_1" 16 "TirePress_10_MUX_16" 17 "TirePress_11_MUX_17" 18 "TirePress_12_MUX_18" 19 "TirePress_13_MUX_19" 32 "TirePress_20_MUX_32" 33 "TirePress_21_MUX_33" 34 "TirePress_22_MUX_34" 35 "TirePress_23_MUX_35" 48 "TirePress_30_MUX_48" 49 "TirePress_31_MUX_49" 50 "TirePress_32_MUX_50" 51 "TirePress_33_MUX_51" ;
+
+
+BO_ 2565799678 AC: 8 Vector__XXX
+ SG_ IdentityNumber : 0|21@1+ (1,0) [0|2097151] "" Vector__XXX
+ SG_ ManufacturerCode : 21|11@1+ (1,0) [0|2047] "" Vector__XXX
+ SG_ ECUInstance : 32|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ FunctionInstance : 35|5@1+ (1,0) [0|31] "" Vector__XXX
+ SG_ Function : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ReservedBit : 48|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ VehicleSystem m0 : 49|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ VehicleSystem1 m1 : 49|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ VehicleSystem2 m2 : 49|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ VehicleSystem3 m3 : 49|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ VehicleSystem4 m4 : 49|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ VehicleSystem5 m5 : 49|7@1+ (1,0) [0|127] "" Vector__XXX
+ SG_ VehicleSystemInstance : 56|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ IndustryGroup M : 60|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ArbitraryAddressCapable : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2565406462 ACKM: 8 Vector__XXX
+ SG_ ControlByte_ACKM M : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ GroupFunctionValue : 8|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ AddressAcknowledged m0 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AddressNACK m1 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AddressAccessDenied m2 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ AddressBusy m3 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ParameterGroupNumber : 40|24@1+ (1,0) [0|16777215] "" Vector__XXX
+
+BO_ 2566834942 DM01: 22 Vector__XXX
+ SG_ PLStatus : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AWLStatus : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RSLState : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MILStatus : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashAmberWarningLamp : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashRedStopLamp : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashMalfuncIndicatorLamp : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DTC1 : 16|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DTC2 : 48|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DTC3 : 80|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DTC4 : 112|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DTC5 : 144|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+
+BO_ 2566835198 DM02: 22 Vector__XXX
+ SG_ PLStatus : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AWLStatus : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RSLState : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MILStatus : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashProtectLamp : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashAmberWarningLamp : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashRedStopLamp : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FlashMalfuncIndicatorLamp : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DTC1 : 16|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DTC2 : 48|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DTC3 : 80|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DTC4 : 112|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DTC5 : 144|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+
+BO_ 2566835454 DM03: 0 Vector__XXX
+
+BO_ 2566837246 DM11: 0 Vector__XXX
+
+BO_ 2564816638 DM13: 8 Vector__XXX
+ SG_ J1939Network1 : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SAE_J1922 : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SAE_J1587 : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CurrentDataLink : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ManufacturerSpecificPort : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SAE_J1850 : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ISO9141 : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ J1939Network2 : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ J1939Network4 : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ProprietaryNetwork2 : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ProprietaryNetwork1 : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ J1939Network3 : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SuspendSignal : 24|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ HoldSignal : 28|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ SuspendDuration : 32|16@1+ (1,0) [0|64255] "s" Vector__XXX
+
+BO_ 2560884478 DM31: 8 Vector__XXX
+ SG_ DTC1 : 0|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ DTCProtectLampSupportStatus : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DTCWarnLampSupportStatus : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DTCStopLampSupportStatus : 36|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DTCMilSupportStatus : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DTCProtectLampSupportFlash : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DTCWarnLampSupportFlash : 42|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DTCStopLampSupportFlash : 44|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DTCMilSupportFlash : 46|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2560818942 DM32: 8 Vector__XXX
+ SG_ SPN1 : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ FailureModeIdentifier1 : 16|5@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SPN1High : 21|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ DTCTotalActiveTime : 24|16@1+ (0.2,0) [0|12851] "hr" Vector__XXX
+ SG_ DTCTotalPrevActiveTime : 40|16@1+ (0.2,0) [0|12851] "hr" Vector__XXX
+ SG_ DTCTimeUntilDerate : 56|8@1+ (0.25,0) [0|62.5] "hr" Vector__XXX
+
+BO_ 2565537534 RQST: 3 Vector__XXX
+ SG_ ParameterGroupNumber : 0|24@1+ (1,0) [0|16777215] "" Vector__XXX
+
+BO_ 2565668606 TPCMxx: 8 Vector__XXX
+ SG_ ControlByte M : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TotalMessageSize m16 : 8|16@1+ (1,0) [0|64255] "" Vector__XXX
+ SG_ NumOfPacketsThatCanBeSent m17 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TotalMessageSizeEoMA m19 : 8|16@1+ (1,0) [0|64255] "" Vector__XXX
+ SG_ TotalMessageSizeBAM m32 : 8|16@1+ (1,0) [0|64255] "" Vector__XXX
+ SG_ ConnectionAbortReason m255 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ NextPacketNumberToBeSent m17 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TotalNumberOfPackets m16 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TotalNumberOfPacketsEoMA m19 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TotalNumberOfPacketsBAM m32 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MaximumNumberOfPackets m16 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PGNumber : 40|24@1+ (1,0) [0|16777200] "" Vector__XXX
+
+BO_ 2565603070 TPDT: 8 Vector__XXX
+ SG_ SequenceNumber : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+
+
+CM_ "J1939 system messages
+$File: //system_software/dbc/j1939_system/0.36.0.0/j1939_system.dbc $
+$Change: 208863 $
+$DateTime: 2023/11/10 13:11:00 $
+$Revision: #1 $";
+CM_ BU_ HitchControl "Straight truck hitch (NOT Agricultural hitch – it is in IG 2) ";
+CM_ BU_ PowertrainControlModule "Electronic control module in charge of controlling and coordinating the operation of a hybrid propulsion system.";
+CM_ BO_ 2565799678 "Address Claimed
+Message used to claim an address for a Controller Application.";
+CM_ SG_ 2565799678 ManufacturerCode "Assigned by NMEA 2000 Committee";
+CM_ SG_ 2565799678 ReservedBit "Reserved for future definition by SAE. The reserved bit shall be set to zero.";
+CM_ SG_ 2565799678 IndustryGroup "0 = Global
+   1  = On-Highway
+   2  = Agricultural and Forestry
+   3  = Construction
+   4  = Marine
+   5  = Industrial - Process
+          Control - Stationary (Gen-Sets)
+   6  = Reserve for SAE
+   7  = Reserve for SAE";
+CM_ BO_ 2565406462 "Acknowledgment Message
+The Acknowledgment PG is used to provide a handshake mechanism between transmitting and receiving devices.";
+CM_ SG_ 2565406462 ControlByte_ACKM "Indicates the acknowledgement response.
+0 - Positive Acknowledgment (ACK)
+1 - Negative Acknowledgment (NACK)
+2 - Access Denied (PGN supported but access denied)
+3 - Cannot Respond (PGN supported but ECU cannot respond now) cannot respond with ...";
+CM_ SG_ 2565406462 GroupFunctionValue "Group Function of PGN being acknowledged. This field identifies for a device the specific group function of a PGN being acknowledged or declined.  This field is not used if the PGN being acknowledged or declined is not a group function PGN.";
+CM_ SG_ 2565406462 ParameterGroupNumber "PGN which is requested by the Request message";
+CM_ BO_ 2566834942 "Active Diagnostic Trouble Codes
+Active Diagnostic Trouble Codes";
+CM_ SG_ 2566834942 PLStatus "This lamp is used to relay trouble code information that is reporting a problem with a vehicle system that is most probably not electronic subsystem related. For instance, engine coolant temperature is exceeding its prescribed temperature range.
+00 ...";
+CM_ SG_ 2566834942 AWLStatus "This lamp is used to relay trouble code information that is reporting a problem with the vehicle system but the vehicle need not be immediately stopped. 
+
+00     Lamp Off
+01     Lamp On
+10     Reserved
+11     Not available";
+CM_ SG_ 2566834942 RSLState "This lamp is used to relay trouble code information that is of a severe enough condition that it warrants stopping the vehicle.
+
+00     Lamp Off
+01     Lamp On
+10     Reserved
+11     Not available";
+CM_ SG_ 2566834942 MILStatus "A lamp used to relay only emissions-related trouble code information. This lamp is only illuminated when there is an emission-related trouble code active.
+00     Lamp Off
+01     Lamp On
+10     Short MIL for WWH OBD
+11     Not available
+Note ...";
+CM_ SG_ 2566834942 FlashProtectLamp "This parameter provides the capability to flash the engine protect lamp
+
+
+00 - Slow Flash (1 Hz, 50 % duty cycle)
+01 - Fast Flash (2 Hz or faster, 50% duty cycle)
+10 - Reserved
+11 - Unavailable / Do Not Flash";
+CM_ SG_ 2566834942 FlashAmberWarningLamp "This parameter provides the capability to flash the AWL
+
+00 - Slow Flash (1 Hz, 50 % duty cycle)
+01 - Fast Flash (2 Hz or faster, 50% duty cycle)
+10 - Reserved
+11 - Unavailable / Do Not Flash";
+CM_ SG_ 2566834942 FlashRedStopLamp "This parameter provides the capability to flash the RSL
+
+
+00 - Slow Flash (1 Hz, 50 % duty cycle)
+01 - Fast Flash (2 Hz or faster, 50% duty cycle)
+10 - Reserved
+11 - Unavailable / Do Not Flash";
+CM_ SG_ 2566834942 FlashMalfuncIndicatorLamp "This parameter provides the capability to flash the MIL
+00 - Slow Flash (1 Hz, 50 % duty cycle)
+01 - Fast Flash (2 Hz or faster, 50% duty cycle)
+10 - Class C DTC
+11 - Unavailable / Do Not Flash
+Note:  State 10 is for WWH OBD discriminatory ...";
+CM_ SG_ 2566834942 DTC1 "Diagnostic Trouble Code";
+CM_ SG_ 2566834942 DTC2 "Diagnostic Trouble Code";
+CM_ SG_ 2566834942 DTC3 "Diagnostic Trouble Code";
+CM_ SG_ 2566834942 DTC4 "Diagnostic Trouble Code";
+CM_ SG_ 2566834942 DTC5 "Diagnostic Trouble Code";
+CM_ BO_ 2566835198 "Previously Active Diagnostic Trouble Codes
+The information communicated is DM service to communicate the previously active trouble codes.";
+CM_ SG_ 2566835198 PLStatus "This lamp is used to relay trouble code information that is reporting a problem with a vehicle system that is most probably not electronic subsystem related. For instance, engine coolant temperature is exceeding its prescribed temperature range.
+00 ...";
+CM_ SG_ 2566835198 AWLStatus "This lamp is used to relay trouble code information that is reporting a problem with the vehicle system but the vehicle need not be immediately stopped. 
+
+00     Lamp Off
+01     Lamp On
+10     Reserved
+11     Not available";
+CM_ SG_ 2566835198 RSLState "This lamp is used to relay trouble code information that is of a severe enough condition that it warrants stopping the vehicle.
+
+00     Lamp Off
+01     Lamp On
+10     Reserved
+11     Not available";
+CM_ SG_ 2566835198 MILStatus "A lamp used to relay only emissions-related trouble code information. This lamp is only illuminated when there is an emission-related trouble code active.
+00     Lamp Off
+01     Lamp On
+10     Short MIL for WWH OBD
+11     Not available
+Note ...";
+CM_ SG_ 2566835198 FlashProtectLamp "This parameter provides the capability to flash the engine protect lamp
+
+
+00 - Slow Flash (1 Hz, 50 % duty cycle)
+01 - Fast Flash (2 Hz or faster, 50% duty cycle)
+10 - Reserved
+11 - Unavailable / Do Not Flash";
+CM_ SG_ 2566835198 FlashAmberWarningLamp "This parameter provides the capability to flash the AWL
+
+00 - Slow Flash (1 Hz, 50 % duty cycle)
+01 - Fast Flash (2 Hz or faster, 50% duty cycle)
+10 - Reserved
+11 - Unavailable / Do Not Flash";
+CM_ SG_ 2566835198 FlashRedStopLamp "This parameter provides the capability to flash the RSL
+
+
+00 - Slow Flash (1 Hz, 50 % duty cycle)
+01 - Fast Flash (2 Hz or faster, 50% duty cycle)
+10 - Reserved
+11 - Unavailable / Do Not Flash";
+CM_ SG_ 2566835198 FlashMalfuncIndicatorLamp "This parameter provides the capability to flash the MIL
+00 - Slow Flash (1 Hz, 50 % duty cycle)
+01 - Fast Flash (2 Hz or faster, 50% duty cycle)
+10 - Class C DTC
+11 - Unavailable / Do Not Flash
+Note:  State 10 is for WWH OBD discriminatory ...";
+CM_ SG_ 2566835198 DTC1 "Diagnostic Trouble Code";
+CM_ SG_ 2566835198 DTC2 "Diagnostic Trouble Code";
+CM_ SG_ 2566835198 DTC3 "Diagnostic Trouble Code";
+CM_ SG_ 2566835198 DTC4 "Diagnostic Trouble Code";
+CM_ SG_ 2566835198 DTC5 "Diagnostic Trouble Code";
+CM_ BO_ 2566835454 "Diagnostics Data Clear/Reset for Previously Active DTCs";
+CM_ BO_ 2566837246 "Diagnostic Data Clear/Reset for Active DTCs
+All of the diagnostic information pertaining to the active diagnostic trouble codes should be erased. Sent as a request whenever the service tool wishes to clear/reset diagnostic data for active DTCs.";
+CM_ BO_ 2564816638 "Stop Start Broadcast
+This message is used to stop or start broadcast messages. These broadcast messages may be on networks other than SAE J1939.";
+CM_ SG_ 2564816638 J1939Network1 "Identifies the action to be performed on the J1939 Network #1, Primary Vehicle Network' communications port.
+00 Stop Broadcast
+01 Start Broadcast
+10 Reserved
+11 Don't Care/take no action (leave as is)";
+CM_ SG_ 2564816638 SAE_J1922 "Identifies the action to be performed on the J1922 communications port.
+00 Stop Broadcast
+01 Start Broadcast
+10 Reserved
+11 Don't Care/take no action (leave as is)";
+CM_ SG_ 2564816638 SAE_J1587 "Identifies the action to be performed on the J1587 communications port.
+
+00 Stop Broadcast
+01 Start Broadcast
+10 Reserved
+11 Don't Care/take no action (leave as is)";
+CM_ SG_ 2564816638 CurrentDataLink "Identifies the action to be performed on the communications port that this parameter was received on.
+
+00 Stop Broadcast
+01 Start Broadcast
+10 Reserved
+11 Don't Care/take no action (leave as is)";
+CM_ SG_ 2564816638 ManufacturerSpecificPort "Identifies the action to be performed on the 'Other, Manufacture Specified Port' communications port.
+
+00 Stop Broadcast
+01 Start Broadcast
+10 Reserved
+11 Don't Care/take no action (leave as is)";
+CM_ SG_ 2564816638 SAE_J1850 "Identifies the action to be performed on the J1850 communications port.
+
+00 Stop Broadcast
+01 Start Broadcast
+10 Reserved
+11 Don't Care/take no action (leave as is)";
+CM_ SG_ 2564816638 ISO9141 "Identifies the action to be performed on the ISO 9141 communications port.
+
+00 Stop Broadcast
+01 Start Broadcast
+10 Reserved
+11 Don't Care/take no action (leave as is)";
+CM_ SG_ 2564816638 J1939Network2 "Identifies the action to be performed on the J1939 Network #2 communications port.
+
+00 Stop Broadcast
+01 Start Broadcast
+10 Reserved
+11 Don't Care/take no action (leave as is)";
+CM_ SG_ 2564816638 J1939Network4 "Identifies the action to be performed on the J1939 Network #4 communications port.
+
+00 Stop Broadcast
+01 Start Broadcast
+10 Reserved
+11 Don't Care/take no action (leave as is)";
+CM_ SG_ 2564816638 ProprietaryNetwork2 "Identifies the action to be performed on the Proprietary Network #2 communications port.
+
+00 Stop Broadcast
+01 Start Broadcast
+10 Reserved
+11 Don't Care/take no action (leave as is)";
+CM_ SG_ 2564816638 ProprietaryNetwork1 "Identifies the action to be performed on the Proprietary Network #1 communications port.
+
+00 Stop Broadcast
+01 Start Broadcast
+10 Reserved
+11 Don't Care/take no action (leave as is)";
+CM_ SG_ 2564816638 J1939Network3 "Identifies the action to be performed on the J1939 Network #3 communications port.
+
+00 Stop Broadcast
+01 Start Broadcast
+10 Reserved
+11 Don't Care/take no action (leave as is)";
+CM_ SG_ 2564816638 SuspendSignal "Indicator to all nodes that the current communication port broadcast messages are being suspended due to commands other than J1939 DM13. Therefore, the receiving nodes should suspend timeout diagnostics for all messages from the transmitting device ...";
+CM_ SG_ 2564816638 HoldSignal "Indicator to all nodes that the communication ports that have been acted upon by the Stop Start Broadcast PGN are remaining in the modified state. Therefore all nodes should act accordingly. The Hold signal is required to be broadcast every 5 ...";
+CM_ SG_ 2564816638 SuspendDuration "Indicates the duration of a suspension of broadcast messages when that duration is known by the transmitting device. If the DM13 message is sent with thee suspend signal value of 2 or 3, the value of this parameter will represent the duration of ...";
+CM_ BO_ 2560884478 "DTC To Lamp Association
+This message shall provide the applicable lamp(s) for each individual DTC";
+CM_ SG_ 2560884478 DTC1 "Diagnostic Trouble Code";
+CM_ SG_ 2560884478 DTCProtectLampSupportStatus "Lamp support status";
+CM_ SG_ 2560884478 DTCWarnLampSupportStatus "Lamp support status";
+CM_ SG_ 2560884478 DTCStopLampSupportStatus "Lamp support status";
+CM_ SG_ 2560884478 DTCMilSupportStatus "Lamp support status";
+CM_ SG_ 2560884478 DTCProtectLampSupportFlash "Lamp support status";
+CM_ SG_ 2560884478 DTCWarnLampSupportFlash "Lamp support status";
+CM_ SG_ 2560884478 DTCStopLampSupportFlash "Lamp support status";
+CM_ SG_ 2560884478 DTCMilSupportFlash "Lamp support status";
+CM_ BO_ 2560818942 "Regulated Exhaust Emission Level Exceedance
+Provides the DTCs and associated timers related to a regulated exhaust emission level exceedance due to an emission control system malfunction.";
+CM_ SG_ 2560818942 SPN1 "This 19-bit number is used to identify the item for which diagnostics are being reported.";
+CM_ SG_ 2560818942 FailureModeIdentifier1 "The FMI defines the type of failure detected in the subsystem identified by an SPN.";
+CM_ SG_ 2560818942 SPN1High "SPN #1 (Conversion Version 4)";
+CM_ SG_ 2560818942 DTCTotalActiveTime "This timer provides the total number of hours the DTC has been confirmed and active";
+CM_ SG_ 2560818942 DTCTotalPrevActiveTime "This timer provides the number of hours the NOx malfunction has been confirmed and previously active";
+CM_ SG_ 2560818942 DTCTimeUntilDerate "This timer provides the number of hours the malfunction has until the OBD required derate will occur";
+CM_ BO_ 2565537534 "Request
+This message type, identified by the PGN, provides the capability to request information globally or from a specific destination.";
+CM_ SG_ 2565537534 ParameterGroupNumber "Whenever it is necessary to identify a Parameter Group in the data field of a CAN data frame, it will be expressed in 24 bits.  The Parameter Group Number is a 24 bit value that has the following constituent components:  Reserved bit, Data Page bit, ...";
+CM_ BO_ 2565668606 "Transport Protocol - Connection Mgmt
+Used for the transfer of Parameter Groups that have 9 or more bytes of data.";
+CM_ SG_ 2565668606 ControlByte "Control byte (I.e. Group Function) associated with the Transport Protocol - Connection Management (PGN 60,416)
+16 (dec) - Request to Send
+17 (dec) - Clear to Send
+19 (dec) - End of Message ACK
+32 (dec) - Broadcast Announce Message
+255 (dec) - ...";
+CM_ SG_ 2565668606 TotalMessageSize "Total message size (in bytes) for RTS/CTS message.  Messages shorter than 9 data bytes should be sent without utilizing the transport protocol.  Messages longer than 1785 can not use the RTS/CTS transport protocol.";
+CM_ SG_ 2565668606 NumOfPacketsThatCanBeSent "Number of Packets that can be sent (TP.CM_CTS)";
+CM_ SG_ 2565668606 TotalMessageSizeEoMA "Total message size (in bytes) received for RTS/CTS message.  Messages shorter than 9 data bytes should be sent without utilizing the transport protocol.  Messages longer than 1785 can not use the RTS/CTS transport protocol.";
+CM_ SG_ 2565668606 TotalMessageSizeBAM "Total message size (in bytes) for BAM  message.  Messages shorter than 9 data bytes should be sent without utilizing the transport protocol.  Messages longer than 1785 can not use the BAM transport protocol.";
+CM_ SG_ 2565668606 ConnectionAbortReason "Reason for connection abort message.
+1 Already in one or more connection managed sessions and cannot support another.
+2 System resources were needed for another task so this connection managed session was terminated.
+3 A timeout occurred and this ...";
+CM_ SG_ 2565668606 NextPacketNumberToBeSent "Next Packet Number to be sent (TP.CM_CTS)";
+CM_ SG_ 2565668606 TotalNumberOfPackets "Total number of packets for RTS/CTS message.  Zero and one are not valid values.";
+CM_ SG_ 2565668606 TotalNumberOfPacketsEoMA "Total number of packets received for RTS/CTS message.  Zero and one are not valid values.";
+CM_ SG_ 2565668606 TotalNumberOfPacketsBAM "Total number of packets for BAM message.  Zero and one are not valid values.";
+CM_ SG_ 2565668606 MaximumNumberOfPackets "Maximum number of packets for RTS/CTS message.  zero through four are not allowed";
+CM_ SG_ 2565668606 PGNumber "Requested PGN in the TP.CM_RTS message";
+CM_ BO_ 2565603070 "Transport Protocol - Data Transfer
+Used for the transfer of data associated with Parameter Groups that have more than 8 bytes of data.";
+CM_ SG_ 2565603070 SequenceNumber "Sequence Number (TP.DT)";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","noMsgSendType";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "SAE_J1939_21_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_71_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_73_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_75_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_81_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_DA_SpecVersion" STRING ;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ BO_  "SendOnChange" ENUM  "No","Yes";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "SAE_J1939_21_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_71_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_73_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_75_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_81_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_DA_SpecVersion" "";
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "SendOnChange" "No";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_ "BusType" "CAN";
+BA_ "DBName" "J1939_System";
+BA_ "DatabaseVersion" "8.5";
+BA_ "ProtocolType" "J1939";
+BA_ "SAE_J1939_21_SpecVersion" "2006-10";
+BA_ "SAE_J1939_71_SpecVersion" "2012-10";
+BA_ "SAE_J1939_73_SpecVersion" "2012-10";
+BA_ "SAE_J1939_75_SpecVersion" "2012-05";
+BA_ "SAE_J1939_81_SpecVersion" "2012-05";
+BA_ "SAE_J1939_DA_SpecVersion" "2015-01";
+BA_ "NmJ1939Function" BU_ AerodynamicControl 22;
+BA_ "NmStationAddress" BU_ AerodynamicControl 27;
+BA_ "NmJ1939ECUInstance" BU_ Aftertreatment_1_GasIntake 0;
+BA_ "NmJ1939Function" BU_ Aftertreatment_1_GasIntake 68;
+BA_ "NmJ1939FunctionInstance" BU_ Aftertreatment_1_GasIntake 0;
+BA_ "NmStationAddress" BU_ Aftertreatment_1_GasIntake 81;
+BA_ "NmJ1939ECUInstance" BU_ Aftertreatment_1_GasOutlet 1;
+BA_ "NmJ1939Function" BU_ Aftertreatment_1_GasOutlet 68;
+BA_ "NmJ1939FunctionInstance" BU_ Aftertreatment_1_GasOutlet 0;
+BA_ "NmStationAddress" BU_ Aftertreatment_1_GasOutlet 82;
+BA_ "NmJ1939ECUInstance" BU_ Aftertreatment_2_GasIntake 0;
+BA_ "NmJ1939Function" BU_ Aftertreatment_2_GasIntake 68;
+BA_ "NmJ1939FunctionInstance" BU_ Aftertreatment_2_GasIntake 1;
+BA_ "NmStationAddress" BU_ Aftertreatment_2_GasIntake 86;
+BA_ "NmJ1939ECUInstance" BU_ Aftertreatment_2_GasOutlet 1;
+BA_ "NmJ1939Function" BU_ Aftertreatment_2_GasOutlet 68;
+BA_ "NmJ1939FunctionInstance" BU_ Aftertreatment_2_GasOutlet 1;
+BA_ "NmStationAddress" BU_ Aftertreatment_2_GasOutlet 87;
+BA_ "NmJ1939Function" BU_ AtmosphericSensor 76;
+BA_ "NmStationAddress" BU_ AtmosphericSensor 89;
+BA_ "NmJ1939Function" BU_ AuxiliaryHeater1 50;
+BA_ "NmJ1939FunctionInstance" BU_ AuxiliaryHeater1 0;
+BA_ "NmStationAddress" BU_ AuxiliaryHeater1 68;
+BA_ "NmJ1939Function" BU_ AuxiliaryHeater2 50;
+BA_ "NmJ1939FunctionInstance" BU_ AuxiliaryHeater2 1;
+BA_ "NmStationAddress" BU_ AuxiliaryHeater2 69;
+BA_ "NmJ1939Function" BU_ AuxiliaryValveControl 129;
+BA_ "NmJ1939IndustryGroup" BU_ AuxiliaryValveControl 2;
+BA_ "NmJ1939System" BU_ AuxiliaryValveControl 1;
+BA_ "NmStationAddress" BU_ AuxiliaryValveControl 34;
+BA_ "NmJ1939Function" BU_ AxleDrive1 8;
+BA_ "NmJ1939FunctionInstance" BU_ AxleDrive1 0;
+BA_ "NmStationAddress" BU_ AxleDrive1 9;
+BA_ "NmJ1939Function" BU_ AxleDrive2 8;
+BA_ "NmJ1939FunctionInstance" BU_ AxleDrive2 1;
+BA_ "NmStationAddress" BU_ AxleDrive2 10;
+BA_ "NmJ1939Function" BU_ AxleSteering 7;
+BA_ "NmStationAddress" BU_ AxleSteering 8;
+BA_ "NmJ1939Function" BU_ BodyController 26;
+BA_ "NmStationAddress" BU_ BodyController 33;
+BA_ "NmJ1939Function" BU_ BrakesDriveAxle1 11;
+BA_ "NmJ1939FunctionInstance" BU_ BrakesDriveAxle1 0;
+BA_ "NmStationAddress" BU_ BrakesDriveAxle1 13;
+BA_ "NmJ1939Function" BU_ BrakesDriveAxle2 11;
+BA_ "NmJ1939FunctionInstance" BU_ BrakesDriveAxle2 1;
+BA_ "NmStationAddress" BU_ BrakesDriveAxle2 14;
+BA_ "NmJ1939Function" BU_ BrakesSteerAxle 10;
+BA_ "NmStationAddress" BU_ BrakesSteerAxle 12;
+BA_ "NmJ1939Function" BU_ BrakesSystemController 9;
+BA_ "NmJ1939FunctionInstance" BU_ BrakesSystemController 0;
+BA_ "NmStationAddress" BU_ BrakesSystemController 11;
+BA_ "NmJ1939Function" BU_ CabController1 37;
+BA_ "NmJ1939FunctionInstance" BU_ CabController1 0;
+BA_ "NmStationAddress" BU_ CabController1 49;
+BA_ "NmJ1939Function" BU_ CabController2 37;
+BA_ "NmJ1939FunctionInstance" BU_ CabController2 1;
+BA_ "NmStationAddress" BU_ CabController2 50;
+BA_ "NmJ1939Function" BU_ CabDisplay1 60;
+BA_ "NmJ1939FunctionInstance" BU_ CabDisplay1 0;
+BA_ "NmStationAddress" BU_ CabDisplay1 40;
+BA_ "NmJ1939Function" BU_ CabDisplay2 60;
+BA_ "NmJ1939FunctionInstance" BU_ CabDisplay2 1;
+BA_ "NmStationAddress" BU_ CabDisplay2 84;
+BA_ "NmJ1939Function" BU_ ChassisController1 52;
+BA_ "NmJ1939FunctionInstance" BU_ ChassisController1 0;
+BA_ "NmStationAddress" BU_ ChassisController1 71;
+BA_ "NmJ1939Function" BU_ ChassisController2 52;
+BA_ "NmJ1939FunctionInstance" BU_ ChassisController2 1;
+BA_ "NmStationAddress" BU_ ChassisController2 72;
+BA_ "NmJ1939Function" BU_ ClimateControl1 21;
+BA_ "NmJ1939FunctionInstance" BU_ ClimateControl1 0;
+BA_ "NmStationAddress" BU_ ClimateControl1 25;
+BA_ "NmJ1939Function" BU_ ClimateControl2 21;
+BA_ "NmJ1939FunctionInstance" BU_ ClimateControl2 1;
+BA_ "NmStationAddress" BU_ ClimateControl2 58;
+BA_ "NmJ1939Function" BU_ ClutchUnit 49;
+BA_ "NmStationAddress" BU_ ClutchUnit 67;
+BA_ "NmJ1939Function" BU_ CommunicationUnitCellular 54;
+BA_ "NmStationAddress" BU_ CommunicationUnitCellular 74;
+BA_ "NmJ1939Function" BU_ CommunicationUnitRadio 56;
+BA_ "NmStationAddress" BU_ CommunicationUnitRadio 76;
+BA_ "NmJ1939Function" BU_ CommunicationUnitSatellite 55;
+BA_ "NmStationAddress" BU_ CommunicationUnitSatellite 75;
+BA_ "NmJ1939Function" BU_ CruiseControl 14;
+BA_ "NmStationAddress" BU_ CruiseControl 17;
+BA_ "NmJ1939Function" BU_ DieselPartFilterControl 69;
+BA_ "NmStationAddress" BU_ DieselPartFilterControl 85;
+BA_ "NmJ1939Function" BU_ ElectricalChargingSystem 53;
+BA_ "NmStationAddress" BU_ ElectricalChargingSystem 26;
+BA_ "NmJ1939Function" BU_ ElectricalSystem 67;
+BA_ "NmStationAddress" BU_ ElectricalSystem 30;
+BA_ "NmJ1939Function" BU_ EnduranceBrakingSystem 64;
+BA_ "NmStationAddress" BU_ EnduranceBrakingSystem 45;
+BA_ "NmJ1939Function" BU_ Engine1 0;
+BA_ "NmJ1939FunctionInstance" BU_ Engine1 0;
+BA_ "NmStationAddress" BU_ Engine1 0;
+BA_ "NmJ1939Function" BU_ Engine2 0;
+BA_ "NmJ1939FunctionInstance" BU_ Engine2 1;
+BA_ "NmStationAddress" BU_ Engine2 1;
+BA_ "NmJ1939Function" BU_ EngineValveControl 63;
+BA_ "NmStationAddress" BU_ EngineValveControl 70;
+BA_ "NmJ1939Function" BU_ ExhaustEmissionController 44;
+BA_ "NmStationAddress" BU_ ExhaustEmissionController 61;
+BA_ "NmJ1939Function" BU_ FanDriveController 58;
+BA_ "NmStationAddress" BU_ FanDriveController 78;
+BA_ "NmJ1939Function" BU_ FileServer 61;
+BA_ "NmStationAddress" BU_ FileServer 248;
+BA_ "NmJ1939Function" BU_ FuelSystem 15;
+BA_ "NmStationAddress" BU_ FuelSystem 18;
+BA_ "NmJ1939Function" BU_ HeadwayController 32;
+BA_ "NmStationAddress" BU_ HeadwayController 42;
+BA_ "NmStationAddress" BU_ HitchControl 35;
+BA_ "NmJ1939Function" BU_ HydraulicPumpController 34;
+BA_ "NmStationAddress" BU_ HydraulicPumpController 46;
+BA_ "NmJ1939Function" BU_ IgnitionController1 39;
+BA_ "NmJ1939FunctionInstance" BU_ IgnitionController1 0;
+BA_ "NmStationAddress" BU_ IgnitionController1 52;
+BA_ "NmJ1939Function" BU_ IgnitionController2 39;
+BA_ "NmJ1939FunctionInstance" BU_ IgnitionController2 1;
+BA_ "NmStationAddress" BU_ IgnitionController2 53;
+BA_ "NmJ1939Function" BU_ InformationSystem1 47;
+BA_ "NmStationAddress" BU_ InformationSystem1 65;
+BA_ "NmJ1939Function" BU_ InstrumentCluster 19;
+BA_ "NmStationAddress" BU_ InstrumentCluster 23;
+BA_ "NmJ1939Function" BU_ LightingOperatorControl 41;
+BA_ "NmStationAddress" BU_ LightingOperatorControl 55;
+BA_ "NmJ1939Function" BU_ ManagementComputer 30;
+BA_ "NmStationAddress" BU_ ManagementComputer 39;
+BA_ "NmJ1939Function" BU_ OffBoardDiagnosticTool1 129;
+BA_ "NmJ1939FunctionInstance" BU_ OffBoardDiagnosticTool1 0;
+BA_ "NmJ1939IndustryGroup" BU_ OffBoardDiagnosticTool1 0;
+BA_ "NmJ1939System" BU_ OffBoardDiagnosticTool1 0;
+BA_ "NmStationAddress" BU_ OffBoardDiagnosticTool1 249;
+BA_ "NmJ1939Function" BU_ OffBoardDiagnosticTool2 129;
+BA_ "NmJ1939FunctionInstance" BU_ OffBoardDiagnosticTool2 1;
+BA_ "NmJ1939IndustryGroup" BU_ OffBoardDiagnosticTool2 0;
+BA_ "NmJ1939System" BU_ OffBoardDiagnosticTool2 0;
+BA_ "NmStationAddress" BU_ OffBoardDiagnosticTool2 250;
+BA_ "NmJ1939Function" BU_ OffVehicleGateway 28;
+BA_ "NmStationAddress" BU_ OffVehicleGateway 37;
+BA_ "NmJ1939Function" BU_ OilSensor 46;
+BA_ "NmStationAddress" BU_ OilSensor 63;
+BA_ "NmJ1939Function" BU_ OnBoardDataLogger 130;
+BA_ "NmJ1939IndustryGroup" BU_ OnBoardDataLogger 0;
+BA_ "NmJ1939System" BU_ OnBoardDataLogger 0;
+BA_ "NmStationAddress" BU_ OnBoardDataLogger 251;
+BA_ "NmJ1939Function" BU_ OnBoardDiagnosticUnit 62;
+BA_ "NmStationAddress" BU_ OnBoardDiagnosticUnit 43;
+BA_ "NmJ1939Function" BU_ ParkingBrakeController 9;
+BA_ "NmJ1939FunctionInstance" BU_ ParkingBrakeController 1;
+BA_ "NmStationAddress" BU_ ParkingBrakeController 80;
+BA_ "NmJ1939Function" BU_ PneumaticSystemController 36;
+BA_ "NmStationAddress" BU_ PneumaticSystemController 48;
+BA_ "NmJ1939Function" BU_ PowerTakeOff 6;
+BA_ "NmStationAddress" BU_ PowerTakeOff 7;
+BA_ "NmJ1939Function" BU_ PowerTakeOffFront 27;
+BA_ "NmStationAddress" BU_ PowerTakeOffFront 36;
+BA_ "NmStationAddress" BU_ PowertrainControlModule 90;
+BA_ "NmJ1939Function" BU_ PropulsionBatteryCharger 31;
+BA_ "NmStationAddress" BU_ PropulsionBatteryCharger 73;
+BA_ "NmJ1939Function" BU_ RampControl 48;
+BA_ "NmStationAddress" BU_ RampControl 66;
+BA_ "NmJ1939Function" BU_ RearAxleSteeringController 16;
+BA_ "NmJ1939FunctionInstance" BU_ RearAxleSteeringController 1;
+BA_ "NmStationAddress" BU_ RearAxleSteeringController 56;
+BA_ "NmJ1939Function" BU_ RetarderDriveline 13;
+BA_ "NmStationAddress" BU_ RetarderDriveline 16;
+BA_ "NmJ1939Function" BU_ RetarderEngine 12;
+BA_ "NmStationAddress" BU_ RetarderEngine 15;
+BA_ "NmJ1939Function" BU_ RetarderExhaustEngine1 12;
+BA_ "NmJ1939FunctionInstance" BU_ RetarderExhaustEngine1 0;
+BA_ "NmStationAddress" BU_ RetarderExhaustEngine1 41;
+BA_ "NmJ1939Function" BU_ RetarderExhaustEngine2 12;
+BA_ "NmJ1939FunctionInstance" BU_ RetarderExhaustEngine2 1;
+BA_ "NmStationAddress" BU_ RetarderExhaustEngine2 44;
+BA_ "NmJ1939Function" BU_ SafetyRestraintSystem1 132;
+BA_ "NmJ1939FunctionInstance" BU_ SafetyRestraintSystem1 0;
+BA_ "NmJ1939IndustryGroup" BU_ SafetyRestraintSystem1 0;
+BA_ "NmJ1939System" BU_ SafetyRestraintSystem1 0;
+BA_ "NmStationAddress" BU_ SafetyRestraintSystem1 83;
+BA_ "NmJ1939Function" BU_ SafetyRestraintSystem2 132;
+BA_ "NmJ1939FunctionInstance" BU_ SafetyRestraintSystem2 1;
+BA_ "NmJ1939IndustryGroup" BU_ SafetyRestraintSystem2 0;
+BA_ "NmJ1939System" BU_ SafetyRestraintSystem2 0;
+BA_ "NmStationAddress" BU_ SafetyRestraintSystem2 88;
+BA_ "NmJ1939Function" BU_ SeatController1 40;
+BA_ "NmJ1939FunctionInstance" BU_ SeatController1 0;
+BA_ "NmStationAddress" BU_ SeatController1 54;
+BA_ "NmJ1939Function" BU_ SeatController2 40;
+BA_ "NmJ1939FunctionInstance" BU_ SeatController2 1;
+BA_ "NmStationAddress" BU_ SeatController2 79;
+BA_ "NmJ1939Function" BU_ ShiftConsolePrimary 5;
+BA_ "NmJ1939FunctionInstance" BU_ ShiftConsolePrimary 0;
+BA_ "NmStationAddress" BU_ ShiftConsolePrimary 5;
+BA_ "NmJ1939Function" BU_ ShiftConsoleSecondary 5;
+BA_ "NmJ1939FunctionInstance" BU_ ShiftConsoleSecondary 1;
+BA_ "NmStationAddress" BU_ ShiftConsoleSecondary 6;
+BA_ "NmJ1939Function" BU_ StarterSystem 59;
+BA_ "NmStationAddress" BU_ StarterSystem 31;
+BA_ "NmJ1939Function" BU_ SteeringColumnUnit 57;
+BA_ "NmStationAddress" BU_ SteeringColumnUnit 77;
+BA_ "NmJ1939Function" BU_ SteeringController 16;
+BA_ "NmJ1939FunctionInstance" BU_ SteeringController 0;
+BA_ "NmStationAddress" BU_ SteeringController 19;
+BA_ "NmJ1939Function" BU_ SuspensionDriveAxle1 18;
+BA_ "NmJ1939FunctionInstance" BU_ SuspensionDriveAxle1 0;
+BA_ "NmStationAddress" BU_ SuspensionDriveAxle1 21;
+BA_ "NmJ1939Function" BU_ SuspensionDriveAxle2 18;
+BA_ "NmJ1939FunctionInstance" BU_ SuspensionDriveAxle2 1;
+BA_ "NmStationAddress" BU_ SuspensionDriveAxle2 22;
+BA_ "NmJ1939Function" BU_ SuspensionSteerAxle 17;
+BA_ "NmStationAddress" BU_ SuspensionSteerAxle 20;
+BA_ "NmJ1939Function" BU_ SuspensionSystemController1 35;
+BA_ "NmJ1939FunctionInstance" BU_ SuspensionSystemController1 0;
+BA_ "NmStationAddress" BU_ SuspensionSystemController1 47;
+BA_ "NmJ1939Function" BU_ SuspensionSystemController2 35;
+BA_ "NmJ1939FunctionInstance" BU_ SuspensionSystemController2 1;
+BA_ "NmStationAddress" BU_ SuspensionSystemController2 64;
+BA_ "NmJ1939Function" BU_ TirePressureController 38;
+BA_ "NmStationAddress" BU_ TirePressureController 51;
+BA_ "NmJ1939Function" BU_ TractorTrailerBridge1 25;
+BA_ "NmStationAddress" BU_ TractorTrailerBridge1 32;
+BA_ "NmJ1939Function" BU_ Transmission1 3;
+BA_ "NmJ1939FunctionInstance" BU_ Transmission1 0;
+BA_ "NmStationAddress" BU_ Transmission1 3;
+BA_ "NmJ1939Function" BU_ Transmission2 3;
+BA_ "NmJ1939FunctionInstance" BU_ Transmission2 1;
+BA_ "NmStationAddress" BU_ Transmission2 4;
+BA_ "NmJ1939Function" BU_ TransmissionDisplay1 43;
+BA_ "NmJ1939FunctionInstance" BU_ TransmissionDisplay1 0;
+BA_ "NmStationAddress" BU_ TransmissionDisplay1 59;
+BA_ "NmJ1939Function" BU_ TransmissionDisplay2 43;
+BA_ "NmJ1939FunctionInstance" BU_ TransmissionDisplay2 1;
+BA_ "NmStationAddress" BU_ TransmissionDisplay2 60;
+BA_ "NmJ1939Function" BU_ TripRecorder 20;
+BA_ "NmStationAddress" BU_ TripRecorder 24;
+BA_ "NmJ1939Function" BU_ Turbocharger 133;
+BA_ "NmJ1939IndustryGroup" BU_ Turbocharger 0;
+BA_ "NmJ1939System" BU_ Turbocharger 0;
+BA_ "NmStationAddress" BU_ Turbocharger 2;
+BA_ "NmJ1939Function" BU_ VehicleDynamicStability 45;
+BA_ "NmStationAddress" BU_ VehicleDynamicStability 62;
+BA_ "NmJ1939Function" BU_ VehicleNavigation 23;
+BA_ "NmStationAddress" BU_ VehicleNavigation 28;
+BA_ "NmJ1939Function" BU_ VehicleSecurity 24;
+BA_ "NmStationAddress" BU_ VehicleSecurity 29;
+BA_ "NmJ1939Function" BU_ VirtualTerminal 29;
+BA_ "NmStationAddress" BU_ VirtualTerminal 38;
+BA_ "NmJ1939Function" BU_ WaterPumpController 42;
+BA_ "NmStationAddress" BU_ WaterPumpController 57;
+BA_ "GenMsgSendType" BO_ 2565799678 8;
+BA_ "VFrameFormat" BO_ 2565799678 3;
+BA_ "GenMsgRequestable" BO_ 2565406462 0;
+BA_ "GenMsgSendType" BO_ 2565406462 8;
+BA_ "VFrameFormat" BO_ 2565406462 3;
+BA_ "GenMsgSendType" BO_ 2566834942 8;
+BA_ "TpJ1939VarDlc" BO_ 2566834942 1;
+BA_ "VFrameFormat" BO_ 2566834942 3;
+BA_ "GenMsgSendType" BO_ 2566835198 8;
+BA_ "TpJ1939VarDlc" BO_ 2566835198 1;
+BA_ "VFrameFormat" BO_ 2566835198 3;
+BA_ "GenMsgSendType" BO_ 2566835454 8;
+BA_ "VFrameFormat" BO_ 2566835454 3;
+BA_ "GenMsgSendType" BO_ 2566837246 8;
+BA_ "VFrameFormat" BO_ 2566837246 3;
+BA_ "GenMsgSendType" BO_ 2564816638 8;
+BA_ "VFrameFormat" BO_ 2564816638 3;
+BA_ "TpJ1939VarDlc" BO_ 2560884478 1;
+BA_ "VFrameFormat" BO_ 2560884478 3;
+BA_ "TpJ1939VarDlc" BO_ 2560818942 1;
+BA_ "VFrameFormat" BO_ 2560818942 3;
+BA_ "GenMsgRequestable" BO_ 2565537534 0;
+BA_ "GenMsgSendType" BO_ 2565537534 8;
+BA_ "VFrameFormat" BO_ 2565537534 3;
+BA_ "GenMsgRequestable" BO_ 2565668606 0;
+BA_ "GenMsgSendType" BO_ 2565668606 8;
+BA_ "VFrameFormat" BO_ 2565668606 3;
+BA_ "GenMsgRequestable" BO_ 2565603070 0;
+BA_ "GenMsgSendType" BO_ 2565603070 8;
+BA_ "VFrameFormat" BO_ 2565603070 3;
+BA_ "SPN" SG_ 2565799678 IdentityNumber 2837;
+BA_ "SPN" SG_ 2565799678 ManufacturerCode 2838;
+BA_ "SPN" SG_ 2565799678 ECUInstance 2840;
+BA_ "SigType" SG_ 2565799678 ECUInstance 0;
+BA_ "SPN" SG_ 2565799678 FunctionInstance 2839;
+BA_ "SigType" SG_ 2565799678 FunctionInstance 0;
+BA_ "SPN" SG_ 2565799678 Function 2841;
+BA_ "SigType" SG_ 2565799678 VehicleSystem 0;
+BA_ "SigType" SG_ 2565799678 VehicleSystem1 0;
+BA_ "SigType" SG_ 2565799678 VehicleSystem2 0;
+BA_ "SigType" SG_ 2565799678 VehicleSystem3 0;
+BA_ "SigType" SG_ 2565799678 VehicleSystem4 0;
+BA_ "SigType" SG_ 2565799678 VehicleSystem5 0;
+BA_ "SPN" SG_ 2565799678 VehicleSystemInstance 2843;
+BA_ "SigType" SG_ 2565799678 VehicleSystemInstance 0;
+BA_ "SPN" SG_ 2565799678 IndustryGroup 2846;
+BA_ "SigType" SG_ 2565799678 IndustryGroup 0;
+BA_ "SPN" SG_ 2565799678 ArbitraryAddressCapable 2844;
+BA_ "SigType" SG_ 2565799678 ArbitraryAddressCapable 0;
+BA_ "SPN" SG_ 2565406462 ControlByte_ACKM 2541;
+BA_ "SigType" SG_ 2565406462 ControlByte_ACKM 6;
+BA_ "SigType" SG_ 2565406462 GroupFunctionValue 1;
+BA_ "SPN" SG_ 2565406462 AddressAcknowledged 3290;
+BA_ "SPN" SG_ 2565406462 AddressNACK 3291;
+BA_ "SPN" SG_ 2565406462 AddressAccessDenied 3292;
+BA_ "SPN" SG_ 2565406462 AddressBusy 3293;
+BA_ "SPN" SG_ 2565406462 ParameterGroupNumber 2547;
+BA_ "SigType" SG_ 2565406462 ParameterGroupNumber 6;
+BA_ "SPN" SG_ 2566834942 PLStatus 987;
+BA_ "SigType" SG_ 2566834942 PLStatus 5;
+BA_ "SPN" SG_ 2566834942 AWLStatus 624;
+BA_ "SigType" SG_ 2566834942 AWLStatus 5;
+BA_ "SPN" SG_ 2566834942 RSLState 623;
+BA_ "SigType" SG_ 2566834942 RSLState 4;
+BA_ "SPN" SG_ 2566834942 MILStatus 1213;
+BA_ "SigType" SG_ 2566834942 MILStatus 5;
+BA_ "SPN" SG_ 2566834942 FlashProtectLamp 3041;
+BA_ "SigType" SG_ 2566834942 FlashProtectLamp 5;
+BA_ "SPN" SG_ 2566834942 FlashAmberWarningLamp 3040;
+BA_ "SigType" SG_ 2566834942 FlashAmberWarningLamp 5;
+BA_ "SPN" SG_ 2566834942 FlashRedStopLamp 3039;
+BA_ "SigType" SG_ 2566834942 FlashRedStopLamp 5;
+BA_ "SPN" SG_ 2566834942 FlashMalfuncIndicatorLamp 3038;
+BA_ "SigType" SG_ 2566834942 FlashMalfuncIndicatorLamp 5;
+BA_ "SigType" SG_ 2566834942 DTC1 7;
+BA_ "SigType" SG_ 2566834942 DTC2 7;
+BA_ "SigType" SG_ 2566834942 DTC3 7;
+BA_ "SigType" SG_ 2566834942 DTC4 7;
+BA_ "SigType" SG_ 2566834942 DTC5 7;
+BA_ "SPN" SG_ 2566835198 PLStatus 987;
+BA_ "SigType" SG_ 2566835198 PLStatus 5;
+BA_ "SPN" SG_ 2566835198 AWLStatus 624;
+BA_ "SigType" SG_ 2566835198 AWLStatus 5;
+BA_ "SPN" SG_ 2566835198 RSLState 623;
+BA_ "SigType" SG_ 2566835198 RSLState 4;
+BA_ "SPN" SG_ 2566835198 MILStatus 1213;
+BA_ "SigType" SG_ 2566835198 MILStatus 5;
+BA_ "SPN" SG_ 2566835198 FlashProtectLamp 3041;
+BA_ "SigType" SG_ 2566835198 FlashProtectLamp 5;
+BA_ "SPN" SG_ 2566835198 FlashAmberWarningLamp 3040;
+BA_ "SigType" SG_ 2566835198 FlashAmberWarningLamp 5;
+BA_ "SPN" SG_ 2566835198 FlashRedStopLamp 3039;
+BA_ "SigType" SG_ 2566835198 FlashRedStopLamp 5;
+BA_ "SPN" SG_ 2566835198 FlashMalfuncIndicatorLamp 3038;
+BA_ "SigType" SG_ 2566835198 FlashMalfuncIndicatorLamp 5;
+BA_ "SigType" SG_ 2566835198 DTC1 7;
+BA_ "SigType" SG_ 2566835198 DTC2 7;
+BA_ "SigType" SG_ 2566835198 DTC3 7;
+BA_ "SigType" SG_ 2566835198 DTC4 7;
+BA_ "SigType" SG_ 2566835198 DTC5 7;
+BA_ "SPN" SG_ 2564816638 J1939Network1 639;
+BA_ "SigType" SG_ 2564816638 J1939Network1 5;
+BA_ "SPN" SG_ 2564816638 SAE_J1922 622;
+BA_ "SigType" SG_ 2564816638 SAE_J1922 5;
+BA_ "SPN" SG_ 2564816638 SAE_J1587 608;
+BA_ "SigType" SG_ 2564816638 SAE_J1587 5;
+BA_ "SPN" SG_ 2564816638 CurrentDataLink 1230;
+BA_ "SigType" SG_ 2564816638 CurrentDataLink 5;
+BA_ "SPN" SG_ 2564816638 ManufacturerSpecificPort 1234;
+BA_ "SigType" SG_ 2564816638 ManufacturerSpecificPort 5;
+BA_ "SPN" SG_ 2564816638 SAE_J1850 1233;
+BA_ "SigType" SG_ 2564816638 SAE_J1850 5;
+BA_ "SPN" SG_ 2564816638 ISO9141 1232;
+BA_ "SigType" SG_ 2564816638 ISO9141 5;
+BA_ "SPN" SG_ 2564816638 J1939Network2 1231;
+BA_ "SigType" SG_ 2564816638 J1939Network2 5;
+BA_ "SPN" SG_ 2564816638 J1939Network4 1668;
+BA_ "SigType" SG_ 2564816638 J1939Network4 5;
+BA_ "SPN" SG_ 2564816638 ProprietaryNetwork2 5588;
+BA_ "SigType" SG_ 2564816638 ProprietaryNetwork2 5;
+BA_ "SPN" SG_ 2564816638 ProprietaryNetwork1 625;
+BA_ "SigType" SG_ 2564816638 ProprietaryNetwork1 5;
+BA_ "SPN" SG_ 2564816638 J1939Network3 1235;
+BA_ "SigType" SG_ 2564816638 J1939Network3 5;
+BA_ "SPN" SG_ 2564816638 SuspendSignal 2618;
+BA_ "SigType" SG_ 2564816638 SuspendSignal 0;
+BA_ "SPN" SG_ 2564816638 HoldSignal 1236;
+BA_ "SigType" SG_ 2564816638 HoldSignal 0;
+BA_ "SPN" SG_ 2564816638 SuspendDuration 2619;
+BA_ "SigType" SG_ 2564816638 SuspendDuration 1;
+BA_ "SigType" SG_ 2560884478 DTC1 7;
+BA_ "SPN" SG_ 2560884478 DTCProtectLampSupportStatus 4116;
+BA_ "SigType" SG_ 2560884478 DTCProtectLampSupportStatus 4;
+BA_ "SPN" SG_ 2560884478 DTCWarnLampSupportStatus 4115;
+BA_ "SigType" SG_ 2560884478 DTCWarnLampSupportStatus 4;
+BA_ "SPN" SG_ 2560884478 DTCStopLampSupportStatus 4114;
+BA_ "SigType" SG_ 2560884478 DTCStopLampSupportStatus 4;
+BA_ "SPN" SG_ 2560884478 DTCMilSupportStatus 4113;
+BA_ "SigType" SG_ 2560884478 DTCMilSupportStatus 0;
+BA_ "SPN" SG_ 2560884478 DTCProtectLampSupportFlash 4120;
+BA_ "SigType" SG_ 2560884478 DTCProtectLampSupportFlash 4;
+BA_ "SPN" SG_ 2560884478 DTCWarnLampSupportFlash 4119;
+BA_ "SigType" SG_ 2560884478 DTCWarnLampSupportFlash 4;
+BA_ "SPN" SG_ 2560884478 DTCStopLampSupportFlash 4118;
+BA_ "SigType" SG_ 2560884478 DTCStopLampSupportFlash 4;
+BA_ "SPN" SG_ 2560884478 DTCMilSupportFlash 4117;
+BA_ "SigType" SG_ 2560884478 DTCMilSupportFlash 0;
+BA_ "SPN" SG_ 2560818942 SPN1 1214;
+BA_ "SPN" SG_ 2560818942 FailureModeIdentifier1 1215;
+BA_ "SigType" SG_ 2560818942 FailureModeIdentifier1 0;
+BA_ "SigType" SG_ 2560818942 SPN1High 0;
+BA_ "SPN" SG_ 2560818942 DTCTotalActiveTime 4121;
+BA_ "SigType" SG_ 2560818942 DTCTotalActiveTime 1;
+BA_ "SPN" SG_ 2560818942 DTCTotalPrevActiveTime 4122;
+BA_ "SigType" SG_ 2560818942 DTCTotalPrevActiveTime 1;
+BA_ "SPN" SG_ 2560818942 DTCTimeUntilDerate 4123;
+BA_ "SigType" SG_ 2560818942 DTCTimeUntilDerate 1;
+BA_ "SPN" SG_ 2565537534 ParameterGroupNumber 2540;
+BA_ "SigType" SG_ 2565537534 ParameterGroupNumber 6;
+BA_ "SPN" SG_ 2565668606 ControlByte 2556;
+BA_ "SPN" SG_ 2565668606 TotalMessageSize 2557;
+BA_ "SigType" SG_ 2565668606 TotalMessageSize 1;
+BA_ "SPN" SG_ 2565668606 NumOfPacketsThatCanBeSent 2561;
+BA_ "SPN" SG_ 2565668606 TotalMessageSizeEoMA 2564;
+BA_ "SigType" SG_ 2565668606 TotalMessageSizeEoMA 1;
+BA_ "SPN" SG_ 2565668606 TotalMessageSizeBAM 2567;
+BA_ "SigType" SG_ 2565668606 TotalMessageSizeBAM 1;
+BA_ "SPN" SG_ 2565668606 ConnectionAbortReason 2570;
+BA_ "SPN" SG_ 2565668606 NextPacketNumberToBeSent 2562;
+BA_ "SPN" SG_ 2565668606 TotalNumberOfPackets 2558;
+BA_ "SPN" SG_ 2565668606 TotalNumberOfPacketsEoMA 2565;
+BA_ "SPN" SG_ 2565668606 TotalNumberOfPacketsBAM 2568;
+BA_ "SPN" SG_ 2565668606 MaximumNumberOfPackets 2559;
+BA_ "SPN" SG_ 2565668606 PGNumber 2560;
+BA_ "SigType" SG_ 2565668606 PGNumber 6;
+BA_ "SPN" SG_ 2565603070 SequenceNumber 2572;
+VAL_ 2565799678 ManufacturerCode 0 "Reserved" 806 "Charge" ;
+VAL_ 2565799678 Function 0 "Engine" 1 "Auxiliary Power Unit (APU)" 2 "Electric Propulsion Control" 3 "Transmission" 4 "Battery Pack Monitor" 5 "Shift Control/Console" 6 "Power TakeOff - (Main or Rear)" 7 "Axle - Steering" 8 "Axle - Drive" 9 "Brakes - System Controller" 10 "Brakes - Steer Axle" 11 "Brakes - Drive Axle" 12 "Retarder - Engine" 13 "Retarder - Driveline" 14 "Cruise Control" 15 "Fuel System" 16 "Steering Controller" 17 "Suspension - Steer Axle" 18 "Suspension - Drive Axle" 19 "Instrument Cluster" 20 "Trip Recorder" 21 "Cab Climate Control" 22 "Aerodynamic Control" 23 "Vehicle Navigation" 24 "Vehicle Security" 25 "Network Interconnect ECU" 26 "Body Controller" 27 "Power TakeOff (Sec or Front)" 28 "Off Vehicle Gateway" 29 "Virtual Terminal (in cab)" 30 "Management Computer" 31 "Propulsion Battery Charger" 32 "Headway Controller" 33 "System Monitor" 34 "Hydraulic Pump Controller" 35 "Suspension - System Controller" 36 "Pneumatic - System Controller" 37 "Cab Controller" 38 "Tire Pressure Control" 39 "Ignition Control Module" 40 "Seat Control" 41 "Lighting - Operator Controls" 42 "Water Pump Control" 43 "Transmission Display" 44 "Exhaust Emission Control" 45 "Veh Dynamic Stability Cntl" 46 "Oil Sensor Unit" 47 "Information System Controller" 48 "Ramp Control" 49 "Clutch/Converter Control" 50 "Auxiliary Heater" 51 "FwdLooking Collision Warn Sys" 52 "Chassis Controller" 53 "Alternator/Charging System" 54 "Communications Unit, Cellular" 55 "Communications Unit, Satellite" 56 "Communications Unit, Radio" 57 "Steering Column Unit" 58 "Fan Drive Control" 59 "Starter" 60 "Cab Display" 61 "File Server/Printer" 62 "On-Board Diagnostic Unit" 63 "Engine Valve Controller" 64 "Endurance Braking" 65 "Gas Flow Measurement" 66 "I/O Controller" 67 "Electrical System Controller" 68 "AftertreatmentSystemGasMeasur" 69 "EngEmissionAftertreatementSys" 70 "Auxiliary Regeneration Device" 71 "Transfer Case Control" 72 "Coolant Valve Controller" 73 "Rollover Detection Control" 74 "Lubrication System" 75 "Supplemental Fan" 76 "Temperature Sensor" 77 "Fuel Properties Sensor" 78 "Fire Suppression System" 79 "Power Systems Manager" 80 "Electric Powertrain" 81 "Reserved" 82 "Reserved" 83 "Reserved" 84 "Reserved" 85 "Reserved" 86 "Reserved" 87 "Reserved" 88 "Reserved" 89 "Reserved" 90 "Reserved" 91 "Reserved" 92 "Reserved" 93 "Reserved" 94 "Reserved" 95 "Reserved" 96 "Reserved" 97 "Reserved" 98 "Reserved" 99 "Reserved" 100 "Reserved" 101 "Reserved" 102 "Reserved" 103 "Reserved" 104 "Reserved" 105 "Reserved" 106 "Reserved" 107 "Reserved" 108 "Reserved" 109 "Reserved" 110 "Reserved" 111 "Reserved" 112 "Reserved" 113 "Reserved" 114 "Reserved" 115 "Reserved" 116 "Reserved" 117 "Reserved" 118 "Reserved" 119 "Reserved" 120 "Reserved" 121 "Reserved" 122 "Reserved" 123 "Reserved" 124 "Reserved" 125 "Reserved" 126 "Reserved" 127 "Reserved" 255 "Not Available" ;
+VAL_ 2565799678 VehicleSystem 0 "Non-specific System" 127 "Not Available" ;
+VAL_ 2565799678 VehicleSystem1 0 "Non-specific System" 1 "Tractor" 2 "Trailer" 127 "Not Available" ;
+VAL_ 2565799678 VehicleSystem2 0 "Non-specific System" 1 "Tractor" 2 "Tillage" 3 "Secondary Tillage" 4 "Planters/Seeders" 5 "Fertilizers" 6 "Sprayers" 7 "Harvesters" 8 "Root Harvesters" 9 "Forage" 10 "Irrigation" 11 "Transport/Trailer" 12 "Farm Yard Operations" 13 "Powered Auxiliary Device" 14 "Special Crops" 15 "Earth Work" 16 "Skidder" 17 "Sensor Systems" 19 "Timber Harvesters" 20 "Forwarders" 21 "Timber loaders" 22 "Timber Processing Machines" 23 "Mulchers" 24 "Utility Vehicles" 25 "Slurry Applicators" 127 "Not Available" ;
+VAL_ 2565799678 VehicleSystem3 0 "Non-specific System" 1 "Skid Steer Loader" 2 "Articulated Dump Truck" 3 "Backhoe" 4 "Crawler" 5 "Excavator" 6 "Forklift" 7 "Four Wheel Drive Loader" 8 "Grader" 127 "Not Available" ;
+VAL_ 2565799678 VehicleSystem4 0 "Non-specific System" 10 "System Tools" 20 "Safety Systems" 25 "Inter/Intranetwork Device" 30 "Electrical Distribution" 35 "Electrical Generation" 40 "SteeringAndControlSurfaces" 50 "Propulsion" 60 "Navigation" 70 "Communications" 75 "Sensor Comm Interface" 80 "Inst/General Sys (deprecate)" 85 "External Environment" 90 "Internal Environment" 100 "Deck, Cargo and Fishing Eqt" 120 "Display" 125 "Entertainment" 127 "Not Available" ;
+VAL_ 2565799678 VehicleSystem5 0 "Ind. Process Cntl Stationary" 127 "Not Available" ;
+VAL_ 2565799678 IndustryGroup 0 "Global" 1 "On-Highway" 2 "Agricultural and Forestry" 3 "Construction" 4 "Marine" 5 "IndustrialProcessCtrlStationary" 6 "Reserved for SAE" 7 "Reserved for SAE" ;
+VAL_ 2565406462 ControlByte_ACKM 0 "Positive Acknowledgment" 1 "Negative Acknowledgment" 2 "Access Denied" 3 "Cannot Respond" ;
+VAL_ 2566834942 PLStatus 0 "Lamp Off" 1 "Lamp On" 2 "Reserved" 3 "Not available" ;
+VAL_ 2566834942 AWLStatus 0 "Lamp Off" 1 "Lamp On" 2 "Reserved" 3 "Not available" ;
+VAL_ 2566834942 RSLState 0 "Lamp Off" 1 "Lamp On" 2 "Reserved" 3 "Not available" ;
+VAL_ 2566834942 MILStatus 0 "Lamp Off" 1 "Lamp On" 2 "Short MIL for WWH OBD" 3 "Not available" ;
+VAL_ 2566834942 FlashProtectLamp 0 "Slow Flash" 1 "Fast Flash" 2 "Reserved" 3 "Unavailable / Do Not Flash" ;
+VAL_ 2566834942 FlashAmberWarningLamp 0 "Slow Flash" 1 "Fast Flash" 2 "Reserved" 3 "Unavailable / Do Not Flash" ;
+VAL_ 2566834942 FlashRedStopLamp 0 "Slow Flash" 1 "Fast Flash" 2 "Reserved" 3 "Unavailable / Do Not Flash" ;
+VAL_ 2566834942 FlashMalfuncIndicatorLamp 0 "Slow Flash" 1 "Fast Flash" 2 "Class C DTC  " 3 "Unavailable / Do Not Flash" ;
+VAL_ 2566835198 PLStatus 0 "Lamp Off" 1 "Lamp On" 2 "Reserved" 3 "Not available" ;
+VAL_ 2566835198 AWLStatus 0 "Lamp Off" 1 "Lamp On" 2 "Reserved" 3 "Not available" ;
+VAL_ 2566835198 RSLState 0 "Lamp Off" 1 "Lamp On" 2 "Reserved" 3 "Not available" ;
+VAL_ 2566835198 MILStatus 0 "Lamp Off" 1 "Lamp On" 2 "Short MIL for WWH OBD" 3 "Not available" ;
+VAL_ 2566835198 FlashProtectLamp 0 "Slow Flash" 1 "Fast Flash" 2 "Reserved" 3 "Unavailable / Do Not Flash" ;
+VAL_ 2566835198 FlashAmberWarningLamp 0 "Slow Flash" 1 "Fast Flash" 2 "Reserved" 3 "Unavailable / Do Not Flash" ;
+VAL_ 2566835198 FlashRedStopLamp 0 "Slow Flash" 1 "Fast Flash" 2 "Reserved" 3 "Unavailable / Do Not Flash" ;
+VAL_ 2566835198 FlashMalfuncIndicatorLamp 0 "Slow Flash" 1 "Fast Flash" 2 "Class C DTC  " 3 "Unavailable / Do Not Flash" ;
+VAL_ 2564816638 J1939Network1 0 "Stop Broadcast" 1 "Start Broadcast" 2 "Reserved" 3 "Don't Care/take no action" ;
+VAL_ 2564816638 SAE_J1922 0 "Stop Broadcast" 1 "Start Broadcast" 2 "Reserved" 3 "Don't Care/take no action" ;
+VAL_ 2564816638 SAE_J1587 0 "Stop Broadcast" 1 "Start Broadcast" 2 "Reserved" 3 "Don't Care/take no action" ;
+VAL_ 2564816638 CurrentDataLink 0 "Stop Broadcast" 1 "Start Broadcast" 2 "Reserved" 3 "Don't Care/take no action" ;
+VAL_ 2564816638 ManufacturerSpecificPort 0 "Stop Broadcast" 1 "Start Broadcast" 2 "Reserved" 3 "Don't Care/take no action" ;
+VAL_ 2564816638 SAE_J1850 0 "Stop Broadcast" 1 "Start Broadcast" 2 "Reserved" 3 "Don't Care/take no action" ;
+VAL_ 2564816638 ISO9141 0 "Stop Broadcast" 1 "Start Broadcast" 2 "Reserved" 3 "Don't Care/take no action" ;
+VAL_ 2564816638 J1939Network2 0 "Stop Broadcast" 1 "Start Broadcast" 2 "Reserved" 3 "Don't Care/take no action" ;
+VAL_ 2564816638 J1939Network4 0 "Stop Broadcast" 1 "Start Broadcast" 2 "Reserved" 3 "Don't Care/take no action" ;
+VAL_ 2564816638 ProprietaryNetwork2 0 "Stop Broadcast" 1 "Start Broadcast" 2 "Reserved" 3 "Don't Care/take no action" ;
+VAL_ 2564816638 ProprietaryNetwork1 0 "Stop Broadcast" 1 "Start Broadcast" 2 "Reserved" 3 "Don't Care/take no action" ;
+VAL_ 2564816638 J1939Network3 0 "Stop Broadcast" 1 "Start Broadcast" 2 "Reserved" 3 "Don't Care/take no action" ;
+VAL_ 2564816638 SuspendSignal 0 "Indefinite suspension of all broadcasts" 1 "Indefinite suspension of some messages" 2 "Temporary suspension of all broadcasts" 3 "Temporary suspension of some messages" 14 "Resuming normal broadcast pattern" 15 "Not Available" ;
+VAL_ 2564816638 HoldSignal 0 "All Devices" 1 "Devices whose broadcast state has been modified" 15 "Not Avai l abl e" ;
+VAL_ 2560884478 DTCProtectLampSupportStatus 0 "LampOff" 1 "LampOn" 2 "Reserved" 3 "Unavailable" ;
+VAL_ 2560884478 DTCWarnLampSupportStatus 0 "LampOff" 1 "LampOn" 2 "Reserved" 3 "Unavailable" ;
+VAL_ 2560884478 DTCStopLampSupportStatus 0 "LampOff" 1 "LampOn" 2 "Reserved" 3 "Unavailable" ;
+VAL_ 2560884478 DTCMilSupportStatus 0 "LampOff" 1 "LampOn" 2 "ShortMI" 3 "Unavailable" ;
+VAL_ 2560884478 DTCProtectLampSupportFlash 0 "SlowFlash" 1 "FastFlash" 2 "Reserved" 3 "Unavailable" ;
+VAL_ 2560884478 DTCWarnLampSupportFlash 0 "SlowFlash" 1 "FastFlash" 2 "Reserved" 3 "Unavailable" ;
+VAL_ 2560884478 DTCStopLampSupportFlash 0 "SlowFlash" 1 "FastFlash" 2 "Reserved" 3 "Unavailable" ;
+VAL_ 2560884478 DTCMilSupportFlash 0 "SlowFlash" 1 "FastFlash" 2 "Class_C_DTC" 3 "Unavailable" ;
+VAL_ 2560818942 FailureModeIdentifier1 0 "Above normal (most severe)" 1 "Below normal (most severe)" 2 "Data erratic" 3 "Voltage above normal" 4 "Voltage below normal" 5 "Current below normal" 6 "Current above normal" 7 "Mechanical system not responding" 8 "Abnormal frequency" 9 "Abnormal update rate" 10 "Abnormal rate of change" 11 "Root cause not known" 12 "Bad intelligent device" 13 "Out of calibration" 14 "Special intstructions" 15 "Above normal (least severe)" 16 "Above normal (moderately severe)" 17 "Below normal (least severe)" 18 "Below normal (moderately severe)" 19 "Received network data in error" 31 "Not available" ;
+VAL_ 2565668606 ControlByte 0 "Reserved_0" 16 "RTS" 17 "CTS" 19 "EoMA" 20 "ERTS" 21 "ECTS" 22 "EDPO" 23 "EEoMACK" 24 "EAbort" 32 "BAM" 255 "Abort" ;
+VAL_ 2565668606 PGNumber 0 "Zero" 255 "NotAvailable" 16646143 "Dummy" ;
+

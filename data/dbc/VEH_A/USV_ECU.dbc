@@ -1,0 +1,1686 @@
+VERSION "ValeoSDI"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Tester SDI
+
+
+BO_ 1977 Diag_Response: 8 SDI
+ SG_ Diag_Response_Byte7 : 56|8@1+ (1,0) [0|0] ""  Tester
+ SG_ Diag_Response_Byte6 : 48|8@1+ (1,0) [0|0] ""  Tester
+ SG_ Diag_Response_Byte5 : 40|8@1+ (1,0) [0|0] ""  Tester
+ SG_ Diag_Response_Byte4 : 32|8@1+ (1,0) [0|0] ""  Tester
+ SG_ Diag_Response_Byte3 : 24|8@1+ (1,0) [0|0] ""  Tester
+ SG_ Diag_Response_Byte2 : 16|8@1+ (1,0) [0|0] ""  Tester
+ SG_ Diag_Response_Byte1 : 8|8@1+ (1,0) [0|0] ""  Tester
+ SG_ Diag_Response_Byte0 : 0|8@1+ (1,0) [0|0] ""  Tester
+
+BO_ 1969 Diag_Request: 8 Tester
+ SG_ Diag_Request_Byte7 : 56|8@1+ (1,0) [0|0] ""  SDI
+ SG_ Diag_Request_Byte6 : 48|8@1+ (1,0) [0|0] ""  SDI
+ SG_ Diag_Request_Byte5 : 40|8@1+ (1,0) [0|0] ""  SDI
+ SG_ Diag_Request_Byte4 : 32|8@1+ (1,0) [0|0] ""  SDI
+ SG_ Diag_Request_Byte3 : 24|8@1+ (1,0) [0|0] ""  SDI
+ SG_ Diag_Request_Byte2 : 16|8@1+ (1,0) [0|0] ""  SDI
+ SG_ Diag_Request_Byte1 : 8|8@1+ (1,0) [0|0] ""  SDI
+ SG_ Diag_Request_Byte0 : 0|8@1+ (1,0) [0|0] ""  SDI
+
+BO_ 628 SDIInput5: 8 Tester
+ SG_ SDIInput5MsgCtr : 63|8@0+ (1,0) [0|255] ""  SDI
+ SG_ IgnitionSts : 39|8@0+ (1,0) [0|255] ""  SDI
+ SG_ DoorReSts : 21|2@0+ (1,0) [0|0] ""  SDI
+ SG_ DoorFrntRiSts : 19|2@0+ (1,0) [0|0] ""  SDI
+ SG_ DoorFrntLeSts : 17|2@0+ (1,0) [0|0] ""  SDI
+ SG_ TrlrAttchd : 23|2@0+ (1,0) [0|3] ""  SDI
+ SG_ AmbAirT : 7|10@0+ (0.1,-51.1) [-51.1|51.2] "°C"  SDI
+
+BO_ 627 SDIInput4: 8 Tester
+ SG_ SDIInput4MsgCtr : 63|8@0+ (1,0) [0|255] ""  SDI
+ SG_ VehYawRate : 39|16@0+ (0.005,-163.83) [-163.83|163.845] "deg/s"  SDI
+ SG_ VehALgt : 7|16@0+ (0.002,-65.532) [-65.532|65.538] "m/s^2"  SDI
+ SG_ VehALat : 23|16@0+ (0.002,-65.532) [-65.532|65.538] "m/s^2"  SDI
+
+BO_ 626 SDIInput3: 8 Tester
+ SG_ SDIInput3MsgCtr : 63|8@0+ (1,0) [0|255] ""  SDI
+ SG_ WhlDirReRi : 55|2@0+ (1,0) [0|3] ""  SDI
+ SG_ WhlDirReLe : 53|2@0+ (1,0) [0|3] ""  SDI
+ SG_ WhlDirFrntRi : 51|2@0+ (1,0) [0|3] ""  SDI
+ SG_ WhlDirFrntLe : 49|2@0+ (1,0) [0|3] ""  SDI
+ SG_ WhlSpdReRi : 35|12@0+ (1,0) [0|4095] "rpm"  SDI
+ SG_ WhlSpdReLe : 31|12@0+ (1,0) [0|4095] "rpm"  SDI
+ SG_ WhlSpdFrntRi : 11|12@0+ (1,0) [0|4095] "rpm"  SDI
+ SG_ WhlSpdFrntLe : 7|12@0+ (1,0) [0|4095] "rpm"  SDI
+
+BO_ 625 SDIInput2: 8 Tester
+ SG_ WhlPlsReRiQly : 47|2@0+ (1,0) [0|3] ""  SDI
+ SG_ WhlPlsReRi : 25|10@0+ (1,0) [0|1023] ""  SDI
+ SG_ WhlPlsReLeQly : 45|2@0+ (1,0) [0|3] ""  SDI
+ SG_ WhlPlsReLe : 19|10@0+ (1,0) [0|1023] ""  SDI
+ SG_ SDIInput2MsgCtr : 63|8@0+ (1,0) [0|255] ""  SDI
+ SG_ WhlPlsFrntRiQly : 43|2@0+ (1,0) [0|3] ""  SDI
+ SG_ WhlPlsFrntRi : 13|10@0+ (1,0) [0|1023] ""  SDI
+ SG_ WhlPlsFrntLeQly : 41|2@0+ (1,0) [0|3] ""  SDI
+ SG_ WhlPlsFrntLe : 7|10@0+ (1,0) [0|1023] ""  SDI
+
+BO_ 624 SDIInput1: 8 Tester
+ SG_ SDIInput1MsgCtr : 63|8@0+ (1,0) [0|255] ""  SDI
+ SG_ VehVLgt : 23|12@0+ (0.03125,0) [0|127.96875] "m/s"  SDI
+ SG_ GearPosn : 26|3@0+ (1,0) [0|7] ""  SDI
+ SG_ SteerWhlAgFrnt : 7|16@0+ (0.025,-819) [-819|819.375] "deg"  SDI
+
+BO_ 513 SDIMeas1_SensorFSL_0: 8 SDI
+ SG_ SensorFSL_Echo2Dist : 47|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFSL_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFSL_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorFSL_Echo1Dist : 31|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFSL_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorFSL_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 514 SDIMeas1_SensorFSL_1: 2 SDI
+ SG_ SensorFSL_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorFSL_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorFSL_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFSL_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 545 SDIMeas1_SensorRSL_0: 8 SDI
+ SG_ SensorRSL_Echo2Dist : 47|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorRSL_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorRSL_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorRSL_Echo1Dist : 31|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorRSL_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorRSL_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 546 SDIMeas1_SensorRSL_1: 2 SDI
+ SG_ SensorRSL_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorRSL_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorRSL_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorRSL_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 515 SDIMeas2_SensorFSL_FOL_0: 8 SDI
+ SG_ SensorFSL_FOL_Echo2Dist : 47|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFSL_FOL_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFSL_FOL_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorFSL_FOL_Echo1Dist : 31|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFSL_FOL_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorFSL_FOL_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 516 SDIMeas2_SensorFSL_FOL_1: 2 SDI
+ SG_ SensorFSL_FOL_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorFSL_FOL_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorFSL_FOL_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFSL_FOL_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 547 SDIMeas2_SensorRSL_ROL_0: 8 SDI
+ SG_ SensorRSL_ROL_Echo2Dist : 47|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorRSL_ROL_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorRSL_ROL_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorRSL_ROL_Echo1Dist : 31|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorRSL_ROL_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorRSL_ROL_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 548 SDIMeas2_SensorRSL_ROL_1: 2 SDI
+ SG_ SensorRSL_ROL_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorRSL_ROL_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorRSL_ROL_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorRSL_ROL_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 517 SDIMeas3_SensorFOL_0: 8 SDI
+ SG_ SensorFOL_Echo2Dist : 47|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFOL_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFOL_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorFOL_Echo1Dist : 31|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFOL_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorFOL_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 518 SDIMeas3_SensorFOL_1: 2 SDI
+ SG_ SensorFOL_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorFOL_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorFOL_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFOL_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 549 SDIMeas3_SensorROL_0: 8 SDI
+ SG_ SensorROL_Echo2Dist : 47|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorROL_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorROL_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorROL_Echo1Dist : 31|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorROL_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorROL_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 550 SDIMeas3_SensorROL_1: 2 SDI
+ SG_ SensorROL_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorROL_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorROL_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorROL_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 519 SDIMeas4_SensorFOL_FIL_0: 8 SDI
+ SG_ SensorFOL_FIL_Echo2Dist : 47|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFOL_FIL_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFOL_FIL_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorFOL_FIL_Echo1Dist : 31|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFOL_FIL_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorFOL_FIL_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 520 SDIMeas4_SensorFOL_FIL_1: 2 SDI
+ SG_ SensorFOL_FIL_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorFOL_FIL_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorFOL_FIL_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFOL_FIL_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 551 SDIMeas4_SensorROL_RIL_0: 8 SDI
+ SG_ SensorROL_RIL_Echo2Dist : 47|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorROL_RIL_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorROL_RIL_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorROL_RIL_Echo1Dist : 31|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorROL_RIL_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorROL_RIL_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 552 SDIMeas4_SensorROL_RIL_1: 2 SDI
+ SG_ SensorROL_RIL_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorROL_RIL_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorROL_RIL_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorROL_RIL_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 521 SDIMeas5_SensorFIL_0: 8 SDI
+ SG_ SensorFIL_Echo2Dist : 47|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFIL_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFIL_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorFIL_Echo1Dist : 31|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFIL_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorFIL_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 522 SDIMeas5_SensorFIL_1: 2 SDI
+ SG_ SensorFIL_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorFIL_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorFIL_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFIL_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 553 SDIMeas5_SensorRIL_0: 8 SDI
+ SG_ SensorRIL_Echo2Dist : 47|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorRIL_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorRIL_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorRIL_Echo1Dist : 31|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorRIL_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorRIL_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 554 SDIMeas5_SensorRIL_1: 2 SDI
+ SG_ SensorRIL_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorRIL_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorRIL_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorRIL_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 523 SDIMeas6_SensorFIL_FIR_0: 8 SDI
+ SG_ SensorFIL_FIR_Echo2Dist : 47|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFIL_FIR_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFIL_FIR_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorFIL_FIR_Echo1Dist : 31|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFIL_FIR_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorFIL_FIR_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 524 SDIMeas6_SensorFIL_FIR_1: 2 SDI
+ SG_ SensorFIL_FIR_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorFIL_FIR_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorFIL_FIR_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFIL_FIR_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 555 SDIMeas6_SensorRIL_RIR_0: 8 SDI
+ SG_ SensorRIL_RIR_Echo2Dist : 47|16@0+ (1,0) [0|65555] "mm"  Tester
+ SG_ SensorRIL_RIR_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorRIL_RIR_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorRIL_RIR_Echo1Dist : 31|16@0+ (1,0) [0|65555] "mm"  Tester
+ SG_ SensorRIL_RIR_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorRIL_RIR_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 556 SDIMeas6_SensorRIL_RIR_1: 2 SDI
+ SG_ SensorRIL_RIR_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorRIL_RIR_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorRIL_RIR_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorRIL_RIR_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 525 SDIMeas7_SensorFIR_0: 8 SDI
+ SG_ SensorFIR_Echo2Dist : 47|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFIR_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFIR_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorFIR_Echo1Dist : 31|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFIR_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorFIR_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 526 SDIMeas7_SensorFIR_1: 2 SDI
+ SG_ SensorFIR_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorFIR_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorFIR_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFIR_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 557 SDIMeas7_SensorRIR_0: 8 SDI
+ SG_ SensorRIR_Echo2Dist : 47|16@0+ (1,0) [0|65575] "mm"  Tester
+ SG_ SensorRIR_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorRIR_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorRIR_Echo1Dist : 31|16@0+ (1,0) [0|65575] "mm"  Tester
+ SG_ SensorRIR_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorRIR_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 558 SDIMeas7_SensorRIR_1: 2 SDI
+ SG_ SensorRIR_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorRIR_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorRIR_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorRIR_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 527 SDIMeas8_SensorFIR_FOR_0: 8 SDI
+ SG_ SensorFIR_FOR_Echo2Dist : 47|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFIR_FOR_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFIR_FOR_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorFIR_FOR_Echo1Dist : 31|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFIR_FOR_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorFIR_FOR_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 528 SDIMeas8_SensorFIR_FOR_1: 2 SDI
+ SG_ SensorFIR_FOR_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorFIR_FOR_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorFIR_FOR_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFIR_FOR_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 559 SDIMeas8_SensorRIR_ROR_0: 8 SDI
+ SG_ SensorRIR_ROR_Echo2Dist : 47|16@0+ (1,0) [0|65595] "mm"  Tester
+ SG_ SensorRIR_ROR_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorRIR_ROR_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorRIR_ROR_Echo1Dist : 31|16@0+ (1,0) [0|65595] "mm"  Tester
+ SG_ SensorRIR_ROR_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorRIR_ROR_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 560 SDIMeas8_SensorRIR_ROR_1: 2 SDI
+ SG_ SensorRIR_ROR_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorRIR_ROR_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorRIR_ROR_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorRIR_ROR_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 529 SDIMeas9_SensorFOR_0: 8 SDI
+ SG_ SensorFOR_Echo2Dist : 47|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFOR_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFOR_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorFOR_Echo1Dist : 31|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFOR_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorFOR_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 530 SDIMeas9_SensorFOR_1: 2 SDI
+ SG_ SensorFOR_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorFOR_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorFOR_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFOR_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 561 SDIMeas9_SensorROR_0: 8 SDI
+ SG_ SensorROR_Echo2Dist : 47|16@0+ (1,0) [0|65615] "mm"  Tester
+ SG_ SensorROR_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorROR_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorROR_Echo1Dist : 31|16@0+ (1,0) [0|65615] "mm"  Tester
+ SG_ SensorROR_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorROR_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 562 SDIMeas9_SensorROR_1: 2 SDI
+ SG_ SensorROR_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorROR_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorROR_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorROR_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 531 SDIMeas10_SensorFOR_FSR_0: 8 SDI
+ SG_ SensorFOR_FSR_Echo2Dist : 47|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFOR_FSR_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFOR_FSR_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorFOR_FSR_Echo1Dist : 31|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFOR_FSR_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorFOR_FSR_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 532 SDIMeas10_SensorFOR_FSR_1: 2 SDI
+ SG_ SensorFOR_FSR_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorFOR_FSR_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorFOR_FSR_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFOR_FSR_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 563 SDIMeas10_SensorROR_RSR_0: 8 SDI
+ SG_ SensorROR_RSR_Echo2Dist : 47|16@0+ (1,0) [0|65635] "mm"  Tester
+ SG_ SensorROR_RSR_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorROR_RSR_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorROR_RSR_Echo1Dist : 31|16@0+ (1,0) [0|65635] "mm"  Tester
+ SG_ SensorROR_RSR_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorROR_RSR_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 564 SDIMeas10_SensorROR_RSR_1: 2 SDI
+ SG_ SensorROR_RSR_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorROR_RSR_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorROR_RSR_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorROR_RSR_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 533 SDIMeas11_SensorFSR_0: 8 SDI
+ SG_ SensorFSR_Echo2Dist : 47|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFSR_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFSR_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorFSR_Echo1Dist : 31|16@0+ (1,0) [0|65535] "mm"  Tester
+ SG_ SensorFSR_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorFSR_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 534 SDIMeas11_SensorFSR_1: 2 SDI
+ SG_ SensorFSR_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorFSR_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorFSR_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorFSR_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 565 SDIMeas11_SensorRSR_0: 8 SDI
+ SG_ SensorRSR_Echo2Dist : 47|16@0+ (1,0) [0|65655] "mm"  Tester
+ SG_ SensorRSR_Echo1Height : 63|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorRSR_Echo1NumDetn : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ SensorRSR_Echo1Dist : 31|16@0+ (1,0) [0|65655] "mm"  Tester
+ SG_ SensorRSR_BlindDist : 15|8@0+ (4,0) [0|1020] "mm"  Tester
+ SG_ SensorRSR_SignalWayId : 7|8@0+ (1,0) [0|255] ""  Tester
+
+BO_ 566 SDIMeas11_SensorRSR_1: 2 SDI
+ SG_ SensorRSR_avl : 14|1@0+ (1,0) [0|1] ""  Tester
+ SG_ SensorRSR_cntr : 13|4@0+ (1,0) [0|15] "Unitless"  Tester
+ SG_ SensorRSR_Echo2Height : 9|2@0+ (1,0) [0|3] ""  Tester
+ SG_ SensorRSR_Echo2NumDetn : 7|8@0+ (1,0) [0|255] "Unitless"  Tester
+
+BO_ 769 DebugState: 8 SDI
+ SG_ DbgSuccessInitFlag : 63|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ DbgMaximumCpuLoad : 39|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ DbgAverageCpuLoad : 31|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ DbgKl15VlthChannelState : 23|8@0+ (1,0) [0|255] "Unitless"  Tester
+ SG_ DbgKl15AdcValue : 7|16@0+ (1,0) [0|65535] "Unitless"  Tester
+
+BO_ 770 DebugWdgEcuTime: 8 SDI
+ SG_ DbgWdgEntity : 39|32@0+ (1,0) [0|4294967295] "Unitless"  Tester
+ SG_ DbgEcuInternalTime : 7|32@0+ (1,0) [0|4294967295] "Unitless"  Tester
+
+BO_ 771 DebugReason: 8 SDI
+ SG_ DbgDetReason : 39|32@0+ (1,0) [0|4294967295] "Unitless"  Tester
+ SG_ DbgResetReason : 7|32@0+ (1,0) [0|4294967295] "Unitless"  Tester
+
+BO_ 772 DebugSwVersion: 8 SDI
+ SG_ DbgSwVersion : 7|64@0+ (1,0) [0|1.84467440737096E+019] "Unitless"  Tester
+
+
+
+CM_ BO_ 628 "SDI Input message 5";
+CM_ SG_ 628 SDIInput5MsgCtr "SDI input 5 message counter";
+CM_ SG_ 628 IgnitionSts "Ignition status";
+CM_ SG_ 628 DoorReSts "Rear door status";
+CM_ SG_ 628 DoorFrntRiSts "Front right door status";
+CM_ SG_ 628 DoorFrntLeSts "Front left door status";
+CM_ SG_ 628 TrlrAttchd "Trailer attached";
+CM_ SG_ 628 AmbAirT "Temperature of air surrounding vehicle
+0x3FE - error
+0x3FF - NA";
+CM_ BO_ 627 "SDI Input message 4";
+CM_ SG_ 627 SDIInput4MsgCtr "SDI input 4 message counter";
+CM_ SG_ 627 VehYawRate "Vehile yaw rate
+0xFFFE - error
+0xFFFF - NA";
+CM_ SG_ 627 VehALgt "Vehicle longitudinal acceleration
+0xFFFE - error
+0xFFFF - NA";
+CM_ SG_ 627 VehALat "Vehicle lateral acceleration
+0xFFFE - error
+0xFFFF - NA";
+CM_ BO_ 626 "SDI Input message 3";
+CM_ SG_ 626 SDIInput3MsgCtr "SDI input 3 message counter";
+CM_ SG_ 626 WhlDirReRi "Wheel direction rear right";
+CM_ SG_ 626 WhlDirReLe "Wheel direction rear left";
+CM_ SG_ 626 WhlDirFrntRi "Wheel direction front right";
+CM_ SG_ 626 WhlDirFrntLe "Wheel direction front left";
+CM_ SG_ 626 WhlSpdReRi "Wheel speed rear right
+0xFFE - error
+0FFFF - NA";
+CM_ SG_ 626 WhlSpdReLe "Wheel speed rear left
+0xFFE - error
+0FFFF - NA";
+CM_ SG_ 626 WhlSpdFrntRi "Wheel speed front right
+0xFFE - error
+0FFFF - NA";
+CM_ SG_ 626 WhlSpdFrntLe "Wheel speed front left
+0xFFE - error
+0FFFF - NA";
+CM_ BO_ 625 "SDI Input message 2";
+CM_ SG_ 625 WhlPlsReRiQly "Wheel pulse rear right quality";
+CM_ SG_ 625 WhlPlsReRi "Wheel pulse rear right";
+CM_ SG_ 625 WhlPlsReLeQly "Wheel pulse rear left quality";
+CM_ SG_ 625 WhlPlsReLe "Wheel pulse rear left";
+CM_ SG_ 625 SDIInput2MsgCtr "SDI input 2 message counter";
+CM_ SG_ 625 WhlPlsFrntRiQly "Wheel pulse front right quality";
+CM_ SG_ 625 WhlPlsFrntRi "Wheel pulse front right";
+CM_ SG_ 625 WhlPlsFrntLeQly "Wheel pulse front left quality";
+CM_ SG_ 625 WhlPlsFrntLe "Wheel pulse front left";
+CM_ BO_ 624 "SDI Input message 1";
+CM_ SG_ 624 SDIInput1MsgCtr "SDI input 1 message counter";
+CM_ SG_ 624 VehVLgt "Vehicle longitudinal velocity
+0xFFE - error
+0xFFF - NA";
+CM_ SG_ 624 GearPosn "Gear position";
+CM_ SG_ 624 SteerWhlAgFrnt "Steering wheel angle front
+0xFFFE - error
+0xFFFF - NA";
+CM_ SG_ 513 SensorFSL_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 513 SensorFSL_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 513 SensorFSL_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 513 SensorFSL_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 513 SensorFSL_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 513 SensorFSL_SignalWayId "Signal Way ID";
+CM_ SG_ 514 SensorFSL_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 514 SensorFSL_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 514 SensorFSL_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 514 SensorFSL_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 545 SensorRSL_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 545 SensorRSL_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 545 SensorRSL_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 545 SensorRSL_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 545 SensorRSL_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 545 SensorRSL_SignalWayId "Signal Way ID";
+CM_ SG_ 546 SensorRSL_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 546 SensorRSL_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 546 SensorRSL_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 546 SensorRSL_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 515 SensorFSL_FOL_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 515 SensorFSL_FOL_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 515 SensorFSL_FOL_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 515 SensorFSL_FOL_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 515 SensorFSL_FOL_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 515 SensorFSL_FOL_SignalWayId "Signal Way ID";
+CM_ SG_ 516 SensorFSL_FOL_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 516 SensorFSL_FOL_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 516 SensorFSL_FOL_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 516 SensorFSL_FOL_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 547 SensorRSL_ROL_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 547 SensorRSL_ROL_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 547 SensorRSL_ROL_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 547 SensorRSL_ROL_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 547 SensorRSL_ROL_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 547 SensorRSL_ROL_SignalWayId "Signal Way ID";
+CM_ SG_ 548 SensorRSL_ROL_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 548 SensorRSL_ROL_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 548 SensorRSL_ROL_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 548 SensorRSL_ROL_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 517 SensorFOL_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 517 SensorFOL_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 517 SensorFOL_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 517 SensorFOL_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 517 SensorFOL_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 517 SensorFOL_SignalWayId "Signal Way ID";
+CM_ SG_ 518 SensorFOL_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 518 SensorFOL_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 518 SensorFOL_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 518 SensorFOL_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 549 SensorROL_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 549 SensorROL_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 549 SensorROL_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 549 SensorROL_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 549 SensorROL_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 549 SensorROL_SignalWayId "Signal Way ID";
+CM_ SG_ 550 SensorROL_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 550 SensorROL_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 550 SensorROL_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 550 SensorROL_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 519 SensorFOL_FIL_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 519 SensorFOL_FIL_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 519 SensorFOL_FIL_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 519 SensorFOL_FIL_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 519 SensorFOL_FIL_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 519 SensorFOL_FIL_SignalWayId "Signal Way ID";
+CM_ SG_ 520 SensorFOL_FIL_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 520 SensorFOL_FIL_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 520 SensorFOL_FIL_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 520 SensorFOL_FIL_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 551 SensorROL_RIL_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 551 SensorROL_RIL_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 551 SensorROL_RIL_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 551 SensorROL_RIL_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 551 SensorROL_RIL_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 551 SensorROL_RIL_SignalWayId "Signal Way ID";
+CM_ SG_ 552 SensorROL_RIL_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 552 SensorROL_RIL_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 552 SensorROL_RIL_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 552 SensorROL_RIL_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 521 SensorFIL_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 521 SensorFIL_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 521 SensorFIL_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 521 SensorFIL_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 521 SensorFIL_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 521 SensorFIL_SignalWayId "Signal Way ID";
+CM_ SG_ 522 SensorFIL_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 522 SensorFIL_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 522 SensorFIL_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 522 SensorFIL_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 553 SensorRIL_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 553 SensorRIL_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 553 SensorRIL_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 553 SensorRIL_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 553 SensorRIL_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 553 SensorRIL_SignalWayId "Signal Way ID";
+CM_ SG_ 554 SensorRIL_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 554 SensorRIL_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 554 SensorRIL_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 554 SensorRIL_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 523 SensorFIL_FIR_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 523 SensorFIL_FIR_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 523 SensorFIL_FIR_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 523 SensorFIL_FIR_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 523 SensorFIL_FIR_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 523 SensorFIL_FIR_SignalWayId "Signal Way ID";
+CM_ SG_ 524 SensorFIL_FIR_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 524 SensorFIL_FIR_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 524 SensorFIL_FIR_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 524 SensorFIL_FIR_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 555 SensorRIL_RIR_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 555 SensorRIL_RIR_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 555 SensorRIL_RIR_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 555 SensorRIL_RIR_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 555 SensorRIL_RIR_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 555 SensorRIL_RIR_SignalWayId "Signal Way ID";
+CM_ SG_ 556 SensorRIL_RIR_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 556 SensorRIL_RIR_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 556 SensorRIL_RIR_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 556 SensorRIL_RIR_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 525 SensorFIR_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 525 SensorFIR_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 525 SensorFIR_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 525 SensorFIR_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 525 SensorFIR_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 525 SensorFIR_SignalWayId "Signal Way ID";
+CM_ SG_ 526 SensorFIR_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 526 SensorFIR_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 526 SensorFIR_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 526 SensorFIR_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 557 SensorRIR_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 557 SensorRIR_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 557 SensorRIR_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 557 SensorRIR_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 557 SensorRIR_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 557 SensorRIR_SignalWayId "Signal Way ID";
+CM_ SG_ 558 SensorRIR_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 558 SensorRIR_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 558 SensorRIR_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 558 SensorRIR_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 527 SensorFIR_FOR_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 527 SensorFIR_FOR_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 527 SensorFIR_FOR_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 527 SensorFIR_FOR_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 527 SensorFIR_FOR_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 527 SensorFIR_FOR_SignalWayId "Signal Way ID";
+CM_ SG_ 528 SensorFIR_FOR_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 528 SensorFIR_FOR_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 528 SensorFIR_FOR_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 528 SensorFIR_FOR_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 559 SensorRIR_ROR_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 559 SensorRIR_ROR_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 559 SensorRIR_ROR_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 559 SensorRIR_ROR_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 559 SensorRIR_ROR_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 559 SensorRIR_ROR_SignalWayId "Signal Way ID";
+CM_ SG_ 560 SensorRIR_ROR_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 560 SensorRIR_ROR_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 560 SensorRIR_ROR_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 560 SensorRIR_ROR_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 529 SensorFOR_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 529 SensorFOR_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 529 SensorFOR_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 529 SensorFOR_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 529 SensorFOR_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 529 SensorFOR_SignalWayId "Signal Way ID";
+CM_ SG_ 530 SensorFOR_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 530 SensorFOR_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 530 SensorFOR_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 530 SensorFOR_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 561 SensorROR_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 561 SensorROR_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 561 SensorROR_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 561 SensorROR_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 561 SensorROR_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 561 SensorROR_SignalWayId "Signal Way ID";
+CM_ SG_ 562 SensorROR_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 562 SensorROR_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 562 SensorROR_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 562 SensorROR_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 531 SensorFOR_FSR_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 531 SensorFOR_FSR_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 531 SensorFOR_FSR_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 531 SensorFOR_FSR_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 531 SensorFOR_FSR_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 531 SensorFOR_FSR_SignalWayId "Signal Way ID";
+CM_ SG_ 532 SensorFOR_FSR_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 532 SensorFOR_FSR_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 532 SensorFOR_FSR_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 532 SensorFOR_FSR_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 563 SensorROR_RSR_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 563 SensorROR_RSR_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 563 SensorROR_RSR_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 563 SensorROR_RSR_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 563 SensorROR_RSR_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 563 SensorROR_RSR_SignalWayId "Signal Way ID";
+CM_ SG_ 564 SensorROR_RSR_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 564 SensorROR_RSR_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 564 SensorROR_RSR_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 564 SensorROR_RSR_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 533 SensorFSR_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 533 SensorFSR_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 533 SensorFSR_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 533 SensorFSR_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 533 SensorFSR_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 533 SensorFSR_SignalWayId "Signal Way ID";
+CM_ SG_ 534 SensorFSR_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 534 SensorFSR_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 534 SensorFSR_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 534 SensorFSR_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+CM_ SG_ 565 SensorRSR_Echo2Dist "Detected 2nd echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 565 SensorRSR_Echo1Height "Detected 1st echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 565 SensorRSR_Echo1NumDetn "Detected 1st echo: Number of detections for the current track. This information shows the quality level of the distance ";
+CM_ SG_ 565 SensorRSR_Echo1Dist "Detected 1st echo: Current distance of the track. U16_Max will be output in case no distance is measured";
+CM_ SG_ 565 SensorRSR_BlindDist "For each signalway the blind distance is provided";
+CM_ SG_ 565 SensorRSR_SignalWayId "Signal Way ID";
+CM_ SG_ 566 SensorRSR_avl "To ensure that no package was lost during transfer of the data to the user.";
+CM_ SG_ 566 SensorRSR_cntr "Keep alive counter: It's counting up with every new output. When observed the user knows if this signal is refreshed or 'frozen'.";
+CM_ SG_ 566 SensorRSR_Echo2Height "Detected 2nd echo: Height classification result for the reflection (low/high/unknown)";
+CM_ SG_ 566 SensorRSR_Echo2NumDetn "Detected 2nd echo: Number of detections for the current track. This information shows the quality level of the distance";
+BA_DEF_ BO_  "DiagState" ENUM  "no ","yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "no","yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "no","yes";
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "1","0";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_  "Baudrate" INT 1000 1000000;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","spontaneous","not-used","not-used","not-used","cyclicAndSpontaneous","not-used","cyclicIfActive","NoMsgSendType";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65536;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65536;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigStartValue" HEX 0 80000000;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "NmAsrMessage" ENUM  "No","Yes";
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ILused" ENUM  "No","Yes";
+BA_DEF_DEF_  "DiagState" "no ";
+BA_DEF_DEF_  "DiagResponse" "no";
+BA_DEF_DEF_  "DiagRequest" "no";
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "VFrameFormat" "ExtendedCAN_FD";
+BA_DEF_DEF_  "Baudrate" 1000;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "NmAsrMessage" "No";
+BA_DEF_DEF_  "NodeLayerModules" "CANoeILNLSPA.dll";
+BA_DEF_DEF_  "ILused" "Yes";
+BA_ "BusType" "CAN";
+BA_ "ProtocolType" "CAN";
+BA_ "Baudrate" 500000;
+BA_ "DBName" "ValeoSDI";
+BA_ "NodeLayerModules" BU_ SDI "CANoeILNLSPA.dll";
+BA_ "ILused" BU_ SDI 0;
+BA_ "VFrameFormat" BO_ 1977 0;
+BA_ "DiagResponse" BO_ 1977 1;
+BA_ "VFrameFormat" BO_ 1969 0;
+BA_ "DiagRequest" BO_ 1969 1;
+BA_ "GenMsgSendType" BO_ 628 0;
+BA_ "GenMsgCycleTime" BO_ 628 40;
+BA_ "VFrameFormat" BO_ 628 0;
+BA_ "GenMsgCycleTime" BO_ 627 40;
+BA_ "GenMsgSendType" BO_ 627 0;
+BA_ "VFrameFormat" BO_ 627 0;
+BA_ "GenMsgCycleTime" BO_ 626 40;
+BA_ "GenMsgSendType" BO_ 626 0;
+BA_ "VFrameFormat" BO_ 626 0;
+BA_ "GenMsgCycleTime" BO_ 625 40;
+BA_ "GenMsgSendType" BO_ 625 0;
+BA_ "VFrameFormat" BO_ 625 0;
+BA_ "GenMsgCycleTime" BO_ 624 40;
+BA_ "GenMsgSendType" BO_ 624 0;
+BA_ "VFrameFormat" BO_ 624 0;
+BA_ "GenMsgSendType" BO_ 513 0;
+BA_ "GenMsgCycleTime" BO_ 513 80;
+BA_ "GenMsgStartDelayTime" BO_ 513 0;
+BA_ "GenMsgILSupport" BO_ 513 1;
+BA_ "NmAsrMessage" BO_ 513 0;
+BA_ "VFrameFormat" BO_ 513 0;
+BA_ "GenMsgSendType" BO_ 514 0;
+BA_ "GenMsgCycleTime" BO_ 514 80;
+BA_ "GenMsgStartDelayTime" BO_ 514 0;
+BA_ "GenMsgILSupport" BO_ 514 1;
+BA_ "NmAsrMessage" BO_ 514 0;
+BA_ "VFrameFormat" BO_ 514 0;
+BA_ "GenMsgSendType" BO_ 545 0;
+BA_ "GenMsgCycleTime" BO_ 545 80;
+BA_ "GenMsgStartDelayTime" BO_ 545 0;
+BA_ "GenMsgILSupport" BO_ 545 1;
+BA_ "NmAsrMessage" BO_ 545 0;
+BA_ "VFrameFormat" BO_ 545 0;
+BA_ "GenMsgSendType" BO_ 546 0;
+BA_ "GenMsgCycleTime" BO_ 546 80;
+BA_ "GenMsgStartDelayTime" BO_ 546 0;
+BA_ "GenMsgILSupport" BO_ 546 1;
+BA_ "NmAsrMessage" BO_ 546 0;
+BA_ "VFrameFormat" BO_ 546 0;
+BA_ "GenMsgSendType" BO_ 515 0;
+BA_ "GenMsgCycleTime" BO_ 515 80;
+BA_ "GenMsgStartDelayTime" BO_ 515 0;
+BA_ "GenMsgILSupport" BO_ 515 1;
+BA_ "NmAsrMessage" BO_ 515 0;
+BA_ "VFrameFormat" BO_ 515 0;
+BA_ "GenMsgSendType" BO_ 516 0;
+BA_ "GenMsgCycleTime" BO_ 516 80;
+BA_ "GenMsgStartDelayTime" BO_ 516 0;
+BA_ "GenMsgILSupport" BO_ 516 1;
+BA_ "NmAsrMessage" BO_ 516 0;
+BA_ "VFrameFormat" BO_ 516 0;
+BA_ "GenMsgSendType" BO_ 547 0;
+BA_ "GenMsgCycleTime" BO_ 547 80;
+BA_ "GenMsgStartDelayTime" BO_ 547 0;
+BA_ "GenMsgILSupport" BO_ 547 1;
+BA_ "NmAsrMessage" BO_ 547 0;
+BA_ "VFrameFormat" BO_ 547 0;
+BA_ "GenMsgSendType" BO_ 548 0;
+BA_ "GenMsgCycleTime" BO_ 548 80;
+BA_ "GenMsgStartDelayTime" BO_ 548 0;
+BA_ "GenMsgILSupport" BO_ 548 1;
+BA_ "NmAsrMessage" BO_ 548 0;
+BA_ "VFrameFormat" BO_ 548 0;
+BA_ "GenMsgSendType" BO_ 517 0;
+BA_ "GenMsgCycleTime" BO_ 517 80;
+BA_ "GenMsgStartDelayTime" BO_ 517 0;
+BA_ "GenMsgILSupport" BO_ 517 1;
+BA_ "NmAsrMessage" BO_ 517 0;
+BA_ "VFrameFormat" BO_ 517 0;
+BA_ "GenMsgSendType" BO_ 518 0;
+BA_ "GenMsgCycleTime" BO_ 518 80;
+BA_ "GenMsgStartDelayTime" BO_ 518 0;
+BA_ "GenMsgILSupport" BO_ 518 1;
+BA_ "NmAsrMessage" BO_ 518 0;
+BA_ "VFrameFormat" BO_ 518 0;
+BA_ "GenMsgSendType" BO_ 549 0;
+BA_ "GenMsgCycleTime" BO_ 549 80;
+BA_ "GenMsgStartDelayTime" BO_ 549 0;
+BA_ "GenMsgILSupport" BO_ 549 1;
+BA_ "NmAsrMessage" BO_ 549 0;
+BA_ "VFrameFormat" BO_ 549 0;
+BA_ "GenMsgSendType" BO_ 550 0;
+BA_ "GenMsgCycleTime" BO_ 550 80;
+BA_ "GenMsgStartDelayTime" BO_ 550 0;
+BA_ "GenMsgILSupport" BO_ 550 1;
+BA_ "NmAsrMessage" BO_ 550 0;
+BA_ "VFrameFormat" BO_ 550 0;
+BA_ "GenMsgSendType" BO_ 519 0;
+BA_ "GenMsgCycleTime" BO_ 519 80;
+BA_ "GenMsgStartDelayTime" BO_ 519 0;
+BA_ "GenMsgILSupport" BO_ 519 1;
+BA_ "NmAsrMessage" BO_ 519 0;
+BA_ "VFrameFormat" BO_ 519 0;
+BA_ "GenMsgSendType" BO_ 520 0;
+BA_ "GenMsgCycleTime" BO_ 520 80;
+BA_ "GenMsgStartDelayTime" BO_ 520 0;
+BA_ "GenMsgILSupport" BO_ 520 1;
+BA_ "NmAsrMessage" BO_ 520 0;
+BA_ "VFrameFormat" BO_ 520 0;
+BA_ "GenMsgSendType" BO_ 551 0;
+BA_ "GenMsgCycleTime" BO_ 551 80;
+BA_ "GenMsgStartDelayTime" BO_ 551 0;
+BA_ "GenMsgILSupport" BO_ 551 1;
+BA_ "NmAsrMessage" BO_ 551 0;
+BA_ "VFrameFormat" BO_ 551 0;
+BA_ "GenMsgSendType" BO_ 552 0;
+BA_ "GenMsgCycleTime" BO_ 552 80;
+BA_ "GenMsgStartDelayTime" BO_ 552 0;
+BA_ "GenMsgILSupport" BO_ 552 1;
+BA_ "NmAsrMessage" BO_ 552 0;
+BA_ "VFrameFormat" BO_ 552 0;
+BA_ "GenMsgSendType" BO_ 521 0;
+BA_ "GenMsgCycleTime" BO_ 521 80;
+BA_ "GenMsgStartDelayTime" BO_ 521 0;
+BA_ "GenMsgILSupport" BO_ 521 1;
+BA_ "NmAsrMessage" BO_ 521 0;
+BA_ "VFrameFormat" BO_ 521 0;
+BA_ "GenMsgSendType" BO_ 522 0;
+BA_ "GenMsgCycleTime" BO_ 522 80;
+BA_ "GenMsgStartDelayTime" BO_ 522 0;
+BA_ "GenMsgILSupport" BO_ 522 1;
+BA_ "NmAsrMessage" BO_ 522 0;
+BA_ "VFrameFormat" BO_ 522 0;
+BA_ "GenMsgSendType" BO_ 553 0;
+BA_ "GenMsgCycleTime" BO_ 553 80;
+BA_ "GenMsgStartDelayTime" BO_ 553 0;
+BA_ "GenMsgILSupport" BO_ 553 1;
+BA_ "NmAsrMessage" BO_ 553 0;
+BA_ "VFrameFormat" BO_ 553 0;
+BA_ "GenMsgSendType" BO_ 554 0;
+BA_ "GenMsgCycleTime" BO_ 554 80;
+BA_ "GenMsgStartDelayTime" BO_ 554 0;
+BA_ "GenMsgILSupport" BO_ 554 1;
+BA_ "NmAsrMessage" BO_ 554 0;
+BA_ "VFrameFormat" BO_ 554 0;
+BA_ "GenMsgSendType" BO_ 523 0;
+BA_ "GenMsgCycleTime" BO_ 523 80;
+BA_ "GenMsgStartDelayTime" BO_ 523 0;
+BA_ "GenMsgILSupport" BO_ 523 1;
+BA_ "NmAsrMessage" BO_ 523 0;
+BA_ "VFrameFormat" BO_ 523 0;
+BA_ "GenMsgSendType" BO_ 524 0;
+BA_ "GenMsgCycleTime" BO_ 524 80;
+BA_ "GenMsgStartDelayTime" BO_ 524 0;
+BA_ "GenMsgILSupport" BO_ 524 1;
+BA_ "NmAsrMessage" BO_ 524 0;
+BA_ "VFrameFormat" BO_ 524 0;
+BA_ "GenMsgSendType" BO_ 555 0;
+BA_ "GenMsgCycleTime" BO_ 555 80;
+BA_ "GenMsgStartDelayTime" BO_ 555 0;
+BA_ "GenMsgILSupport" BO_ 555 1;
+BA_ "NmAsrMessage" BO_ 555 0;
+BA_ "VFrameFormat" BO_ 555 0;
+BA_ "GenMsgSendType" BO_ 556 0;
+BA_ "GenMsgCycleTime" BO_ 556 80;
+BA_ "GenMsgStartDelayTime" BO_ 556 0;
+BA_ "GenMsgILSupport" BO_ 556 1;
+BA_ "NmAsrMessage" BO_ 556 0;
+BA_ "VFrameFormat" BO_ 556 0;
+BA_ "GenMsgSendType" BO_ 525 0;
+BA_ "GenMsgCycleTime" BO_ 525 80;
+BA_ "GenMsgStartDelayTime" BO_ 525 0;
+BA_ "GenMsgILSupport" BO_ 525 1;
+BA_ "NmAsrMessage" BO_ 525 0;
+BA_ "VFrameFormat" BO_ 525 0;
+BA_ "GenMsgSendType" BO_ 526 0;
+BA_ "GenMsgCycleTime" BO_ 526 80;
+BA_ "GenMsgStartDelayTime" BO_ 526 0;
+BA_ "GenMsgILSupport" BO_ 526 1;
+BA_ "NmAsrMessage" BO_ 526 0;
+BA_ "VFrameFormat" BO_ 526 0;
+BA_ "GenMsgSendType" BO_ 557 0;
+BA_ "GenMsgCycleTime" BO_ 557 80;
+BA_ "GenMsgStartDelayTime" BO_ 557 0;
+BA_ "GenMsgILSupport" BO_ 557 1;
+BA_ "NmAsrMessage" BO_ 557 0;
+BA_ "VFrameFormat" BO_ 557 0;
+BA_ "GenMsgSendType" BO_ 558 0;
+BA_ "GenMsgCycleTime" BO_ 558 80;
+BA_ "GenMsgStartDelayTime" BO_ 558 0;
+BA_ "GenMsgILSupport" BO_ 558 1;
+BA_ "NmAsrMessage" BO_ 558 0;
+BA_ "VFrameFormat" BO_ 558 0;
+BA_ "GenMsgSendType" BO_ 527 0;
+BA_ "GenMsgCycleTime" BO_ 527 80;
+BA_ "GenMsgStartDelayTime" BO_ 527 0;
+BA_ "GenMsgILSupport" BO_ 527 1;
+BA_ "NmAsrMessage" BO_ 527 0;
+BA_ "VFrameFormat" BO_ 527 0;
+BA_ "GenMsgSendType" BO_ 528 0;
+BA_ "GenMsgCycleTime" BO_ 528 80;
+BA_ "GenMsgStartDelayTime" BO_ 528 0;
+BA_ "GenMsgILSupport" BO_ 528 1;
+BA_ "NmAsrMessage" BO_ 528 0;
+BA_ "VFrameFormat" BO_ 528 0;
+BA_ "GenMsgSendType" BO_ 559 0;
+BA_ "GenMsgCycleTime" BO_ 559 80;
+BA_ "GenMsgStartDelayTime" BO_ 559 0;
+BA_ "GenMsgILSupport" BO_ 559 1;
+BA_ "NmAsrMessage" BO_ 559 0;
+BA_ "VFrameFormat" BO_ 559 0;
+BA_ "GenMsgSendType" BO_ 560 0;
+BA_ "GenMsgCycleTime" BO_ 560 80;
+BA_ "GenMsgStartDelayTime" BO_ 560 0;
+BA_ "GenMsgILSupport" BO_ 560 1;
+BA_ "NmAsrMessage" BO_ 560 0;
+BA_ "VFrameFormat" BO_ 560 0;
+BA_ "GenMsgSendType" BO_ 529 0;
+BA_ "GenMsgCycleTime" BO_ 529 80;
+BA_ "GenMsgStartDelayTime" BO_ 529 0;
+BA_ "GenMsgILSupport" BO_ 529 1;
+BA_ "NmAsrMessage" BO_ 529 0;
+BA_ "VFrameFormat" BO_ 529 0;
+BA_ "GenMsgSendType" BO_ 530 0;
+BA_ "GenMsgCycleTime" BO_ 530 80;
+BA_ "GenMsgStartDelayTime" BO_ 530 0;
+BA_ "GenMsgILSupport" BO_ 530 1;
+BA_ "NmAsrMessage" BO_ 530 0;
+BA_ "VFrameFormat" BO_ 530 0;
+BA_ "GenMsgSendType" BO_ 561 0;
+BA_ "GenMsgCycleTime" BO_ 561 80;
+BA_ "GenMsgStartDelayTime" BO_ 561 0;
+BA_ "GenMsgILSupport" BO_ 561 1;
+BA_ "NmAsrMessage" BO_ 561 0;
+BA_ "VFrameFormat" BO_ 561 0;
+BA_ "GenMsgSendType" BO_ 562 0;
+BA_ "GenMsgCycleTime" BO_ 562 80;
+BA_ "GenMsgStartDelayTime" BO_ 562 0;
+BA_ "GenMsgILSupport" BO_ 562 1;
+BA_ "NmAsrMessage" BO_ 562 0;
+BA_ "VFrameFormat" BO_ 562 0;
+BA_ "GenMsgSendType" BO_ 531 0;
+BA_ "GenMsgCycleTime" BO_ 531 80;
+BA_ "GenMsgStartDelayTime" BO_ 531 0;
+BA_ "GenMsgILSupport" BO_ 531 1;
+BA_ "NmAsrMessage" BO_ 531 0;
+BA_ "VFrameFormat" BO_ 531 0;
+BA_ "GenMsgSendType" BO_ 532 0;
+BA_ "GenMsgCycleTime" BO_ 532 80;
+BA_ "GenMsgStartDelayTime" BO_ 532 0;
+BA_ "GenMsgILSupport" BO_ 532 1;
+BA_ "NmAsrMessage" BO_ 532 0;
+BA_ "VFrameFormat" BO_ 532 0;
+BA_ "GenMsgSendType" BO_ 563 0;
+BA_ "GenMsgCycleTime" BO_ 563 80;
+BA_ "GenMsgStartDelayTime" BO_ 563 0;
+BA_ "GenMsgILSupport" BO_ 563 1;
+BA_ "NmAsrMessage" BO_ 563 0;
+BA_ "VFrameFormat" BO_ 563 0;
+BA_ "GenMsgSendType" BO_ 564 0;
+BA_ "GenMsgCycleTime" BO_ 564 80;
+BA_ "GenMsgStartDelayTime" BO_ 564 0;
+BA_ "GenMsgILSupport" BO_ 564 1;
+BA_ "NmAsrMessage" BO_ 564 0;
+BA_ "VFrameFormat" BO_ 564 0;
+BA_ "GenMsgSendType" BO_ 533 0;
+BA_ "GenMsgCycleTime" BO_ 533 80;
+BA_ "GenMsgStartDelayTime" BO_ 533 0;
+BA_ "GenMsgILSupport" BO_ 533 1;
+BA_ "NmAsrMessage" BO_ 533 0;
+BA_ "VFrameFormat" BO_ 533 0;
+BA_ "GenMsgSendType" BO_ 534 0;
+BA_ "GenMsgCycleTime" BO_ 534 80;
+BA_ "GenMsgStartDelayTime" BO_ 534 0;
+BA_ "GenMsgILSupport" BO_ 534 1;
+BA_ "NmAsrMessage" BO_ 534 0;
+BA_ "VFrameFormat" BO_ 534 0;
+BA_ "GenMsgSendType" BO_ 565 0;
+BA_ "GenMsgCycleTime" BO_ 565 80;
+BA_ "GenMsgStartDelayTime" BO_ 565 0;
+BA_ "GenMsgILSupport" BO_ 565 1;
+BA_ "NmAsrMessage" BO_ 565 0;
+BA_ "VFrameFormat" BO_ 565 0;
+BA_ "GenMsgSendType" BO_ 566 0;
+BA_ "GenMsgCycleTime" BO_ 566 80;
+BA_ "GenMsgStartDelayTime" BO_ 566 0;
+BA_ "GenMsgILSupport" BO_ 566 1;
+BA_ "NmAsrMessage" BO_ 566 0;
+BA_ "VFrameFormat" BO_ 566 0;
+BA_ "GenMsgSendType" BO_ 769 0;
+BA_ "GenMsgCycleTime" BO_ 769 80;
+BA_ "GenMsgStartDelayTime" BO_ 769 0;
+BA_ "GenMsgILSupport" BO_ 769 1;
+BA_ "NmAsrMessage" BO_ 769 0;
+BA_ "VFrameFormat" BO_ 769 0;
+BA_ "GenMsgSendType" BO_ 770 0;
+BA_ "GenMsgCycleTime" BO_ 770 100;
+BA_ "GenMsgStartDelayTime" BO_ 770 0;
+BA_ "GenMsgILSupport" BO_ 770 1;
+BA_ "NmAsrMessage" BO_ 770 0;
+BA_ "VFrameFormat" BO_ 770 0;
+BA_ "GenMsgSendType" BO_ 771 0;
+BA_ "GenMsgCycleTime" BO_ 771 100;
+BA_ "GenMsgStartDelayTime" BO_ 771 0;
+BA_ "GenMsgILSupport" BO_ 771 1;
+BA_ "NmAsrMessage" BO_ 771 0;
+BA_ "VFrameFormat" BO_ 771 0;
+BA_ "GenMsgSendType" BO_ 772 0;
+BA_ "GenMsgCycleTime" BO_ 772 1000;
+BA_ "GenMsgStartDelayTime" BO_ 772 0;
+BA_ "GenMsgILSupport" BO_ 772 1;
+BA_ "NmAsrMessage" BO_ 772 0;
+BA_ "VFrameFormat" BO_ 772 0;
+BA_ "GenSigStartValue" SG_ 628 AmbAirT 511;
+BA_ "GenSigStartValue" SG_ 627 VehYawRate 32766;
+BA_ "GenSigStartValue" SG_ 627 VehALgt 32766;
+BA_ "GenSigStartValue" SG_ 627 VehALat 32766;
+BA_ "GenSigStartValue" SG_ 625 WhlPlsReRiQly 0;
+BA_ "GenSigStartValue" SG_ 625 WhlPlsReLeQly 0;
+BA_ "GenSigStartValue" SG_ 625 WhlPlsFrntRiQly 0;
+BA_ "GenSigStartValue" SG_ 625 WhlPlsFrntLeQly 0;
+BA_ "GenSigStartValue" SG_ 624 SteerWhlAgFrnt 32760;
+BA_ "GenSigStartValue" SG_ 513 SensorFSL_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 513 SensorFSL_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 513 SensorFSL_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 513 SensorFSL_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 513 SensorFSL_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 513 SensorFSL_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 513 SensorFSL_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 513 SensorFSL_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 513 SensorFSL_BlindDist 0;
+BA_ "GenSigSendType" SG_ 513 SensorFSL_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 513 SensorFSL_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 513 SensorFSL_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 514 SensorFSL_avl 0;
+BA_ "GenSigSendType" SG_ 514 SensorFSL_avl 0;
+BA_ "GenSigStartValue" SG_ 514 SensorFSL_cntr 0;
+BA_ "GenSigSendType" SG_ 514 SensorFSL_cntr 0;
+BA_ "GenSigStartValue" SG_ 514 SensorFSL_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 514 SensorFSL_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 514 SensorFSL_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 514 SensorFSL_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 545 SensorRSL_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 545 SensorRSL_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 545 SensorRSL_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 545 SensorRSL_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 545 SensorRSL_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 545 SensorRSL_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 545 SensorRSL_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 545 SensorRSL_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 545 SensorRSL_BlindDist 0;
+BA_ "GenSigSendType" SG_ 545 SensorRSL_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 545 SensorRSL_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 545 SensorRSL_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 546 SensorRSL_avl 0;
+BA_ "GenSigSendType" SG_ 546 SensorRSL_avl 0;
+BA_ "GenSigStartValue" SG_ 546 SensorRSL_cntr 0;
+BA_ "GenSigSendType" SG_ 546 SensorRSL_cntr 0;
+BA_ "GenSigStartValue" SG_ 546 SensorRSL_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 546 SensorRSL_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 546 SensorRSL_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 546 SensorRSL_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 515 SensorFSL_FOL_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 515 SensorFSL_FOL_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 515 SensorFSL_FOL_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 515 SensorFSL_FOL_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 515 SensorFSL_FOL_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 515 SensorFSL_FOL_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 515 SensorFSL_FOL_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 515 SensorFSL_FOL_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 515 SensorFSL_FOL_BlindDist 0;
+BA_ "GenSigSendType" SG_ 515 SensorFSL_FOL_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 515 SensorFSL_FOL_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 515 SensorFSL_FOL_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 516 SensorFSL_FOL_avl 0;
+BA_ "GenSigSendType" SG_ 516 SensorFSL_FOL_avl 0;
+BA_ "GenSigStartValue" SG_ 516 SensorFSL_FOL_cntr 0;
+BA_ "GenSigSendType" SG_ 516 SensorFSL_FOL_cntr 0;
+BA_ "GenSigStartValue" SG_ 516 SensorFSL_FOL_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 516 SensorFSL_FOL_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 516 SensorFSL_FOL_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 516 SensorFSL_FOL_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 547 SensorRSL_ROL_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 547 SensorRSL_ROL_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 547 SensorRSL_ROL_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 547 SensorRSL_ROL_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 547 SensorRSL_ROL_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 547 SensorRSL_ROL_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 547 SensorRSL_ROL_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 547 SensorRSL_ROL_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 547 SensorRSL_ROL_BlindDist 0;
+BA_ "GenSigSendType" SG_ 547 SensorRSL_ROL_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 547 SensorRSL_ROL_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 547 SensorRSL_ROL_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 548 SensorRSL_ROL_avl 0;
+BA_ "GenSigSendType" SG_ 548 SensorRSL_ROL_avl 0;
+BA_ "GenSigStartValue" SG_ 548 SensorRSL_ROL_cntr 0;
+BA_ "GenSigSendType" SG_ 548 SensorRSL_ROL_cntr 0;
+BA_ "GenSigStartValue" SG_ 548 SensorRSL_ROL_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 548 SensorRSL_ROL_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 548 SensorRSL_ROL_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 548 SensorRSL_ROL_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 517 SensorFOL_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 517 SensorFOL_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 517 SensorFOL_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 517 SensorFOL_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 517 SensorFOL_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 517 SensorFOL_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 517 SensorFOL_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 517 SensorFOL_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 517 SensorFOL_BlindDist 0;
+BA_ "GenSigSendType" SG_ 517 SensorFOL_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 517 SensorFOL_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 517 SensorFOL_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 518 SensorFOL_avl 0;
+BA_ "GenSigSendType" SG_ 518 SensorFOL_avl 0;
+BA_ "GenSigStartValue" SG_ 518 SensorFOL_cntr 0;
+BA_ "GenSigSendType" SG_ 518 SensorFOL_cntr 0;
+BA_ "GenSigStartValue" SG_ 518 SensorFOL_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 518 SensorFOL_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 518 SensorFOL_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 518 SensorFOL_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 549 SensorROL_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 549 SensorROL_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 549 SensorROL_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 549 SensorROL_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 549 SensorROL_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 549 SensorROL_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 549 SensorROL_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 549 SensorROL_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 549 SensorROL_BlindDist 0;
+BA_ "GenSigSendType" SG_ 549 SensorROL_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 549 SensorROL_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 549 SensorROL_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 550 SensorROL_avl 0;
+BA_ "GenSigSendType" SG_ 550 SensorROL_avl 0;
+BA_ "GenSigStartValue" SG_ 550 SensorROL_cntr 0;
+BA_ "GenSigSendType" SG_ 550 SensorROL_cntr 0;
+BA_ "GenSigStartValue" SG_ 550 SensorROL_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 550 SensorROL_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 550 SensorROL_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 550 SensorROL_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 519 SensorFOL_FIL_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 519 SensorFOL_FIL_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 519 SensorFOL_FIL_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 519 SensorFOL_FIL_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 519 SensorFOL_FIL_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 519 SensorFOL_FIL_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 519 SensorFOL_FIL_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 519 SensorFOL_FIL_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 519 SensorFOL_FIL_BlindDist 0;
+BA_ "GenSigSendType" SG_ 519 SensorFOL_FIL_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 519 SensorFOL_FIL_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 519 SensorFOL_FIL_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 520 SensorFOL_FIL_avl 0;
+BA_ "GenSigSendType" SG_ 520 SensorFOL_FIL_avl 0;
+BA_ "GenSigStartValue" SG_ 520 SensorFOL_FIL_cntr 0;
+BA_ "GenSigSendType" SG_ 520 SensorFOL_FIL_cntr 0;
+BA_ "GenSigStartValue" SG_ 520 SensorFOL_FIL_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 520 SensorFOL_FIL_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 520 SensorFOL_FIL_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 520 SensorFOL_FIL_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 551 SensorROL_RIL_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 551 SensorROL_RIL_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 551 SensorROL_RIL_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 551 SensorROL_RIL_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 551 SensorROL_RIL_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 551 SensorROL_RIL_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 551 SensorROL_RIL_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 551 SensorROL_RIL_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 551 SensorROL_RIL_BlindDist 0;
+BA_ "GenSigSendType" SG_ 551 SensorROL_RIL_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 551 SensorROL_RIL_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 551 SensorROL_RIL_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 552 SensorROL_RIL_avl 0;
+BA_ "GenSigSendType" SG_ 552 SensorROL_RIL_avl 0;
+BA_ "GenSigStartValue" SG_ 552 SensorROL_RIL_cntr 0;
+BA_ "GenSigSendType" SG_ 552 SensorROL_RIL_cntr 0;
+BA_ "GenSigStartValue" SG_ 552 SensorROL_RIL_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 552 SensorROL_RIL_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 552 SensorROL_RIL_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 552 SensorROL_RIL_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 521 SensorFIL_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 521 SensorFIL_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 521 SensorFIL_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 521 SensorFIL_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 521 SensorFIL_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 521 SensorFIL_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 521 SensorFIL_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 521 SensorFIL_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 521 SensorFIL_BlindDist 0;
+BA_ "GenSigSendType" SG_ 521 SensorFIL_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 521 SensorFIL_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 521 SensorFIL_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 522 SensorFIL_avl 0;
+BA_ "GenSigSendType" SG_ 522 SensorFIL_avl 0;
+BA_ "GenSigStartValue" SG_ 522 SensorFIL_cntr 0;
+BA_ "GenSigSendType" SG_ 522 SensorFIL_cntr 0;
+BA_ "GenSigStartValue" SG_ 522 SensorFIL_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 522 SensorFIL_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 522 SensorFIL_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 522 SensorFIL_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 553 SensorRIL_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 553 SensorRIL_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 553 SensorRIL_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 553 SensorRIL_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 553 SensorRIL_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 553 SensorRIL_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 553 SensorRIL_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 553 SensorRIL_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 553 SensorRIL_BlindDist 0;
+BA_ "GenSigSendType" SG_ 553 SensorRIL_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 553 SensorRIL_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 553 SensorRIL_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 554 SensorRIL_avl 0;
+BA_ "GenSigSendType" SG_ 554 SensorRIL_avl 0;
+BA_ "GenSigStartValue" SG_ 554 SensorRIL_cntr 0;
+BA_ "GenSigSendType" SG_ 554 SensorRIL_cntr 0;
+BA_ "GenSigStartValue" SG_ 554 SensorRIL_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 554 SensorRIL_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 554 SensorRIL_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 554 SensorRIL_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 523 SensorFIL_FIR_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 523 SensorFIL_FIR_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 523 SensorFIL_FIR_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 523 SensorFIL_FIR_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 523 SensorFIL_FIR_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 523 SensorFIL_FIR_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 523 SensorFIL_FIR_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 523 SensorFIL_FIR_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 523 SensorFIL_FIR_BlindDist 0;
+BA_ "GenSigSendType" SG_ 523 SensorFIL_FIR_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 523 SensorFIL_FIR_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 523 SensorFIL_FIR_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 524 SensorFIL_FIR_avl 0;
+BA_ "GenSigSendType" SG_ 524 SensorFIL_FIR_avl 0;
+BA_ "GenSigStartValue" SG_ 524 SensorFIL_FIR_cntr 0;
+BA_ "GenSigSendType" SG_ 524 SensorFIL_FIR_cntr 0;
+BA_ "GenSigStartValue" SG_ 524 SensorFIL_FIR_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 524 SensorFIL_FIR_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 524 SensorFIL_FIR_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 524 SensorFIL_FIR_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 555 SensorRIL_RIR_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 555 SensorRIL_RIR_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 555 SensorRIL_RIR_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 555 SensorRIL_RIR_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 555 SensorRIL_RIR_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 555 SensorRIL_RIR_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 555 SensorRIL_RIR_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 555 SensorRIL_RIR_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 555 SensorRIL_RIR_BlindDist 0;
+BA_ "GenSigSendType" SG_ 555 SensorRIL_RIR_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 555 SensorRIL_RIR_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 555 SensorRIL_RIR_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 556 SensorRIL_RIR_avl 0;
+BA_ "GenSigSendType" SG_ 556 SensorRIL_RIR_avl 0;
+BA_ "GenSigStartValue" SG_ 556 SensorRIL_RIR_cntr 0;
+BA_ "GenSigSendType" SG_ 556 SensorRIL_RIR_cntr 0;
+BA_ "GenSigStartValue" SG_ 556 SensorRIL_RIR_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 556 SensorRIL_RIR_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 556 SensorRIL_RIR_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 556 SensorRIL_RIR_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 525 SensorFIR_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 525 SensorFIR_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 525 SensorFIR_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 525 SensorFIR_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 525 SensorFIR_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 525 SensorFIR_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 525 SensorFIR_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 525 SensorFIR_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 525 SensorFIR_BlindDist 0;
+BA_ "GenSigSendType" SG_ 525 SensorFIR_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 525 SensorFIR_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 525 SensorFIR_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 526 SensorFIR_avl 0;
+BA_ "GenSigSendType" SG_ 526 SensorFIR_avl 0;
+BA_ "GenSigStartValue" SG_ 526 SensorFIR_cntr 0;
+BA_ "GenSigSendType" SG_ 526 SensorFIR_cntr 0;
+BA_ "GenSigStartValue" SG_ 526 SensorFIR_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 526 SensorFIR_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 526 SensorFIR_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 526 SensorFIR_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 557 SensorRIR_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 557 SensorRIR_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 557 SensorRIR_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 557 SensorRIR_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 557 SensorRIR_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 557 SensorRIR_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 557 SensorRIR_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 557 SensorRIR_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 557 SensorRIR_BlindDist 0;
+BA_ "GenSigSendType" SG_ 557 SensorRIR_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 557 SensorRIR_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 557 SensorRIR_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 558 SensorRIR_avl 0;
+BA_ "GenSigSendType" SG_ 558 SensorRIR_avl 0;
+BA_ "GenSigStartValue" SG_ 558 SensorRIR_cntr 0;
+BA_ "GenSigSendType" SG_ 558 SensorRIR_cntr 0;
+BA_ "GenSigStartValue" SG_ 558 SensorRIR_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 558 SensorRIR_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 558 SensorRIR_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 558 SensorRIR_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 527 SensorFIR_FOR_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 527 SensorFIR_FOR_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 527 SensorFIR_FOR_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 527 SensorFIR_FOR_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 527 SensorFIR_FOR_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 527 SensorFIR_FOR_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 527 SensorFIR_FOR_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 527 SensorFIR_FOR_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 527 SensorFIR_FOR_BlindDist 0;
+BA_ "GenSigSendType" SG_ 527 SensorFIR_FOR_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 527 SensorFIR_FOR_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 527 SensorFIR_FOR_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 528 SensorFIR_FOR_avl 0;
+BA_ "GenSigSendType" SG_ 528 SensorFIR_FOR_avl 0;
+BA_ "GenSigStartValue" SG_ 528 SensorFIR_FOR_cntr 0;
+BA_ "GenSigSendType" SG_ 528 SensorFIR_FOR_cntr 0;
+BA_ "GenSigStartValue" SG_ 528 SensorFIR_FOR_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 528 SensorFIR_FOR_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 528 SensorFIR_FOR_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 528 SensorFIR_FOR_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 559 SensorRIR_ROR_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 559 SensorRIR_ROR_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 559 SensorRIR_ROR_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 559 SensorRIR_ROR_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 559 SensorRIR_ROR_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 559 SensorRIR_ROR_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 559 SensorRIR_ROR_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 559 SensorRIR_ROR_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 559 SensorRIR_ROR_BlindDist 0;
+BA_ "GenSigSendType" SG_ 559 SensorRIR_ROR_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 559 SensorRIR_ROR_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 559 SensorRIR_ROR_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 560 SensorRIR_ROR_avl 0;
+BA_ "GenSigSendType" SG_ 560 SensorRIR_ROR_avl 0;
+BA_ "GenSigStartValue" SG_ 560 SensorRIR_ROR_cntr 0;
+BA_ "GenSigSendType" SG_ 560 SensorRIR_ROR_cntr 0;
+BA_ "GenSigStartValue" SG_ 560 SensorRIR_ROR_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 560 SensorRIR_ROR_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 560 SensorRIR_ROR_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 560 SensorRIR_ROR_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 529 SensorFOR_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 529 SensorFOR_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 529 SensorFOR_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 529 SensorFOR_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 529 SensorFOR_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 529 SensorFOR_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 529 SensorFOR_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 529 SensorFOR_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 529 SensorFOR_BlindDist 0;
+BA_ "GenSigSendType" SG_ 529 SensorFOR_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 529 SensorFOR_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 529 SensorFOR_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 530 SensorFOR_avl 0;
+BA_ "GenSigSendType" SG_ 530 SensorFOR_avl 0;
+BA_ "GenSigStartValue" SG_ 530 SensorFOR_cntr 0;
+BA_ "GenSigSendType" SG_ 530 SensorFOR_cntr 0;
+BA_ "GenSigStartValue" SG_ 530 SensorFOR_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 530 SensorFOR_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 530 SensorFOR_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 530 SensorFOR_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 561 SensorROR_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 561 SensorROR_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 561 SensorROR_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 561 SensorROR_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 561 SensorROR_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 561 SensorROR_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 561 SensorROR_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 561 SensorROR_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 561 SensorROR_BlindDist 0;
+BA_ "GenSigSendType" SG_ 561 SensorROR_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 561 SensorROR_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 561 SensorROR_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 562 SensorROR_avl 0;
+BA_ "GenSigSendType" SG_ 562 SensorROR_avl 0;
+BA_ "GenSigStartValue" SG_ 562 SensorROR_cntr 0;
+BA_ "GenSigSendType" SG_ 562 SensorROR_cntr 0;
+BA_ "GenSigStartValue" SG_ 562 SensorROR_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 562 SensorROR_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 562 SensorROR_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 562 SensorROR_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 531 SensorFOR_FSR_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 531 SensorFOR_FSR_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 531 SensorFOR_FSR_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 531 SensorFOR_FSR_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 531 SensorFOR_FSR_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 531 SensorFOR_FSR_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 531 SensorFOR_FSR_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 531 SensorFOR_FSR_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 531 SensorFOR_FSR_BlindDist 0;
+BA_ "GenSigSendType" SG_ 531 SensorFOR_FSR_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 531 SensorFOR_FSR_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 531 SensorFOR_FSR_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 532 SensorFOR_FSR_avl 0;
+BA_ "GenSigSendType" SG_ 532 SensorFOR_FSR_avl 0;
+BA_ "GenSigStartValue" SG_ 532 SensorFOR_FSR_cntr 0;
+BA_ "GenSigSendType" SG_ 532 SensorFOR_FSR_cntr 0;
+BA_ "GenSigStartValue" SG_ 532 SensorFOR_FSR_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 532 SensorFOR_FSR_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 532 SensorFOR_FSR_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 532 SensorFOR_FSR_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 563 SensorROR_RSR_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 563 SensorROR_RSR_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 563 SensorROR_RSR_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 563 SensorROR_RSR_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 563 SensorROR_RSR_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 563 SensorROR_RSR_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 563 SensorROR_RSR_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 563 SensorROR_RSR_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 563 SensorROR_RSR_BlindDist 0;
+BA_ "GenSigSendType" SG_ 563 SensorROR_RSR_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 563 SensorROR_RSR_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 563 SensorROR_RSR_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 564 SensorROR_RSR_avl 0;
+BA_ "GenSigSendType" SG_ 564 SensorROR_RSR_avl 0;
+BA_ "GenSigStartValue" SG_ 564 SensorROR_RSR_cntr 0;
+BA_ "GenSigSendType" SG_ 564 SensorROR_RSR_cntr 0;
+BA_ "GenSigStartValue" SG_ 564 SensorROR_RSR_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 564 SensorROR_RSR_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 564 SensorROR_RSR_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 564 SensorROR_RSR_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 533 SensorFSR_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 533 SensorFSR_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 533 SensorFSR_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 533 SensorFSR_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 533 SensorFSR_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 533 SensorFSR_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 533 SensorFSR_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 533 SensorFSR_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 533 SensorFSR_BlindDist 0;
+BA_ "GenSigSendType" SG_ 533 SensorFSR_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 533 SensorFSR_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 533 SensorFSR_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 534 SensorFSR_avl 0;
+BA_ "GenSigSendType" SG_ 534 SensorFSR_avl 0;
+BA_ "GenSigStartValue" SG_ 534 SensorFSR_cntr 0;
+BA_ "GenSigSendType" SG_ 534 SensorFSR_cntr 0;
+BA_ "GenSigStartValue" SG_ 534 SensorFSR_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 534 SensorFSR_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 534 SensorFSR_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 534 SensorFSR_Echo2NumDetn 0;
+BA_ "GenSigStartValue" SG_ 565 SensorRSR_Echo2Dist 0;
+BA_ "GenSigSendType" SG_ 565 SensorRSR_Echo2Dist 0;
+BA_ "GenSigStartValue" SG_ 565 SensorRSR_Echo1Height 0;
+BA_ "GenSigSendType" SG_ 565 SensorRSR_Echo1Height 0;
+BA_ "GenSigStartValue" SG_ 565 SensorRSR_Echo1NumDetn 0;
+BA_ "GenSigSendType" SG_ 565 SensorRSR_Echo1NumDetn 0;
+BA_ "GenSigStartValue" SG_ 565 SensorRSR_Echo1Dist 0;
+BA_ "GenSigSendType" SG_ 565 SensorRSR_Echo1Dist 0;
+BA_ "GenSigStartValue" SG_ 565 SensorRSR_BlindDist 0;
+BA_ "GenSigSendType" SG_ 565 SensorRSR_BlindDist 0;
+BA_ "GenSigStartValue" SG_ 565 SensorRSR_SignalWayId 0;
+BA_ "GenSigSendType" SG_ 565 SensorRSR_SignalWayId 0;
+BA_ "GenSigStartValue" SG_ 566 SensorRSR_avl 0;
+BA_ "GenSigSendType" SG_ 566 SensorRSR_avl 0;
+BA_ "GenSigStartValue" SG_ 566 SensorRSR_cntr 0;
+BA_ "GenSigSendType" SG_ 566 SensorRSR_cntr 0;
+BA_ "GenSigStartValue" SG_ 566 SensorRSR_Echo2Height 0;
+BA_ "GenSigSendType" SG_ 566 SensorRSR_Echo2Height 0;
+BA_ "GenSigStartValue" SG_ 566 SensorRSR_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 566 SensorRSR_Echo2NumDetn 0;
+BA_ "GenSigSendType" SG_ 769 DbgSuccessInitFlag 0;
+BA_ "GenSigStartValue" SG_ 769 DbgSuccessInitFlag 0;
+BA_ "GenSigSendType" SG_ 769 DbgMaximumCpuLoad 0;
+BA_ "GenSigStartValue" SG_ 769 DbgMaximumCpuLoad 0;
+BA_ "GenSigSendType" SG_ 769 DbgAverageCpuLoad 0;
+BA_ "GenSigStartValue" SG_ 769 DbgAverageCpuLoad 0;
+BA_ "GenSigSendType" SG_ 769 DbgKl15VlthChannelState 0;
+BA_ "GenSigStartValue" SG_ 769 DbgKl15VlthChannelState 0;
+BA_ "GenSigSendType" SG_ 769 DbgKl15AdcValue 0;
+BA_ "GenSigStartValue" SG_ 769 DbgKl15AdcValue 0;
+BA_ "GenSigStartValue" SG_ 770 DbgWdgEntity 0;
+BA_ "GenSigSendType" SG_ 770 DbgWdgEntity 0;
+BA_ "GenSigStartValue" SG_ 770 DbgEcuInternalTime 0;
+BA_ "GenSigSendType" SG_ 770 DbgEcuInternalTime 0;
+BA_ "GenSigStartValue" SG_ 771 DbgDetReason 0;
+BA_ "GenSigSendType" SG_ 771 DbgDetReason 0;
+BA_ "GenSigStartValue" SG_ 771 DbgResetReason 0;
+BA_ "GenSigSendType" SG_ 771 DbgResetReason 0;
+BA_ "GenSigStartValue" SG_ 772 DbgSwVersion 0;
+BA_ "GenSigSendType" SG_ 772 DbgSwVersion 0;
+VAL_ 628 IgnitionSts 1 "Ignition OFF" 0 "Ignition ON" ;
+VAL_ 628 DoorReSts 3 "NA" 2 "Reserved" 1 "Door is opened" 0 "Door is closed" ;
+VAL_ 628 DoorFrntRiSts 3 "NA" 2 "Reserved" 1 "Door is opened" 0 "Door is closed" ;
+VAL_ 628 DoorFrntLeSts 3 "NA" 2 "Reserved" 1 "Door is opened" 0 "Door is closed" ;
+VAL_ 628 TrlrAttchd 3 "NA" 2 "Reserved" 1 "Trailer is attached" 0 "Trailer is not attached" ;
+VAL_ 628 AmbAirT 1023 "Not Available" 1022 "Error" ;
+VAL_ 627 VehYawRate 65535 "Not Available" 65534 "Error" ;
+VAL_ 627 VehALgt 65535 "Not Available" 65534 "Error" ;
+VAL_ 627 VehALat 65535 "Not Available" 65534 "Error" ;
+VAL_ 626 WhlDirReRi 3 "NA" 2 "Backward" 1 "Forward" 0 "Stationary" ;
+VAL_ 626 WhlDirReLe 3 "NA" 2 "Backward" 1 "Forward" 0 "Stationary" ;
+VAL_ 626 WhlDirFrntRi 3 "NA" 2 "Backward" 1 "Forward" 0 "Stationary" ;
+VAL_ 626 WhlDirFrntLe 3 "NA" 2 "Backward" 1 "Forward" 0 "Stationary" ;
+VAL_ 626 WhlSpdReRi 4095 "Not Available" 4094 "Error" ;
+VAL_ 626 WhlSpdReLe 4095 "Not Available" 4094 "Error" ;
+VAL_ 626 WhlSpdFrntRi 4095 "Not Available" 4094 "Error" ;
+VAL_ 626 WhlSpdFrntLe 4095 "Not Available" 4094 "Error" ;
+VAL_ 625 WhlPlsReRiQly 3 "NA" 2 "Reserved" 1 "Ok" 0 "Error" ;
+VAL_ 625 WhlPlsReLeQly 3 "NA" 2 "Reserved" 1 "Ok" 0 "Error" ;
+VAL_ 625 WhlPlsFrntRiQly 3 "NA" 2 "Reserved" 1 "Ok" 0 "Error" ;
+VAL_ 625 WhlPlsFrntLeQly 3 "NA" 2 "Reserved" 1 "Ok" 0 "Error" ;
+VAL_ 624 VehVLgt 4095 "Not Available" 4094 "Error" ;
+VAL_ 624 GearPosn 7 "NA" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Park" 2 "Reverse" 1 "Drive" 0 "Neutral" ;
+VAL_ 624 SteerWhlAgFrnt 65535 "Not Available" 65534 "Error" ;
+VAL_ 513 SensorFSL_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 513 SensorFSL_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 514 SensorFSL_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 514 SensorFSL_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 545 SensorRSL_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 545 SensorRSL_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 546 SensorRSL_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 546 SensorRSL_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 515 SensorFSL_FOL_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 515 SensorFSL_FOL_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 516 SensorFSL_FOL_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 516 SensorFSL_FOL_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 547 SensorRSL_ROL_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 547 SensorRSL_ROL_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 548 SensorRSL_ROL_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 548 SensorRSL_ROL_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 517 SensorFOL_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 517 SensorFOL_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 518 SensorFOL_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 518 SensorFOL_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 549 SensorROL_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 549 SensorROL_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 550 SensorROL_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 550 SensorROL_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 519 SensorFOL_FIL_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 519 SensorFOL_FIL_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 520 SensorFOL_FIL_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 520 SensorFOL_FIL_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 551 SensorROL_RIL_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 551 SensorROL_RIL_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 552 SensorROL_RIL_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 552 SensorROL_RIL_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 521 SensorFIL_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 521 SensorFIL_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 522 SensorFIL_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 522 SensorFIL_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 553 SensorRIL_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 553 SensorRIL_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 554 SensorRIL_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 554 SensorRIL_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 523 SensorFIL_FIR_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 523 SensorFIL_FIR_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 524 SensorFIL_FIR_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 524 SensorFIL_FIR_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 555 SensorRIL_RIR_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 555 SensorRIL_RIR_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 556 SensorRIL_RIR_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 556 SensorRIL_RIR_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 525 SensorFIR_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 525 SensorFIR_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 526 SensorFIR_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 526 SensorFIR_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 557 SensorRIR_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 557 SensorRIR_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 558 SensorRIR_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 558 SensorRIR_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 527 SensorFIR_FOR_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 527 SensorFIR_FOR_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 528 SensorFIR_FOR_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 528 SensorFIR_FOR_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 559 SensorRIR_ROR_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 559 SensorRIR_ROR_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 560 SensorRIR_ROR_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 560 SensorRIR_ROR_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 529 SensorFOR_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 529 SensorFOR_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 530 SensorFOR_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 530 SensorFOR_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 561 SensorROR_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 561 SensorROR_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 562 SensorROR_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 562 SensorROR_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 531 SensorFOR_FSR_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 531 SensorFOR_FSR_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 532 SensorFOR_FSR_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 532 SensorFOR_FSR_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 563 SensorROR_RSR_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 563 SensorROR_RSR_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 564 SensorROR_RSR_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 564 SensorROR_RSR_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 533 SensorFSR_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 533 SensorFSR_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 534 SensorFSR_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 534 SensorFSR_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 565 SensorRSR_Echo1Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+VAL_ 565 SensorRSR_SignalWayId 0 "ulsSignalWayId_FSLtoFSL" 1 "ulsSignalWayId_FOLtoFSL" 2 "ulsSignalWayId_FSLtoFOL" 3 "ulsSignalWayId_FOLtoFOL" 4 "ulsSignalWayId_FILtoFOL" 5 "ulsSignalWayId_FOLtoFIL" 6 "ulsSignalWayId_FILtoFIL" 7 "ulsSignalWayId_FIRtoFIL" 8 "ulsSignalWayId_FILtoFIR" 9 "ulsSignalWayId_FIRtoFIR" 10 "ulsSignalWayId_FORtoFIR" 11 "ulsSignalWayId_FIRtoFOR" 12 "ulsSignalWayId_FORtoFOR" 13 "ulsSignalWayId_FSRtoFOR" 14 "ulsSignalWayId_FORtoFSR" 15 "ulsSignalWayId_FSRtoFSR" 16 "ulsSignalWayId_FCRtoFSR" 17 "ulsSignalWayId_FSRtoFCR" 18 "ulsSignalWayId_FCRtoFCR" 19 "ulsSignalWayId_RCRtoFCR" 20 "ulsSignalWayId_FCRtoRCR" 21 "ulsSignalWayId_RCRtoRCR" 22 "ulsSignalWayId_RSRtoRCR" 23 "ulsSignalWayId_RCRtoRSR" 24 "ulsSignalWayId_RSRtoRSR" 25 "ulsSignalWayId_RORtoRSR" 26 "ulsSignalWayId_RSRtoROR" 27 "ulsSignalWayId_RORtoROR" 28 "ulsSignalWayId_RIRtoROR" 29 "ulsSignalWayId_RORtoRIR" 30 "ulsSignalWayId_RIRtoRIR" 31 "ulsSignalWayId_RILtoRIR" 32 "ulsSignalWayId_RIRtoRIL" 33 "ulsSignalWayId_RILtoRIL" 34 "ulsSignalWayId_ROLtoRIL" 35 "ulsSignalWayId_RILtoROL" 36 "ulsSignalWayId_ROLtoROL" 37 "ulsSignalWayId_RSLtoROL" 38 "ulsSignalWayId_ROLtoRSL" 39 "ulsSignalWayId_RSLtoRSL" 40 "ulsSignalWayId_RCLtoRSL" 41 "ulsSignalWayId_RSLtoRCL" 42 "ulsSignalWayId_RCLtoRCL" 43 "ulsSignalWayId_FCLtoRCL" 44 "ulsSignalWayId_RCLtoFCL" 45 "ulsSignalWayId_FCLtoFCL" 46 "ulsSignalWayId_FSLtoFCL" 47 "ulsSignalWayId_FCLtoFSL" 48 "ulsSignalWayId_reserved1" 49 "ulsSignalWayId_reserved2" 50 "ulsSignalWayId_reserved3" 51 "ulsSignalWayId_reserved4" 52 "ulsSignalWayId_reserved5" 53 "ulsSignalWayId_reserved6" 54 "ulsSignalWayId_reserved7" 55 "ulsSignalWayId_reserved8" 56 "ulsSignalWayId_reserved9" 57 "ulsSignalWayId_reserved10" 58 "ulsSignalWayId_reserved11" 59 "ulsSignalWayId_reserved12" 255 "ulsSignalWayId_Undefind" ;
+VAL_ 566 SensorRSR_avl 0 "Boolean_FALSE" 1 "Boolean_TRUE" ;
+VAL_ 566 SensorRSR_Echo2Height 0 "ulsEchoHei_Ukwn" 1 "ulsEchoHei_Lo" 2 "ulsEchoHei_Hi" 3 "ulsEchoHei_Ini" ;
+SIG_GROUP_ 513 SensorFSL_0 1 : SensorFSL_BlindDist SensorFSL_SignalWayId SensorFSL_Echo1Dist SensorFSL_Echo1NumDetn SensorFSL_Echo1Height SensorFSL_Echo2Dist;
+SIG_GROUP_ 514 SensorFSL_1 1 : SensorFSL_avl SensorFSL_cntr SensorFSL_Echo2Height SensorFSL_Echo2NumDetn;
+SIG_GROUP_ 545 SensorRSL_0 1 : SensorRSL_BlindDist SensorRSL_SignalWayId SensorRSL_Echo1Dist SensorRSL_Echo1NumDetn SensorRSL_Echo1Height SensorRSL_Echo2Dist;
+SIG_GROUP_ 546 SensorRSL_1 1 : SensorRSL_avl SensorRSL_cntr SensorRSL_Echo2Height SensorRSL_Echo2NumDetn;
+SIG_GROUP_ 515 SensorFSL_FOL_0 1 : SensorFSL_FOL_BlindDist SensorFSL_FOL_SignalWayId SensorFSL_FOL_Echo1Dist SensorFSL_FOL_Echo1NumDetn SensorFSL_FOL_Echo1Height SensorFSL_FOL_Echo2Dist;
+SIG_GROUP_ 516 SensorFSL_FOL_1 1 : SensorFSL_FOL_avl SensorFSL_FOL_cntr SensorFSL_FOL_Echo2Height SensorFSL_FOL_Echo2NumDetn;
+SIG_GROUP_ 547 SensorRSL_ROL_0 1 : SensorRSL_ROL_BlindDist SensorRSL_ROL_SignalWayId SensorRSL_ROL_Echo1Dist SensorRSL_ROL_Echo1NumDetn SensorRSL_ROL_Echo1Height SensorRSL_ROL_Echo2Dist;
+SIG_GROUP_ 548 SensorRSL_ROL_1 1 : SensorRSL_ROL_avl SensorRSL_ROL_cntr SensorRSL_ROL_Echo2Height SensorRSL_ROL_Echo2NumDetn;
+SIG_GROUP_ 517 SensorFOL_0 1 : SensorFOL_BlindDist SensorFOL_SignalWayId SensorFOL_Echo1Dist SensorFOL_Echo1NumDetn SensorFOL_Echo1Height SensorFOL_Echo2Dist;
+SIG_GROUP_ 518 SensorFOL_1 1 : SensorFOL_avl SensorFOL_cntr SensorFOL_Echo2Height SensorFOL_Echo2NumDetn;
+SIG_GROUP_ 549 SensorROL_0 1 : SensorROL_BlindDist SensorROL_SignalWayId SensorROL_Echo1Dist SensorROL_Echo1NumDetn SensorROL_Echo1Height SensorROL_Echo2Dist;
+SIG_GROUP_ 550 SensorROL_1 1 : SensorROL_avl SensorROL_cntr SensorROL_Echo2Height SensorROL_Echo2NumDetn;
+SIG_GROUP_ 519 SensorFOL_FIL_0 1 : SensorFOL_FIL_BlindDist SensorFOL_FIL_SignalWayId SensorFOL_FIL_Echo1Dist SensorFOL_FIL_Echo1NumDetn SensorFOL_FIL_Echo1Height SensorFOL_FIL_Echo2Dist;
+SIG_GROUP_ 520 SensorFOL_FIL_1 1 : SensorFOL_FIL_avl SensorFOL_FIL_cntr SensorFOL_FIL_Echo2Height SensorFOL_FIL_Echo2NumDetn;
+SIG_GROUP_ 551 SensorROL_RIL_0 1 : SensorROL_RIL_BlindDist SensorROL_RIL_SignalWayId SensorROL_RIL_Echo1Dist SensorROL_RIL_Echo1NumDetn SensorROL_RIL_Echo1Height SensorROL_RIL_Echo2Dist;
+SIG_GROUP_ 552 SensorROL_RIL_1 1 : SensorROL_RIL_avl SensorROL_RIL_cntr SensorROL_RIL_Echo2Height SensorROL_RIL_Echo2NumDetn;
+SIG_GROUP_ 521 SensorFIL_0 1 : SensorFIL_BlindDist SensorFIL_SignalWayId SensorFIL_Echo1Dist SensorFIL_Echo1NumDetn SensorFIL_Echo1Height SensorFIL_Echo2Dist;
+SIG_GROUP_ 522 SensorFIL_1 1 : SensorFIL_avl SensorFIL_cntr SensorFIL_Echo2Height SensorFIL_Echo2NumDetn;
+SIG_GROUP_ 553 SensorRIL_0 1 : SensorRIL_BlindDist SensorRIL_SignalWayId SensorRIL_Echo1Dist SensorRIL_Echo1NumDetn SensorRIL_Echo1Height SensorRIL_Echo2Dist;
+SIG_GROUP_ 554 SensorRIL_1 1 : SensorRIL_avl SensorRIL_cntr SensorRIL_Echo2Height SensorRIL_Echo2NumDetn;
+SIG_GROUP_ 523 SensorFIL_FIR_0 1 : SensorFIL_FIR_BlindDist SensorFIL_FIR_SignalWayId SensorFIL_FIR_Echo1Dist SensorFIL_FIR_Echo1NumDetn SensorFIL_FIR_Echo1Height SensorFIL_FIR_Echo2Dist;
+SIG_GROUP_ 524 SensorFIL_FIR_1 1 : SensorFIL_FIR_avl SensorFIL_FIR_cntr SensorFIL_FIR_Echo2Height SensorFIL_FIR_Echo2NumDetn;
+SIG_GROUP_ 555 SensorRIL_RIR_0 1 : SensorRIL_RIR_BlindDist SensorRIL_RIR_SignalWayId SensorRIL_RIR_Echo1Dist SensorRIL_RIR_Echo1NumDetn SensorRIL_RIR_Echo1Height SensorRIL_RIR_Echo2Dist;
+SIG_GROUP_ 556 SensorRIL_RIR_1 1 : SensorRIL_RIR_avl SensorRIL_RIR_cntr SensorRIL_RIR_Echo2Height SensorRIL_RIR_Echo2NumDetn;
+SIG_GROUP_ 525 SensorFIR_0 1 : SensorFIR_BlindDist SensorFIR_SignalWayId SensorFIR_Echo1Dist SensorFIR_Echo1NumDetn SensorFIR_Echo1Height SensorFIR_Echo2Dist;
+SIG_GROUP_ 526 SensorFIR_1 1 : SensorFIR_avl SensorFIR_cntr SensorFIR_Echo2Height SensorFIR_Echo2NumDetn;
+SIG_GROUP_ 557 SensorRIR_0 1 : SensorRIR_BlindDist SensorRIR_SignalWayId SensorRIR_Echo1Dist SensorRIR_Echo1NumDetn SensorRIR_Echo1Height SensorRIR_Echo2Dist;
+SIG_GROUP_ 558 SensorRIR_1 1 : SensorRIR_avl SensorRIR_cntr SensorRIR_Echo2Height SensorRIR_Echo2NumDetn;
+SIG_GROUP_ 527 SensorFIR_FOR_0 1 : SensorFIR_FOR_BlindDist SensorFIR_FOR_SignalWayId SensorFIR_FOR_Echo1Dist SensorFIR_FOR_Echo1NumDetn SensorFIR_FOR_Echo1Height SensorFIR_FOR_Echo2Dist;
+SIG_GROUP_ 528 SensorFIR_FOR_1 1 : SensorFIR_FOR_avl SensorFIR_FOR_cntr SensorFIR_FOR_Echo2Height SensorFIR_FOR_Echo2NumDetn;
+SIG_GROUP_ 559 SensorRIR_ROR_0 1 : SensorRIR_ROR_BlindDist SensorRIR_ROR_SignalWayId SensorRIR_ROR_Echo1Dist SensorRIR_ROR_Echo1NumDetn SensorRIR_ROR_Echo1Height SensorRIR_ROR_Echo2Dist;
+SIG_GROUP_ 560 SensorRIR_ROR_1 1 : SensorRIR_ROR_avl SensorRIR_ROR_cntr SensorRIR_ROR_Echo2Height SensorRIR_ROR_Echo2NumDetn;
+SIG_GROUP_ 529 SensorFOR_0 1 : SensorFOR_BlindDist SensorFOR_SignalWayId SensorFOR_Echo1Dist SensorFOR_Echo1NumDetn SensorFOR_Echo1Height SensorFOR_Echo2Dist;
+SIG_GROUP_ 530 SensorFOR_1 1 : SensorFOR_avl SensorFOR_cntr SensorFOR_Echo2Height SensorFOR_Echo2NumDetn;
+SIG_GROUP_ 561 SensorROR_0 1 : SensorROR_BlindDist SensorROR_SignalWayId SensorROR_Echo1Dist SensorROR_Echo1NumDetn SensorROR_Echo1Height SensorROR_Echo2Dist;
+SIG_GROUP_ 562 SensorROR_1 1 : SensorROR_avl SensorROR_cntr SensorROR_Echo2Height SensorROR_Echo2NumDetn;
+SIG_GROUP_ 531 SensorFOR_FSR_0 1 : SensorFOR_FSR_BlindDist SensorFOR_FSR_SignalWayId SensorFOR_FSR_Echo1Dist SensorFOR_FSR_Echo1NumDetn SensorFOR_FSR_Echo1Height SensorFOR_FSR_Echo2Dist;
+SIG_GROUP_ 532 SensorFOR_FSR_1 1 : SensorFOR_FSR_avl SensorFOR_FSR_cntr SensorFOR_FSR_Echo2Height SensorFOR_FSR_Echo2NumDetn;
+SIG_GROUP_ 563 SensorROR_RSR_0 1 : SensorROR_RSR_BlindDist SensorROR_RSR_SignalWayId SensorROR_RSR_Echo1Dist SensorROR_RSR_Echo1NumDetn SensorROR_RSR_Echo1Height SensorROR_RSR_Echo2Dist;
+SIG_GROUP_ 564 SensorROR_RSR_1 1 : SensorROR_RSR_avl SensorROR_RSR_cntr SensorROR_RSR_Echo2Height SensorROR_RSR_Echo2NumDetn;
+SIG_GROUP_ 533 SensorFSR_0 1 : SensorFSR_BlindDist SensorFSR_SignalWayId SensorFSR_Echo1Dist SensorFSR_Echo1NumDetn SensorFSR_Echo1Height SensorFSR_Echo2Dist;
+SIG_GROUP_ 534 SensorFSR_1 1 : SensorFSR_avl SensorFSR_cntr SensorFSR_Echo2Height SensorFSR_Echo2NumDetn;
+SIG_GROUP_ 565 SensorRSR_0 1 : SensorRSR_BlindDist SensorRSR_SignalWayId SensorRSR_Echo1Dist SensorRSR_Echo1NumDetn SensorRSR_Echo1Height SensorRSR_Echo2Dist;
+SIG_GROUP_ 566 SensorRSR_1 1 : SensorRSR_avl SensorRSR_cntr SensorRSR_Echo2Height SensorRSR_Echo2NumDetn;
+SIG_GROUP_ 769 DebugState 1 : DbgSuccessInitFlag DbgMaximumCpuLoad DbgAverageCpuLoad DbgKl15VlthChannelState DbgKl15AdcValue;
+SIG_GROUP_ 770 DebugWdgEcuTime 1 : DbgWdgEntity DbgEcuInternalTime;
+SIG_GROUP_ 771 DebugReason 1 : DbgDetReason DbgResetReason;
+SIG_GROUP_ 772 DebugSwVersion 1 : DbgSwVersion;
+

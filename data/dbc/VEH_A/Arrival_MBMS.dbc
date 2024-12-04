@@ -1,0 +1,961 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BMS_Master ElectricalChargingSystem Vector InstrumentCluster DCU
+VAL_TABLE_ topology_state 7 "NA" 3 "Out of Packs range" 2 "Out of Location range" 1 "Duplicating Location" 0 "Correct" ;
+VAL_TABLE_ vtHealthLevel 3 "NA" 2 "Critical" 1 "Warning" 0 "Normal" ;
+VAL_TABLE_ ReadyToSleep 3 "Not available" 2 "Fault" 1 "Ready" 0 "Not ready" ;
+VAL_TABLE_ mm_mode 4 "SleepPreparation" 7 "NA" 3 "Emergency" 2 "Operation" 1 "Diag" 0 "Init" ;
+VAL_TABLE_ hvil_Status 3 "not available" 2 "Break" 1 "Normal" 0 "Shortcircuit" ;
+VAL_TABLE_ bms_Mode 15 "NA" 11 "Service" 10 "Fault" 9 "PowerOff" 8 "SleepPrep" 7 "Sleep" 6 "HV_Disconnecting" 5 "Drive" 4 "Precharge" 3 "Ready" 2 "Diag" 1 "SW_Init" 0 "FW_Init" ;
+VAL_TABLE_ firmware_block_info 4 "firmware block 4" 3 "firmware block 3" 2 "firmware block 2" 1 "firmware block 1" 0 "firmware block 0" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ st_ChargeOverCurrent : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Count_of_HVBMs_in_Chrg : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ req_DisconnectOverride : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ req_ConnectOverride : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ req_Disconnect : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ISO_Fault : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Insulation_Failure : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ req_Disconnect_Emergency : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ req_Connect_Emergency : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ req_Balancing : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HVIL2_Resistance : 0|14@1+ (0.1,0) [0|1000] "Ohm" Vector__XXX
+ SG_ HVIL2_State : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ st_FM_DeratingMode : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Charging_Mode : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2180914174 Battery_DchPower_Performance: 8 Vector__XXX
+ SG_ AvailableDischargePower_30sec : 32|16@1+ (0.05,0) [0|3212.75] "kW" Vector__XXX
+ SG_ AvailableDischargePower_10sec : 16|16@1+ (0.05,0) [0|3212.75] "kW" Vector__XXX
+ SG_ AvailableDischargePower_2sec : 0|16@1+ (0.05,0) [0|3212.75] "kW" Vector__XXX
+
+BO_ 2180911870 Battery_Errors_2: 8 Vector__XXX
+ SG_ sts_PrechIsoChkFail : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ sts_LVStsMsg : 61|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ sts_ChrgSysStMsg : 59|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ sts_BmsReqMsg : 57|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ st_LowVoltageFault : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ sts_LvStateFault : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ sts_BmsPwrCtrlMsg : 53|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ sts_Count_CB_UDifErr_Full : 52|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ st_PckCntctrFailure : 51|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ st_IntPrechargeFailure : 50|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ st_HiBusUDbal : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ st_ExtPrechargeFailure : 48|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ st_CnnctInterlockFailure : 47|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ st_BatteryOverCurrent : 44|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ st_BatteryCommLost : 43|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NVRAM_Fault : 39|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HVIL_Fault : 38|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HVBMs_JointFaultLevel : 40|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ HVBMs_Fault : 37|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ st_TopologyError : 34|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ st_ErrorLogMaster : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ st_HVBM_LLDataValid : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2180913918 Battery_Topology_Info: 8 Vector__XXX
+ SG_ PackRemCur : 48|16@1+ (0.1,-3212.5) [-3212.5|3212.6] "A" Vector__XXX
+ SG_ StrmRemCur : 32|16@1+ (0.1,-3212.5) [-3212.5|3212.6] "A" Vector__XXX
+ SG_ MaxSrtmCur : 16|16@1+ (0.1,-3212.5) [-3212.5|3212.6] "A" Vector__XXX
+ SG_ MaxPackCur : 0|16@1+ (0.1,-3212.5) [-3212.5|3212.6] "A" Vector__XXX
+
+BO_ 2180913662 Battery_Info_3: 8 Vector__XXX
+ SG_ st_FM_Warning : 33|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ st_FM_FltLvl7Mem : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ st_FM_Critical : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ st_MBMSTestModeOn : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ req_PackCntctrOn : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Count_of_HVBMs_LowCurPredn : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ sts_HvbmLowCurPredn : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ sts_MdLowChrgCur : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ sts_MdChrgReconnFailure : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ sts_MdChrgConnFailure : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ sts_MdChrgBalnActive : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ChargingComplete_MD_Num : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Count_of_HVBMs_ChCmpl : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2180913406 Battery_CB_Voltage: 8 BMS_Master
+ SG_ LowestCBvoltage : 40|8@1+ (0.02,0) [0|5] "V" Vector__XXX
+ SG_ LowestCBvoltage_MD_Num : 32|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ LowestCBvoltage_CellBlockNum : 24|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ HighestCBvoltage : 16|8@1+ (0.02,0) [0|5] "V" Vector__XXX
+ SG_ HighestCBvoltage_MD_Num : 8|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ HighestCBvoltage_CellBlockNum : 0|8@1+ (1,0) [0|250] "" Vector__XXX
+
+BO_ 2180912894 Battery_Pack_Diagnostic: 8 Vector__XXX
+ SG_ Pack_sts_SystemWarning : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_sts_ThermEventPossible : 13|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PackDiag_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PackDiag_Counter : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Pack_st_TempSensorFault : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pack_HVBMCommLostCount : 24|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ MaxPackCellTemperature : 16|8@1+ (1,-50) [-50|150] "degC" Vector__XXX
+ SG_ BatteryPack_ID : 32|24@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2180912638 PU_Info: 8 BMS_Master
+ SG_ fw_percentage_bl_F m15 : 32|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ fw_percentage_bl_E m14 : 32|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ fw_percentage_bl_4 m4 : 32|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ fw_percentage_bl_3 m3 : 32|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ fw_percentage_bl_2 m2 : 32|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ fw_percentage_bl_1 m1 : 32|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ fw_percentage_bl_0 m0 : 32|8@1+ (1,0) [0|255] "%" Vector__XXX
+ SG_ firmware_block_filled_fw_bl_F m15 : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ device_count_upgrading_fw_bl_F m15 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_upgraded_fw_bl_F m15 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_failed_fw_bl_F m15 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ firmware_block_filled_fw_bl_E m14 : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ device_count_upgrading_fw_bl_E m14 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_upgraded_fw_bl_E m14 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_failed_fw_bl_E m14 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ firmware_block_filled_fw_bl_4 m4 : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ firmware_block_filled_fw_bl_3 m3 : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ firmware_block_filled_fw_bl_2 m2 : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ firmware_block_filled_fw_bl_1 m1 : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ firmware_block_filled_fw_bl_0 m0 : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ device_count_upgrading_fw_bl_4 m4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_upgrading_fw_bl_3 m3 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_upgrading_fw_bl_2 m2 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_upgrading_fw_bl_1 m1 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_upgrading_fw_bl_0 m0 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_upgraded_fw_bl_4 m4 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_upgraded_fw_bl_3 m3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_upgraded_fw_bl_2 m2 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_upgraded_fw_bl_1 m1 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_upgraded_fw_bl_0 m0 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_failed_fw_bl_4 m4 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_failed_fw_bl_3 m3 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_failed_fw_bl_2 m2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_failed_fw_bl_1 m1 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ device_count_failed_fw_bl_0 m0 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ firmware_block M : 0|4@1+ (1,0) [0|4] "" Vector__XXX
+
+BO_ 2180912126 Recuperation_Statistic: 8 Vector__XXX
+ SG_ TotalRecupEnergy : 32|32@1+ (0.1,0) [0|421108121.5] "kWh" Vector__XXX
+ SG_ TotalRecupCapacity : 0|32@1+ (0.01,0) [0|42110812.15] "kAh" Vector__XXX
+
+BO_ 2381395198 MBMS_LL_Diagnostics: 8 Vector__XXX
+ SG_ sts_Vbat : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ sts_McuT : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ sts_McuCoreV : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ sts_IgInpV : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LdoPwrSrc : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ McuPwrSrcSeln : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MaiPwrSrc : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ EthPwrSrc : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AuxPwrSrc : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2167340798 BMS_Requests_2: 8 DCU
+ SG_ req_Statistic : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ req_SOH_Info : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2650674430 Battery_SOH_2: 8 BMS_Master
+ SG_ SOH_HVBM_j1939_SA : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ SOH_n_DchCycles : 40|8@1+ (10,0) [0|2000] "unit" Vector__XXX
+ SG_ SOH_n_ChCycles : 32|8@1+ (10,0) [0|2000] "unit" Vector__XXX
+ SG_ SOH_MinCB_Resistance : 16|16@1+ (0.0001,0) [0|6.4255] "Ohm" Vector__XXX
+ SG_ SOH_MaxCB_Resistance : 0|16@1+ (0.0001,0) [0|6.4255] "Ohm" Vector__XXX
+
+BO_ 2650675198 Battery_SOH_1: 8 BMS_Master
+ SG_ SOH_MinCB_ChCapacity : 48|16@1+ (0.001,0) [0|64.255] "Ah" Vector__XXX
+ SG_ SOH_MaxCB_ChCapacity : 32|16@1+ (0.001,0) [0|64.255] "Ah" Vector__XXX
+ SG_ SOH_MinCB_DchCapacity : 16|16@1+ (0.001,0) [0|64.255] "Ah" Vector__XXX
+ SG_ SOH_MaxCB_DchCapacity : 0|16@1+ (0.001,0) [0|64.255] "Ah" Vector__XXX
+
+BO_ 2180911614 Battery_Info_2: 8 BMS_Master
+ SG_ AvailableEnergy : 16|16@1+ (0.05,0) [0|3212.75] "kWh" Vector__XXX
+ SG_ MaxDchCurrent_30sec_Debug : 48|16@1+ (0.1,-3212.5) [-3212.5|3212.6] "A" Vector__XXX
+ SG_ MaxChCurrent_30sec_Debug : 32|16@1+ (0.1,-3212.5) [-3212.5|3212.6] "A" Vector__XXX
+ SG_ TotalAvailRemainEnergy : 0|16@1+ (0.05,0) [0|3212.75] "kWh" Vector__XXX
+
+BO_ 2167275262 BMS_External_Measurement: 8 DCU
+ SG_ Ext_Bus_Voltage : 0|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+
+BO_ 2167209726 BMS_Charging_Control: 8 DCU
+ SG_ req_IMDdisable : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2167078654 BMS_Request: 8 DCU
+ SG_ BmsReq_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BmsReq_Counter : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ req_Sleep : 12|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2180911358 Capacity_Statistic: 8 BMS_Master
+ SG_ TotalChargedCapacity : 32|32@1+ (0.01,0) [0|42110812.15] "kAh" Vector__XXX
+ SG_ TotalDischargedCapacity : 0|32@1+ (0.01,0) [0|42110812.15] "kAh" Vector__XXX
+
+BO_ 2180911102 Energy_Statistic: 8 BMS_Master
+ SG_ TotalDischargedEnergy : 0|32@1+ (0.1,0) [0|421108121.5] "kWh" Vector__XXX
+ SG_ TotalChargedEnergy : 32|32@1+ (0.1,0) [0|421108121.5] "kWh" Vector__XXX
+
+BO_ 2180910846 Charging_Info_2: 8 BMS_Master
+ SG_ Charging_MaxPowerLimit : 16|16@1+ (0.05,0) [0|3212.75] "kW" Vector__XXX
+ SG_ Charging_MaxCurrentLimit : 0|16@1+ (0.1,-3276.8) [-3276.8|3276.7] "A" Vector__XXX
+ SG_ TimeToTgCharge : 48|16@1+ (1,0) [0|64255] "min" Vector__XXX
+ SG_ TimeToFullCharge : 32|16@1+ (1,0) [0|64255] "min" Vector__XXX
+
+BO_ 2180910590 Charging_Info: 8 BMS_Master
+ SG_ ChrgInfo_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ChrgInfo_Counter : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Charging_TargetVoltage : 32|16@1+ (0.05,0) [0|3276.75] "V" Vector__XXX
+ SG_ Charging_TargetCurrent : 16|16@1+ (0.1,-3276.8) [-3276.8|3276.7] "A" Vector__XXX
+ SG_ Charging_MaxVoltageLimit : 48|16@1+ (0.05,0) [0|3276.75] "V" Vector__XXX
+ SG_ Charging_Complete : 12|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2180910334 Battery_MD_Voltage: 8 BMS_Master
+ SG_ Lowest_MD_Voltage_Num : 24|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ Lowest_MD_Voltage : 32|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+ SG_ Highest_MD_Voltage_Num : 16|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ Highest_MD_Voltage : 0|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+
+BO_ 2180910078 HVBM_Diagnostic_Health: 8 BMS_Master
+ SG_ Err_st_history_2 : 32|24@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HVBM_ID : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Err_st_history : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2180909566 HVIL_State: 8 BMS_Master
+ SG_ HVIL_Resistance : 8|14@1+ (0.1,0) [0|1638.3] "Ohm" Vector__XXX
+ SG_ HVIL_State : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2180909310 Battery_MD_Temperature: 8 BMS_Master
+ SG_ BatTgTempUpLim : 56|8@1+ (1,-55) [-55|195] "degC" Vector__XXX
+ SG_ BatTgTempLoLim : 48|8@1+ (1,-55) [-55|195] "degC" Vector__XXX
+ SG_ MDTemp_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MDTemp_Counter : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ LowestAverageMDTemp_Num : 40|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ LowestAverageMDTemp : 32|8@1+ (1,-55) [-55|195] "degC" Vector__XXX
+ SG_ HighestAverageMDTemp_Num : 24|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ HighestAverageMDTemp : 16|8@1+ (1,-55) [-55|195] "degC" Vector__XXX
+
+BO_ 2180909054 Battery_Cell_Temperature: 8 BMS_Master
+ SG_ LowestCellTemperature : 40|8@1+ (1,-55) [-55|195] "degC" Vector__XXX
+ SG_ LowestCellTemp_MD_Num : 32|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ LowestCellTemp_CellNum : 24|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ HighestCellTemperature : 16|8@1+ (1,-55) [-55|195] "degC" Vector__XXX
+ SG_ HighestCellTemp_MD_Num : 8|8@1+ (1,0) [0|250] "" Vector__XXX
+ SG_ HighestCellTemp_CellNum : 0|8@1+ (1,0) [0|250] "" Vector__XXX
+
+BO_ 2180908798 Battery_Errors: 8 BMS_Master
+ SG_ st_ErrorLogHVBMs_2 : 32|24@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ st_IsoFaultCodeLog : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ st_ErrorLogHVBMs : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2180908542 Battery_ChPower_Performance: 8 BMS_Master
+ SG_ AvailableChargePower_30sec : 32|16@1+ (0.05,0) [0|3212.75] "kW" Vector__XXX
+ SG_ AvailableChargePower_10sec : 16|16@1+ (0.05,0) [0|3212.75] "kW" Vector__XXX
+ SG_ AvailableChargePower_2sec : 0|16@1+ (0.05,0) [0|3212.75] "kW" Vector__XXX
+
+BO_ 2180908286 Battery_ChCurrent_Performance: 8 BMS_Master
+ SG_ MaxAvailChargeCurrent_30sec : 48|16@1+ (0.1,0) [0|6425.5] "A" Vector__XXX
+ SG_ MaxAvailChargeCurrent_10sec : 32|16@1+ (0.1,0) [0|6425.5] "A" Vector__XXX
+ SG_ MaxAvailChargeCurrent_2sec : 16|16@1+ (0.1,0) [0|6425.5] "A" Vector__XXX
+ SG_ ChCurrPerfomance_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ChCurrPerfomance_Counter : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2180908030 Battery_DchCurrent_Performance: 8 BMS_Master
+ SG_ MaxAvailDischargeCurrent_30sec : 48|16@1+ (0.1,0) [0|6425.5] "A" Vector__XXX
+ SG_ MaxAvailDischargeCurrent_10sec : 32|16@1+ (0.1,0) [0|6425.5] "A" Vector__XXX
+ SG_ MaxAvailDischargeCurrent_2sec : 16|16@1+ (0.1,0) [0|6425.5] "A" Vector__XXX
+ SG_ DchCurrPerfomance_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DchCurrPerfomance_Counter : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2180907774 Battery_State: 8 BMS_Master
+ SG_ BatteryDisconnectForewarning : 13|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BatteryDisconnectEmergency : 12|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BatState_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BatState_Counter : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BatteryCurrent : 32|16@1+ (0.1,-3212.5) [-3212.5|3212.6] "A" Vector__XXX
+ SG_ BatteryVoltage : 16|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+ SG_ UsableBatterySOC : 48|16@1+ (0.0015625,0) [0|100.3984375] "%" Vector__XXX
+
+BO_ 2166947582 BMS_Power_Control: 8 DCU
+ SG_ PwrControl_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ PwrControl_Counter : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ perm_Connect : 13|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ perm_EmergencyDisconnect : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ req_EmergencyDisconnect : 14|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ req_Connect : 12|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2180907262 BMS_State: 8 BMS_Master
+ SG_ MBMS_Health : 26|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BmsState_Counter : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BmsState_CRC : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BatterySOC : 48|16@1+ (0.0015625,0) [0|100.3984375] "%" Vector__XXX
+ SG_ BatteryPower : 32|16@1+ (0.1,-3212.5) [-3212.5|3212.6] "kW" Vector__XXX
+ SG_ BatterySystemFaultLevel : 19|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ st_ReadyToSleep : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_DisconnectForewarning : 24|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_DisconnectEmergency : 25|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_ModuleManagementMode : 16|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BMS_Mode : 12|4@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2180907518 Battery_Info: 8 BMS_Master
+ SG_ MSDState : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ st_CrashEvent : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HVBM_Count : 40|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Count_of_HVBMs_in_Sleep : 32|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Count_of_HVBMs_ConnLost : 8|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Isolation_Status : 3|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Isolation_FaultCode : 0|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Count_of_HVBMs_in_Flt : 24|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ Count_of_HVBMs_in_Drv : 16|8@1+ (1,0) [0|255] "unit" Vector__XXX
+ SG_ ISO_Resistance : 48|16@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_TX_BU_ 2167275262 : ElectricalChargingSystem,DCU;
+BO_TX_BU_ 2167209726 : ElectricalChargingSystem,DCU;
+
+
+CM_ "Common signals from Master BMS.
+$File: //depot/auto/dbc/Components/BMS/Arrival_BMS_v4/head/Arrival_BMS_v4.dbc $
+$Change: 154785 $
+$DateTime: 2022/09/02 13:40:10 $
+$Revision: #126 $";
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 st_ChargeOverCurrent "Charging overcurrent condition alert";
+CM_ SG_ 3221225472 Count_of_HVBMs_in_Chrg "Count of HVBMs that are charging. (i.e. MBMS system mode = Charging, HVBM Mode = Drive)";
+CM_ SG_ 3221225472 req_DisconnectOverride "Request from vehicle control system to connect modules to main BUS";
+CM_ SG_ 3221225472 req_ConnectOverride "Request from vehicle control system to connect modules to main BUS";
+CM_ SG_ 3221225472 req_Disconnect "Request from vehicle control system to disconnect modules from main BUS";
+CM_ SG_ 3221225472 ISO_Fault "isolation fault";
+CM_ SG_ 3221225472 Insulation_Failure "Insulation failure state";
+CM_ SG_ 3221225472 req_Disconnect_Emergency "Request from vehicle control system to emergency disconnect modules from main BUS";
+CM_ SG_ 3221225472 req_Connect_Emergency "Request from vehicle control system to emergency connect modules to main BUS";
+CM_ SG_ 3221225472 req_Balancing "Request from vehicle control system to turn on balancing process";
+CM_ SG_ 3221225472 HVIL2_State "HVIL2 State: 0 - shortcircuit (<1 Ohm), 1 - some load detected between 1 and  ~50 Ohm, 2 - break (>~50 Ohm), 3 - NA";
+CM_ SG_ 3221225472 st_FM_DeratingMode "Derating mode status from Fault Management";
+CM_ SG_ 3221225472 Charging_Mode "Charging mode (boolean status from DCU that we are charging now)";
+CM_ BO_ 2180914174 "Message contains predicted information for discharge power battery performance.";
+CM_ SG_ 2180914174 AvailableDischargePower_30sec "Power available to be discherged from battery module during next 30 seconds, kW.  Depends on SOC level, module temperatures and disbalance level";
+CM_ SG_ 2180914174 AvailableDischargePower_10sec "Power available to be discherged from battery module during next 10 seconds, kW.  Depends on SOC level, module temperatures and disbalance level";
+CM_ SG_ 2180914174 AvailableDischargePower_2sec "Power available to be discherged from battery module during next 2 seconds, kW.  Depends on SOC level, module temperatures and disbalance level";
+CM_ BO_ 2180911870 "Message contains information about battery errors.";
+CM_ SG_ 2180911870 sts_PrechIsoChkFail "Precharge isolation check failure detected.";
+CM_ SG_ 2180911870 sts_LVStsMsg "Status of LV_States message connection: 0x0 - Normal (allmessages present), 0x1 - Warning (at least one is suspect to be lost), 0x2 - Critical (at least one islost), 0x3 - NA ";
+CM_ SG_ 2180911870 sts_ChrgSysStMsg "Status of CHRG_SysState message connection: 0x0 - Normal (all messages present), 0x1 - Warning (at least one is suspect to be lost), 0x2 - Critical (at least one is lost), 0x3 - NA ";
+CM_ SG_ 2180911870 sts_BmsReqMsg "Status of BMS_Requests message connection: 0x0 - Normal (allmessages present), 0x1 - Warning (at least one is suspect to be lost), 0x2 - Critical (at least one islost), 0x3 - NA ";
+CM_ SG_ 2180911870 st_LowVoltageFault "LowVoltageFault in Master BMS: 0 - LowVoltage is OK, 1 -  LowVoltage is Fault";
+CM_ SG_ 2180911870 sts_LvStateFault "Lv state fault status";
+CM_ SG_ 2180911870 sts_BmsPwrCtrlMsg "Status of BMS_Power_Control message connection: 0x0 - Normal (allmessages present), 0x1 - Warning (at least one is suspect to be lost), 0x2 - Critical (at least one islost), 0x3 - NA ";
+CM_ SG_ 2180911870 sts_Count_CB_UDifErr_Full "At least one HVBM has a full CB-Voltage-diff-error counter. 0 - counter is not full, 1 - counter is full";
+CM_ SG_ 2180911870 st_PckCntctrFailure "status of pack contactors failure";
+CM_ SG_ 2180911870 st_IntPrechargeFailure "status of internal precharge failure";
+CM_ SG_ 2180911870 st_HiBusUDbal "High bus voltage disbalance";
+CM_ SG_ 2180911870 st_ExtPrechargeFailure "status of external precharge failure";
+CM_ SG_ 2180911870 st_CnnctInterlockFailure "status of connector interlock failure";
+CM_ SG_ 2180911870 st_BatteryOverCurrent "status of MBMS OverCurrent fault: 0x0 - Normal, 0x1 - Warning, 0x2 - Alarm, 0x3 - Critical, 0x7 - NA ";
+CM_ SG_ 2180911870 st_BatteryCommLost "Communication with HVBMs is lost. 0 - Comm is OK, 1 - Comm is lost";
+CM_ SG_ 2180911870 NVRAM_Fault "fault with writing to NVRAM or reading from NVRAM processes";
+CM_ SG_ 2180911870 HVIL_Fault "HVIL fault (break)";
+CM_ SG_ 2180911870 HVBMs_JointFaultLevel "It is an aggrated fault level value representing the status of all the HVBMs in the MBMS";
+CM_ SG_ 2180911870 HVBMs_Fault "flag is set to 1 when count of fault and lost connection HVBMs is equal or more than parameter MBMS_SMF_par_n_HVBMtoDcnt";
+CM_ SG_ 2180911870 st_TopologyError "Battery topology error status. 0x0 - correct topology, 0x1 - duplicating location number inside same pack, 0x2 - out-of-range location number,  0x3 - out-of-range pack number, 0x7 - NA";
+CM_ SG_ 2180911870 st_ErrorLogMaster "MasterBMS Error log";
+CM_ SG_ 2180911870 st_HVBM_LLDataValid "Indication status LLDataValid and SOA HVBM range
+
+0x00 - normal, LLDataValid = true
+0x01 - warning, LLDataValid = false, SOA - normal range
+0x02 - critical, LLDataValid = false, SOA - enormal range
+0x03 - NA";
+CM_ BO_ 2180913918 "Message contains information about topology properties of battery";
+CM_ SG_ 2180913918 PackRemCur "Packs remainig current, A";
+CM_ SG_ 2180913918 StrmRemCur "Stream remainig current, A";
+CM_ SG_ 2180913918 MaxSrtmCur "Max current in streams of battery, A";
+CM_ SG_ 2180913918 MaxPackCur "Max current in packs of battery, A";
+CM_ BO_ 2180913662 "Message contains information about module performance";
+CM_ SG_ 2180913662 st_FM_Warning "warning status from Fault Management";
+CM_ SG_ 2180913662 st_FM_FltLvl7Mem "Fault level 7 in memory status from Fault Management";
+CM_ SG_ 2180913662 st_FM_Critical "critical status from Fault Management";
+CM_ SG_ 2180913662 st_MBMSTestModeOn "status: MBMS in test mode";
+CM_ SG_ 2180913662 req_PackCntctrOn "Request from model to power on pack contactor pins";
+CM_ SG_ 2180913662 Count_of_HVBMs_LowCurPredn "Count of HVBMs with low current prediction";
+CM_ SG_ 2180913662 sts_HvbmLowCurPredn "At least one HVBM has a low current prediction";
+CM_ SG_ 2180913662 sts_MdLowChrgCur "BMS is reducing target charging current to connect modules during charging.";
+CM_ SG_ 2180913662 sts_MdChrgReconnFailure "Module reconnection after charging failure.";
+CM_ SG_ 2180913662 sts_MdChrgConnFailure "Module connection failure during charing (number of connected modules < total modules - parameter). ";
+CM_ SG_ 2180913662 sts_MdChrgBalnActive "Module charge balancing is active - modules connecting sequentially during charging when voltages are matched.";
+CM_ SG_ 2180913662 ChargingComplete_MD_Num "Module ID that has charge complete status (decimal number).";
+CM_ SG_ 2180913662 Count_of_HVBMs_ChCmpl "Number of HVBMs with charge complete status.";
+CM_ BO_ 2180913406 "Message contains information about highest and lowest CB voltages in battery";
+CM_ SG_ 2180913406 LowestCBvoltage "Lowest CB voltage in battery, V";
+CM_ SG_ 2180913406 LowestCBvoltage_MD_Num "Module with lowest CB voltage in battery";
+CM_ SG_ 2180913406 LowestCBvoltage_CellBlockNum "Number of CB with lowest voltage in battery";
+CM_ SG_ 2180913406 HighestCBvoltage "Highest CB voltage in battery, V";
+CM_ SG_ 2180913406 HighestCBvoltage_MD_Num "Module with highest CB voltage in battery";
+CM_ SG_ 2180913406 HighestCBvoltage_CellBlockNum "Number of CB with highest voltage in battery";
+CM_ BO_ 2180912894 "Message contains diagnostic information about battery packs";
+CM_ SG_ 2180912894 Pack_sts_SystemWarning "System warning status for Pack";
+CM_ SG_ 2180912894 Pack_sts_ThermEventPossible "Thermal event is possible for Pack";
+CM_ SG_ 2180912894 PackDiag_CRC "CRC for Battery_Pack_Diagnostic message";
+CM_ SG_ 2180912894 PackDiag_Counter "Counter for Battery_Pack_Diagnostic message";
+CM_ SG_ 2180912894 Pack_st_TempSensorFault "At least one HVBM in the battery pack has a temperature detection failure";
+CM_ SG_ 2180912894 Pack_HVBMCommLostCount "Count of HVBMs communication lost in battery pack";
+CM_ SG_ 2180912894 MaxPackCellTemperature "Highest cell temperature in battery pack, degC";
+CM_ SG_ 2180912894 BatteryPack_ID "Battery Pack ID";
+CM_ BO_ 2180912638 "Message contains parallel update info";
+CM_ BO_ 2180912126 "Message contains information about total capacity and energy for battery accumulated in the recuperation mode";
+CM_ SG_ 2180912126 TotalRecupEnergy "Total Energy which battery receive from recuperate for all time, kWh";
+CM_ SG_ 2180912126 TotalRecupCapacity "Total Capacity which battery receive from recuperate for all time, kAh";
+CM_ BO_ 2381395198 "LL diagnostics message";
+CM_ SG_ 2381395198 sts_Vbat "Status of LV battery voltage  (1 - out of bounds, 0 - otherwise)";
+CM_ SG_ 2381395198 sts_McuT "Status of MCU temperature  (1 - out of bounds, 0 - otherwise)";
+CM_ SG_ 2381395198 sts_McuCoreV "Status of MCU core voltage  (1 - out of bounds, 0 - otherwise)";
+CM_ SG_ 2381395198 sts_IgInpV "Status of voltage presented on the Ignition input (1 - out of bounds, 0 - otherwise)";
+CM_ SG_ 2381395198 LdoPwrSrc "Overall Power Good signal of 3.3V LDO power sources (used for power supply of 8 CAN transceivers, HVIL circuit, external FLASH memory chip, external watchdog chip, RS232 chip)";
+CM_ SG_ 2381395198 McuPwrSrcSeln "Signal that provides information which 3.3V power source is used for MCU powering (main or aux). May be used for checking if selected power source is working (in addition to 3V3_aux_PG and 3V3_main_PG diagnostics)";
+CM_ SG_ 2381395198 MaiPwrSrc "Power Good signal of main 3.3V power source. May be used for checking if main 3.3V power source is working";
+CM_ SG_ 2381395198 EthPwrSrc "Power Good signal of Ethernet chip 3.3V power source. May be used for checking if Ethernet 3.3V power source is working";
+CM_ SG_ 2381395198 AuxPwrSrc "Power Good signal of aux 3.3V power source. May be used for checking if aux 3.3V power source is working";
+CM_ BO_ 2167340798 "Message contains requests messages for battery";
+CM_ SG_ 2167340798 req_Statistic "Request from vehicle control system to provide statistic messages sending ";
+CM_ SG_ 2167340798 req_SOH_Info "Request from vehicle control system to provide SOH info messages sending ";
+CM_ BO_ 2650674430 "Message with SOH information from HVBMs";
+CM_ SG_ 2650674430 SOH_HVBM_j1939_SA "HVBM source address for SOH statistics";
+CM_ SG_ 2650674430 SOH_n_DchCycles "Amount of full discharge cycles";
+CM_ SG_ 2650674430 SOH_n_ChCycles "Amount of full charge cycles";
+CM_ SG_ 2650674430 SOH_MinCB_Resistance "Min CB resistance calculated by SOH algorithm, Ohm";
+CM_ SG_ 2650674430 SOH_MaxCB_Resistance "Max CB resistance calculated by SOH algorithm, Ohm";
+CM_ BO_ 2650675198 "Message with SOH information from HVBMs";
+CM_ SG_ 2650675198 SOH_MinCB_ChCapacity "Min CB charge capacity calculated by SOH algorithm, Ah.";
+CM_ SG_ 2650675198 SOH_MaxCB_ChCapacity "Max CB charge capacity calculated by SOH algorithm, Ah.";
+CM_ SG_ 2650675198 SOH_MinCB_DchCapacity "Min CB discharge capacity calculated by SOH algorithm, Ah.";
+CM_ SG_ 2650675198 SOH_MaxCB_DchCapacity "Max CB discharge capacity calculated by SOH algorithm, Ah.";
+CM_ BO_ 2180911614 "Message contains information about module performance";
+CM_ SG_ 2180911614 AvailableEnergy "HV battery pack total available energy, kWh.  ";
+CM_ SG_ 2180911614 MaxDchCurrent_30sec_Debug "Experimental: Current available to discharge from module during next 30 seconds, A.  Depends on SOC level, module temperatures and disbalance level";
+CM_ SG_ 2180911614 MaxChCurrent_30sec_Debug "Experimental: Current available for module charging during next 30 seconds, A. Depends on SOC level, module temperatures and disbalance level
+";
+CM_ SG_ 2180911614 TotalAvailRemainEnergy "HV battery pack total available remaining energy, kWh.  ";
+CM_ BO_ 2167275262 "Message contains charging control signals for battery";
+CM_ SG_ 2167275262 Ext_Bus_Voltage "Bus voltage which are received from DCU, V";
+CM_ BO_ 2167209726 "Message contains charging control signals for battery";
+CM_ SG_ 2167209726 req_IMDdisable "Request from control unit to disable IMD";
+CM_ BO_ 2167078654 "Message contains sleep request for battery";
+CM_ SG_ 2167078654 BmsReq_CRC "CRC for BMS_Request message";
+CM_ SG_ 2167078654 BmsReq_Counter "Counter for BMS_Request message";
+CM_ SG_ 2167078654 req_Sleep "Request from vehicle control system to provide sleep mode";
+CM_ BO_ 2180911358 "Message contains information about total charge and discharge capacity for battery";
+CM_ SG_ 2180911358 TotalChargedCapacity "Total Capacity which battery receive from charge for all time, kAh";
+CM_ SG_ 2180911358 TotalDischargedCapacity "Total Capacity which battery give to consumers for all time, kAh";
+CM_ BO_ 2180911102 "Message contains information about total charge and discharge energy for battery";
+CM_ SG_ 2180911102 TotalDischargedEnergy "Total Energy which battery give to consumers for all time, kWh";
+CM_ SG_ 2180911102 TotalChargedEnergy "Total Energy which battery receive from charge for all time, kWh";
+CM_ BO_ 2180910846 "Message contains information about charging target and time";
+CM_ SG_ 2180910846 Charging_MaxPowerLimit "maximum power limit value for charging station";
+CM_ SG_ 2180910846 Charging_MaxCurrentLimit "maximum current limit value for charging station";
+CM_ SG_ 2180910846 TimeToTgCharge "Estimated charging time to target SoC, min";
+CM_ SG_ 2180910846 TimeToFullCharge "Estimated charging time to target SoC, min";
+CM_ BO_ 2180910590 "Message contains information about charging and charging limits";
+CM_ SG_ 2180910590 ChrgInfo_CRC "CRC for Charging_Info message";
+CM_ SG_ 2180910590 ChrgInfo_Counter "Counter for Charging_Info message";
+CM_ SG_ 2180910590 Charging_TargetVoltage "target voltage value for charging station";
+CM_ SG_ 2180910590 Charging_TargetCurrent "target current value for charging station";
+CM_ SG_ 2180910590 Charging_MaxVoltageLimit "maximum voltage limit value for charging station";
+CM_ SG_ 2180910590 Charging_Complete "Charging complete";
+CM_ BO_ 2180910334 "Message contains information about modules voltages in battery";
+CM_ SG_ 2180910334 Lowest_MD_Voltage_Num "Number of module with lowest average voltage in battery (decimal number)";
+CM_ SG_ 2180910334 Lowest_MD_Voltage "Lowest average module voltage in battery, V";
+CM_ SG_ 2180910334 Highest_MD_Voltage_Num "Number of module with highest average voltage in battery (decimal number)";
+CM_ SG_ 2180910334 Highest_MD_Voltage "Highest average module voltage in battery, V";
+CM_ BO_ 2180910078 "Message contains diagnostic information about HVBMs errors";
+CM_ SG_ 2180910078 Err_st_history_2 "HVBM Error log(part 2) - flag for each bit rised";
+CM_ SG_ 2180910078 HVBM_ID "J1939 source address of HVBM";
+CM_ SG_ 2180910078 Err_st_history "HVBM Error log - flag for each bit rised";
+CM_ BO_ 2180909566 "status of HVIL";
+CM_ SG_ 2180909566 HVIL_Resistance "HVIL resistance, Ohms";
+CM_ SG_ 2180909566 HVIL_State "HVIL1 State: 0 - shortcircuit (<1 Ohm), 1 - some load detected between 1 and  ~200 Ohm, 2 - break (>~200 Ohm), 3 - NA";
+CM_ BO_ 2180909310 "Message contains information about modules temperatures in battery";
+CM_ SG_ 2180909310 BatTgTempUpLim "Battery target temperature upper limit, degC";
+CM_ SG_ 2180909310 BatTgTempLoLim "Battery target temperature lower limit, degC";
+CM_ SG_ 2180909310 MDTemp_CRC "CRC for Battery_MD_Temperature message";
+CM_ SG_ 2180909310 MDTemp_Counter "Counter for Battery_MD_Temperature message";
+CM_ SG_ 2180909310 LowestAverageMDTemp_Num "Number of module with lowest average temperature in battery (decimal number)";
+CM_ SG_ 2180909310 LowestAverageMDTemp "Lowest average module temperature in battery, degC";
+CM_ SG_ 2180909310 HighestAverageMDTemp_Num "Number of module with highest average temperature in battery (decimal number)";
+CM_ SG_ 2180909310 HighestAverageMDTemp "Highest average module temperature in battery, degC";
+CM_ BO_ 2180909054 "Message contains information about highest and lowest cells temperatures in battery";
+CM_ SG_ 2180909054 LowestCellTemperature "Lowest cell temperature in battery, degC";
+CM_ SG_ 2180909054 LowestCellTemp_MD_Num "Module with lowest cell temperature in battery";
+CM_ SG_ 2180909054 LowestCellTemp_CellNum "Number of cell with lowest temperature in battery";
+CM_ SG_ 2180909054 HighestCellTemperature "Highest cell temperature in battery, degC";
+CM_ SG_ 2180909054 HighestCellTemp_MD_Num "Module with highest cell temperature in battery";
+CM_ SG_ 2180909054 HighestCellTemp_CellNum "Number of cell with highest temperature in battery";
+CM_ BO_ 2180908798 "Message contains information about battery errors.";
+CM_ SG_ 2180908798 st_ErrorLogHVBMs_2 "HVBM Error log (part 2) - flags for each bit rised if it is true even for 1 HVBM";
+CM_ SG_ 2180908798 st_IsoFaultCodeLog "History of isolation monitor fault codes";
+CM_ SG_ 2180908798 st_ErrorLogHVBMs "HVBM Error log - flags for each bit rised if it is true even for 1 HVBM";
+CM_ BO_ 2180908542 "Message contains predicted information for charge power battery performance.";
+CM_ SG_ 2180908542 AvailableChargePower_30sec "Power available for battery module charging during next 30 seconds, kW.  Depends on SOC level, module temperatures and disbalance level";
+CM_ SG_ 2180908542 AvailableChargePower_10sec "Power available for battery module charging during next 10 seconds, kW.  Depends on SOC level, module temperatures and disbalance level";
+CM_ SG_ 2180908542 AvailableChargePower_2sec "Power available for battery module charging during next 2 seconds, kW.  Depends on SOC level, module temperatures and disbalance level";
+CM_ BO_ 2180908286 "Message contains predicted information for charge current battery performance.";
+CM_ SG_ 2180908286 MaxAvailChargeCurrent_30sec "Current available for module charging during next 30 seconds, A. Depends on SOC level, module temperatures and disbalance level
+";
+CM_ SG_ 2180908286 MaxAvailChargeCurrent_10sec "Current available for module charging during next 10 seconds, A. Depends on SOC level, module temperatures and disbalance level";
+CM_ SG_ 2180908286 MaxAvailChargeCurrent_2sec "Current available for module charging during next 2 seconds, A. Depends on SOC level, module temperatures and disbalance level";
+CM_ SG_ 2180908286 ChCurrPerfomance_CRC "CRC for Battery_ChargeCurrent_Perfomance message";
+CM_ SG_ 2180908286 ChCurrPerfomance_Counter "Counter for Battery_ChargeCurrent_Perfomance message";
+CM_ BO_ 2180908030 "Message contains predicted information for discharge current battery performance.";
+CM_ SG_ 2180908030 MaxAvailDischargeCurrent_30sec "Current available to discharge from module during next 30 seconds, A.  Depends on SOC level, module temperatures and disbalance level";
+CM_ SG_ 2180908030 MaxAvailDischargeCurrent_10sec "Current available to discharge from module during next 10 seconds, A.  Depends on SOC level, module temperatures and disbalance level";
+CM_ SG_ 2180908030 MaxAvailDischargeCurrent_2sec "Current available to discharge from module during next 2 seconds, A.  Depends on SOC level, module temperatures and disbalance level";
+CM_ SG_ 2180908030 DchCurrPerfomance_CRC "CRC for Battery_DischargeCurrent_Perfomance message";
+CM_ SG_ 2180908030 DchCurrPerfomance_Counter "Counter for Battery_DischargeCurrent_Perfomance message";
+CM_ BO_ 2180907774 "Message contains information about battery performance";
+CM_ SG_ 2180907774 BatteryDisconnectForewarning "Battery Disconnect Forewarning";
+CM_ SG_ 2180907774 BatteryDisconnectEmergency "Battery Disconnect Emergency";
+CM_ SG_ 2180907774 BatState_CRC "CRC for Battery_State message";
+CM_ SG_ 2180907774 BatState_Counter "Counter for Battery_State message";
+CM_ SG_ 2180907774 BatteryCurrent "Current which is going through battery module, A";
+CM_ SG_ 2180907774 BatteryVoltage "Battery Output voltage (bus voltage), V";
+CM_ SG_ 2180907774 UsableBatterySOC "Usable SOC of battery pack, %";
+CM_ BO_ 2166947582 "Message contains power control signals for battery";
+CM_ SG_ 2166947582 PwrControl_CRC "CRC for BMS_PowerControl message";
+CM_ SG_ 2166947582 PwrControl_Counter "Counter for BMS_PowerControl message";
+CM_ SG_ 2166947582 perm_Connect "Permission from power control system to finish connecting procedure";
+CM_ SG_ 2166947582 perm_EmergencyDisconnect "Permission from power control system to emergency disconnect modules from main BUS";
+CM_ SG_ 2166947582 req_EmergencyDisconnect "Request from power control system to emergency disconnect modules from main BUS";
+CM_ SG_ 2166947582 req_Connect "Request from vehicle control system to connect modules to main BUS";
+CM_ BO_ 2180907262 "Message contains information about module performance";
+CM_ SG_ 2180907262 MBMS_Health "Heath status of Battery system OK(0),  WARN(1), FAILED(2), UNAVAILABLE(3)";
+CM_ SG_ 2180907262 BmsState_Counter "Counter for BMS_State message";
+CM_ SG_ 2180907262 BmsState_CRC "CRC for BMS_State message";
+CM_ SG_ 2180907262 BatterySOC "SOC of battery pack, %";
+CM_ SG_ 2180907262 BatteryPower "Instant Power of battery module, kW";
+CM_ SG_ 2180907262 BatterySystemFaultLevel "Battery System fault level";
+CM_ SG_ 2180907262 st_ReadyToSleep "BMS readiness to sleep mode. 0 - Not ready, 1 - Ready, 2- Fault, 3 - Not available";
+CM_ SG_ 2180907262 BMS_DisconnectForewarning "Battery Disconnect Forewarning";
+CM_ SG_ 2180907262 BMS_DisconnectEmergency "Battery Disconnect Emergency";
+CM_ SG_ 2180907262 BMS_ModuleManagementMode "Module management mode of MBMS: 0x0 - Init, 0x1 - Diag, 0x2 - Operation, 0x3 - Emergency, 0x4 - SleepPreparation";
+CM_ SG_ 2180907262 BMS_Mode "System mode of MBMS: 0x0 - FW_Init, 0x1 - SW_Init, 0x2 - Diag, 0x3 - Ready, 0x4 - Precharge, 0x5 - Drive, 0x6 - HV_Disconnecting, 0x7 - Sleep, 0x8 - SleepPrep, 0x9 - PowerOff, 0xA - Fault, 0xB - Service";
+CM_ BO_ 2180907518 "Message contains information about module performance";
+CM_ SG_ 2180907518 MSDState "MSD state: 0 - MSD connected, 1 - MSD opened";
+CM_ SG_ 2180907518 st_CrashEvent "Crash detection. 0 - No crash, 1 - Crash event detected";
+CM_ SG_ 2180907518 HVBM_Count "Number of HVBMs in battery system";
+CM_ SG_ 2180907518 Count_of_HVBMs_in_Sleep "Count of HVBMs in sleep state";
+CM_ SG_ 2180907518 Count_of_HVBMs_ConnLost "Count of HVBMs which have lost connection to MBMS";
+CM_ SG_ 2180907518 Isolation_Status "Status of isolation monitor. 0 - no faults, 1 - isolation warning, 2 - isolation fault, 3 - not available";
+CM_ SG_ 2180907518 Isolation_FaultCode "Type of isolation error. 0 - no faults, 1 - Possible communication error, 2 - Isolation warning, 3 - Isolation fault, 4 - Measurements timeout reached, 5 - Isolation monitor HW fault, 6 - Communication error";
+CM_ SG_ 2180907518 Count_of_HVBMs_in_Flt "Count of failure HVBMs";
+CM_ SG_ 2180907518 Count_of_HVBMs_in_Drv "Count of HVBMs in drive mode";
+CM_ SG_ 2180907518 ISO_Resistance "isolation resistance";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","noMsgSendType";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_  "SAE_J1939_DA_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_81_SpecVersion" STRING ;
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "SAE_J1939_75_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_21_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_73_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_71_SpecVersion" STRING ;
+BA_DEF_ BO_  "SendOnChange" ENUM  "No","Yes";
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "SAE_J1939_DA_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_81_SpecVersion" "";
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "SAE_J1939_75_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_21_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_73_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_71_SpecVersion" "";
+BA_DEF_DEF_  "SendOnChange" "No";
+BA_ "SAE_J1939_71_SpecVersion" "2012-10";
+BA_ "SAE_J1939_73_SpecVersion" "2012-10";
+BA_ "SAE_J1939_21_SpecVersion" "2006-10";
+BA_ "SAE_J1939_75_SpecVersion" "2012-05";
+BA_ "ProtocolType" "J1939";
+BA_ "BusType" "CAN";
+BA_ "DatabaseVersion" "8.5";
+BA_ "SAE_J1939_81_SpecVersion" "2012-05";
+BA_ "SAE_J1939_DA_SpecVersion" "2015-01";
+BA_ "DBName" "Arrival_MBMS";
+BA_ "NmStationAddress" BU_ BMS_Master 91;
+BA_ "NmStationAddress" BU_ ElectricalChargingSystem 26;
+BA_ "NmStationAddress" BU_ Vector 249;
+BA_ "NmStationAddress" BU_ InstrumentCluster 23;
+BA_ "NmStationAddress" BU_ DCU 90;
+BA_ "GenMsgCycleTime" BO_ 2180914174 500;
+BA_ "GenMsgSendType" BO_ 2180914174 0;
+BA_ "VFrameFormat" BO_ 2180914174 3;
+BA_ "GenMsgCycleTime" BO_ 2180911870 1000;
+BA_ "GenMsgSendType" BO_ 2180911870 0;
+BA_ "VFrameFormat" BO_ 2180911870 3;
+BA_ "GenMsgCycleTime" BO_ 2180913918 1000;
+BA_ "GenMsgSendType" BO_ 2180913918 0;
+BA_ "VFrameFormat" BO_ 2180913918 3;
+BA_ "GenMsgSendType" BO_ 2180913662 0;
+BA_ "GenMsgCycleTime" BO_ 2180913662 1000;
+BA_ "VFrameFormat" BO_ 2180913662 3;
+BA_ "GenMsgCycleTime" BO_ 2180913406 1000;
+BA_ "GenMsgSendType" BO_ 2180913406 0;
+BA_ "VFrameFormat" BO_ 2180913406 3;
+BA_ "GenMsgSendType" BO_ 2180912894 0;
+BA_ "GenMsgCycleTime" BO_ 2180912894 100;
+BA_ "VFrameFormat" BO_ 2180912894 3;
+BA_ "GenMsgCycleTime" BO_ 2180912638 1000;
+BA_ "GenMsgSendType" BO_ 2180912638 0;
+BA_ "VFrameFormat" BO_ 2180912638 3;
+BA_ "GenMsgSendType" BO_ 2180912126 0;
+BA_ "GenMsgCycleTime" BO_ 2180912126 1000;
+BA_ "VFrameFormat" BO_ 2180912126 3;
+BA_ "GenMsgSendType" BO_ 2381395198 0;
+BA_ "GenMsgCycleTime" BO_ 2381395198 60000;
+BA_ "VFrameFormat" BO_ 2381395198 3;
+BA_ "GenMsgCycleTime" BO_ 2167340798 1000;
+BA_ "GenMsgSendType" BO_ 2167340798 0;
+BA_ "VFrameFormat" BO_ 2167340798 3;
+BA_ "GenMsgCycleTime" BO_ 2650674430 1000;
+BA_ "GenMsgSendType" BO_ 2650674430 0;
+BA_ "VFrameFormat" BO_ 2650674430 3;
+BA_ "GenMsgCycleTime" BO_ 2650675198 1000;
+BA_ "GenMsgSendType" BO_ 2650675198 0;
+BA_ "VFrameFormat" BO_ 2650675198 3;
+BA_ "GenMsgSendType" BO_ 2180911614 0;
+BA_ "GenMsgCycleTime" BO_ 2180911614 1000;
+BA_ "VFrameFormat" BO_ 2180911614 3;
+BA_ "GenMsgCycleTime" BO_ 2167275262 100;
+BA_ "GenMsgSendType" BO_ 2167275262 0;
+BA_ "VFrameFormat" BO_ 2167275262 3;
+BA_ "GenMsgCycleTime" BO_ 2167209726 1000;
+BA_ "GenMsgSendType" BO_ 2167209726 0;
+BA_ "VFrameFormat" BO_ 2167209726 3;
+BA_ "GenMsgCycleTime" BO_ 2167078654 1000;
+BA_ "GenMsgSendType" BO_ 2167078654 0;
+BA_ "VFrameFormat" BO_ 2167078654 3;
+BA_ "GenMsgCycleTime" BO_ 2180911358 1000;
+BA_ "GenMsgSendType" BO_ 2180911358 0;
+BA_ "VFrameFormat" BO_ 2180911358 3;
+BA_ "GenMsgCycleTime" BO_ 2180911102 1000;
+BA_ "GenMsgSendType" BO_ 2180911102 0;
+BA_ "VFrameFormat" BO_ 2180911102 3;
+BA_ "GenMsgCycleTime" BO_ 2180910846 1000;
+BA_ "GenMsgSendType" BO_ 2180910846 0;
+BA_ "VFrameFormat" BO_ 2180910846 3;
+BA_ "GenMsgCycleTime" BO_ 2180910590 1000;
+BA_ "GenMsgSendType" BO_ 2180910590 0;
+BA_ "VFrameFormat" BO_ 2180910590 3;
+BA_ "GenMsgSendType" BO_ 2180910334 0;
+BA_ "GenMsgCycleTime" BO_ 2180910334 1000;
+BA_ "VFrameFormat" BO_ 2180910334 3;
+BA_ "GenMsgCycleTime" BO_ 2180910078 20;
+BA_ "GenMsgSendType" BO_ 2180910078 0;
+BA_ "VFrameFormat" BO_ 2180910078 3;
+BA_ "GenMsgCycleTime" BO_ 2180909566 1000;
+BA_ "GenMsgSendType" BO_ 2180909566 0;
+BA_ "VFrameFormat" BO_ 2180909566 3;
+BA_ "GenMsgSendType" BO_ 2180909310 0;
+BA_ "GenMsgCycleTime" BO_ 2180909310 1000;
+BA_ "VFrameFormat" BO_ 2180909310 3;
+BA_ "GenMsgSendType" BO_ 2180909054 0;
+BA_ "GenMsgCycleTime" BO_ 2180909054 1000;
+BA_ "VFrameFormat" BO_ 2180909054 3;
+BA_ "GenMsgCycleTime" BO_ 2180908798 1000;
+BA_ "GenMsgSendType" BO_ 2180908798 0;
+BA_ "VFrameFormat" BO_ 2180908798 3;
+BA_ "GenMsgSendType" BO_ 2180908542 0;
+BA_ "GenMsgCycleTime" BO_ 2180908542 500;
+BA_ "VFrameFormat" BO_ 2180908542 3;
+BA_ "GenMsgSendType" BO_ 2180908286 0;
+BA_ "GenMsgCycleTime" BO_ 2180908286 500;
+BA_ "VFrameFormat" BO_ 2180908286 3;
+BA_ "GenMsgSendType" BO_ 2180908030 0;
+BA_ "GenMsgCycleTime" BO_ 2180908030 500;
+BA_ "VFrameFormat" BO_ 2180908030 3;
+BA_ "GenMsgSendType" BO_ 2180907774 0;
+BA_ "GenMsgCycleTime" BO_ 2180907774 20;
+BA_ "VFrameFormat" BO_ 2180907774 3;
+BA_ "GenMsgSendType" BO_ 2166947582 0;
+BA_ "GenMsgCycleTime" BO_ 2166947582 20;
+BA_ "VFrameFormat" BO_ 2166947582 3;
+BA_ "GenMsgCycleTime" BO_ 2180907262 100;
+BA_ "GenMsgSendType" BO_ 2180907262 0;
+BA_ "VFrameFormat" BO_ 2180907262 3;
+BA_ "GenMsgSendType" BO_ 2180907518 0;
+BA_ "GenMsgCycleTime" BO_ 2180907518 1000;
+BA_ "VFrameFormat" BO_ 2180907518 3;
+BA_ "SPN" SG_ 3221225472 st_ChargeOverCurrent 516833;
+BA_ "GenSigStartValue" SG_ 3221225472 HVIL2_State 1;
+BA_ "SigType" SG_ 2180914174 AvailableDischargePower_30sec 1;
+BA_ "SPN" SG_ 2180914174 AvailableDischargePower_30sec 516811;
+BA_ "SigType" SG_ 2180914174 AvailableDischargePower_10sec 1;
+BA_ "SPN" SG_ 2180914174 AvailableDischargePower_10sec 516807;
+BA_ "SigType" SG_ 2180914174 AvailableDischargePower_2sec 1;
+BA_ "SPN" SG_ 2180914174 AvailableDischargePower_2sec 516803;
+BA_ "SPN" SG_ 2180911870 sts_ChrgSysStMsg 516836;
+BA_ "SPN" SG_ 2180911870 sts_BmsReqMsg 516835;
+BA_ "SPN" SG_ 2180911870 sts_BmsPwrCtrlMsg 516834;
+BA_ "SPN" SG_ 2180911870 st_PckCntctrFailure 516829;
+BA_ "SPN" SG_ 2180911870 st_IntPrechargeFailure 516831;
+BA_ "SPN" SG_ 2180911870 st_HiBusUDbal 516830;
+BA_ "SPN" SG_ 2180911870 st_ExtPrechargeFailure 516825;
+BA_ "SPN" SG_ 2180911870 st_CnnctInterlockFailure 516828;
+BA_ "SPN" SG_ 2180911870 st_BatteryOverCurrent 516821;
+BA_ "SPN" SG_ 2180911870 NVRAM_Fault 516824;
+BA_ "SPN" SG_ 2180911870 HVIL_Fault 516823;
+BA_ "SPN" SG_ 2180911870 HVBMs_Fault 516826;
+BA_ "SPN" SG_ 2180911870 st_HVBM_LLDataValid 516827;
+BA_ "SPN" SG_ 2180913918 PackRemCur 516801;
+BA_ "GenSigStartValue" SG_ 2180913918 PackRemCur 32125;
+BA_ "SigType" SG_ 2180913918 PackRemCur 1;
+BA_ "SPN" SG_ 2180913918 StrmRemCur 516801;
+BA_ "GenSigStartValue" SG_ 2180913918 StrmRemCur 32125;
+BA_ "SigType" SG_ 2180913918 StrmRemCur 1;
+BA_ "SPN" SG_ 2180913918 MaxSrtmCur 516801;
+BA_ "GenSigStartValue" SG_ 2180913918 MaxSrtmCur 32125;
+BA_ "SigType" SG_ 2180913918 MaxSrtmCur 1;
+BA_ "SPN" SG_ 2180913918 MaxPackCur 516801;
+BA_ "GenSigStartValue" SG_ 2180913918 MaxPackCur 32125;
+BA_ "SigType" SG_ 2180913918 MaxPackCur 1;
+BA_ "SPN" SG_ 2180913406 LowestCBvoltage 5919;
+BA_ "GenSigStartValue" SG_ 2180913406 LowestCBvoltage 0;
+BA_ "SigType" SG_ 2180913406 LowestCBvoltage 1;
+BA_ "SPN" SG_ 2180913406 LowestCBvoltage_MD_Num 5919;
+BA_ "GenSigStartValue" SG_ 2180913406 LowestCBvoltage_MD_Num 1;
+BA_ "SigType" SG_ 2180913406 LowestCBvoltage_MD_Num 1;
+BA_ "SPN" SG_ 2180913406 LowestCBvoltage_CellBlockNum 5919;
+BA_ "GenSigStartValue" SG_ 2180913406 LowestCBvoltage_CellBlockNum 1;
+BA_ "SigType" SG_ 2180913406 LowestCBvoltage_CellBlockNum 1;
+BA_ "SPN" SG_ 2180913406 HighestCBvoltage 5919;
+BA_ "GenSigStartValue" SG_ 2180913406 HighestCBvoltage 0;
+BA_ "SigType" SG_ 2180913406 HighestCBvoltage 1;
+BA_ "SPN" SG_ 2180913406 HighestCBvoltage_MD_Num 5919;
+BA_ "GenSigStartValue" SG_ 2180913406 HighestCBvoltage_MD_Num 1;
+BA_ "SigType" SG_ 2180913406 HighestCBvoltage_MD_Num 1;
+BA_ "SPN" SG_ 2180913406 HighestCBvoltage_CellBlockNum 5919;
+BA_ "GenSigStartValue" SG_ 2180913406 HighestCBvoltage_CellBlockNum 1;
+BA_ "SigType" SG_ 2180913406 HighestCBvoltage_CellBlockNum 1;
+BA_ "SigType" SG_ 2180912894 PackDiag_CRC 12;
+BA_ "SigType" SG_ 2180912894 PackDiag_Counter 11;
+BA_ "SigType" SG_ 2180912894 MaxPackCellTemperature 1;
+BA_ "GenSigStartValue" SG_ 2180912894 MaxPackCellTemperature 50;
+BA_ "SPN" SG_ 2180912894 MaxPackCellTemperature 5919;
+BA_ "GenSigStartValue" SG_ 2650674430 SOH_HVBM_j1939_SA 0;
+BA_ "GenSigStartValue" SG_ 2650674430 SOH_n_DchCycles 0;
+BA_ "GenSigStartValue" SG_ 2650674430 SOH_n_ChCycles 0;
+BA_ "GenSigStartValue" SG_ 2650674430 SOH_MinCB_Resistance 0;
+BA_ "GenSigStartValue" SG_ 2650674430 SOH_MaxCB_Resistance 0;
+BA_ "GenSigStartValue" SG_ 2650675198 SOH_MinCB_ChCapacity 0;
+BA_ "GenSigStartValue" SG_ 2650675198 SOH_MaxCB_ChCapacity 0;
+BA_ "GenSigStartValue" SG_ 2650675198 SOH_MinCB_DchCapacity 0;
+BA_ "GenSigStartValue" SG_ 2650675198 SOH_MaxCB_DchCapacity 0;
+BA_ "SigType" SG_ 2180911614 AvailableEnergy 1;
+BA_ "SPN" SG_ 2180911614 MaxDchCurrent_30sec_Debug 516814;
+BA_ "GenSigStartValue" SG_ 2180911614 MaxDchCurrent_30sec_Debug 32125;
+BA_ "SigType" SG_ 2180911614 MaxDchCurrent_30sec_Debug 1;
+BA_ "SPN" SG_ 2180911614 MaxChCurrent_30sec_Debug 516813;
+BA_ "GenSigStartValue" SG_ 2180911614 MaxChCurrent_30sec_Debug 32125;
+BA_ "SigType" SG_ 2180911614 MaxChCurrent_30sec_Debug 1;
+BA_ "SigType" SG_ 2180911614 TotalAvailRemainEnergy 1;
+BA_ "SPN" SG_ 2167275262 Ext_Bus_Voltage 5919;
+BA_ "SigType" SG_ 2167275262 Ext_Bus_Voltage 1;
+BA_ "SigType" SG_ 2167078654 BmsReq_CRC 12;
+BA_ "SigType" SG_ 2167078654 BmsReq_Counter 11;
+BA_ "GenSigStartValue" SG_ 2180910846 Charging_MaxPowerLimit 0;
+BA_ "GenSigStartValue" SG_ 2180910846 Charging_MaxCurrentLimit 32768;
+BA_ "SigType" SG_ 2180910590 ChrgInfo_CRC 12;
+BA_ "SigType" SG_ 2180910590 ChrgInfo_Counter 11;
+BA_ "GenSigStartValue" SG_ 2180910590 Charging_TargetVoltage 0;
+BA_ "GenSigStartValue" SG_ 2180910590 Charging_TargetCurrent 32768;
+BA_ "GenSigStartValue" SG_ 2180910590 Charging_MaxVoltageLimit 0;
+BA_ "SigType" SG_ 2180910334 Lowest_MD_Voltage_Num 1;
+BA_ "GenSigStartValue" SG_ 2180910334 Lowest_MD_Voltage_Num 0;
+BA_ "SigType" SG_ 2180910334 Lowest_MD_Voltage 1;
+BA_ "GenSigStartValue" SG_ 2180910334 Lowest_MD_Voltage 0;
+BA_ "SigType" SG_ 2180910334 Highest_MD_Voltage_Num 1;
+BA_ "GenSigStartValue" SG_ 2180910334 Highest_MD_Voltage_Num 0;
+BA_ "SigType" SG_ 2180910334 Highest_MD_Voltage 1;
+BA_ "GenSigStartValue" SG_ 2180910334 Highest_MD_Voltage 0;
+BA_ "GenSigStartValue" SG_ 2180909566 HVIL_State 1;
+BA_ "SigType" SG_ 2180909310 MDTemp_CRC 12;
+BA_ "SigType" SG_ 2180909310 MDTemp_Counter 11;
+BA_ "SigType" SG_ 2180909310 LowestAverageMDTemp_Num 1;
+BA_ "GenSigStartValue" SG_ 2180909310 LowestAverageMDTemp_Num 0;
+BA_ "SPN" SG_ 2180909310 LowestAverageMDTemp_Num 5919;
+BA_ "SigType" SG_ 2180909310 LowestAverageMDTemp 1;
+BA_ "GenSigStartValue" SG_ 2180909310 LowestAverageMDTemp 56;
+BA_ "SPN" SG_ 2180909310 LowestAverageMDTemp 5919;
+BA_ "SigType" SG_ 2180909310 HighestAverageMDTemp_Num 1;
+BA_ "GenSigStartValue" SG_ 2180909310 HighestAverageMDTemp_Num 0;
+BA_ "SPN" SG_ 2180909310 HighestAverageMDTemp_Num 5919;
+BA_ "SigType" SG_ 2180909310 HighestAverageMDTemp 1;
+BA_ "GenSigStartValue" SG_ 2180909310 HighestAverageMDTemp 56;
+BA_ "SPN" SG_ 2180909310 HighestAverageMDTemp 5919;
+BA_ "SigType" SG_ 2180909054 LowestCellTemperature 1;
+BA_ "SPN" SG_ 2180909054 LowestCellTemperature 5919;
+BA_ "GenSigStartValue" SG_ 2180909054 LowestCellTemperature 56;
+BA_ "SigType" SG_ 2180909054 LowestCellTemp_MD_Num 1;
+BA_ "GenSigStartValue" SG_ 2180909054 LowestCellTemp_MD_Num 1;
+BA_ "SPN" SG_ 2180909054 LowestCellTemp_MD_Num 5919;
+BA_ "SigType" SG_ 2180909054 LowestCellTemp_CellNum 1;
+BA_ "GenSigStartValue" SG_ 2180909054 LowestCellTemp_CellNum 1;
+BA_ "SPN" SG_ 2180909054 LowestCellTemp_CellNum 5919;
+BA_ "SigType" SG_ 2180909054 HighestCellTemperature 1;
+BA_ "GenSigStartValue" SG_ 2180909054 HighestCellTemperature 56;
+BA_ "SPN" SG_ 2180909054 HighestCellTemperature 5919;
+BA_ "SigType" SG_ 2180909054 HighestCellTemp_MD_Num 1;
+BA_ "GenSigStartValue" SG_ 2180909054 HighestCellTemp_MD_Num 1;
+BA_ "SPN" SG_ 2180909054 HighestCellTemp_MD_Num 5919;
+BA_ "SigType" SG_ 2180909054 HighestCellTemp_CellNum 1;
+BA_ "GenSigStartValue" SG_ 2180909054 HighestCellTemp_CellNum 1;
+BA_ "SPN" SG_ 2180909054 HighestCellTemp_CellNum 5919;
+BA_ "SigType" SG_ 2180908542 AvailableChargePower_30sec 1;
+BA_ "SPN" SG_ 2180908542 AvailableChargePower_30sec 516812;
+BA_ "SPN" SG_ 2180908542 AvailableChargePower_10sec 516808;
+BA_ "SigType" SG_ 2180908542 AvailableChargePower_10sec 1;
+BA_ "SPN" SG_ 2180908542 AvailableChargePower_2sec 516804;
+BA_ "SigType" SG_ 2180908542 AvailableChargePower_2sec 1;
+BA_ "GenSigStartValue" SG_ 2180908286 MaxAvailChargeCurrent_30sec 0;
+BA_ "SigType" SG_ 2180908286 MaxAvailChargeCurrent_30sec 1;
+BA_ "SPN" SG_ 2180908286 MaxAvailChargeCurrent_30sec 516813;
+BA_ "SPN" SG_ 2180908286 MaxAvailChargeCurrent_10sec 516809;
+BA_ "SigType" SG_ 2180908286 MaxAvailChargeCurrent_10sec 1;
+BA_ "SPN" SG_ 2180908286 MaxAvailChargeCurrent_2sec 516805;
+BA_ "SigType" SG_ 2180908286 MaxAvailChargeCurrent_2sec 1;
+BA_ "SigType" SG_ 2180908286 ChCurrPerfomance_CRC 12;
+BA_ "SigType" SG_ 2180908286 ChCurrPerfomance_Counter 11;
+BA_ "GenSigStartValue" SG_ 2180908030 MaxAvailDischargeCurrent_30sec 0;
+BA_ "SigType" SG_ 2180908030 MaxAvailDischargeCurrent_30sec 1;
+BA_ "SPN" SG_ 2180908030 MaxAvailDischargeCurrent_30sec 516814;
+BA_ "GenSigStartValue" SG_ 2180908030 MaxAvailDischargeCurrent_10sec 0;
+BA_ "SigType" SG_ 2180908030 MaxAvailDischargeCurrent_10sec 1;
+BA_ "SPN" SG_ 2180908030 MaxAvailDischargeCurrent_10sec 516810;
+BA_ "GenSigStartValue" SG_ 2180908030 MaxAvailDischargeCurrent_2sec 0;
+BA_ "SigType" SG_ 2180908030 MaxAvailDischargeCurrent_2sec 1;
+BA_ "SPN" SG_ 2180908030 MaxAvailDischargeCurrent_2sec 516806;
+BA_ "SigType" SG_ 2180908030 DchCurrPerfomance_CRC 12;
+BA_ "SigType" SG_ 2180908030 DchCurrPerfomance_Counter 11;
+BA_ "SigType" SG_ 2180907774 BatState_CRC 12;
+BA_ "SigType" SG_ 2180907774 BatState_Counter 11;
+BA_ "GenSigStartValue" SG_ 2180907774 BatteryCurrent 32125;
+BA_ "SigType" SG_ 2180907774 BatteryCurrent 1;
+BA_ "SPN" SG_ 2180907774 BatteryCurrent 516801;
+BA_ "SigType" SG_ 2180907774 BatteryVoltage 1;
+BA_ "SPN" SG_ 2180907774 BatteryVoltage 5919;
+BA_ "GenSigStartValue" SG_ 2180907774 UsableBatterySOC 64000;
+BA_ "SigType" SG_ 2180907774 UsableBatterySOC 1;
+BA_ "SPN" SG_ 2180907774 UsableBatterySOC 5921;
+BA_ "SigType" SG_ 2166947582 PwrControl_CRC 12;
+BA_ "SigType" SG_ 2166947582 PwrControl_Counter 11;
+BA_ "SigType" SG_ 2180907262 BmsState_Counter 11;
+BA_ "SigType" SG_ 2180907262 BmsState_CRC 12;
+BA_ "GenSigStartValue" SG_ 2180907262 BatterySOC 64000;
+BA_ "SigType" SG_ 2180907262 BatterySOC 1;
+BA_ "SPN" SG_ 2180907262 BatterySOC 5921;
+BA_ "SigType" SG_ 2180907262 BatteryPower 1;
+BA_ "SPN" SG_ 2180907262 BatteryPower 516802;
+BA_ "GenSigStartValue" SG_ 2180907262 BatteryPower 32125;
+BA_ "SPN" SG_ 2180907518 st_CrashEvent 516832;
+BA_ "SPN" SG_ 2180907518 Isolation_FaultCode 516820;
+BA_ "SPN" SG_ 2180907518 Count_of_HVBMs_in_Flt 516822;
+VAL_ 3221225472 HVIL2_State 3 "not available" 2 "Break" 1 "Normal" 0 "Shortcircuit" ;
+VAL_ 2180911870 sts_LVStsMsg 3 "NA" 2 "Critical" 1 "Warning" 0 "Normal" ;
+VAL_ 2180911870 sts_ChrgSysStMsg 3 "NA" 2 "Critical" 1 "Warning" 0 "Normal" ;
+VAL_ 2180911870 sts_BmsReqMsg 3 "NA" 2 "Critical" 1 "Warning" 0 "Normal" ;
+VAL_ 2180911870 sts_BmsPwrCtrlMsg 3 "NA" 2 "Critical" 1 "Warning" 0 "Normal" ;
+VAL_ 2180911870 st_BatteryOverCurrent 7 "NA" 3 "Critical" 2 "Alarm" 1 "Warning" 0 "Normal" ;
+VAL_ 2180911870 st_TopologyError 7 "NA" 3 "Out of Packs range" 2 "Out of Location range" 1 "Duplicating Location" 0 "Correct" ;
+VAL_ 2180911870 st_HVBM_LLDataValid 3 "NA" 2 "Critical" 1 "Warning" 0 "Normal" ;
+VAL_ 2180912638 firmware_block 15 "Error" 14 "No firmware registered" 4 "firmware block 4" 3 "firmware block 3" 2 "firmware block 2" 1 "firmware block 1" 0 "firmware block 0" ;
+VAL_ 2180909566 HVIL_State 3 "not available" 2 "Break" 1 "Normal" 0 "Shortcircuit" ;
+VAL_ 2180907262 MBMS_Health 3 "NA" 2 "Critical" 1 "Warning" 0 "Normal" ;
+VAL_ 2180907262 st_ReadyToSleep 3 "Not available" 2 "Fault" 1 "Ready" 0 "Not ready" ;
+VAL_ 2180907262 BMS_ModuleManagementMode 4 "SleepPreparation" 7 "NA" 3 "Emergency" 2 "Operation" 1 "Diag" 0 "Init" ;
+VAL_ 2180907262 BMS_Mode 13 "ForceConnecting" 12 "Charging" 15 "NA" 11 "Service" 10 "Fault" 9 "PowerOff" 8 "SleepPrep" 7 "Sleep" 6 "HV_Disconnecting" 5 "Drive" 4 "Precharge" 3 "Ready" 2 "Diag" 1 "SW_Init" 0 "FW_Init" ;
+VAL_ 2180907518 Isolation_Status 3 "Unavailable" 2 "Critical" 1 "Warning" 0 "NoFaults" ;
+VAL_ 2180907518 Isolation_FaultCode 7 "NA" 6 "CommError" 5 "HWerror" 4 "MeasurementTimeout" 3 "IsolationFault" 2 "IsolationWarning" 1 "PossibleCommError" 0 "NoFault" ;
+

@@ -1,0 +1,286 @@
+/*************************************************************************************/
+//                                                                                     
+// Description: LIN for Hella Aftermarket Caravan
+// Created:     28.07.2015
+// Updated: 	16.09.2016
+// Author:      haedko1, bitufl1
+// Project:     Hella IBS_P2_AMCaravan
+// Revision:    $Revision: 1.7 $                                                                                    
+// Comment:     Based on "IBS_200X_Hella.ldf"
+//                                                                                     
+/*************************************************************************************/
+
+LIN_description_file;
+LIN_protocol_version = "2.0";
+LIN_language_version = "2.0";
+LIN_speed = 19.2 kbps;
+
+Nodes {
+  Master: LDFMasterNode, 10 ms, 0 ms ;
+  Slaves: IBS ;
+}
+
+Signals {
+  SOC_Limit: 8, 0, LDFMasterNode, IBS ;
+  AvailableCapacity: 16, 65535, IBS, LDFMasterNode ;
+  AvgRi: 16, 65535, IBS, LDFMasterNode ;
+  BatteryCurrent: 24, {255, 255, 255}, IBS, LDFMasterNode ;
+  BatteryDefect: 1, 0, IBS, LDFMasterNode ;
+  BatteryTemperature: 9, 511, IBS, LDFMasterNode ;
+  BatteryVoltage: 16, 65535, IBS, LDFMasterNode ;
+  CapacityLossBottom: 8, 255, IBS, LDFMasterNode ;
+  CapacityLossTop: 8, 255, IBS, LDFMasterNode ;
+  CurrentAutorange: 2, 0, IBS, LDFMasterNode ;
+  DischargeableAh: 16, 65535, IBS, LDFMasterNode ;
+  EstVoltaDrop: 8, 255, IBS, LDFMasterNode ;
+  Event_EngineStart: 1, 0, IBS, LDFMasterNode ;
+  Event_LowVoltage: 1, 0, IBS, LDFMasterNode ;
+  Event_PowerOn: 1, 0, IBS, LDFMasterNode ;
+  IBS_Error: 1, 0, IBS, LDFMasterNode ;
+  LINResponseError: 1, 0, IBS, LDFMasterNode ;
+  NominalCapacity: 8, 255, IBS, LDFMasterNode ;
+  OptChargeVolt: 8, 255, IBS, LDFMasterNode ;
+  Recalibrated: 1, 0, IBS, LDFMasterNode ;
+  SOCLowerTolerance: 8, 255, IBS, LDFMasterNode ;
+  SOCUpperTolerance: 8, 255, IBS, LDFMasterNode ;
+  StateOfCharge: 8, 255, IBS, LDFMasterNode ;
+  StateOfHealth: 8, 255, IBS, LDFMasterNode ;
+  Sulfation: 1, 0, IBS, LDFMasterNode ;
+  WakeupStatus: 2, 0, IBS, LDFMasterNode ;
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+
+
+Frames {
+  MASTER_FRAME: 32, LDFMasterNode, 8 {
+    SOC_Limit, 0 ;
+  }
+  IBS_STATUS: 33, IBS, 5 {
+    LINResponseError, 0 ;
+    WakeupStatus, 1 ;
+    Event_LowVoltage, 3 ;
+    Event_PowerOn, 4 ;
+    Event_EngineStart, 5 ;
+    Sulfation, 6 ;
+    BatteryDefect, 7 ;
+    SOCUpperTolerance, 8 ;
+    SOCLowerTolerance, 16 ;
+    CapacityLossTop, 24 ;
+    CapacityLossBottom, 32 ;
+  }
+  IBS_UIT: 34, IBS, 7 {
+    BatteryCurrent, 0 ;
+    BatteryVoltage, 24 ;
+    BatteryTemperature, 40 ;
+    CurrentAutorange, 49 ;
+    IBS_Error, 55 ;
+  }
+  IBS_BZE1: 37, IBS, 6 {
+    StateOfCharge, 0 ;
+    StateOfHealth, 8 ;
+    EstVoltaDrop, 16 ;
+    OptChargeVolt, 24 ;
+    AvgRi, 32 ;
+  }
+  IBS_BZE2: 38, IBS, 6 {
+    AvailableCapacity, 0 ;
+    DischargeableAh, 16 ;
+    NominalCapacity, 32 ;
+    Recalibrated, 40 ;
+  }
+}
+
+
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+
+Node_attributes {
+  IBS{
+    LIN_protocol = "2.0" ;
+    configured_NAD = 0x1 ;
+    product_id = 0x36, 0xF60A, 255 ;
+    response_error = LINResponseError ;
+    P2_min = 50 ms ;
+    ST_min = 50 ms ;
+    configurable_frames {
+      IBS_STATUS = 0x1021 ;
+      IBS_UIT = 0x1022 ;
+      IBS_BZE1 = 0x1025 ;
+      IBS_BZE2 = 0x1026 ;
+      MASTER_FRAME = 0x1020 ;
+    }
+  }
+}
+
+Schedule_tables {
+ Standard {
+    IBS_STATUS delay 20 ms ;
+    IBS_UIT delay 20 ms ;
+    IBS_BZE1 delay 20 ms ;
+    IBS_BZE2 delay 60 ms ;
+    MASTER_FRAME delay 20 ms ;
+  }
+}
+
+
+Signal_encoding_types {
+  Enc_AvailableCapacity {
+    physical_value, 0, 2500, 0.1, 0, "Ah" ;
+    logical_value, 65535, "SNA" ;
+  }
+  Enc_AvgRi {
+    physical_value, 0, 20000, 0.01, 0, "mOhm" ;
+    logical_value, 65535, "SNA" ;
+  }
+  Enc_BatteryCurrent {
+    physical_value, 0, 4000000, 0.001, -2000, "A" ;
+    logical_value, 16777215, "SNA" ;
+  }
+  Enc_BatteryDefect {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  Enc_BatteryTemperature {
+    physical_value, 0, 330, 0.5, -40, "°C" ;
+    logical_value, 511, "SNA" ;
+  }
+  Enc_BatteryVoltage {
+    physical_value, 0, 50000, 0.001, 0, "V" ;
+    logical_value, 65535, "SNA" ;
+  }
+  Enc_CapacityLossBottom {
+    physical_value, 0, 200, 0.5, 0, "%" ;
+    logical_value, 255, "SNA" ;
+  }
+  Enc_CapacityLossTop {
+    physical_value, 0, 200, 0.5, 0, "%" ;
+    logical_value, 255, "SNA" ;
+  }
+  Enc_CurrentAutorange {
+    logical_value, 0, "Range not defined" ;
+    logical_value, 1, "Current range I1" ;
+    logical_value, 2, "Current range I2" ;
+    logical_value, 3, "Current range I3" ;
+  }
+  Enc_DischargeableAh {
+    physical_value, 0, 2500, 0.1, 0, "Ah" ;
+    logical_value, 65535, "SNA" ;
+  }
+  Enc_EstVoltaDrop {
+    physical_value, 0, 254, 0.05, 0, "V" ;
+    logical_value, 255, "SNA" ;
+  }
+  Enc_Event {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  Enc_LINResponseError {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  Enc_NominalCapacity {
+    physical_value, 0, 250, 2, 0, "Ah" ;
+    logical_value, 255, "SNA" ;
+  }
+  Enc_OptChargeVolt {
+    physical_value, 0, 254, 0.05, 5, "V" ;
+    logical_value, 255, "SNA" ;
+  }
+  Enc_Recalibrated {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  Enc_SOCLimit {
+    physical_value, 0, 254, 1, 0, "%" ;
+    logical_value, 255, "SNA" ;
+  }
+  Enc_SOCLowerTolerance {
+    physical_value, 0, 254, 1, 0, "%" ;
+    logical_value, 255, "SNA" ;
+  }
+  Enc_SOCUpperTolerance {
+    physical_value, 0, 254, 1, 0, "%" ;
+    logical_value, 255, "SNA" ;
+  }
+  Enc_StateOfCharge {
+    physical_value, 0, 200, 0.5, 0, "%" ;
+    logical_value, 255, "SNA" ;
+  }
+  Enc_StateOfHealth {
+    physical_value, 0, 200, 0.5, 0, "%" ;
+    logical_value, 255, "SNA" ;
+  }
+  Enc_Sulfation {
+    physical_value, 0, 1, 1, 0 ;
+  }
+  Enc_WakeupStatus {
+    logical_value, 0, "No active wakeup demand" ;
+    logical_value, 1, "Active wakeup demand" ;
+    logical_value, 2, "Not defined" ;
+    logical_value, 3, "Signal not available (SNA)" ;
+  }
+  Enc_MinimalQuiescentCurrent {
+    physical_value, 0, 65000, 1, -65000, "mA" ;
+  }
+}
+
+Signal_representation {
+  Enc_AvailableCapacity: AvailableCapacity ;
+  Enc_AvgRi: AvgRi ;
+  Enc_BatteryCurrent: BatteryCurrent ;
+  Enc_BatteryDefect: BatteryDefect ;
+  Enc_BatteryTemperature: BatteryTemperature ;
+  Enc_BatteryVoltage: BatteryVoltage ;
+  Enc_CapacityLossBottom: CapacityLossBottom ;
+  Enc_CapacityLossTop: CapacityLossTop ;
+  Enc_CurrentAutorange: CurrentAutorange ;
+  Enc_DischargeableAh: DischargeableAh ;
+  Enc_EstVoltaDrop: EstVoltaDrop ;
+  Enc_Event: Event_EngineStart, Event_LowVoltage, Event_PowerOn, IBS_Error ;
+  Enc_LINResponseError: LINResponseError ;
+  Enc_NominalCapacity: NominalCapacity ;
+  Enc_OptChargeVolt: OptChargeVolt ;
+  Enc_Recalibrated: Recalibrated ;
+  Enc_SOCLimit: SOC_Limit ;
+  Enc_SOCLowerTolerance: SOCLowerTolerance ;
+  Enc_SOCUpperTolerance: SOCUpperTolerance ;
+  Enc_StateOfCharge: StateOfCharge ;
+  Enc_StateOfHealth: StateOfHealth ;
+  Enc_Sulfation: Sulfation ;
+  Enc_WakeupStatus: WakeupStatus ;
+}

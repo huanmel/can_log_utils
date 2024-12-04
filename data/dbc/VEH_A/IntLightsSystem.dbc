@@ -1,0 +1,325 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ CabLightModeAuto_table 3 "Not Available" 2 "Error" 1 "True" 0 "False" ;
+VAL_TABLE_ CabLightEnableCmd_Table 3 "Not Available" 2 "Reserved" 1 "On" 0 "Off" ;
+VAL_TABLE_ CabLightEnableState_Table 7 "Not Available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_TABLE_ CabLightEnableReq_table 7 "Not Available" 3 "Error" 2 "Auto" 1 "On" 0 "Off" ;
+VAL_TABLE_ CabLightIntensityReq_Table 7 "Not Available" 3 "Error" 2 " Level 3" 1 " Level 2" 0 " Level 1" ;
+VAL_TABLE_ LightStateAct 3 "Not Available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_TABLE_ CargoLightModeAutoTable 3 "Not Available" 2 "Error" 1 "True" 0 "False" ;
+VAL_TABLE_ HmiReq 7 "Not Available" 3 "Error" 2 "Auto" 1 "On" 0 "Off" ;
+
+
+BO_ 2582781438 CLSA: 8 Vector__XXX
+ SG_ RFtwlLightModeAuto : 61|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RFtwlLightIntensityState : 58|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ RFtwlLightEnableState : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LFtwlLightModeAuto : 53|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LFtwlLightIntensityState : 50|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ LFtwlLightEnableState : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PassLightModeAuto : 45|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DriverLightModeAuto : 43|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PassLightIntensityState : 40|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ PassLightEnableState : 37|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DriverLightIntensityState : 34|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ DriverLightEnableState : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CabLightModeAuto : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CabLightEnableState : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CabLightIntensityState : 2|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CabLightColorState : 5|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ VestLightIntensityState : 20|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ VestLightEnableState : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VestLightColorState : 18|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ SaloonLightsEnableState : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IndtLightsColorState : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IndLighstIntensityState : 28|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ HaloLightsColorState : 10|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ HaloLighstIntensityState : 12|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2582780695 CLHMIR: 8 Vector__XXX
+ SG_ RFtwlLightIntensityReq : 43|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ RFtwlLightEnableReq : 40|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ LFtwlLightIntensityReq : 35|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ LFtwlLightEnableReq : 32|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ PassLightIntensityReq : 27|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ DriverLightIntensityReq : 24|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ PassLightEnableReq : 19|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ DriverLightEnableReq : 16|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ VestLightEnaReq : 11|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ IndHaloLightEnaReq : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CabLightEnableReq : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CabLightIntensityReq : 3|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CabLightColorReq : 6|2@1+ (1,0) [0|3] "-" Vector__XXX
+
+BO_ 2582780670 CARGOLSA: 1 Vector__XXX
+ SG_ CargoLightStateAct : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2582781182 CARGOLM: 1 Vector__XXX
+ SG_ CargoLightModeAuto : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2582780183 CARGOLHMIR: 8 Vector__XXX
+ SG_ CargoLightModeHmiReq : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+
+
+
+CM_ "$File: //depot/auto/dbc/Components/HMI/Lights/0.0.9.0/IntLightsSystem.dbc $
+$Change: 215965 $
+$DateTime: 2024/08/21 09:47:24 $
+$Revision: #1 $";
+CM_ BO_ 2582781438 "The message is a response to the request for lighting data in the Cabin Lighting Request message.";
+CM_ SG_ 2582781438 RFtwlLightModeAuto "Indicates whether the cabin light is in auto modeIndicates whether the cabin light is in auto mode";
+CM_ SG_ 2582781438 RFtwlLightIntensityState "Indicates the cabin light intensity level state.Indicates the cabin light intensity level state.";
+CM_ SG_ 2582781438 RFtwlLightEnableState "Indicates the cabin light enable state.Indicates the cabin light enable state.";
+CM_ SG_ 2582781438 LFtwlLightModeAuto "Indicates whether the cabin light is in auto modeIndicates whether the cabin light is in auto mode";
+CM_ SG_ 2582781438 LFtwlLightIntensityState "Indicates the cabin light intensity level state.Indicates the cabin light intensity level state.";
+CM_ SG_ 2582781438 LFtwlLightEnableState "Indicates the cabin light enable state.Indicates the cabin light enable state.";
+CM_ SG_ 2582781438 PassLightModeAuto "Indicates whether the cabin light is in auto modeIndicates whether the cabin light is in auto mode";
+CM_ SG_ 2582781438 DriverLightModeAuto "Indicates whether the cabin light is in auto modeIndicates whether the cabin light is in auto mode";
+CM_ SG_ 2582781438 PassLightIntensityState "Indicates the cabin light intensity level state.Indicates the cabin light intensity level state.";
+CM_ SG_ 2582781438 PassLightEnableState "Indicates the cabin light enable state.Indicates the cabin light enable state.";
+CM_ SG_ 2582781438 DriverLightIntensityState "Indicates the cabin light intensity level state.Indicates the cabin light intensity level state.";
+CM_ SG_ 2582781438 DriverLightEnableState "Indicates the cabin light enable state.Indicates the cabin light enable state.";
+CM_ SG_ 2582781438 CabLightModeAuto "Indicates whether the cabin light is in auto modeIndicates whether the cabin light is in auto mode";
+CM_ SG_ 2582781438 CabLightEnableState "Indicates the cabin light enable state.Indicates the cabin light enable state.";
+CM_ SG_ 2582781438 CabLightIntensityState "Indicates the cabin light intensity level state.Indicates the cabin light intensity level state.";
+CM_ SG_ 2582781438 CabLightColorState "Indicates the cabin light color state.";
+CM_ SG_ 2582781438 VestLightIntensityState "Current state of vestibule light intensity to be displayed";
+CM_ SG_ 2582781438 VestLightEnableState "Current ON/OFF state of vestibule light to be displayed";
+CM_ SG_ 2582781438 VestLightColorState "Current state of vestibule light colour temperature to be displayed";
+CM_ SG_ 2582781438 SaloonLightsEnableState "Current ON/OFF state of sallon lights to be displayed";
+CM_ SG_ 2582781438 IndtLightsColorState "Actuated state of indirect lights colour temperature.";
+CM_ SG_ 2582781438 IndLighstIntensityState "Actuated state of indirect lights intensity.";
+CM_ SG_ 2582781438 HaloLightsColorState "Current state of halo lights colour temperature to be displayed";
+CM_ SG_ 2582781438 HaloLighstIntensityState "Actuated state of halo lights intensity.";
+CM_ BO_ 2582780695 "The message containing the request on cabin light sources from the operator's cargo light control switch(s).";
+CM_ SG_ 2582780695 RFtwlLightIntensityReq "Indicates the cabin light intensity level request from HMIIndicates the cabin light intensity level request from HMI";
+CM_ SG_ 2582780695 RFtwlLightEnableReq "Indicates the cabin light enable request from HMIIndicates the cabin light enable request from HMI";
+CM_ SG_ 2582780695 LFtwlLightIntensityReq "Indicates the cabin light intensity level request from HMIIndicates the cabin light intensity level request from HMI";
+CM_ SG_ 2582780695 LFtwlLightEnableReq "Indicates the cabin light enable request from HMIIndicates the cabin light enable request from HMI";
+CM_ SG_ 2582780695 PassLightIntensityReq "Indicates the cabin light intensity level request from HMIIndicates the cabin light intensity level request from HMI";
+CM_ SG_ 2582780695 DriverLightIntensityReq "Indicates the cabin light intensity level request from HMIIndicates the cabin light intensity level request from HMI";
+CM_ SG_ 2582780695 PassLightEnableReq "Indicates the cabin light enable request from HMIIndicates the cabin light enable request from HMI";
+CM_ SG_ 2582780695 DriverLightEnableReq "Indicates the cabin light enable request from HMIIndicates the cabin light enable request from HMI";
+CM_ SG_ 2582780695 VestLightEnaReq "User input for controlling the ON/OFF state of the vestibule light";
+CM_ SG_ 2582780695 IndHaloLightEnaReq "User input for controlling the ON/OFF state of the indirect and halo lights";
+CM_ SG_ 2582780695 CabLightEnableReq "Indicates the cabin light enable request from HMIIndicates the cabin light enable request from HMI";
+CM_ SG_ 2582780695 CabLightIntensityReq "Indicates the cabin light intensity level request from HMIIndicates the cabin light intensity level request from HMI";
+CM_ SG_ 2582780695 CabLightColorReq "Indicates the cabin light color request from HMI.";
+CM_ SG_ 2582780670 CargoLightStateAct "Indicates the actual state of the cargo light.";
+CM_ SG_ 2582781182 CargoLightModeAuto "Indicates whether the cargo light is in auto mode";
+CM_ BO_ 2582780183 "Cargo Lighting HMI Request";
+CM_ SG_ 2582780183 CargoLightModeHmiReq "Indicates the cargo lighting mode request from HMI.";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","IfActive","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","noMsgSendType";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BO_  "SendOnChange" ENUM  "No","Yes";
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "Producer" STRING ;
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SendOnChange" "No";
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_ "BusType" "CAN";
+BA_ "DBName" "CARGOLIGHT";
+BA_ "GenMsgSendType" BO_ 2582781438 0;
+BA_ "GenMsgCycleTime" BO_ 2582781438 1000;
+BA_ "GenMsgDelayTime" BO_ 2582781438 100;
+BA_ "SendOnChange" BO_ 2582781438 1;
+BA_ "VFrameFormat" BO_ 2582781438 3;
+BA_ "GenMsgSendType" BO_ 2582780695 0;
+BA_ "GenMsgCycleTime" BO_ 2582780695 1000;
+BA_ "GenMsgDelayTime" BO_ 2582780695 100;
+BA_ "SendOnChange" BO_ 2582780695 1;
+BA_ "VFrameFormat" BO_ 2582780695 3;
+BA_ "GenMsgSendType" BO_ 2582780670 0;
+BA_ "GenMsgCycleTime" BO_ 2582780670 1000;
+BA_ "GenMsgDelayTime" BO_ 2582780670 100;
+BA_ "SendOnChange" BO_ 2582780670 1;
+BA_ "VFrameFormat" BO_ 2582780670 3;
+BA_ "GenMsgSendType" BO_ 2582781182 0;
+BA_ "GenMsgCycleTime" BO_ 2582781182 1000;
+BA_ "GenMsgDelayTime" BO_ 2582781182 100;
+BA_ "SendOnChange" BO_ 2582781182 1;
+BA_ "VFrameFormat" BO_ 2582781182 3;
+BA_ "GenMsgSendType" BO_ 2582780183 0;
+BA_ "GenMsgCycleTime" BO_ 2582780183 1000;
+BA_ "GenMsgDelayTime" BO_ 2582780183 100;
+BA_ "SendOnChange" BO_ 2582780183 1;
+BA_ "VFrameFormat" BO_ 2582780183 3;
+BA_ "GenSigStartValue" SG_ 2582781438 RFtwlLightModeAuto 3;
+BA_ "GenSigStartValue" SG_ 2582781438 RFtwlLightIntensityState 7;
+BA_ "GenSigStartValue" SG_ 2582781438 RFtwlLightEnableState 3;
+BA_ "GenSigStartValue" SG_ 2582781438 LFtwlLightModeAuto 3;
+BA_ "GenSigStartValue" SG_ 2582781438 LFtwlLightIntensityState 7;
+BA_ "GenSigStartValue" SG_ 2582781438 LFtwlLightEnableState 3;
+BA_ "GenSigStartValue" SG_ 2582781438 PassLightModeAuto 3;
+BA_ "GenSigStartValue" SG_ 2582781438 DriverLightModeAuto 3;
+BA_ "GenSigStartValue" SG_ 2582781438 PassLightIntensityState 7;
+BA_ "GenSigStartValue" SG_ 2582781438 PassLightEnableState 3;
+BA_ "GenSigStartValue" SG_ 2582781438 DriverLightIntensityState 7;
+BA_ "GenSigStartValue" SG_ 2582781438 DriverLightEnableState 3;
+BA_ "GenSigStartValue" SG_ 2582781438 CabLightModeAuto 3;
+BA_ "GenSigStartValue" SG_ 2582781438 CabLightEnableState 3;
+BA_ "GenSigStartValue" SG_ 2582781438 CabLightIntensityState 7;
+BA_ "GenSigStartValue" SG_ 2582781438 CabLightColorState 3;
+BA_ "GenSigStartValue" SG_ 2582781438 VestLightIntensityState 7;
+BA_ "GenSigStartValue" SG_ 2582781438 VestLightEnableState 3;
+BA_ "GenSigStartValue" SG_ 2582781438 VestLightColorState 3;
+BA_ "GenSigStartValue" SG_ 2582781438 SaloonLightsEnableState 3;
+BA_ "GenSigStartValue" SG_ 2582781438 IndtLightsColorState 3;
+BA_ "GenSigStartValue" SG_ 2582781438 IndLighstIntensityState 7;
+BA_ "GenSigStartValue" SG_ 2582781438 HaloLightsColorState 3;
+BA_ "GenSigStartValue" SG_ 2582781438 HaloLighstIntensityState 7;
+BA_ "GenSigStartValue" SG_ 2582780695 RFtwlLightIntensityReq 7;
+BA_ "GenSigStartValue" SG_ 2582780695 RFtwlLightEnableReq 7;
+BA_ "GenSigStartValue" SG_ 2582780695 LFtwlLightIntensityReq 7;
+BA_ "GenSigStartValue" SG_ 2582780695 LFtwlLightEnableReq 7;
+BA_ "GenSigStartValue" SG_ 2582780695 PassLightIntensityReq 7;
+BA_ "GenSigStartValue" SG_ 2582780695 DriverLightIntensityReq 7;
+BA_ "GenSigStartValue" SG_ 2582780695 PassLightEnableReq 7;
+BA_ "GenSigStartValue" SG_ 2582780695 DriverLightEnableReq 7;
+BA_ "GenSigStartValue" SG_ 2582780695 VestLightEnaReq 7;
+BA_ "GenSigStartValue" SG_ 2582780695 IndHaloLightEnaReq 7;
+BA_ "GenSigStartValue" SG_ 2582780695 CabLightEnableReq 7;
+BA_ "GenSigStartValue" SG_ 2582780695 CabLightIntensityReq 7;
+BA_ "GenSigStartValue" SG_ 2582780695 CabLightColorReq 3;
+BA_ "GenSigStartValue" SG_ 2582780670 CargoLightStateAct 3;
+BA_ "GenSigStartValue" SG_ 2582781182 CargoLightModeAuto 3;
+BA_ "GenSigStartValue" SG_ 2582780183 CargoLightModeHmiReq 7;
+BA_ "Producer" BO_ 2582781438 "ILS";
+BA_ "Producer" BO_ 2582780670 "ILS";
+BA_ "Producer" BO_ 2582781182 "ILS";
+VAL_ 2582781438 RFtwlLightModeAuto 3 "Not Available" 2 "Error" 1 "True" 0 "False" ;
+VAL_ 2582781438 RFtwlLightIntensityState 7 "Not Available" 3 "Error" 2 "Level 3" 1 "Level 2" 0 "Level 1" ;
+VAL_ 2582781438 RFtwlLightEnableState 3 "Not Available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2582781438 LFtwlLightModeAuto 3 "Not Available" 2 "Error" 1 "True" 0 "False" ;
+VAL_ 2582781438 LFtwlLightIntensityState 7 "Not Available" 3 "Error" 2 "Level 3" 1 "Level 2" 0 "Level 1" ;
+VAL_ 2582781438 LFtwlLightEnableState 3 "Not Available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2582781438 PassLightModeAuto 3 "Not Available" 2 "Error" 1 "True" 0 "False" ;
+VAL_ 2582781438 DriverLightModeAuto 3 "Not Available" 2 "Error" 1 "True" 0 "False" ;
+VAL_ 2582781438 PassLightIntensityState 7 "Not Available" 3 "Error" 2 "Level 3" 1 "Level 2" 0 "Level 1" ;
+VAL_ 2582781438 PassLightEnableState 3 "Not Available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2582781438 DriverLightIntensityState 7 "Not Available" 3 "Error" 2 "Level 3" 1 "Level 2" 0 "Level 1" ;
+VAL_ 2582781438 DriverLightEnableState 3 "Not Available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2582781438 CabLightModeAuto 3 "Not Available" 2 "Error" 1 "True" 0 "False" ;
+VAL_ 2582781438 CabLightEnableState 3 "Not Available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2582781438 CabLightIntensityState 7 "Not Available" 3 "Error" 2 "Level 3" 1 "Level 2" 0 "Level 1" ;
+VAL_ 2582781438 CabLightColorState 3 "Not available" 2 "Reserved" 1 "Warm white" 0 "Cold white" ;
+VAL_ 2582781438 VestLightIntensityState 7 "Not Available" 3 "Error" 2 "Level 3" 1 "Level 2" 0 "Level 1" ;
+VAL_ 2582781438 VestLightEnableState 3 "Not Available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2582781438 VestLightColorState 3 "Not available" 2 "Reserved" 1 "Warm white" 0 "Cold white" ;
+VAL_ 2582781438 SaloonLightsEnableState 3 "Not Available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2582781438 IndtLightsColorState 3 "Not available" 2 "Reserved" 1 "Warm white" 0 "Cold white" ;
+VAL_ 2582781438 IndLighstIntensityState 7 "Not Available" 3 "Error" 2 "Level 3" 1 "Level 2" 0 "Level 1" ;
+VAL_ 2582781438 HaloLightsColorState 3 "Not available" 2 "Reserved" 1 "Warm white" 0 "Cold white" ;
+VAL_ 2582781438 HaloLighstIntensityState 7 "Not Available" 3 "Error" 2 "Level 3" 1 "Level 2" 0 "Level 1" ;
+VAL_ 2582780695 RFtwlLightIntensityReq 7 "Not Available" 3 "Error" 2 "Level 3" 1 "Level 2" 0 "Level 1" ;
+VAL_ 2582780695 RFtwlLightEnableReq 7 "Not Available" 3 "Error" 2 "Auto" 1 "On" 0 "Off" ;
+VAL_ 2582780695 LFtwlLightIntensityReq 7 "Not Available" 3 "Error" 2 "Level 3" 1 "Level 2" 0 "Level 1" ;
+VAL_ 2582780695 LFtwlLightEnableReq 7 "Not Available" 3 "Error" 2 "Auto" 1 "On" 0 "Off" ;
+VAL_ 2582780695 PassLightIntensityReq 7 "Not Available" 3 "Error" 2 "Level 3" 1 "Level 2" 0 "Level 1" ;
+VAL_ 2582780695 DriverLightIntensityReq 7 "Not Available" 3 "Error" 2 "Level 3" 1 "Level 2" 0 "Level 1" ;
+VAL_ 2582780695 PassLightEnableReq 7 "Not Available" 3 "Error" 2 "Auto" 1 "On" 0 "Off" ;
+VAL_ 2582780695 DriverLightEnableReq 7 "Not Available" 3 "Error" 2 "Auto" 1 "On" 0 "Off" ;
+VAL_ 2582780695 VestLightEnaReq 7 "Not Available" 3 "Error" 2 "Auto" 1 "On" 0 "Off" ;
+VAL_ 2582780695 IndHaloLightEnaReq 7 "Not Available" 3 "Error" 2 "Auto" 1 "On" 0 "Off" ;
+VAL_ 2582780695 CabLightEnableReq 7 "Not Available" 3 "Error" 2 "Auto" 1 "On" 0 "Off" ;
+VAL_ 2582780695 CabLightIntensityReq 7 "Not Available" 3 "Error" 2 "Level 3" 1 "Level 2" 0 "Level 1" ;
+VAL_ 2582780695 CabLightColorReq 3 "Not available" 2 "Reserved" 1 "Warm white" 0 "Cold white" ;
+VAL_ 2582780670 CargoLightStateAct 3 "Not Available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2582781182 CargoLightModeAuto 3 "Not Available" 2 "Error" 1 "True" 0 "False" ;
+VAL_ 2582780183 CargoLightModeHmiReq 7 "Not Available" 3 "Error" 2 "Auto" 1 "On" 0 "Off" ;
+

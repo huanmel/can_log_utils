@@ -1,0 +1,537 @@
+VERSION "head"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ STP_Health 3 "NOTAVAILABLE" 1 "ERROR" 0 "NO ERROR" ;
+VAL_TABLE_ TelltaleReq 3 "Not Available" 2 "Error" 1 "On" 0 "Off" ;
+
+
+BO_ 2381910782 STP_MonitoringMessage_TOUCH7: 8 Vector__XXX
+ SG_ TS_LIN_CommFailure : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TOUCH_CompCaps5 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2381912062 STP_MonitoringMessage_UWB5: 8 Vector__XXX
+ SG_ UWB_Rx_dBm : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ UWB_RangingDistance4_cm : 24|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ UWB_RangingDistance3_cm : 16|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ UWB_RangingDistance2_cm : 8|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ UWB_RangingDistance1_cm : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2381911806 STP_MonitoringMessage_UWB4: 8 Vector__XXX
+ SG_ UWB_Reset : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ UWB_RangingStatus : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UWB_CommFailure : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ UWB_RangingErrCode : 24|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ UWB_NSuccess : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ UWB_Noise_dBm : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2381911550 STP_MonitoringMessage_UWB3: 8 Vector__XXX
+ SG_ UWB_SpiSendPackets : 32|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UWB_SpiSendErrs : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2381911294 STP_MonitoringMessage_UWB2: 8 Vector__XXX
+ SG_ UWB_SpiReceiveErrs : 32|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UWB_SpiReceivedPackets : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2381911038 STP_MonitoringMessage_UWB1: 8 Vector__XXX
+ SG_ UWB_RangingCnt : 32|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UWB_NLost : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2650348286 STP_MonitoringMessage_NFC1: 8 Vector__XXX
+ SG_ NFC_ConnStatus : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NFC_RSSI_PM : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ NFC_RSSI_AM : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ NFC_CardDetectCntr : 16|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2381910526 STP_MonitoringMessage_TOUCH6: 8 Vector__XXX
+ SG_ TS_LIN_NTx : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ TS_LIN_NRx : 0|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+
+BO_ 2650345726 STP_MonitoringMessage_TOUCH5: 8 Vector__XXX
+ SG_ TS_LIN_NLost : 32|32@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TOUCH_SingleClicks : 0|32@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2650345470 STP_MonitoringMessage_TOUCH4: 8 Vector__XXX
+ SG_ TOUCH_DoubleClicks : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TOUCH_SegmentValue5 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TOUCH_SegmentValue4 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TOUCH_SegmentValue3 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TOUCH_SegmentValue2 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TOUCH_SegmentValue1 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2650344958 STP_MonitoringMessage_TOUCH3: 8 Vector__XXX
+ SG_ TOUCH_CompCaps4 : 48|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TOUCH_CompCaps3 : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TOUCH_CompCaps2 : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TOUCH_CompCaps1 : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2381908990 STP_MonitoringMessage_TOUCH2: 8 Vector__XXX
+ SG_ TOUCH_Uptime : 32|32@1+ (1,0) [0|16777215] "" Vector__XXX
+ SG_ TOUCH_Reset : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TOUCH_Position : 16|16@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ TOUCH_MotorTemp : 8|8@1- (1,0) [-128|127] "" Vector__XXX
+ SG_ TOUCH_IsTouching : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TOUCH_FwFailure : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ TOUCH_CommFailure : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2650345214 STP_MonitoringMessage_BLE3: 8 Vector__XXX
+ SG_ BLE_SpiSendPackets : 32|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BLE_SpiSendErrs : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2650344702 STP_MonitoringMessage_BLE2: 8 Vector__XXX
+ SG_ BLE_SpiReceiveErrs : 32|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BLE_SpiReceivedPackets : 0|32@1+ (1,0) [0|65535] "" Vector__XXX
+
+BO_ 2650344190 STP_MonitoringMessage_TOUCH1: 8 Vector__XXX
+ SG_ MicroChip_Sent : 32|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MicroChip_Recvd : 0|32@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2650343934 STP_MonitoringMessage_MCU2: 8 Vector__XXX
+ SG_ MCU_Uptime : 16|32@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ MCU_Temp : 0|8@1- (1,0) [0|127] "" Vector__XXX
+
+BO_ 2650343678 STP_MonitoringMessage_MCU1: 8 Vector__XXX
+ SG_ MCU_VDD_LV_mV : 48|16@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ MCU_VBAT_MEAS_mV : 32|16@1+ (1,0) [0|65535] "" Vector__XXX
+ SG_ MCU_SAR_BIAS_3_mV : 16|16@1+ (1,0) [0|4095] "" Vector__XXX
+ SG_ MCU_BOARD_ID_mV : 0|16@1+ (1,0) [0|4095] "" Vector__XXX
+
+BO_ 2650343422 STP_MonitoringMessage_LED2: 8 Vector__XXX
+ SG_ LED_NTC_Temp : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2650343166 STP_MonitoringMessage_LED1: 8 Vector__XXX
+ SG_ LED_SHORTED_LED_BIT_OUT4SL : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LED_SHORTED_LED_BIT_OUT3SL : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LED_SHORTED_LED_BIT_OUT2SL : 14|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LED_SHORTED_LED_BIT_OUT1SL : 13|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LED_RTOOR : 12|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_OTW : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_OT : 10|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LED_OPEN_BIT_OUT4O : 9|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LED_OPEN_BIT_OUT3O : 8|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LED_OPEN_BIT_OUT2O : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LED_OPEN_BIT_OUT1O : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LED_ISETOOR : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_HW_RST : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_En : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_CommFailure : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_BSTUV : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_BSTOV : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LED_R : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ LED_ID : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LED_G : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ LED_B : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2650342910 STP_MonitoringMessage_CAN3: 8 Vector__XXX
+ SG_ CAN_TLE_EI_VIO_LTUV : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ CAN_TLE_EI_VCC_LTUV : 0|8@1+ (1,0) [0|127] "" Vector__XXX
+
+BO_ 2650342654 STP_MonitoringMessage_CAN2: 8 Vector__XXX
+ SG_ CAN_TLE_EI_VBAT_UV : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ CAN_TLE_EI_TSD : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ CAN_TLE_EI_POR : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ CAN_TLE_EI_COM_ERR : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CAN_error_frames : 0|32@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2650342398 STP_MonitoringMessage_CAN1: 8 Vector__XXX
+ SG_ CAN_bit_errors : 32|32@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ CAN_ack_errors : 0|32@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2650342142 STP_MonitoringMessage_BLE1: 8 Vector__XXX
+ SG_ BLE_State : 56|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ BLE_RSSI : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BLE_Reset : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BLE_NTx : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BLE_NRx : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BLE_NLost : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BLE_FwFailure : 10|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BLE_ErrCode : 16|8@1+ (1,0) [0|4294967295] "" Vector__XXX
+ SG_ BLE_ConnStatus : 9|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BLE_CommFailure : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BLE_API_STATUS : 0|8@1+ (1,0) [0|4294967295] "" Vector__XXX
+
+BO_ 2381906430 STPHealth: 8 Vector__XXX
+ SG_ PassTouchpointFault : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DriverTouchpointFault : 18|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CargoTouchpointFault : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BulkheadTouchpointFault : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ uwb_range_notestablished : 16|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ts_lin_incorrect_amount_err : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ts_emb_not_found_err : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ts_emb_link_err : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ts_emb_update_err : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ts_lin_link_err : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ts_lin_update_err : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2381906174 STPFwUpdStatus: 8 Vector__XXX
+ SG_ ErrorCodeUpdFw5 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ErrorCodeUpdFw4 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ErrorCodeUpdFw3 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ErrorCodeUpdFw2 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ErrorCodeUpdFw1 : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ErrorCodeUpdFw0 : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ UpdateProgress : 4|4@1+ (10,0) [0|10] "" Vector__XXX
+ SG_ FailedUpdatedDevices : 12|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ SuccessUpdatedDevices : 8|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ NumberDevices : 0|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2381731326 TP_TouchEvent: 8 Vector__XXX
+ SG_ TouchFailState : 3|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ TouchEvent : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+
+BO_ 2373975806 TP_StateReq: 8 Vector__XXX
+ SG_ StateRequest : 0|3@1+ (1,0) [0|7] "" Vector__XXX
+
+
+
+CM_ "Braking System Tell Tales Requests to HMI
+$File: //depot/auto/dbc/Components/HMI/Smart_TP/0.2.5.0/SmartTP.dbc $
+$Change: 215966 $
+$DateTime: 2024/08/21 09:55:02 $
+$Revision: #1 $";
+CM_ SG_ 2381910782 TS_LIN_CommFailure "Single bit that is set to 1 whenever LIN communication with external TS device (first TS in the chain) has any issue (i.e. no response, or a malformed packet).
+
+";
+CM_ SG_ 2381912062 UWB_Rx_dBm "Integer, most recent ranging status: Estimated overall received power in dBm	";
+CM_ SG_ 2381911806 UWB_Reset "Single bit that is set to 1 whenever there is a RESET of the UWB Controller is detected.
+
+";
+CM_ SG_ 2381911806 UWB_CommFailure "Single bit that is set to 1 whenever communication with UWB controller has any issue (i.e. no response, or a malformed packet).
+
+";
+CM_ SG_ 2381911806 UWB_NSuccess "Integer that is incremented each time the ranging frame is successfully processed	";
+CM_ SG_ 2381911806 UWB_Noise_dBm "Integer, most recent ranging status: Estimated received noise power in dBm	";
+CM_ SG_ 2381911038 UWB_NLost "Integer that is incremented each time the ranging frame is lost or corrupted	";
+CM_ SG_ 2650348286 NFC_ConnStatus "Single bit that is set to 1 whenever communication with NFC controller has any issue (i.e. no response, or a malformed packet).
+
+";
+CM_ SG_ 2650348286 NFC_RSSI_PM "PM channel RSSI peak value of the most recently received frame	";
+CM_ SG_ 2650348286 NFC_RSSI_AM "AM channel RSSI peak value of the most recently received frame	";
+CM_ SG_ 2381910526 TS_LIN_NTx "Number of LIN frames transmitted to the external TS device (first in the chain)	";
+CM_ SG_ 2381910526 TS_LIN_NRx "Number of LIN frames received from the external TS device (first in the chain)	";
+CM_ SG_ 2650345726 TS_LIN_NLost "Number of LIN Rx frames that were lost or corrupted when communicating with the external TS device (first in the chain)	";
+CM_ SG_ 2381908990 TOUCH_Reset "Single bit that is set to 1 whenever there is a RESET of the Touch Controller is detected.
+
+";
+CM_ SG_ 2381908990 TOUCH_Position "representing finger position on the touch plate";
+CM_ SG_ 2381908990 TOUCH_MotorTemp "Current temperature (�C) measured by the temperature sensor located near the vibro-motor.	";
+CM_ SG_ 2381908990 TOUCH_IsTouching "Single bit that is set to 1 if at the moment of CAN message serialization the touch sensor is touched/being kept touched.	";
+CM_ SG_ 2381908990 TOUCH_FwFailure "Single bit that is set to 1 if the bootloader of the Touch controller detects that there is no valid Touch controller firmware available.
+
+";
+CM_ SG_ 2381908990 TOUCH_CommFailure "Single bit that is set to 1 whenever communication with Touch controller has any issue (i.e. no response, or a malformed packet).
+
+";
+CM_ SG_ 2650343934 MCU_Uptime "Current uptime of the primary microcontroller in ticks of the system timer	";
+CM_ SG_ 2650343934 MCU_Temp "Current temperature (�C) measured by the temperature sensor of the primary microcontroller	";
+CM_ SG_ 2650343678 MCU_VDD_LV_mV "Current scaled voltage at the VDD_LV channel	";
+CM_ SG_ 2650343678 MCU_VBAT_MEAS_mV "Current scaled voltage at the VBAT_MEAS channel	";
+CM_ SG_ 2650343678 MCU_SAR_BIAS_3_mV "Current scaled voltage at the SAR_BIAS_3 channel	";
+CM_ SG_ 2650343678 MCU_BOARD_ID_mV "Current scaled voltage at the BOARD_ID channel	";
+CM_ SG_ 2650343166 LED_RTOOR "The RTOOR bit of the LED Driver's DIAG_REG (0x15) register.
+
+This bit is set to 1 if the resistor on the RT pin is out of the expected range. When this happens, the device cannot operate.";
+CM_ SG_ 2650343166 LED_OTW "The OTW bit of the LED Driver's DIAG_REG (0x15) register. 
+
+If 1, the junction temperature of the device is over T WARN , or the temperature foldback circuit has reached the temperature T1.";
+CM_ SG_ 2650343166 LED_OT "The OT bit of the LED Driver's DIAG_REG (0x15) register. 
+
+If 1, the junction temperature of the device exceeds T SHDN , and the device is shut down.";
+CM_ SG_ 2650343166 LED_ISETOOR "The ISETOOR bit of the LED Driver's DIAG_REG (0x15) register. 
+
+When 1, this bit indicates that the ISET current is out of range. This is more than likely due to an incorrect resistor value on ISET. In this condition, the IC stops operation.";
+CM_ SG_ 2650343166 LED_HW_RST "The HW_RST bit of the LED Driver's DIAG_REG (0x15) register. 
+
+If 1, the device has just emerged from a hardware reset (power-up).";
+CM_ SG_ 2650343166 LED_En "Current value of the LED_EN pin	";
+CM_ SG_ 2650343166 LED_CommFailure "Single bit that is set to 1 whenever communication with LED driver has any issue (i.e. no response, or a malformed packet).
+
+";
+CM_ SG_ 2650343166 LED_BSTUV "The BSTUV bit of the LED Driver's DIAG_REG (0x15) register. 
+
+If 1, an undervoltage is detected on the boost output, and the boost is disabled.";
+CM_ SG_ 2650343166 LED_BSTOV "The BSTOV bit of the LED Driver's DIAG_REG (0x15) register. 
+
+If 1, the boost converter is at its overvoltage limit.";
+CM_ SG_ 2650343166 LED_R "Currently set intensity of the RED channel	";
+CM_ SG_ 2650343166 LED_G "Currently set intensity of the GREEN channel	";
+CM_ SG_ 2650343166 LED_B "Currently set intensity of the BLUE channel	";
+CM_ SG_ 2650342910 CAN_TLE_EI_VIO_LTUV "TLE9255 Event Counter: VIO long-term undervoltage detection	";
+CM_ SG_ 2650342910 CAN_TLE_EI_VCC_LTUV "TLE9255 Event Counter: VCC long-term undervoltage detection	";
+CM_ SG_ 2650342654 CAN_TLE_EI_VBAT_UV "TLE9255 Event Counter: Battery Undervoltage detected	";
+CM_ SG_ 2650342654 CAN_TLE_EI_TSD "TLE9255 Event Counter: Thermal Shut Down	";
+CM_ SG_ 2650342654 CAN_TLE_EI_POR "TLE9255 Event Counter: Power On Reset (see tle9255w_info[x].event_count[TLE_EI_POR])	
+";
+CM_ SG_ 2650342654 CAN_TLE_EI_COM_ERR "TLE9255 Event Counter: SPI failure detected	";
+CM_ SG_ 2650342654 CAN_error_frames "Total number of detected error frames due to: stuff, form, crc errors (see mcan_devices[x].info.error_frames)	";
+CM_ SG_ 2650342398 CAN_bit_errors "Number of detected Bit errors (recessive bit was sent but dominant detected) (see mcan_devices[x].info.bit_errors)	";
+CM_ SG_ 2650342398 CAN_ack_errors "Number of detected ACK errors (see mcan_devices[x].info.ack_errors)	";
+CM_ SG_ 2650342142 BLE_RSSI "RSSI during the last good packet received in the specific connection
+
+";
+CM_ SG_ 2650342142 BLE_Reset "Single bit that is set to 1 whenever there is a RESET of the BLE Controller is detected.
+
+";
+CM_ SG_ 2650342142 BLE_NTx "Number of RF frames transmitted	";
+CM_ SG_ 2650342142 BLE_NRx "Number of RF frames received	";
+CM_ SG_ 2650342142 BLE_NLost "Number of RF Rx frames that were lost or corrupted	";
+CM_ SG_ 2650342142 BLE_FwFailure "Single bit that is set to 1 if the bootloader of the BLE controller detects that there is no valid BLE controller firmware available.";
+CM_ SG_ 2650342142 BLE_CommFailure "Single bit that is set to 1 whenever communication with BLE controller has any issue (i.e. no response, or a malformed packet).
+
+";
+CM_ SG_ 2381906174 UpdateProgress "Progress in updating devices";
+CM_ SG_ 2381906174 FailedUpdatedDevices "The number of unseccesful updated devices";
+CM_ SG_ 2381906174 SuccessUpdatedDevices "The number succesfully updated devices";
+CM_ SG_ 2381906174 NumberDevices "The Number of devices to be updated";
+BA_DEF_ BO_  "Producer" STRING ;
+BA_DEF_ BO_  "PpCcGenMsgType" STRING ;
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","IfActive","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","noMsgSendType";
+BA_DEF_ BO_  "SendOnChange" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_DEF_  "Producer" "STP";
+BA_DEF_DEF_  "PpCcGenMsgType" "PpCcUndefined";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "SendOnChange" "No";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_ "BusType" "CAN";
+BA_ "DBName" "HMI_SmartTP";
+BA_ "PpCcGenMsgType" BO_ 2381910782 "PpCcOutput";
+BA_ "GenMsgSendType" BO_ 2381910782 0;
+BA_ "GenMsgCycleTime" BO_ 2381910782 100;
+BA_ "VFrameFormat" BO_ 2381910782 3;
+BA_ "PpCcGenMsgType" BO_ 2381912062 "PpCcOutput";
+BA_ "GenMsgSendType" BO_ 2381912062 0;
+BA_ "GenMsgCycleTime" BO_ 2381912062 100;
+BA_ "VFrameFormat" BO_ 2381912062 3;
+BA_ "PpCcGenMsgType" BO_ 2381911806 "PpCcOutput";
+BA_ "GenMsgSendType" BO_ 2381911806 0;
+BA_ "GenMsgCycleTime" BO_ 2381911806 100;
+BA_ "VFrameFormat" BO_ 2381911806 3;
+BA_ "PpCcGenMsgType" BO_ 2381911550 "PpCcOutput";
+BA_ "GenMsgSendType" BO_ 2381911550 0;
+BA_ "GenMsgCycleTime" BO_ 2381911550 100;
+BA_ "VFrameFormat" BO_ 2381911550 3;
+BA_ "PpCcGenMsgType" BO_ 2381911294 "PpCcOutput";
+BA_ "GenMsgSendType" BO_ 2381911294 0;
+BA_ "GenMsgCycleTime" BO_ 2381911294 100;
+BA_ "VFrameFormat" BO_ 2381911294 3;
+BA_ "PpCcGenMsgType" BO_ 2381911038 "PpCcOutput";
+BA_ "GenMsgSendType" BO_ 2381911038 0;
+BA_ "GenMsgCycleTime" BO_ 2381911038 100;
+BA_ "VFrameFormat" BO_ 2381911038 3;
+BA_ "PpCcGenMsgType" BO_ 2650348286 "PpCcOutput";
+BA_ "GenMsgSendType" BO_ 2650348286 0;
+BA_ "GenMsgCycleTime" BO_ 2650348286 100;
+BA_ "VFrameFormat" BO_ 2650348286 3;
+BA_ "PpCcGenMsgType" BO_ 2381910526 "PpCcOutput";
+BA_ "GenMsgSendType" BO_ 2381910526 0;
+BA_ "GenMsgCycleTime" BO_ 2381910526 100;
+BA_ "VFrameFormat" BO_ 2381910526 3;
+BA_ "PpCcGenMsgType" BO_ 2650345726 "PpCcOutput";
+BA_ "GenMsgSendType" BO_ 2650345726 0;
+BA_ "GenMsgCycleTime" BO_ 2650345726 100;
+BA_ "VFrameFormat" BO_ 2650345726 3;
+BA_ "PpCcGenMsgType" BO_ 2650345470 "PpCcOutput";
+BA_ "GenMsgSendType" BO_ 2650345470 0;
+BA_ "GenMsgCycleTime" BO_ 2650345470 100;
+BA_ "VFrameFormat" BO_ 2650345470 3;
+BA_ "PpCcGenMsgType" BO_ 2650344958 "PpCcOutput";
+BA_ "GenMsgSendType" BO_ 2650344958 0;
+BA_ "GenMsgCycleTime" BO_ 2650344958 100;
+BA_ "VFrameFormat" BO_ 2650344958 3;
+BA_ "PpCcGenMsgType" BO_ 2381908990 "PpCcOutput";
+BA_ "GenMsgSendType" BO_ 2381908990 0;
+BA_ "GenMsgCycleTime" BO_ 2381908990 100;
+BA_ "VFrameFormat" BO_ 2381908990 3;
+BA_ "PpCcGenMsgType" BO_ 2650345214 "PpCcOutput";
+BA_ "GenMsgSendType" BO_ 2650345214 0;
+BA_ "GenMsgCycleTime" BO_ 2650345214 100;
+BA_ "VFrameFormat" BO_ 2650345214 3;
+BA_ "PpCcGenMsgType" BO_ 2650344702 "PpCcOutput";
+BA_ "GenMsgCycleTime" BO_ 2650344702 100;
+BA_ "GenMsgSendType" BO_ 2650344702 0;
+BA_ "VFrameFormat" BO_ 2650344702 3;
+BA_ "PpCcGenMsgType" BO_ 2650344190 "PpCcOutput";
+BA_ "GenMsgCycleTime" BO_ 2650344190 100;
+BA_ "GenMsgSendType" BO_ 2650344190 0;
+BA_ "VFrameFormat" BO_ 2650344190 3;
+BA_ "PpCcGenMsgType" BO_ 2650343934 "PpCcOutput";
+BA_ "GenMsgCycleTime" BO_ 2650343934 100;
+BA_ "GenMsgSendType" BO_ 2650343934 0;
+BA_ "VFrameFormat" BO_ 2650343934 3;
+BA_ "PpCcGenMsgType" BO_ 2650343678 "PpCcOutput";
+BA_ "GenMsgCycleTime" BO_ 2650343678 100;
+BA_ "GenMsgSendType" BO_ 2650343678 0;
+BA_ "VFrameFormat" BO_ 2650343678 3;
+BA_ "PpCcGenMsgType" BO_ 2650343422 "PpCcOutput";
+BA_ "GenMsgCycleTime" BO_ 2650343422 100;
+BA_ "GenMsgSendType" BO_ 2650343422 0;
+BA_ "VFrameFormat" BO_ 2650343422 3;
+BA_ "PpCcGenMsgType" BO_ 2650343166 "PpCcOutput";
+BA_ "GenMsgCycleTime" BO_ 2650343166 100;
+BA_ "GenMsgSendType" BO_ 2650343166 0;
+BA_ "VFrameFormat" BO_ 2650343166 3;
+BA_ "PpCcGenMsgType" BO_ 2650342910 "PpCcOutput";
+BA_ "GenMsgCycleTime" BO_ 2650342910 100;
+BA_ "GenMsgSendType" BO_ 2650342910 0;
+BA_ "VFrameFormat" BO_ 2650342910 3;
+BA_ "PpCcGenMsgType" BO_ 2650342654 "PpCcOutput";
+BA_ "GenMsgCycleTime" BO_ 2650342654 100;
+BA_ "GenMsgSendType" BO_ 2650342654 0;
+BA_ "VFrameFormat" BO_ 2650342654 3;
+BA_ "PpCcGenMsgType" BO_ 2650342398 "PpCcOutput";
+BA_ "GenMsgCycleTime" BO_ 2650342398 100;
+BA_ "GenMsgSendType" BO_ 2650342398 0;
+BA_ "VFrameFormat" BO_ 2650342398 3;
+BA_ "PpCcGenMsgType" BO_ 2650342142 "PpCcOutput";
+BA_ "GenMsgCycleTime" BO_ 2650342142 100;
+BA_ "GenMsgSendType" BO_ 2650342142 0;
+BA_ "VFrameFormat" BO_ 2650342142 3;
+BA_ "PpCcGenMsgType" BO_ 2381906430 "PpCcOutput";
+BA_ "VFrameFormat" BO_ 2381906430 3;
+BA_ "PpCcGenMsgType" BO_ 2381906174 "PpCcOutput";
+BA_ "VFrameFormat" BO_ 2381906174 3;
+BA_ "PpCcGenMsgType" BO_ 2381731326 "PpCcOutput";
+BA_ "GenMsgSendType" BO_ 2381731326 0;
+BA_ "SendOnChange" BO_ 2381731326 1;
+BA_ "GenMsgCycleTime" BO_ 2381731326 1000;
+BA_ "VFrameFormat" BO_ 2381731326 3;
+BA_ "PpCcGenMsgType" BO_ 2373975806 "PpCcInput";
+BA_ "GenMsgSendType" BO_ 2373975806 0;
+BA_ "SendOnChange" BO_ 2373975806 1;
+BA_ "GenMsgCycleTime" BO_ 2373975806 1000;
+BA_ "VFrameFormat" BO_ 2373975806 3;
+BA_ "GenSigStartValue" SG_ 2381906430 PassTouchpointFault 3;
+BA_ "SPN" SG_ 2381906430 PassTouchpointFault 510013;
+BA_ "GenSigStartValue" SG_ 2381906430 DriverTouchpointFault 3;
+BA_ "SPN" SG_ 2381906430 DriverTouchpointFault 510011;
+BA_ "GenSigStartValue" SG_ 2381906430 CargoTouchpointFault 3;
+BA_ "SPN" SG_ 2381906430 CargoTouchpointFault 510010;
+BA_ "GenSigStartValue" SG_ 2381906430 BulkheadTouchpointFault 3;
+BA_ "SPN" SG_ 2381906430 BulkheadTouchpointFault 510012;
+BA_ "SPN" SG_ 2381906430 uwb_range_notestablished 524026;
+BA_ "GenSigStartValue" SG_ 2381906430 uwb_range_notestablished 3;
+BA_ "SPN" SG_ 2381906430 ts_lin_incorrect_amount_err 524022;
+BA_ "GenSigStartValue" SG_ 2381906430 ts_lin_incorrect_amount_err 3;
+BA_ "SPN" SG_ 2381906430 ts_emb_not_found_err 524025;
+BA_ "GenSigStartValue" SG_ 2381906430 ts_emb_not_found_err 3;
+BA_ "SPN" SG_ 2381906430 ts_emb_link_err 524024;
+BA_ "GenSigStartValue" SG_ 2381906430 ts_emb_link_err 3;
+BA_ "SPN" SG_ 2381906430 ts_emb_update_err 524023;
+BA_ "GenSigStartValue" SG_ 2381906430 ts_emb_update_err 3;
+BA_ "SPN" SG_ 2381906430 ts_lin_link_err 524021;
+BA_ "GenSigStartValue" SG_ 2381906430 ts_lin_link_err 3;
+BA_ "SPN" SG_ 2381906430 ts_lin_update_err 524020;
+BA_ "GenSigStartValue" SG_ 2381906430 ts_lin_update_err 3;
+BA_ "GenSigStartValue" SG_ 2381731326 TouchFailState 0;
+BA_ "GenSigStartValue" SG_ 2381731326 TouchEvent 0;
+BA_ "GenSigStartValue" SG_ 2373975806 StateRequest 0;
+BA_ "Producer" BO_ 2381731326 "UICS";
+BA_ "Producer" BO_ 2373975806 "UICS";
+VAL_ 2381906430 PassTouchpointFault 3 "NOTAVAILABLE" 1 "ERROR" 0 "NO ERROR" ;
+VAL_ 2381906430 DriverTouchpointFault 3 "NOTAVAILABLE" 1 "ERROR" 0 "NO ERROR" ;
+VAL_ 2381906430 CargoTouchpointFault 3 "NOTAVAILABLE" 1 "ERROR" 0 "NO ERROR" ;
+VAL_ 2381906430 BulkheadTouchpointFault 3 "NOTAVAILABLE" 1 "ERROR" 0 "NO ERROR" ;
+VAL_ 2381906430 uwb_range_notestablished 3 "NOT AVAILABLE" 1 "ERROR" 0 "NO ERROR" ;
+VAL_ 2381906430 ts_lin_incorrect_amount_err 3 "NOTAVAILABLE" 1 "ERROR" 0 "NO ERROR" ;
+VAL_ 2381906430 ts_emb_not_found_err 3 "NOTAVAILABLE" 1 "ERROR" 0 "NO ERROR" ;
+VAL_ 2381906430 ts_emb_link_err 3 "NOTAVAILABLE" 1 "ERROR" 0 "NO ERROR" ;
+VAL_ 2381906430 ts_emb_update_err 3 "NOTAVAILABLE" 1 "ERROR" 0 "NO ERROR" ;
+VAL_ 2381906430 ts_lin_link_err 3 "NOTAVAILABLE" 1 "ERROR" 0 "NO ERROR" ;
+VAL_ 2381906430 ts_lin_update_err 3 "NOTAVAILABLE" 1 "ERROR" 0 "NO ERROR" ;
+VAL_ 2381731326 TouchFailState 7 "Not Available" 6 "Error" 5 "Reserved" 4 "Reserved" 3 "Reserved" 2 "Failed On Touch" 1 "Failed" 0 "Not Failed" ;
+VAL_ 2381731326 TouchEvent 7 "Not Available" 6 "Error" 5 "Reserved" 4 "Reserved" 3 "Double Press" 2 "Pressed" 1 "Unpressed" 0 "Off" ;
+VAL_ 2373975806 StateRequest 6 "Failed On Touch" 5 "Failed" 4 "Door Is Closing" 7 "Not Available" 3 "Door Is Opening" 2 "Door Opened" 1 "Active" 0 "Inactive" ;
+
