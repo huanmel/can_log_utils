@@ -106,7 +106,7 @@ def convert_log_csv2raw_can_mdf(csv_file):
 
     mdf.start_time=starttime
     mdf.append(sig)
-    mdf.save(mdf_file, overwrite=True)
+    mdf.save(mdf_file, overwrite=True,compression=1)
     print(f'log file converted to {mdf_file}')
 
 
