@@ -1,8 +1,8 @@
 import os
 from asammdf import MDF
 
-from can_utils import mdf_can_log_utils
-import can_utils.mdf_can_log_utils as utls
+from utils import mdf_can_log_utils
+import utils.mdf_can_log_utils as utls
 from proj_config.config import RAW_DATA_DIR, DBC_DIR, VEH_CONF_DIR
 
 
