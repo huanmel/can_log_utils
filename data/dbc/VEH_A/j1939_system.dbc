@@ -157,9 +157,9 @@ BO_ 2565603070 TPDT: 8 Vector__XXX
 
 
 CM_ "J1939 system messages
-$File: //system_software/dbc/j1939_system/0.36.0.0/j1939_system.dbc $
-$Change: 208863 $
-$DateTime: 2023/11/10 13:11:00 $
+$File: //system_software/dbc/j1939_system/0.30.1.0/j1939_system.dbc $
+$Change: 148337 $
+$DateTime: 2022/08/02 12:39:39 $
 $Revision: #1 $";
 CM_ BU_ HitchControl "Straight truck hitch (NOT Agricultural hitch – it is in IG 2) ";
 CM_ BU_ PowertrainControlModule "Electronic control module in charge of controlling and coordinating the operation of a hybrid propulsion system.";

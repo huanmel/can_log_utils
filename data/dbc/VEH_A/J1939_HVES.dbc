@@ -1,0 +1,717 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: ElectricalChargingSystem Vector InstrumentCluster DCU
+VAL_TABLE_ vtOperationalStatus 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_TABLE_ CellVoltageDiffState 15 "Not available" 14 "Error" 4 "Disbalanced" 3 "Can't be corrected" 2 "Can be corrected externally" 1 "Can be correccted internally" 0 "OK" ;
+VAL_TABLE_ vtBmsOperationalStatus 15 "Not available" 14 "Error" 6 "Disabled by internal decision of HVES controller" 5 "Disabled by external command" 4 "Emergency Power-Down In Process" 3 "Normal Power-Down in Process" 2 "Operational" 1 "Initialization Complete, awaiting Operation Consent" 0 "Initialization in process" ;
+VAL_TABLE_ vtConnectionStatus 15 "Not available" 14 "Error" 4 "Disconnected; Precharge Failed" 3 "Disconnection in Process" 2 "Connection in Process" 1 "Connected" 0 "Disconnected" ;
+VAL_TABLE_ vtBalanceStatus 3 "Not available" 2 "Error" 1 "Unbalanced" 0 "Balanced" ;
+VAL_TABLE_ vtSocState 15 "Not available" 14 "Error" 6 "Above recommended upper limit" 5 "At recommended upper limit" 4 "Approaching recommended upper limit" 3 "Below recommended lower limit" 2 "At recommended lower limit" 1 "Approaching recommended lower limit" 0 "Level acceptable" ;
+VAL_TABLE_ vtImpactSensor 3 "Not available" 2 "Error" 1 "Impact sensed" 0 "No impact sensed" ;
+VAL_TABLE_ vtIsolationStatus 15 "Not available" 14 "Error" 5 "Isolation fault" 4 "Isolation marginal" 3 "Isolation acceptable" 2 "Test in process" 1 "Test not started" 0 "No test requested" ;
+VAL_TABLE_ vtContactorState 3 "Not available" 2 "Error" 1 "Close" 0 "Open" ;
+VAL_TABLE_ vtConsent 3 "Not available" 2 "Error" 1 "Consent given" 0 "Consent revoked" ;
+VAL_TABLE_ vtContactorCmd 3 "Not available" 2 "Emergency Close Contactor" 1 "Close Contactor" 0 "Open Contactor" ;
+VAL_TABLE_ vtPowerDownCmd 3 "Not available" 2 "Emergency Power-down" 1 "Normal Power-down" 0 "No Power-down" ;
+VAL_TABLE_ ChargeMode 0 "NoCharging" 2 "CCmode" 1 "CVmode" ;
+VAL_TABLE_ vtStatus 3 "Not available" 2 "Error" 1 "Not Normal" 0 "Normal" ;
+VAL_TABLE_ SystemStates 19 "Service" 18 "Fault" 17 "Sleep" 16 "AfterCharge" 15 "AfterDrive" 14 "Charge_DrPrech" 13 "Drive_ChPrech" 12 "ExtCharge" 11 "DriveCharge_MainOpen" 10 "DriveCharge" 9 "DriveCharge_ChOpen" 8 "Drive" 7 "AllPrecharge" 6 "Precharge_Charge" 5 "Precharge_Main" 4 "BMS_Ready" 3 "Diagnostic" 2 "BMS_SW_Initialization" 1 "BMS_FW_Initialization" ;
+VAL_TABLE_ vtOnOff 3 "Not available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_TABLE_ vtRequest 3 "Not available" 2 "Reserved" 1 "Requested" 0 "Not Requested" ;
+
+
+BO_ 2633785086 HVES1HIST: 11 Vector__XXX
+ SG_ TotalAccumulatedCharge : 56|32@1+ (100,0) [0|421108121500] "Ah" Vector__XXX
+ SG_ TotalEnergyThroughput : 24|32@1+ (100,0) [0|421108121500] "Wh" Vector__XXX
+ SG_ ContactorOpenUnderLoad : 8|16@1+ (1,0) [0|64255] "count" Vector__XXX
+ SG_ StateOfHealth : 0|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 2566675966 HVES1CFG: 16 Vector__XXX
+ SG_ CellMinimumVoltageLimit : 120|8@1+ (0.02044,0) [0|5.11] "V" Vector__XXX
+ SG_ CellMaximumVoltageLimit : 112|8@1+ (0.02044,0) [0|5.11] "V" Vector__XXX
+ SG_ RecomendedMinimumSOC : 48|16@1+ (0.0015625,0) [0|100.3984375] "%" Vector__XXX
+ SG_ RecomendedMinimumOperatingVoltag : 16|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+ SG_ RecomendedMinimumOperatingTemper : 96|16@1+ (0.03125,-273) [-273|1734.96875] "C" Vector__XXX
+ SG_ RecomendedMaximumSOC : 64|16@1+ (0.0015625,0) [0|100.3984375] "%" Vector__XXX
+ SG_ RecomendedMaximumOperatingVoltag : 32|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+ SG_ RecomendedMaximumOperatingTemper : 80|16@1+ (0.03125,-273) [-273|1734.96875] "C" Vector__XXX
+ SG_ NominalVoltage : 0|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+
+BO_ 2365318910 HVESFC: 8 Vector__XXX
+
+BO_ 2566645246 HVESFS: 8 Vector__XXX
+
+BO_ 2364607742 HVES1D10: 8 Vector__XXX
+ SG_ PassiveIsolationTestResult : 48|16@1+ (0.1,0) [0|6425] "ohm/V" Vector__XXX
+ SG_ ActiveIsolationTestResult : 32|16@1+ (0.1,0) [0|6425] "ohm/V" Vector__XXX
+ SG_ LowestCellSOCCellNumber : 24|8@1+ (1,0) [0|250] "count" Vector__XXX
+ SG_ LowestCellSOCModuleNumber : 16|8@1+ (1,0) [0|250] "count" Vector__XXX
+ SG_ HighestCellSOCCellNumber : 8|8@1+ (1,0) [0|250] "count" Vector__XXX
+ SG_ HighestCellSOCModuleNumber : 0|8@1+ (1,0) [0|250] "count" Vector__XXX
+
+BO_ 2364607486 HVES1D9: 8 Vector__XXX
+ SG_ LowestCellTemperatureCellNumber : 24|8@1+ (1,0) [0|250] "count" Vector__XXX
+ SG_ LowestCellTemperatureModuleNumbe : 16|8@1+ (1,0) [0|250] "count" Vector__XXX
+ SG_ HighestCellTemperatureCellNumber : 8|8@1+ (1,0) [0|250] "count" Vector__XXX
+ SG_ HighestCellTemperatureModuleNumb : 0|8@1+ (1,0) [0|250] "count" Vector__XXX
+
+BO_ 2364607230 HVES1D8: 8 Vector__XXX
+ SG_ AverageCellVoltage : 32|16@1+ (0.001,0) [0|64.255] "V" Vector__XXX
+ SG_ LowestCellVoltageCellNumber : 24|8@1+ (1,0) [0|250] "count" Vector__XXX
+ SG_ LowestCellVoltageModuleNumber : 16|8@1+ (1,0) [0|250] "count" Vector__XXX
+ SG_ HighestCellVoltageCellNumber : 8|8@1+ (1,0) [0|250] "count" Vector__XXX
+ SG_ HighestCellVoltageModuleNumber : 0|8@1+ (1,0) [0|250] "count" Vector__XXX
+
+BO_ 2364606974 HVES1TS1: 8 Vector__XXX
+
+BO_ 2364606718 HVES1MS1: 8 Vector__XXX
+ SG_ ModuleOperationalStatus_16 : 30|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModuleOperationalStatus_15 : 28|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModuleOperationalStatus_14 : 26|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModuleOperationalStatus_13 : 24|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModuleOperationalStatus_12 : 22|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModuleOperationalStatus_11 : 20|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModuleOperationalStatus_10 : 18|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModuleOperationalStatus_09 : 16|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModuleOperationalStatus_08 : 14|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModuleOperationalStatus_07 : 12|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModuleOperationalStatus_06 : 10|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModuleOperationalStatus_05 : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModuleOperationalStatus_04 : 6|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModuleOperationalStatus_03 : 4|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModuleOperationalStatus_02 : 2|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ModuleOperationalStatus_01 : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2364580094 HVES1D7: 8 Vector__XXX
+ SG_ MaximumChargeVoltageLimit : 48|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+ SG_ ChargeEnergyCapacity : 24|24@1+ (0.001,0) [0|16449.535] "kWh" Vector__XXX
+ SG_ DischargeEnergyCapacity : 0|24@1+ (0.001,0) [0|16449.535] "kWh" Vector__XXX
+
+BO_ 2364577534 HVES1S1: 8 Vector__XXX
+ SG_ OperationalStatus : 44|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConnectionStatus : 40|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ InternalChargerStatus : 32|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CellBalancingStatus : 30|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CellBalanceStatus : 28|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SOCStatus : 24|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ImpactSensor : 22|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HVILStatus : 20|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PassiveIsolationTestStatus : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ActiveIsolationTestStatus : 12|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CenterOfPackRelayState : 10|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PrechargeRelayState : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DisconnectForewarning : 4|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PositiveContactorState : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NegativeContactorState : 2|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2364577278 HVES1D6: 8 Vector__XXX
+ SG_ ElectronicsTemperature : 48|8@1+ (1,-40) [-40|210] "C" Vector__XXX
+ SG_ OutletCoolantTemperature : 40|8@1+ (1,-40) [-40|210] "C" Vector__XXX
+ SG_ IntakeCoolantTemperature : 32|8@1+ (1,-40) [-40|210] "C" Vector__XXX
+ SG_ IgnitionVoltage : 16|16@1+ (0.01,0) [0|642.55] "V" Vector__XXX
+ SG_ BusVoltage : 0|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+
+BO_ 2364577022 HVES1D5: 8 Vector__XXX
+ SG_ MaximumCellSOC : 48|16@1+ (0.0015625,0) [0|100.3984375] "%" Vector__XXX
+ SG_ MinimumCellSOC : 32|16@1+ (0.0015625,0) [0|100.3984375] "%" Vector__XXX
+ SG_ ChargeCurrentLimit : 16|16@1+ (0.05,-1600) [-1600|1612.75] "A" Vector__XXX
+ SG_ DischargeCurrentLimit : 0|16@1+ (0.05,-1600) [-1600|1612.75] "A" Vector__XXX
+
+BO_ 2364576766 HVES1D4: 8 Vector__XXX
+ SG_ CellBalancingCount : 32|16@1+ (1,0) [0|64255] "count" Vector__XXX
+ SG_ ChargeCapacity : 16|16@1+ (0.01,0) [0|642.55] "Ah" Vector__XXX
+ SG_ DischargeCapacity : 0|16@1+ (0.01,0) [0|642.55] "Ah" Vector__XXX
+
+BO_ 2364576510 HVES1D3: 8 Vector__XXX
+ SG_ CellTemperatureDiffStatus : 48|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AverageCellTemperature : 32|16@1+ (0.03125,-273) [-273|1734.96875] "C" Vector__XXX
+ SG_ LowestCellTemperature : 16|16@1+ (0.03125,-273) [-273|1734.96875] "C" Vector__XXX
+ SG_ HighestCellTemperature : 0|16@1+ (0.03125,-273) [-273|1734.96875] "C" Vector__XXX
+
+BO_ 2364576254 HVES1D2: 8 Vector__XXX
+ SG_ CellVoltageDiffStatus : 48|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LowestCellVoltage : 32|16@1+ (0.001,0) [0|64.225] "V" Vector__XXX
+ SG_ HighestCellVoltage : 16|16@1+ (0.001,0) [0|64.225] "V" Vector__XXX
+ SG_ FastUpdateSOC : 0|16@1+ (0.0015625,0) [0|100.3984375] "%" Vector__XXX
+
+BO_ 2364575998 HVES1D1: 8 Vector__XXX
+ SG_ Current : 48|16@1+ (0.05,-1600) [-1600|1612.75] "A" Vector__XXX
+ SG_ VoltageLevel : 32|16@1+ (0.05,0) [0|3212.75] "V" Vector__XXX
+ SG_ AvailableChargePower : 16|16@1+ (0.05,0) [0|3212.75] "kW" Vector__XXX
+ SG_ AvailableDischargePower : 0|16@1+ (0.05,0) [0|3212.75] "kW" Vector__XXX
+
+BO_ 2364552958 HVES1S2: 8 Vector__XXX
+ SG_ DischargePowerLimitDueUndefinedC : 10|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DischargePowerLimitDueTemperatur : 2|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DischargePowerLimitDueSOC : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DischargePowerLimitDueDiagnostic : 4|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DischargePowerLimitDueCurrent : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DischargePowerLimitDueCellVoltag : 6|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ChargePowerLimitDueUndefinedCaus : 42|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ChargePowerLimitDueTemperature : 34|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ChargePowerLimitDueSOC : 32|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ChargePowerLimitDueDiagnostic : 36|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ChargePowerLimitDueCurrent : 40|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ChargePowerLimitDueCellVoltage : 38|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2350644990 HVES1C: 8 Vector__XXX
+ SG_ LowSideResistorConnectCmd : 16|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HighSideResistorConnectCmd : 14|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ OperationConsent : 12|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ EnableInternalChargerCmd : 10|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CellBalancingCmd : 8|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PassiveIsolationTestCmd : 6|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ActiveIsolationTestCmd : 4|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PowerDownCmd : 2|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ConnectCmd : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+CM_ BO_ 2633785086 "Historical data for High Voltage Energy Storage pack (or system) 1.";
+CM_ SG_ 2633785086 TotalAccumulatedCharge "The total accumulated amp hours which have flowed through High Voltage Energy Storage 1 pack (or system).  This parameter is the sum of the absolute values of the Ampere hours into and out of HVES1.";
+CM_ SG_ 2633785086 TotalEnergyThroughput "The total energy throughput which has flowed through High Voltage Energy Storage 1 pack (or system).  This parameter is the sum of the absolute values of the Energy into and out of HVES1.
+";
+CM_ SG_ 2633785086 ContactorOpenUnderLoad "This signal represents the number of times the contactors inside the High Voltage Energy Storage 1 pack (or system) have opened while current is flowing through them.";
+CM_ SG_ 2633785086 StateOfHealth "This signal represents the expected remaining 'Life' of the High Voltage Energy Storage 1 pack (or system), in percent.  This value should begin at 100%, and end at 0% when 'no'  energy is able to be put in or taken out. ";
+CM_ BO_ 2566675966 "Configuration data for High Voltage Energy Storage pack (or system) 1.  Note that configuration data should not dynamically change during vehicle operation.";
+CM_ SG_ 2566675966 CellMinimumVoltageLimit "Per the HVES manufacturer, this is the minimum cell voltage for High Voltage Energy Storage 1 pack (or system) operation.  Operating below this value may damage HVES hardware, or compromise HVES life.";
+CM_ SG_ 2566675966 CellMaximumVoltageLimit "Per the HVES manufacturer, this is the maximum cell voltage for High Voltage Energy Storage 1 pack (or system) operation.  Operating above this value may damage HVES hardware, or compromise HVES life.";
+CM_ SG_ 2566675966 RecomendedMinimumSOC "Per the HVES manufacturer, this is the recommended minimum state of charge for High Voltage Energy Storage 1 pack (or system) operation.  Operating below this value may compromise HVES life.";
+CM_ SG_ 2566675966 RecomendedMinimumOperatingVoltag "Per the HVES manufacturer, this is the minimum recommended voltage level for High Voltage Energy Storage 1 pack (or system) operation.  Operating below this value may compromise HVES life.";
+CM_ SG_ 2566675966 RecomendedMinimumOperatingTemper "Per the HVES manufacturer, this is the recommended minimum temperature for High Voltage Energy Storage 1 pack (or system) operation.  Operating below this value may damage HVES hardware, or compromise HVES life.";
+CM_ SG_ 2566675966 RecomendedMaximumSOC "Per the HVES manufacturer, this is the recommended maximum state of charge for High Voltage Energy Storage 1 pack (or system) operation.  Operating above this value may compromise HVES life.";
+CM_ SG_ 2566675966 RecomendedMaximumOperatingVoltag "Per the HVES manufacturer, this is the maximum recommended voltage level for High Voltage Energy Storage 1 pack (or system) operation.  Operating above this value may compromise HVES life.";
+CM_ SG_ 2566675966 RecomendedMaximumOperatingTemper "Per the HVES manufacturer, this is the recommended maximum temperature for High Voltage Energy Storage 1 pack (or system) operation.  Operating above this value may damage HVES hardware, or compromise HVES life.";
+CM_ SG_ 2566675966 NominalVoltage "Per the HVES manufacturer, this is the nominal operating voltage of the High Voltage Energy Storage 1 pack (or system), e.g. '300V' or '600V'.";
+CM_ BO_ 2365318910 "Commands to 1 or more fans in an HVES pack or system.  See PGN 64485 for the corresponding feedback message.";
+CM_ BO_ 2566645246 "The status of HVES fan(s).   See PGN 64486 for the corresponding command message.";
+CM_ BO_ 2364607742 "Data set 10 (electrical) for High Voltage Energy Storage pack (or system) 1.";
+CM_ SG_ 2364607742 PassiveIsolationTestResult "The isolation resistance expressed in Ohms per Volt that resulted from the High-Voltage Bus Passive Isolation Test.";
+CM_ SG_ 2364607742 ActiveIsolationTestResult "The isolation resistance expressed in Ohms per Volt that resulted from the High-Voltage Bus Active Isolation Test.";
+CM_ SG_ 2364607742 LowestCellSOCCellNumber "Identifies the location of the HVES1 Lowest Cell State of Charge (SPN 8084) within the HVES1 Lowest Cell State of Charge Module Number (SPN 8247).";
+CM_ SG_ 2364607742 LowestCellSOCModuleNumber "Identifies the location of the module containing the HVES1 Lowest Cell State of Charge (SPN 8084).";
+CM_ SG_ 2364607742 HighestCellSOCCellNumber "Identifies the location of the HVES1 Highest Cell State of Charge (SPN 8085) within the HVES1 Highest Cell State of Charge Module Number (SPN 8245).";
+CM_ SG_ 2364607742 HighestCellSOCModuleNumber "Identifies the location of the module containing the HVES1 Highest Cell State of Charge (SPN 8085).";
+CM_ BO_ 2364607486 "Data set 9 (thermal) for High Voltage Energy Storage pack (or system) 1.";
+CM_ SG_ 2364607486 LowestCellTemperatureCellNumber "Identifies the location of the HVES1 Lowest Cell Temperature (SPN 8076) within the HVES1 Lowest Cell Temperature Module Number (SPN 8243).";
+CM_ SG_ 2364607486 LowestCellTemperatureModuleNumbe "Identifies the location of the module containing the HVES1 Lowest Cell Temperature (SPN 8076).";
+CM_ SG_ 2364607486 HighestCellTemperatureCellNumber "Identifies the location of the HVES1 Highest Cell Temperature (SPN 8075) within the HVES1 Highest Cell Temperature Module Number (SPN 8241).";
+CM_ SG_ 2364607486 HighestCellTemperatureModuleNumb "Identifies the location of the module containing the HVES1 Highest Cell Temperature (SPN 8075).";
+CM_ BO_ 2364607230 "Data set 8 (electrical data) for High Voltage Energy Storage pack (or system) 1.";
+CM_ SG_ 2364607230 AverageCellVoltage "The average cell voltage in the High Voltage Energy Storage 1 pack (or system).";
+CM_ SG_ 2364607230 LowestCellVoltageCellNumber "Identifies the location of the HVES1 Lowest Cell Voltage (SPN 5923) within the HVES1 Lowest Cell Voltage Module Number (SPN 8238).";
+CM_ SG_ 2364607230 LowestCellVoltageModuleNumber "Identifies the location of the module containing the HVES1 Lowest Cell Voltage (SPN 5923).";
+CM_ SG_ 2364607230 HighestCellVoltageCellNumber "Identifies the location of HVES1 Highest Cell Voltage (SPN 5922) within the HVES1 Highest Cell Voltage Module Number (SPN 8236).";
+CM_ SG_ 2364607230 HighestCellVoltageModuleNumber "Identifies the location of the module containing the HVES1 Highest Cell Voltage (SPN 5922).";
+CM_ BO_ 2364606974 "A collection of data that High Voltage Energy Storage 1 Thermal Management System sends to the Hybrid Controller.";
+CM_ BO_ 2364606718 "Module Status message 1 for High Voltage Energy Storage pack (or system) 1.";
+CM_ SG_ 2364606718 ModuleOperationalStatus_16 "Operational Status of the High Voltage Energy Storage 1 Module 16.";
+CM_ SG_ 2364606718 ModuleOperationalStatus_15 "Operational Status of the High Voltage Energy Storage 1 Module 15.";
+CM_ SG_ 2364606718 ModuleOperationalStatus_14 "Operational Status of the High Voltage Energy Storage 1 Module 14.";
+CM_ SG_ 2364606718 ModuleOperationalStatus_13 "Operational Status of the High Voltage Energy Storage 1 Module 13.";
+CM_ SG_ 2364606718 ModuleOperationalStatus_12 "Operational Status of the High Voltage Energy Storage 1 Module 12.";
+CM_ SG_ 2364606718 ModuleOperationalStatus_11 "Operational Status of the High Voltage Energy Storage 1 Module 11.";
+CM_ SG_ 2364606718 ModuleOperationalStatus_10 "Operational Status of the High Voltage Energy Storage 1 Module 10.";
+CM_ SG_ 2364606718 ModuleOperationalStatus_09 "Operational Status of the High Voltage Energy Storage 1 Module 9.";
+CM_ SG_ 2364606718 ModuleOperationalStatus_08 "Operational Status of the High Voltage Energy Storage 1 Module 8.";
+CM_ SG_ 2364606718 ModuleOperationalStatus_07 "Operational Status of the High Voltage Energy Storage 1 Module 7.";
+CM_ SG_ 2364606718 ModuleOperationalStatus_06 "Operational Status of the High Voltage Energy Storage 1 Module 6.";
+CM_ SG_ 2364606718 ModuleOperationalStatus_05 "Operational Status of the High Voltage Energy Storage 1 Module 5.";
+CM_ SG_ 2364606718 ModuleOperationalStatus_04 "Operational Status of the High Voltage Energy Storage 1 Module 4.";
+CM_ SG_ 2364606718 ModuleOperationalStatus_03 "Operational Status of the High Voltage Energy Storage 1 Module 3.";
+CM_ SG_ 2364606718 ModuleOperationalStatus_02 "Operational Status of the High Voltage Energy Storage 1 Module 2.";
+CM_ SG_ 2364606718 ModuleOperationalStatus_01 "Operational Status of the High Voltage Energy Storage 1 Module 1.";
+CM_ BO_ 2364580094 "Data set 7 (electrical) for High Voltage Energy Storage pack (or system) 1.";
+CM_ SG_ 2364580094 MaximumChargeVoltageLimit "The maximum voltage level not to be exceeded while charging the High Voltage Energy Storage 1 pack (or system).  If this parameter is not supported, the maximum charge voltage should be limited to SPN 8117 (HVES1 Recommended Maximum Operating Voltage).";
+CM_ SG_ 2364580094 ChargeEnergyCapacity "The amount of unused electrical energy storage available to be filled by charging High Voltage Energy Storage 1 pack (or system), i.e. 'how much empty space is remaining in the tank'.  ";
+CM_ SG_ 2364580094 DischargeEnergyCapacity "The amount of stored electrical energy in High Voltage Energy Storage 1 pack (or system) that is available for use by the hybrid system, i.e. 'how full is the tank'. ";
+CM_ BO_ 2364577534 "Status data set 1 for High Voltage Energy Storage pack (or system) 1.";
+CM_ SG_ 2364577534 OperationalStatus "Provides feedback on where the HVES1 pack (or system) is in its operating spectrum, and includes feedback in response to the Operation Consent and Power Down Command parameters.";
+CM_ SG_ 2364577534 ConnectionStatus "This parameter provides high level feedback on the HVES1 pack (or system) high voltage bus connection";
+CM_ SG_ 2364577534 InternalChargerStatus "Indicates that the charger in the HVES1 is on.  External chargers may use the External Energy Source Connection Status (SPN 7898) and related SPNs.";
+CM_ SG_ 2364577534 CellBalancingStatus "Indicates whether or not the cells in the High Voltage Energy Storage 1 pack (or system) are currently being balanced.";
+CM_ SG_ 2364577534 CellBalanceStatus "Indicates whether or not the cells in the High Voltage Energy Storage 1 pack (or system) are balanced.";
+CM_ SG_ 2364577534 SOCStatus "Status of the High Voltage Energy Storage 1 pack (or system) State of Charge (SOC).  Note:  A given HVES controller may not support all of the states.";
+CM_ SG_ 2364577534 ImpactSensor "Switch indicating that an impact has been sensed by the High Voltage Energy Storage 1 pack (or system).   The impact indication may require action by another controller, or by the HVES1 control module itself.";
+CM_ SG_ 2364577534 HVILStatus "Status of the High Voltage Interlock Loop from the viewpoint of the High Voltage Energy Storage 1 pack (or system).";
+CM_ SG_ 2364577534 PassiveIsolationTestStatus "Status of the high-voltage bus electrical passive isolation test as performed by the High Voltage Energy Storage 1 pack (or system).";
+CM_ SG_ 2364577534 ActiveIsolationTestStatus "Status of the high-voltage bus electrical active isolation test as performed by the High Voltage Energy Storage 1 pack (or system)";
+CM_ SG_ 2364577534 CenterOfPackRelayState "Position of the center high-voltage contactor.  When this contactor is closed, the positive half of the High Voltage Energy Storage 1 pack (or system) is connected to the negative half";
+CM_ SG_ 2364577534 PrechargeRelayState "Position of the high-voltage bus contactor pre-charge relay.  When this relay is closed, the High Voltage Energy Storage 1 pack (or system) is bringing the high-voltage bus up to its operating level.";
+CM_ SG_ 2364577534 DisconnectForewarning "Indicates that the High Voltage Energy Storage 1 pack (or system) is about to disconnect from the high voltage bus due to unacceptable conditions.";
+CM_ SG_ 2364577534 PositiveContactorState "Position of the High Voltage Energy Storage 1 pack (or system) positive side bus contactor.  When this contactor is closed, the positive side of HVES1 is connected to the positive side of the high-voltage bus.";
+CM_ SG_ 2364577534 NegativeContactorState "Position of the High Voltage Energy Storage 1 pack (or system) negative side bus contactor.  When this contactor is closed, the negative side of HVES1 is connected to the negative side of the high-voltage bus.";
+CM_ BO_ 2364577278 "Data set 6 (external or interface data) for High Voltage Energy Storage pack (or system) 1.";
+CM_ SG_ 2364577278 ElectronicsTemperature "The temperature of the electronics or control modules in the High Voltage Energy Storage 1 pack (or system).  If there are mulitple temperature sensors then this parameter would be set to the maximum sensor reading.";
+CM_ SG_ 2364577278 OutletCoolantTemperature "The temperature of liquid coolant as it exits the High Voltage Energy Storage 1 pack (or system).";
+CM_ SG_ 2364577278 IntakeCoolantTemperature "The temperature of liquid coolant as it enters the High Voltage Energy Storage 1 pack (or system).";
+CM_ SG_ 2364577278 IgnitionVoltage "The voltage level at the ignition input of the High Voltage Energy Storage 1 pack (or system) controller.";
+CM_ SG_ 2364577278 BusVoltage "The voltage level of the high voltage bus, as measured by the High Voltage Energy Storage 1 pack (or system) on the bus side (not the battery side) of its contactors.";
+CM_ BO_ 2364577022 "Data set 5 (electrical data) for High Voltage Energy Storage pack (or system) 1.";
+CM_ SG_ 2364577022 MaximumCellSOC "Indicates the state of charge of the highest-charged cell in the High Voltage Energy Storage 1 pack (or system).  0% means no charge remaining, 100% means the cell is fully charged.  ";
+CM_ SG_ 2364577022 MinimumCellSOC "Indicates the state of charge of the lowest-charged cell in the High Voltage Energy Storage 1 pack (or system).  0% means no charge remaining, 100% means the cell is fully charged.";
+CM_ SG_ 2364577022 ChargeCurrentLimit "The maximum permissible current flow into the High Voltage Energy Storage 1 pack (or system).  This parameter is defined from the high voltage energy storage system's point of view.";
+CM_ SG_ 2364577022 DischargeCurrentLimit "The maximum permissible current flow out of the High Voltage Energy Storage 1 pack (or system).  This parameter is defined from the high voltage energy storage system's point of view.";
+CM_ BO_ 2364576766 "Data set 4 (electrical data) for High Voltage Energy Storage pack (or system) 1.";
+CM_ SG_ 2364576766 CellBalancingCount "The number of cells that are currently being balanced in the High Voltage Energy Storage 1 pack (or system).";
+CM_ SG_ 2364576766 ChargeCapacity "The amount of unused electrical charge storage in the High Voltage Energy Storage 1 pack (or system) that is available to be filled by charging, i.e. 'how much empty space is remaining in the tank'.";
+CM_ SG_ 2364576766 DischargeCapacity "The amount of stored electrical charge in the High Voltage Energy Storage 1 pack (or system) that is available for use by the hybrid system, i.e. 'how full is the tank'.  ";
+CM_ BO_ 2364576510 "Data set 3 (thermal data) for High Voltage Energy Storage pack (or system) 1.";
+CM_ SG_ 2364576510 CellTemperatureDiffStatus "Indicates whether or not the differential between the highest and lowest cell temperatures are within acceptable limits per the High Voltage Energy Storage 1 pack (or system).";
+CM_ SG_ 2364576510 AverageCellTemperature "The average temperature level of all cells in the High Voltage Energy Storage 1 pack (or system).";
+CM_ SG_ 2364576510 LowestCellTemperature "The lowest temperature level reported by any cell in the High Voltage Energy Storage 1 pack (or system).";
+CM_ SG_ 2364576510 HighestCellTemperature "The highest temperature level reported by any cell in the High Voltage Energy Storage 1 pack (or system).";
+CM_ BO_ 2364576254 "Data set 2 (electrical data) for High Voltage Energy Storage pack (or system) 1.";
+CM_ SG_ 2364576254 CellVoltageDiffStatus "Indicates whether or not the differential between the highest and lowest cell voltages are within acceptable limits, according to the High Voltage Energy Storage 1 pack (or system).";
+CM_ SG_ 2364576254 LowestCellVoltage "The lowest voltage level reported by any cell in the High Voltage Energy Storage 1 pack (or system).   If a single voltage sensor covers more than one cell, the value in this parameter is for the smallest group of cells measured.";
+CM_ SG_ 2364576254 HighestCellVoltage "The highest voltage level reported by any cell in the High Voltage Energy Storage 1 pack (or system).  If a single voltage sensor covers more than one cell, the value in this parameter is for the smallest group of cells measured.";
+CM_ SG_ 2364576254 FastUpdateSOC "Indicates the High Voltage Energy Storage 1 pack (or system) state of charge.  0% means no charge remaining, 100% means the system is fully charged in terms of physical limits of the energy storage system.";
+CM_ BO_ 2364575998 "Data set 1 (electrical data) for High Voltage Energy Storage pack (or system) 1.";
+CM_ SG_ 2364575998 Current "The current in or out of the High Voltage Energy Storage 1 pack (or system).  This parameter should be synchronized with SPN 5919 (HVES1 Voltage Level) such that a realized power value can be calculated.";
+CM_ SG_ 2364575998 VoltageLevel "The voltage level of the High Voltage Energy Storage 1 pack (or system).  This parameter should be synchronized with SPN 5920 (HVES1 Current) such that a realized power value can be calculated.";
+CM_ SG_ 2364575998 AvailableChargePower "The rate at which the High Voltage Energy Storage 1 pack (or system) can currently receive energy from a regenerative or recharging system.";
+CM_ SG_ 2364575998 AvailableDischargePower "The rate at which the High Voltage Energy Storage 1 pack (or system) can currently provide energy for propulsion or other uses.";
+CM_ BO_ 2364552958 "Status data set 2 for High Voltage Energy Storage pack (or system) 1.";
+CM_ SG_ 2364552958 DischargePowerLimitDueUndefinedC "Indicates whether or not HVES1 discharge power is being limited due to an undefined cause.";
+CM_ SG_ 2364552958 DischargePowerLimitDueTemperatur "Indicates whether or not HVES1 discharge power is being limited due to battery temperature.";
+CM_ SG_ 2364552958 DischargePowerLimitDueSOC "Indicates whether or not HVES1 discharge power is being limited due to state of charge.";
+CM_ SG_ 2364552958 DischargePowerLimitDueDiagnostic "Indicates whether or not HVES1 discharge power is being limited due to a battery diagnostic condition.";
+CM_ SG_ 2364552958 DischargePowerLimitDueCurrent "Indicates whether or not HVES1 discharge power is being limited due to battery current.";
+CM_ SG_ 2364552958 DischargePowerLimitDueCellVoltag "Indicates whether or not HVES1 discharge power is being limited due to a battery or cell voltage level.";
+CM_ SG_ 2364552958 ChargePowerLimitDueUndefinedCaus "Indicates whether or not HVES1 charge power is being limited due to an undefined cause.";
+CM_ SG_ 2364552958 ChargePowerLimitDueTemperature "Indicates whether or not HVES1 charge power is being limited due to battery temperature.";
+CM_ SG_ 2364552958 ChargePowerLimitDueSOC "Indicates whether or not HVES1 charge power is being limited due to state of charge.";
+CM_ SG_ 2364552958 ChargePowerLimitDueDiagnostic "Indicates whether or not HVES1 charge power is being limited due to a battery diagnostic condition.";
+CM_ SG_ 2364552958 ChargePowerLimitDueCurrent "Indicates whether or not HVES1 charge power is being limited due to battery current.";
+CM_ SG_ 2364552958 ChargePowerLimitDueCellVoltage "Indicates whether or not HVES1 charge power is being limited due to a battery or cell voltage level.";
+CM_ BO_ 2350644990 "Control commands to be sent to High Voltage Energy Storage pack (or system) 1.";
+CM_ SG_ 2350644990 LowSideResistorConnectCmd "This parameter is used to request connection of the HVES1 High-Voltage bus low side resistor in order to perform an isolation test.  See also HVES1 High-Voltage Bus High Side Resistor Connect Request (SPN 8433).";
+CM_ SG_ 2350644990 HighSideResistorConnectCmd "This parameter is used to request connection of the HVES1 High-Voltage bus high side resistor in order to perform an isolation test.  See also HVES1 High-Voltage Bus Low Side Resistor Connect Request (SPN 8434).";
+CM_ SG_ 2350644990 OperationConsent "This parameter provides an indication to the HVES1 pack (or system) that an external device is ready for HVES1 to proceed with normal operation.";
+CM_ SG_ 2350644990 EnableInternalChargerCmd "When the HVES has an internal charger this parameter will enable it.   External chargers may use the External Energy Source Connection Demand (SPN 7890) and related SPNs.";
+CM_ SG_ 2350644990 CellBalancingCmd "Command for the High Voltage Energy Storage 1 pack (or system) to perform cell balancing.";
+CM_ SG_ 2350644990 PassiveIsolationTestCmd "Command for the High Voltage Energy Storage 1 pack (or system) to perform a passive electrical isolation test on the high voltage bus.";
+CM_ SG_ 2350644990 ActiveIsolationTestCmd "Command for the High Voltage Energy Storage 1 pack (or system) to perform an active electrical isolation test on the high voltage bus.";
+CM_ SG_ 2350644990 PowerDownCmd "Command to shut down the High Voltage Energy Storage 1 pack (or system).";
+CM_ SG_ 2350644990 ConnectCmd "Command to connect the High Voltage Energy Storage 1 pack (or system) to the high-voltage bus.";
+BA_DEF_  "DBName" STRING ;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_ BO_  "TpJ1939VarDlc" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","IfActive","noMsgSendType";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_  "SAE_J1939_DA_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_81_SpecVersion" STRING ;
+BA_DEF_  "DatabaseVersion" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "SAE_J1939_75_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_21_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_73_SpecVersion" STRING ;
+BA_DEF_  "SAE_J1939_71_SpecVersion" STRING ;
+BA_DEF_ BO_  "SendOnChange" ENUM  "No","Yes";
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "TpJ1939VarDlc" "No";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "SAE_J1939_DA_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_81_SpecVersion" "";
+BA_DEF_DEF_  "DatabaseVersion" "";
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "ProtocolType" "";
+BA_DEF_DEF_  "SAE_J1939_75_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_21_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_73_SpecVersion" "";
+BA_DEF_DEF_  "SAE_J1939_71_SpecVersion" "";
+BA_DEF_DEF_  "SendOnChange" "No";
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "SAE_J1939_71_SpecVersion" "2012-10";
+BA_ "SAE_J1939_73_SpecVersion" "2012-10";
+BA_ "SAE_J1939_21_SpecVersion" "2006-10";
+BA_ "SAE_J1939_75_SpecVersion" "2012-05";
+BA_ "ProtocolType" "J1939";
+BA_ "BusType" "CAN";
+BA_ "DatabaseVersion" "8.5";
+BA_ "SAE_J1939_81_SpecVersion" "2012-05";
+BA_ "SAE_J1939_DA_SpecVersion" "2015-01";
+BA_ "DBName" "J1939_HVES";
+BA_ "NmStationAddress" BU_ ElectricalChargingSystem 26;
+BA_ "NmStationAddress" BU_ Vector 249;
+BA_ "NmStationAddress" BU_ InstrumentCluster 23;
+BA_ "NmStationAddress" BU_ DCU 100;
+BA_ "VFrameFormat" BO_ 2633785086 3;
+BA_ "VFrameFormat" BO_ 2566675966 3;
+BA_ "GenMsgCycleTime" BO_ 2365318910 1000;
+BA_ "GenMsgSendType" BO_ 2365318910 0;
+BA_ "VFrameFormat" BO_ 2365318910 3;
+BA_ "GenMsgCycleTime" BO_ 2566645246 1000;
+BA_ "GenMsgSendType" BO_ 2566645246 0;
+BA_ "VFrameFormat" BO_ 2566645246 3;
+BA_ "GenMsgCycleTime" BO_ 2364607742 100;
+BA_ "GenMsgSendType" BO_ 2364607742 0;
+BA_ "VFrameFormat" BO_ 2364607742 3;
+BA_ "GenMsgSendType" BO_ 2364607486 0;
+BA_ "GenMsgCycleTime" BO_ 2364607486 100;
+BA_ "VFrameFormat" BO_ 2364607486 3;
+BA_ "GenMsgSendType" BO_ 2364607230 0;
+BA_ "GenMsgCycleTime" BO_ 2364607230 100;
+BA_ "VFrameFormat" BO_ 2364607230 3;
+BA_ "GenMsgSendType" BO_ 2364606974 0;
+BA_ "GenMsgCycleTime" BO_ 2364606974 100;
+BA_ "VFrameFormat" BO_ 2364606974 3;
+BA_ "GenMsgSendType" BO_ 2364606718 0;
+BA_ "GenMsgCycleTime" BO_ 2364606718 100;
+BA_ "VFrameFormat" BO_ 2364606718 3;
+BA_ "GenMsgSendType" BO_ 2364580094 0;
+BA_ "GenMsgCycleTime" BO_ 2364580094 100;
+BA_ "VFrameFormat" BO_ 2364580094 3;
+BA_ "GenMsgSendType" BO_ 2364577534 0;
+BA_ "GenMsgCycleTime" BO_ 2364577534 100;
+BA_ "VFrameFormat" BO_ 2364577534 3;
+BA_ "GenMsgSendType" BO_ 2364577278 0;
+BA_ "GenMsgCycleTime" BO_ 2364577278 100;
+BA_ "VFrameFormat" BO_ 2364577278 3;
+BA_ "GenMsgSendType" BO_ 2364577022 0;
+BA_ "GenMsgCycleTime" BO_ 2364577022 20;
+BA_ "VFrameFormat" BO_ 2364577022 3;
+BA_ "GenMsgSendType" BO_ 2364576766 0;
+BA_ "GenMsgCycleTime" BO_ 2364576766 100;
+BA_ "VFrameFormat" BO_ 2364576766 3;
+BA_ "GenMsgSendType" BO_ 2364576510 0;
+BA_ "GenMsgCycleTime" BO_ 2364576510 20;
+BA_ "VFrameFormat" BO_ 2364576510 3;
+BA_ "GenMsgSendType" BO_ 2364576254 0;
+BA_ "GenMsgCycleTime" BO_ 2364576254 20;
+BA_ "VFrameFormat" BO_ 2364576254 3;
+BA_ "GenMsgSendType" BO_ 2364575998 0;
+BA_ "GenMsgCycleTime" BO_ 2364575998 20;
+BA_ "VFrameFormat" BO_ 2364575998 3;
+BA_ "GenMsgSendType" BO_ 2364552958 0;
+BA_ "GenMsgCycleTime" BO_ 2364552958 100;
+BA_ "SendOnChange" BO_ 2364552958 1;
+BA_ "VFrameFormat" BO_ 2364552958 3;
+BA_ "GenMsgCycleTime" BO_ 2350644990 20;
+BA_ "GenMsgSendType" BO_ 2350644990 0;
+BA_ "VFrameFormat" BO_ 2350644990 3;
+BA_ "SPN" SG_ 2633785086 TotalAccumulatedCharge 8212;
+BA_ "SigType" SG_ 2633785086 TotalAccumulatedCharge 1;
+BA_ "SPN" SG_ 2633785086 TotalEnergyThroughput 8211;
+BA_ "SigType" SG_ 2633785086 TotalEnergyThroughput 1;
+BA_ "SPN" SG_ 2633785086 ContactorOpenUnderLoad 8122;
+BA_ "SigType" SG_ 2633785086 ContactorOpenUnderLoad 1;
+BA_ "SPN" SG_ 2633785086 StateOfHealth 8121;
+BA_ "SigType" SG_ 2633785086 StateOfHealth 1;
+BA_ "SigType" SG_ 2566675966 CellMinimumVoltageLimit 1;
+BA_ "SPN" SG_ 2566675966 CellMinimumVoltageLimit 8210;
+BA_ "SigType" SG_ 2566675966 CellMaximumVoltageLimit 1;
+BA_ "SPN" SG_ 2566675966 CellMaximumVoltageLimit 8209;
+BA_ "SigType" SG_ 2566675966 RecomendedMinimumSOC 1;
+BA_ "SPN" SG_ 2566675966 RecomendedMinimumSOC 8118;
+BA_ "SigType" SG_ 2566675966 RecomendedMinimumOperatingVoltag 1;
+BA_ "SPN" SG_ 2566675966 RecomendedMinimumOperatingVoltag 8116;
+BA_ "SystemSignalLongSymbol" SG_ 2566675966 RecomendedMinimumOperatingVoltag "RecomendedMinimumOperatingVoltage";
+BA_ "SigType" SG_ 2566675966 RecomendedMinimumOperatingTemper 1;
+BA_ "GenSigStartValue" SG_ 2566675966 RecomendedMinimumOperatingTemper 8736;
+BA_ "SPN" SG_ 2566675966 RecomendedMinimumOperatingTemper 8208;
+BA_ "SystemSignalLongSymbol" SG_ 2566675966 RecomendedMinimumOperatingTemper "RecomendedMinimumOperatingTemperature";
+BA_ "SigType" SG_ 2566675966 RecomendedMaximumSOC 1;
+BA_ "SPN" SG_ 2566675966 RecomendedMaximumSOC 8119;
+BA_ "SigType" SG_ 2566675966 RecomendedMaximumOperatingVoltag 1;
+BA_ "SPN" SG_ 2566675966 RecomendedMaximumOperatingVoltag 8117;
+BA_ "SystemSignalLongSymbol" SG_ 2566675966 RecomendedMaximumOperatingVoltag "RecomendedMaximumOperatingVoltage";
+BA_ "SigType" SG_ 2566675966 RecomendedMaximumOperatingTemper 1;
+BA_ "GenSigStartValue" SG_ 2566675966 RecomendedMaximumOperatingTemper 8736;
+BA_ "SPN" SG_ 2566675966 RecomendedMaximumOperatingTemper 8120;
+BA_ "SystemSignalLongSymbol" SG_ 2566675966 RecomendedMaximumOperatingTemper "RecomendedMaximumOperatingTemperature";
+BA_ "SigType" SG_ 2566675966 NominalVoltage 1;
+BA_ "SPN" SG_ 2566675966 NominalVoltage 8115;
+BA_ "SPN" SG_ 2364607742 PassiveIsolationTestResult 8432;
+BA_ "SigType" SG_ 2364607742 PassiveIsolationTestResult 1;
+BA_ "SPN" SG_ 2364607742 ActiveIsolationTestResult 8431;
+BA_ "SigType" SG_ 2364607742 ActiveIsolationTestResult 1;
+BA_ "SPN" SG_ 2364607742 LowestCellSOCCellNumber 8248;
+BA_ "SigType" SG_ 2364607742 LowestCellSOCCellNumber 1;
+BA_ "SPN" SG_ 2364607742 LowestCellSOCModuleNumber 8247;
+BA_ "SigType" SG_ 2364607742 LowestCellSOCModuleNumber 1;
+BA_ "SPN" SG_ 2364607742 HighestCellSOCCellNumber 8246;
+BA_ "SigType" SG_ 2364607742 HighestCellSOCCellNumber 1;
+BA_ "SPN" SG_ 2364607742 HighestCellSOCModuleNumber 8245;
+BA_ "SigType" SG_ 2364607742 HighestCellSOCModuleNumber 1;
+BA_ "SPN" SG_ 2364607486 LowestCellTemperatureCellNumber 8244;
+BA_ "SigType" SG_ 2364607486 LowestCellTemperatureCellNumber 1;
+BA_ "SPN" SG_ 2364607486 LowestCellTemperatureModuleNumbe 8243;
+BA_ "SigType" SG_ 2364607486 LowestCellTemperatureModuleNumbe 1;
+BA_ "SystemSignalLongSymbol" SG_ 2364607486 LowestCellTemperatureModuleNumbe "LowestCellTemperatureModuleNumber";
+BA_ "SPN" SG_ 2364607486 HighestCellTemperatureCellNumber 8242;
+BA_ "SigType" SG_ 2364607486 HighestCellTemperatureCellNumber 1;
+BA_ "SPN" SG_ 2364607486 HighestCellTemperatureModuleNumb 8241;
+BA_ "SigType" SG_ 2364607486 HighestCellTemperatureModuleNumb 1;
+BA_ "SystemSignalLongSymbol" SG_ 2364607486 HighestCellTemperatureModuleNumb "HighestCellTemperatureModuleNumber";
+BA_ "SPN" SG_ 2364607230 AverageCellVoltage 8240;
+BA_ "SigType" SG_ 2364607230 AverageCellVoltage 1;
+BA_ "SPN" SG_ 2364607230 LowestCellVoltageCellNumber 8239;
+BA_ "SigType" SG_ 2364607230 LowestCellVoltageCellNumber 1;
+BA_ "SPN" SG_ 2364607230 LowestCellVoltageModuleNumber 8238;
+BA_ "SigType" SG_ 2364607230 LowestCellVoltageModuleNumber 1;
+BA_ "SPN" SG_ 2364607230 HighestCellVoltageCellNumber 8237;
+BA_ "SigType" SG_ 2364607230 HighestCellVoltageCellNumber 1;
+BA_ "SPN" SG_ 2364607230 HighestCellVoltageModuleNumber 8236;
+BA_ "SigType" SG_ 2364607230 HighestCellVoltageModuleNumber 1;
+BA_ "SPN" SG_ 2364606718 ModuleOperationalStatus_16 8229;
+BA_ "SPN" SG_ 2364606718 ModuleOperationalStatus_15 8228;
+BA_ "SPN" SG_ 2364606718 ModuleOperationalStatus_14 8227;
+BA_ "SPN" SG_ 2364606718 ModuleOperationalStatus_13 8226;
+BA_ "SPN" SG_ 2364606718 ModuleOperationalStatus_12 8225;
+BA_ "SPN" SG_ 2364606718 ModuleOperationalStatus_11 8224;
+BA_ "SPN" SG_ 2364606718 ModuleOperationalStatus_10 8223;
+BA_ "SPN" SG_ 2364606718 ModuleOperationalStatus_09 8222;
+BA_ "SPN" SG_ 2364606718 ModuleOperationalStatus_08 8221;
+BA_ "SPN" SG_ 2364606718 ModuleOperationalStatus_07 8220;
+BA_ "SPN" SG_ 2364606718 ModuleOperationalStatus_06 8219;
+BA_ "SPN" SG_ 2364606718 ModuleOperationalStatus_05 8218;
+BA_ "SPN" SG_ 2364606718 ModuleOperationalStatus_04 8217;
+BA_ "SPN" SG_ 2364606718 ModuleOperationalStatus_03 8216;
+BA_ "SPN" SG_ 2364606718 ModuleOperationalStatus_02 8215;
+BA_ "SPN" SG_ 2364606718 ModuleOperationalStatus_01 8214;
+BA_ "SigType" SG_ 2364580094 MaximumChargeVoltageLimit 1;
+BA_ "SPN" SG_ 2364580094 MaximumChargeVoltageLimit 8090;
+BA_ "SigType" SG_ 2364580094 ChargeEnergyCapacity 1;
+BA_ "SPN" SG_ 2364580094 ChargeEnergyCapacity 8206;
+BA_ "SigType" SG_ 2364580094 DischargeEnergyCapacity 1;
+BA_ "SPN" SG_ 2364580094 DischargeEnergyCapacity 8205;
+BA_ "SPN" SG_ 2364577534 OperationalStatus 8414;
+BA_ "SPN" SG_ 2364577534 ConnectionStatus 8413;
+BA_ "SPN" SG_ 2364577534 InternalChargerStatus 8207;
+BA_ "SPN" SG_ 2364577534 CellBalancingStatus 8102;
+BA_ "SPN" SG_ 2364577534 CellBalanceStatus 8101;
+BA_ "SPN" SG_ 2364577534 SOCStatus 8100;
+BA_ "SPN" SG_ 2364577534 ImpactSensor 8099;
+BA_ "SPN" SG_ 2364577534 HVILStatus 8098;
+BA_ "SPN" SG_ 2364577534 PassiveIsolationTestStatus 8097;
+BA_ "SPN" SG_ 2364577534 ActiveIsolationTestStatus 8096;
+BA_ "SPN" SG_ 2364577534 CenterOfPackRelayState 8095;
+BA_ "SPN" SG_ 2364577534 PrechargeRelayState 8094;
+BA_ "SPN" SG_ 2364577534 DisconnectForewarning 8093;
+BA_ "SPN" SG_ 2364577534 PositiveContactorState 8091;
+BA_ "SPN" SG_ 2364577534 NegativeContactorState 8092;
+BA_ "SigType" SG_ 2364577278 ElectronicsTemperature 1;
+BA_ "GenSigStartValue" SG_ 2364577278 ElectronicsTemperature 40;
+BA_ "SPN" SG_ 2364577278 ElectronicsTemperature 8204;
+BA_ "SigType" SG_ 2364577278 OutletCoolantTemperature 1;
+BA_ "GenSigStartValue" SG_ 2364577278 OutletCoolantTemperature 40;
+BA_ "SPN" SG_ 2364577278 OutletCoolantTemperature 8089;
+BA_ "SigType" SG_ 2364577278 IntakeCoolantTemperature 1;
+BA_ "GenSigStartValue" SG_ 2364577278 IntakeCoolantTemperature 40;
+BA_ "SPN" SG_ 2364577278 IntakeCoolantTemperature 8088;
+BA_ "SigType" SG_ 2364577278 IgnitionVoltage 1;
+BA_ "SPN" SG_ 2364577278 IgnitionVoltage 8087;
+BA_ "SigType" SG_ 2364577278 BusVoltage 1;
+BA_ "SPN" SG_ 2364577278 BusVoltage 8086;
+BA_ "SPN" SG_ 2364577022 MaximumCellSOC 8085;
+BA_ "SigType" SG_ 2364577022 MaximumCellSOC 1;
+BA_ "SPN" SG_ 2364577022 MinimumCellSOC 8084;
+BA_ "SigType" SG_ 2364577022 MinimumCellSOC 1;
+BA_ "SPN" SG_ 2364577022 ChargeCurrentLimit 8083;
+BA_ "GenSigStartValue" SG_ 2364577022 ChargeCurrentLimit 32000;
+BA_ "SigType" SG_ 2364577022 ChargeCurrentLimit 1;
+BA_ "SPN" SG_ 2364577022 DischargeCurrentLimit 8082;
+BA_ "GenSigStartValue" SG_ 2364577022 DischargeCurrentLimit 32000;
+BA_ "SigType" SG_ 2364577022 DischargeCurrentLimit 1;
+BA_ "SPN" SG_ 2364576766 CellBalancingCount 8081;
+BA_ "SigType" SG_ 2364576766 CellBalancingCount 1;
+BA_ "SPN" SG_ 2364576766 ChargeCapacity 8080;
+BA_ "SigType" SG_ 2364576766 ChargeCapacity 1;
+BA_ "SPN" SG_ 2364576766 DischargeCapacity 8079;
+BA_ "SigType" SG_ 2364576766 DischargeCapacity 1;
+BA_ "SPN" SG_ 2364576510 CellTemperatureDiffStatus 8078;
+BA_ "SigType" SG_ 2364576510 AverageCellTemperature 1;
+BA_ "GenSigStartValue" SG_ 2364576510 AverageCellTemperature 8736;
+BA_ "SPN" SG_ 2364576510 AverageCellTemperature 8077;
+BA_ "SigType" SG_ 2364576510 LowestCellTemperature 1;
+BA_ "GenSigStartValue" SG_ 2364576510 LowestCellTemperature 8736;
+BA_ "SPN" SG_ 2364576510 LowestCellTemperature 8076;
+BA_ "SigType" SG_ 2364576510 HighestCellTemperature 1;
+BA_ "SPN" SG_ 2364576510 HighestCellTemperature 8075;
+BA_ "GenSigStartValue" SG_ 2364576510 HighestCellTemperature 8736;
+BA_ "SPN" SG_ 2364576254 CellVoltageDiffStatus 5924;
+BA_ "SigType" SG_ 2364576254 LowestCellVoltage 1;
+BA_ "SPN" SG_ 2364576254 LowestCellVoltage 5923;
+BA_ "SigType" SG_ 2364576254 HighestCellVoltage 1;
+BA_ "SPN" SG_ 2364576254 HighestCellVoltage 5922;
+BA_ "SigType" SG_ 2364576254 FastUpdateSOC 1;
+BA_ "SPN" SG_ 2364576254 FastUpdateSOC 5921;
+BA_ "SigType" SG_ 2364575998 Current 1;
+BA_ "SPN" SG_ 2364575998 Current 5920;
+BA_ "GenSigStartValue" SG_ 2364575998 Current 32000;
+BA_ "SigType" SG_ 2364575998 VoltageLevel 1;
+BA_ "SPN" SG_ 2364575998 VoltageLevel 5919;
+BA_ "SigType" SG_ 2364575998 AvailableChargePower 1;
+BA_ "SPN" SG_ 2364575998 AvailableChargePower 5918;
+BA_ "SigType" SG_ 2364575998 AvailableDischargePower 1;
+BA_ "SPN" SG_ 2364575998 AvailableDischargePower 5917;
+BA_ "SPN" SG_ 2364552958 DischargePowerLimitDueUndefinedC 8108;
+BA_ "SystemSignalLongSymbol" SG_ 2364552958 DischargePowerLimitDueUndefinedC "DischargePowerLimitDueUndefinedCase";
+BA_ "SPN" SG_ 2364552958 DischargePowerLimitDueTemperatur 8104;
+BA_ "SystemSignalLongSymbol" SG_ 2364552958 DischargePowerLimitDueTemperatur "DischargePowerLimitDueTemperature";
+BA_ "SPN" SG_ 2364552958 DischargePowerLimitDueSOC 8103;
+BA_ "SPN" SG_ 2364552958 DischargePowerLimitDueDiagnostic 8105;
+BA_ "SPN" SG_ 2364552958 DischargePowerLimitDueCurrent 8107;
+BA_ "SPN" SG_ 2364552958 DischargePowerLimitDueCellVoltag 8106;
+BA_ "SystemSignalLongSymbol" SG_ 2364552958 DischargePowerLimitDueCellVoltag "DischargePowerLimitDueCellVoltage";
+BA_ "SPN" SG_ 2364552958 ChargePowerLimitDueUndefinedCaus 8114;
+BA_ "SystemSignalLongSymbol" SG_ 2364552958 ChargePowerLimitDueUndefinedCaus "ChargePowerLimitDueUndefinedCause";
+BA_ "SPN" SG_ 2364552958 ChargePowerLimitDueTemperature 8110;
+BA_ "SPN" SG_ 2364552958 ChargePowerLimitDueSOC 8109;
+BA_ "SPN" SG_ 2364552958 ChargePowerLimitDueDiagnostic 8111;
+BA_ "SPN" SG_ 2364552958 ChargePowerLimitDueCurrent 8113;
+BA_ "SPN" SG_ 2364552958 ChargePowerLimitDueCellVoltage 8112;
+BA_ "SPN" SG_ 2350644990 LowSideResistorConnectCmd 8434;
+BA_ "SPN" SG_ 2350644990 HighSideResistorConnectCmd 8433;
+BA_ "SPN" SG_ 2350644990 OperationConsent 8412;
+BA_ "SPN" SG_ 2350644990 EnableInternalChargerCmd 8213;
+BA_ "SPN" SG_ 2350644990 CellBalancingCmd 8127;
+BA_ "SPN" SG_ 2350644990 PassiveIsolationTestCmd 8126;
+BA_ "SPN" SG_ 2350644990 ActiveIsolationTestCmd 8125;
+BA_ "SPN" SG_ 2350644990 PowerDownCmd 8124;
+BA_ "SPN" SG_ 2350644990 ConnectCmd 8123;
+VAL_ 2364606718 ModuleOperationalStatus_16 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_ 2364606718 ModuleOperationalStatus_15 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_ 2364606718 ModuleOperationalStatus_14 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_ 2364606718 ModuleOperationalStatus_13 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_ 2364606718 ModuleOperationalStatus_12 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_ 2364606718 ModuleOperationalStatus_11 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_ 2364606718 ModuleOperationalStatus_10 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_ 2364606718 ModuleOperationalStatus_09 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_ 2364606718 ModuleOperationalStatus_08 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_ 2364606718 ModuleOperationalStatus_07 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_ 2364606718 ModuleOperationalStatus_06 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_ 2364606718 ModuleOperationalStatus_05 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_ 2364606718 ModuleOperationalStatus_04 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_ 2364606718 ModuleOperationalStatus_03 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_ 2364606718 ModuleOperationalStatus_02 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_ 2364606718 ModuleOperationalStatus_01 3 "Not available" 2 "Error" 1 "Operational" 0 "Not Operational" ;
+VAL_ 2364577534 OperationalStatus 15 "Not available" 14 "Error" 6 "DisabledByIntDecision" 5 "DisabledByExtComm" 4 "EmergPowDownInProc" 3 "NormPowDownInProc" 2 "Operational" 1 "InitComplete" 0 "InitInProcess" ;
+VAL_ 2364577534 ConnectionStatus 15 "Not available" 14 "Error" 4 "DiscPrechrgFailed" 3 "DiscInProc" 2 "ConnInProc" 1 "Connected" 0 "Disconnected" ;
+VAL_ 2364577534 InternalChargerStatus 3 "Not available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2364577534 CellBalancingStatus 3 "Not available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2364577534 CellBalanceStatus 3 "Not available" 2 "Error" 1 "Unbalanced" 0 "Balanced" ;
+VAL_ 2364577534 SOCStatus 15 "Not available" 14 "Error" 6 "AboveUppLim" 5 "AtUppLim" 4 "ApprUppLim" 3 "BelowLowLim" 2 "AtLowLim" 1 "ApprLowLim" 0 "Level acceptable" ;
+VAL_ 2364577534 ImpactSensor 3 "Not available" 2 "Error" 1 "Impact sensed" 0 "No impact sensed" ;
+VAL_ 2364577534 HVILStatus 3 "Not available" 2 "Error" 1 "Close" 0 "Open" ;
+VAL_ 2364577534 PassiveIsolationTestStatus 15 "Not available" 14 "Error" 5 "Isolation fault" 4 "Isolation marginal" 3 "Isolation acceptable" 2 "Test in process" 1 "Test not started" 0 "No test requested" ;
+VAL_ 2364577534 ActiveIsolationTestStatus 15 "Not available" 14 "Error" 5 "Isolation fault" 4 "Isolation marginal" 3 "Isolation acceptable" 2 "Test in process" 1 "Test not started" 0 "No test requested" ;
+VAL_ 2364577534 CenterOfPackRelayState 3 "Not available" 2 "Error" 1 "Close" 0 "Open" ;
+VAL_ 2364577534 PrechargeRelayState 3 "Not available" 2 "Error" 1 "Close" 0 "Open" ;
+VAL_ 2364577534 DisconnectForewarning 15 "Not available" 14 "Error" 13 "No reason given" 7 "CurrPackMaxLvLAppr" 6 "VCellMaxLvLAppr" 5 "VCellMinLvLAppr" 4 "VModuleMaxLvLAppr" 3 "VModuleMinLvLAppr" 2 "VPackMaxLvLAppr" 1 "VPackMinLvLAppr" 0 "Not pending" ;
+VAL_ 2364577534 PositiveContactorState 3 "Not available" 2 "Error" 1 "Close" 0 "Open" ;
+VAL_ 2364577534 NegativeContactorState 3 "Not available" 2 "Error" 1 "Close" 0 "Open" ;
+VAL_ 2364576510 CellTemperatureDiffStatus 3 "Not available" 2 "Error" 1 "Not Normal" 0 "Normal" ;
+VAL_ 2364576254 CellVoltageDiffStatus 15 "Not available" 14 "Error" 4 "Disbalanced" 3 "Can't be corrected" 2 "Can be corrected externally" 1 "Can be correccted internally" 0 "OK" ;
+VAL_ 2364552958 DischargePowerLimitDueUndefinedC 3 "Not available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2364552958 DischargePowerLimitDueTemperatur 3 "Not available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2364552958 DischargePowerLimitDueSOC 3 "Not available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2364552958 DischargePowerLimitDueDiagnostic 3 "Not available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2364552958 DischargePowerLimitDueCurrent 3 "Not available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2364552958 DischargePowerLimitDueCellVoltag 3 "Not available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2364552958 ChargePowerLimitDueUndefinedCaus 3 "Not available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2364552958 ChargePowerLimitDueTemperature 3 "Not available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2364552958 ChargePowerLimitDueSOC 3 "Not available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2364552958 ChargePowerLimitDueDiagnostic 3 "Not available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2364552958 ChargePowerLimitDueCurrent 3 "Not available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2364552958 ChargePowerLimitDueCellVoltage 3 "Not available" 2 "Error" 1 "On" 0 "Off" ;
+VAL_ 2350644990 LowSideResistorConnectCmd 3 "Not available" 2 "Reserved" 1 "Requested" 0 "Not Requested" ;
+VAL_ 2350644990 HighSideResistorConnectCmd 3 "Not available" 2 "Reserved" 1 "Requested" 0 "Not Requested" ;
+VAL_ 2350644990 OperationConsent 3 "Not available" 2 "Error" 1 "Consent given" 0 "Consent revoked" ;
+VAL_ 2350644990 EnableInternalChargerCmd 3 "Not available" 2 "Reserved" 1 "Requested" 0 "Not Requested" ;
+VAL_ 2350644990 CellBalancingCmd 3 "Not available" 2 "Reserved" 1 "Requested" 0 "Not Requested" ;
+VAL_ 2350644990 PassiveIsolationTestCmd 3 "Not available" 2 "Reserved" 1 "Requested" 0 "Not Requested" ;
+VAL_ 2350644990 ActiveIsolationTestCmd 3 "Not available" 2 "Reserved" 1 "Requested" 0 "Not Requested" ;
+VAL_ 2350644990 PowerDownCmd 3 "Not available" 2 "Emergency Power-down" 1 "Normal Power-down" 0 "No Power-down" ;
+VAL_ 2350644990 ConnectCmd 3 "Not available" 2 "Emergency Close Contactor" 1 "Close Contactor" 0 "Open Contactor" ;
+

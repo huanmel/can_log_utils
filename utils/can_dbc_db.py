@@ -25,7 +25,7 @@ class CanDbcDb:
                 sigs=defaultdict(dict)
                 for sig in frame.signals:
                     # sig_d={k:v for k, v in sig.__dict__.items() if k in DbcDb.SIG_ATTR}
-                    sig_d={key: sig.__dict__[key] for key in DbcDb.SIG_ATTR if key in sig.__dict__}
+                    sig_d={key: sig.__dict__[key] for key in CanDbcDb.SIG_ATTR if key in sig.__dict__}
                     for k,v in sig_d.items():
                         if isinstance(v,decimal.Decimal):
                             sig_d[k]=float(v)

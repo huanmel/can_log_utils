@@ -141,10 +141,6 @@ BO_ 2566845694 TIRE1: 8 Vector__XXX
 
 
 
-CM_ "$File: //depot/auto/dbc/Software_Modules/TPMS/j1939_TPMS/0.0.3.0/j1939_TPMS.dbc $
-$Change: 216205 $
-$DateTime: 2024/08/26 10:14:53 $
-$Revision: #1 $";
 CM_ BO_ 2566845694 "Tire Condition Message 1
 Tire Condition Message
 NOTE – Multiple instances of this message will be required to transmit data for all tire locations.  When reporting data for multiple tire locations, each successive message, which provides data for ...";
@@ -270,7 +266,6 @@ BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","NotUsed","NotUsed","NotU
 BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
 BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
 BA_DEF_ BO_  "SendOnChange" ENUM  "No","Yes";
-BA_DEF_ BO_  "Producer" STRING ;
 BA_DEF_ BU_  "NodeLayerModules" STRING ;
 BA_DEF_ BU_  "NmStationAddress" INT 0 255;
 BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
@@ -292,7 +287,7 @@ BA_DEF_  "SAE_J1939_75_SpecVersion" STRING ;
 BA_DEF_  "SAE_J1939_21_SpecVersion" STRING ;
 BA_DEF_  "SAE_J1939_73_SpecVersion" STRING ;
 BA_DEF_  "SAE_J1939_71_SpecVersion" STRING ;
-BA_DEF_DEF_  "DBName" "j1939_TPMS";
+BA_DEF_DEF_  "DBName" "";
 BA_DEF_DEF_  "GenSigInactiveValue" 0;
 BA_DEF_DEF_  "SigType" "Default";
 BA_DEF_DEF_  "GenSigStartValue" 0;
@@ -312,7 +307,6 @@ BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
 BA_DEF_DEF_  "VFrameFormat" "J1939PG";
 BA_DEF_DEF_  "GenMsgCycleTime" 0;
 BA_DEF_DEF_  "SendOnChange" "No";
-BA_DEF_DEF_  "Producer" "TPMS";
 BA_DEF_DEF_  "NodeLayerModules" "";
 BA_DEF_DEF_  "NmStationAddress" 254;
 BA_DEF_DEF_  "NmJ1939AAC" 0;
@@ -334,6 +328,7 @@ BA_DEF_DEF_  "SAE_J1939_75_SpecVersion" "";
 BA_DEF_DEF_  "SAE_J1939_21_SpecVersion" "";
 BA_DEF_DEF_  "SAE_J1939_73_SpecVersion" "";
 BA_DEF_DEF_  "SAE_J1939_71_SpecVersion" "";
+
 BA_ "SAE_J1939_DA_SpecVersion" "2015-01";
 BA_ "SAE_J1939_81_SpecVersion" "2012-05";
 BA_ "DatabaseVersion" "8.5";
@@ -344,8 +339,9 @@ BA_ "SAE_J1939_21_SpecVersion" "2006-10";
 BA_ "SAE_J1939_73_SpecVersion" "2012-10";
 BA_ "SAE_J1939_71_SpecVersion" "2012-10";
 BA_ "DBName" "J1939_TPMS";
+
 BA_ "GenMsgSendType" BO_ 2566845694 0;
-BA_ "GenMsgCycleTime" BO_ 2566845694 500;
+BA_ "GenMsgCycleTime" BO_ 2566845694 10000;
 BA_ "VFrameFormat" BO_ 2566845694 3;
 BA_ "SigType" SG_ 2566845694 ExTirePressSupport 4;
 BA_ "SPN" SG_ 2566845694 ExTirePressSupport 6990;
